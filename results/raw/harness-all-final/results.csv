@@ -1,0 +1,11 @@
+planner,benchmark,instance,status,compatible,return_code,wall_seconds,max_rss_kb,plan_length,metric_value,validation,case_directory
+crikey2,19_COUNTERS,p001.pddl,unsupported,false,,0,,,,not-run,results/raw/harness-all-final/cases/crikey2/19_COUNTERS/p001
+enhsp,19_COUNTERS,p001.pddl,solved,true,0,0.26,75424,12,12.0,valid,results/raw/harness-all-final/cases/enhsp/19_COUNTERS/p001
+lpg-td,19_COUNTERS,p001.pddl,solved,true,0,0.07,129664,32,32.000,valid,results/raw/harness-all-final/cases/lpg-td/19_COUNTERS/p001
+metric-ff,19_COUNTERS,p001.pddl,solved,true,0,0.00,3200,14,,valid,results/raw/harness-all-final/cases/metric-ff/19_COUNTERS/p001
+metric-ff-2.0,19_COUNTERS,p001.pddl,solved,true,0,0.00,3072,14,,valid,results/raw/harness-all-final/cases/metric-ff-2.0/19_COUNTERS/p001
+nextflap,19_COUNTERS,p001.pddl,solved,true,0,0.92,168920,13,,valid,results/raw/harness-all-final/cases/nextflap/19_COUNTERS/p001
+omtplan,19_COUNTERS,p001.pddl,solved,true,0,1.19,153108,12,,valid,results/raw/harness-all-final/cases/omtplan/19_COUNTERS/p001
+patty,19_COUNTERS,p001.pddl,solved,true,0,0.43,80172,32,,valid,results/raw/harness-all-final/cases/patty/19_COUNTERS/p001
+springroll,19_COUNTERS,p001.pddl,solved,true,0,0.15,54248,14,14.0,valid,results/raw/harness-all-final/cases/springroll/19_COUNTERS/p001
+tamerlite,19_COUNTERS,p001.pddl,solved,true,0,0.68,51592,12,,valid,results/raw/harness-all-final/cases/tamerlite/19_COUNTERS/p001

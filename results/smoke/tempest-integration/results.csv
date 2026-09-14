@@ -1,0 +1,2 @@
+planner,benchmark,instance,status,compatible,return_code,wall_seconds,max_rss_kb,plan_length,metric_value,validation,case_directory
+tempest-numeric-ipc2026,19_COUNTERS,p001.pddl,solved,true,0,0.02,6656,12,,valid,results/smoke/tempest-integration/cases/tempest-numeric-ipc2026/19_COUNTERS/p001

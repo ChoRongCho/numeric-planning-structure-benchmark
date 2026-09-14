@@ -1,0 +1,7 @@
+planner,benchmark,instance,status,compatible,return_code,wall_seconds,max_rss_kb,peak_group_rss_kb,limit_reason,plan_length,metric_value,validation,case_directory
+popf-static-v2,changmin_01_blocksworld,p001.pddl,solved,true,0,0.210568,5760,1552,,8,0.000,valid,results/raw/popf-static-v2-changmin-benchmark-p001-host-smoke-20260911-200238-418423/cases/popf-static-v2/changmin_01_blocksworld/p001
+popf-static-v2,changmin_02_logistics,p001.pddl,solved,true,0,0.210592,7552,7552,,15,0.000,valid,results/raw/popf-static-v2-changmin-benchmark-p001-host-smoke-20260911-200238-418423/cases/popf-static-v2/changmin_02_logistics/p001
+popf-static-v2,changmin_03_books,p001.pddl,solved,true,0,0.212253,7936,7596,,18,0.000,valid,results/raw/popf-static-v2-changmin-benchmark-p001-host-smoke-20260911-200238-418423/cases/popf-static-v2/changmin_03_books/p001
+popf-static-v2,changmin_04_watering,p001.pddl,timeout,true,timeout,120.022654,1110500,1110500,timeout,,,not-run,results/raw/popf-static-v2-changmin-benchmark-p001-host-smoke-20260911-200238-418423/cases/popf-static-v2/changmin_04_watering/p001
+popf-static-v2,changmin_05_barman,p001.pddl,unsolved,true,1,0.218849,6856,6856,,,,not-run,results/raw/popf-static-v2-changmin-benchmark-p001-host-smoke-20260911-200238-418423/cases/popf-static-v2/changmin_05_barman/p001
+popf-static-v2,changmin_06_assembly,p001.pddl,unsolved,true,1,0.214025,5376,0,,,,not-run,results/raw/popf-static-v2-changmin-benchmark-p001-host-smoke-20260911-200238-418423/cases/popf-static-v2/changmin_06_assembly/p001

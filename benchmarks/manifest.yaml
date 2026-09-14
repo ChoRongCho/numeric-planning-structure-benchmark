@@ -1,0 +1,1043 @@
+{
+  "schema_version": 1,
+  "benchmark_count": 45,
+  "problem_count": 556,
+  "benchmarks": [
+    {
+      "id": "01_LOGISTIC",
+      "source": "internal",
+      "domain": "benchmarks/01_LOGISTIC/domain.pddl",
+      "instances_glob": "benchmarks/01_LOGISTIC/instances/*.pddl",
+      "instance_count": 1,
+      "domain_sha256": "f6a373e5fd3b580408c65b1e2e5ee9d1607bce71107f8610ae82fb15bd832389",
+      "instance_set_sha256": "5ea421ce9d4f8a1c752e5d47c9df182aab5bd7fae90702702b20b12534f486a0",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":action-costs"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": true
+      }
+    },
+    {
+      "id": "02_LOGISTIC_NEW",
+      "source": "internal",
+      "domain": "benchmarks/02_LOGISTIC_NEW/domain.pddl",
+      "instances_glob": "benchmarks/02_LOGISTIC_NEW/instances/*.pddl",
+      "instance_count": 2,
+      "domain_sha256": "f28256291e30b5999b33eae212636646557c2a44dbbd74adf478166f06930f66",
+      "instance_set_sha256": "4c0d94e2a4caf71236326e8f0065cf6dfc82a5d8458699c5d7cf9bf9bab37e46",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":action-costs"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": true
+      }
+    },
+    {
+      "id": "03_BLOCKSWORLD",
+      "source": "internal",
+      "domain": "benchmarks/03_BLOCKSWORLD/domain.pddl",
+      "instances_glob": "benchmarks/03_BLOCKSWORLD/instances/*.pddl",
+      "instance_count": 3,
+      "domain_sha256": "fa70e379033a6429b68c61bb9ebe831fcf759c15d319ffaf33ce92430fb57ba6",
+      "instance_set_sha256": "0e0bfa5d9497b4ba899bf7db2a4af499e934c3eb9ad4d6c40a0118e0ef72b844",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":action-costs"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": true
+      }
+    },
+    {
+      "id": "04_ROVER_CHANGMIN",
+      "source": "internal",
+      "domain": "benchmarks/04_ROVER_CHANGMIN/domain.pddl",
+      "instances_glob": "benchmarks/04_ROVER_CHANGMIN/instances/*.pddl",
+      "instance_count": 1,
+      "domain_sha256": "9fe467adce03003d90ccd1f3cd6e9d74b0bac52931c1bf434d4c6be9fa3d4279",
+      "instance_set_sha256": "53f21cff176ce093a7577bbddd666b1110cdfaeffa6d98a92ca993439cf537f5",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":action-costs"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": true
+      }
+    },
+    {
+      "id": "05_PIPESWORLD_STRIPS",
+      "source": "internal",
+      "domain": "benchmarks/05_PIPESWORLD_STRIPS/domain.pddl",
+      "instances_glob": "benchmarks/05_PIPESWORLD_STRIPS/instances/*.pddl",
+      "instance_count": 1,
+      "domain_sha256": "255658e728c889c4f64ce1383446ce0203b1c83f35f7cb5d904089e2c47c5f68",
+      "instance_set_sha256": "68926713c55fc0a2dc21bc171f34ca2e97872ba2f7cb541a23e7c291f5c5de58",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":action-costs"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": true
+      }
+    },
+    {
+      "id": "06_TSP_NUMERIC",
+      "source": "internal",
+      "domain": "benchmarks/06_TSP_NUMERIC/domain.pddl",
+      "instances_glob": "benchmarks/06_TSP_NUMERIC/instances/*.pddl",
+      "instance_count": 1,
+      "domain_sha256": "3a177dd2ccdbe6fc225fdca9c156ad0502263ce0c8f5dd143f822c8cf4b30af3",
+      "instance_set_sha256": "bda38a2a738a31320e162423096e3d19bb0f50d3b324bed49f32bb8fefa6fe04",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":negative-preconditions",
+          ":fluents",
+          ":action-costs"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": true
+      }
+    },
+    {
+      "id": "07_TSP_CONNECTED_NUMERIC",
+      "source": "internal",
+      "domain": "benchmarks/07_TSP_CONNECTED_NUMERIC/domain.pddl",
+      "instances_glob": "benchmarks/07_TSP_CONNECTED_NUMERIC/instances/*.pddl",
+      "instance_count": 1,
+      "domain_sha256": "c6be6d6989d131d2c798af2f95b44cd3cfc11c64c89a5ea01eda85e67da67938",
+      "instance_set_sha256": "203f6be3c6c19f141296845012a456274a220108b8c52f345bdfaf52f2d1dbbf",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":negative-preconditions",
+          ":fluents",
+          ":action-costs"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": true
+      }
+    },
+    {
+      "id": "08_RAILWAYS_SIMPLE",
+      "source": "internal",
+      "domain": "benchmarks/08_RAILWAYS_SIMPLE/domain.pddl",
+      "instances_glob": "benchmarks/08_RAILWAYS_SIMPLE/instances/*.pddl",
+      "instance_count": 2,
+      "domain_sha256": "0febe890fc1fc01380a0bf1ef39730457890d90572a6a64b2d436d7f1f7a434b",
+      "instance_set_sha256": "9b86356d8b85256265441d5e7f96a6058b9500521126ef2108ff82fc5ea20a23",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":derived-predicates",
+          ":negative-preconditions"
+        ],
+        "numeric": false,
+        "temporal": false,
+        "derived_predicates": true,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "09_WATERING",
+      "source": "internal",
+      "domain": "benchmarks/09_WATERING/domain.pddl",
+      "instances_glob": "benchmarks/09_WATERING/instances/*.pddl",
+      "instance_count": 1,
+      "domain_sha256": "a8c011dc42eae00ef3d28c53ff3f1da40a0e830115734aaabb07faf8e004c10c",
+      "instance_set_sha256": "d96de61409e4935c19f5c6faa5457771b82f3ddd196c06e02b6e9ee70ba82230",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":fluents",
+          ":action-costs"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": true
+      }
+    },
+    {
+      "id": "10_EIGHT_PUZZLE",
+      "source": "internal",
+      "domain": "benchmarks/10_EIGHT_PUZZLE/domain.pddl",
+      "instances_glob": "benchmarks/10_EIGHT_PUZZLE/instances/*.pddl",
+      "instance_count": 1,
+      "domain_sha256": "eedec5081ff1152c89e8a5930609b9be66b375db1373049329c15786df686ff3",
+      "instance_set_sha256": "65ec5f9be41e44f65443f827f5959d666257492dc54925bd0857ba8e5cef6a21",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing"
+        ],
+        "numeric": false,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "11_SEEDSET",
+      "source": "internal",
+      "domain": "benchmarks/11_SEEDSET/domain.pddl",
+      "instances_glob": "benchmarks/11_SEEDSET/instances/*.pddl",
+      "instance_count": 1,
+      "domain_sha256": "dd75f6f9fe43504189ff22b6c77dbd18cb45672ccf6947eb2c356fb64f881fec",
+      "instance_set_sha256": "b030bb1d1aff4ce6136f5acf9c98ce80b8daee9d6f58524de557d6e40a809834",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":action-costs"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": true
+      }
+    },
+    {
+      "id": "12_BOOKNEW",
+      "source": "internal",
+      "domain": "benchmarks/12_BOOKNEW/domain.pddl",
+      "instances_glob": "benchmarks/12_BOOKNEW/instances/*.pddl",
+      "instance_count": 1,
+      "domain_sha256": "bf7c28002a453b6d84332e34677983b931c7f72dc715fbe519548c317e67b729",
+      "instance_set_sha256": "290220d4e3e255b09ca19fbe25326ca578f8327e7bd1b2603e88a3d9b5365fe4",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":fluents",
+          ":typing"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "13_GROUNDED_TRUCKS",
+      "source": "internal",
+      "domain": "benchmarks/13_GROUNDED_TRUCKS/domain.pddl",
+      "instances_glob": "benchmarks/13_GROUNDED_TRUCKS/instances/*.pddl",
+      "instance_count": 1,
+      "domain_sha256": "75f3f363da4bb37a99340cb6bd7cc3c8c9347f6354ef16c50f5cec24bdf69698",
+      "instance_set_sha256": "4db0f28fc28d9511e6a0d9fe7a8aabc614298fc8c305ab3353cbb6dd58643e96",
+      "features": {
+        "requirements": [
+          ":strips"
+        ],
+        "numeric": false,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "14_DESIRE",
+      "source": "internal",
+      "domain": "benchmarks/14_DESIRE/domain.pddl",
+      "instances_glob": "benchmarks/14_DESIRE/instances/*.pddl",
+      "instance_count": 1,
+      "domain_sha256": "7d433cdba4c3b4dbf277b34810dfe82b6af99ab3b259e43d6ea624d923b73996",
+      "instance_set_sha256": "79723ade0a36c6d9c11926284a661a500fd49f5ef7acc68f28bc8cce1312e900",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing"
+        ],
+        "numeric": false,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "15_ISSUE49",
+      "source": "internal",
+      "domain": "benchmarks/15_ISSUE49/domain.pddl",
+      "instances_glob": "benchmarks/15_ISSUE49/instances/*.pddl",
+      "instance_count": 2,
+      "domain_sha256": "3ccaeb68590392e5e905bda16bf0e96ef6874ae40b8778d60a521d2564252fcf",
+      "instance_set_sha256": "8023f3f9c861ea37a3d24c2f5a542be60b8ac1f5fe1f770fc446270c2ca2ddd6",
+      "features": {
+        "requirements": [
+          ":strips"
+        ],
+        "numeric": false,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "16_TEST1",
+      "source": "internal",
+      "domain": "benchmarks/16_TEST1/domain.pddl",
+      "instances_glob": "benchmarks/16_TEST1/instances/*.pddl",
+      "instance_count": 1,
+      "domain_sha256": "2962110f8132912f42f80b4a3cd8c9391281ee1de9afec45fa2802e6ca62cf8d",
+      "instance_set_sha256": "4c94f8e92ea2e1b9ec3aacb2f7b970c8f14f83990ee21a1178d23087ed341869",
+      "features": {
+        "requirements": [
+          ":strips"
+        ],
+        "numeric": false,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "17_SATELLITE",
+      "source": "IPC-2004",
+      "domain": "benchmarks/17_SATELLITE/domain.pddl",
+      "instances_glob": "benchmarks/17_SATELLITE/instances/*.pddl",
+      "instance_count": 36,
+      "domain_sha256": "ece68c29645bdb76f6fff610f60dd773320bf29432f7072d1e2c8f5452850d78",
+      "instance_set_sha256": "a47b637236f3d834290fcadba810bb65d62eda5847443cb37235dbd00d2c1198",
+      "features": {
+        "requirements": [
+          ":typing",
+          ":fluents",
+          ":equality"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "18_BLOCK_GROUPING",
+      "source": "IPC-2023",
+      "domain": "benchmarks/18_BLOCK_GROUPING/domain.pddl",
+      "instances_glob": "benchmarks/18_BLOCK_GROUPING/instances/*.pddl",
+      "instance_count": 20,
+      "domain_sha256": "2b03e4c6e6e18758fb0fe34f383189e00c65533700a5dad8f4cdef1696224bd8",
+      "instance_set_sha256": "eb81863bd05d12e4bd1e76da1313df428f4adec3e2088b3686c222297d5623c1",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":fluents",
+          ":negative-preconditions",
+          ":disjunctive-preconditions"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": true,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "19_COUNTERS",
+      "source": "IPC-2023",
+      "domain": "benchmarks/19_COUNTERS/domain.pddl",
+      "instances_glob": "benchmarks/19_COUNTERS/instances/*.pddl",
+      "instance_count": 20,
+      "domain_sha256": "8efd7c897873661f9360fc3606eb5fa8fb4dab632a96f1fa3e26d3dfca7b50c4",
+      "instance_set_sha256": "cb0efd832ae7e5d8361e67efa747ac783fb8353eb72c925b6de8e5959c69a5c1",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":fluents"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "20_DELIVERY",
+      "source": "IPC-2023",
+      "domain": "benchmarks/20_DELIVERY/domain.pddl",
+      "instances_glob": "benchmarks/20_DELIVERY/instances/*.pddl",
+      "instance_count": 20,
+      "domain_sha256": "2e0a2b961b45bec66bccb7dad7773aa5f56b8ff1a12d7ec1d2ba9abfd1f764cf",
+      "instance_set_sha256": "e6f856fbcbf590e30ee1e696472dc1cd9580519a398897025e3099a2e4ed673e",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":fluents"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "21_DRONE",
+      "source": "IPC-2023",
+      "domain": "benchmarks/21_DRONE/domain.pddl",
+      "instances_glob": "benchmarks/21_DRONE/instances/*.pddl",
+      "instance_count": 20,
+      "domain_sha256": "60564747d00e7ecf5367578fa87490ba9c0eb7ef59b6caf1c1ffb2faab899fc3",
+      "instance_set_sha256": "ebe286fcd16cc87044de31a522b93403610bfd53ab3c54db2755d2847f6c9de0",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":fluents"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "22_EXPEDITION",
+      "source": "IPC-2023",
+      "domain": "benchmarks/22_EXPEDITION/domain.pddl",
+      "instances_glob": "benchmarks/22_EXPEDITION/instances/*.pddl",
+      "instance_count": 20,
+      "domain_sha256": "8eb18f333beae8dc214cec54ab738bc2c7a6522f0c7d12df67bf0d5ab934cec9",
+      "instance_set_sha256": "0dbb4d90ee55f461871402b5de87e73357190f2dc02d41aef15f3a3198b57bf9",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":fluents"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "23_EXT_PLANT_WATERING",
+      "source": "IPC-2023",
+      "domain": "benchmarks/23_EXT_PLANT_WATERING/domain.pddl",
+      "instances_glob": "benchmarks/23_EXT_PLANT_WATERING/instances/*.pddl",
+      "instance_count": 20,
+      "domain_sha256": "7157a40fd245fde8f7b016692ef3b241628662e189a0b3957b5ee2696fc28c82",
+      "instance_set_sha256": "b603d9065b89185bb91ac3efccdbb9dd87aa185fe21bd97ab23ee38adbf676e5",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":fluents"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "24_FARMLAND",
+      "source": "IPC-2023",
+      "domain": "benchmarks/24_FARMLAND/domain.pddl",
+      "instances_glob": "benchmarks/24_FARMLAND/instances/*.pddl",
+      "instance_count": 20,
+      "domain_sha256": "2b8a6059b34a68e481c177e8fe1f68d1e2a3bb4ef7d4566a159719d9d470775d",
+      "instance_set_sha256": "68dfa82035268337d821ed5b881b4c29b78e1d75f3bb7c2ded7d0f60ac5cf133",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":fluents",
+          ":equality",
+          ":negative-preconditions"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "25_FO_COUNTERS",
+      "source": "IPC-2023",
+      "domain": "benchmarks/25_FO_COUNTERS/domain.pddl",
+      "instances_glob": "benchmarks/25_FO_COUNTERS/instances/*.pddl",
+      "instance_count": 20,
+      "domain_sha256": "c8dfdb7846160e7390e8b9eda04cd0d7a6ec7e3ff5a1bbaf2c03a7283cf68f99",
+      "instance_set_sha256": "56c2340e24398a14f1a8a0c524d5b7d8895fa33a2a1724faa376b86a9363be5f",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":fluents",
+          ":action-costs"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": true
+      }
+    },
+    {
+      "id": "26_FO_FARMLAND",
+      "source": "IPC-2023",
+      "domain": "benchmarks/26_FO_FARMLAND/domain.pddl",
+      "instances_glob": "benchmarks/26_FO_FARMLAND/instances/*.pddl",
+      "instance_count": 20,
+      "domain_sha256": "1a23b21f8d2a4f7a164c66a30108f6087a710dfa2d1f9dc4f744a84ecab07f1a",
+      "instance_set_sha256": "a692a311b868d9a11805234c4d609818c4539b76cd810b01c879d1dc0019657b",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":fluents",
+          ":adl"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": true,
+        "quantified": true,
+        "disjunctive": true,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "27_FO_SAILING",
+      "source": "IPC-2023",
+      "domain": "benchmarks/27_FO_SAILING/domain.pddl",
+      "instances_glob": "benchmarks/27_FO_SAILING/instances/*.pddl",
+      "instance_count": 20,
+      "domain_sha256": "683fbb9a353f6d644118d914d050e92ad016915ba3f4b391a539ac2684e4903d",
+      "instance_set_sha256": "7c8587cc7f296de6f985a32db30bbd035a55d0f1fafcaf54420c46071b708939",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":fluents",
+          ":negative-preconditions"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "28_HYDROPOWER",
+      "source": "IPC-2023",
+      "domain": "benchmarks/28_HYDROPOWER/domain.pddl",
+      "instances_glob": "benchmarks/28_HYDROPOWER/instances/*.pddl",
+      "instance_count": 20,
+      "domain_sha256": "f9aef98e7f1dd85ce01c46b0db3fe85899a85ca6e511feea08d1e9409d20ab2c",
+      "instance_set_sha256": "8cf1db11c4fce3d2ad3fcef16debffeb93a3880a9763ddfadf3580e9ccce37e7",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":fluents"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "29_MARKETTRADER",
+      "source": "IPC-2023",
+      "domain": "benchmarks/29_MARKETTRADER/domain.pddl",
+      "instances_glob": "benchmarks/29_MARKETTRADER/instances/*.pddl",
+      "instance_count": 19,
+      "domain_sha256": "2d3316d1a6525f055c23ad3f6036d208c977497dfe03f33c7042fd3eaa8e7e62",
+      "instance_set_sha256": "b29ef4d09fd2d1f53c4b4f7c919f4fb9baebee4347b9da3651cfacd7fbedab26",
+      "features": {
+        "requirements": [
+          ":typing",
+          ":fluents"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "30_MPRIME",
+      "source": "IPC-2023",
+      "domain": "benchmarks/30_MPRIME/domain.pddl",
+      "instances_glob": "benchmarks/30_MPRIME/instances/*.pddl",
+      "instance_count": 20,
+      "domain_sha256": "39bcb5cef5b6ddd12779cf23b107103490b600c27584c16143e777d0ed0bd88f",
+      "instance_set_sha256": "495209235aa8e9a06cfb3fb95d4b2903496d846d44eab4197e8274b56cd1dee4",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":fluents"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "31_PATHWAYSMETRIC",
+      "source": "IPC-2023",
+      "domain": "benchmarks/31_PATHWAYSMETRIC/domain.pddl",
+      "instances_glob": "benchmarks/31_PATHWAYSMETRIC/instances/*.pddl",
+      "instance_count": 20,
+      "domain_sha256": "14aed8ea7b8b6c261f36014755a93a8a1651af1cef856660bdd8eddc57ecaa92",
+      "instance_set_sha256": "a58886d0358c756b86be2912d36ebde797d4e656def0459267a94f2a4e10c87a",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":fluents"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "32_ROVER_IPC23",
+      "source": "IPC-2023",
+      "domain": "benchmarks/32_ROVER_IPC23/domain.pddl",
+      "instances_glob": "benchmarks/32_ROVER_IPC23/instances/*.pddl",
+      "instance_count": 20,
+      "domain_sha256": "9161142d23b42f56bca3c05f6ed2812159ec80c86da973d666334c863fa4d7c0",
+      "instance_set_sha256": "ef6ffe36d32ec3e7cd262a53c3309c89ef33e81889739f1bd3e7fbb4a6393b6b",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":fluents"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "33_SAILING",
+      "source": "IPC-2023",
+      "domain": "benchmarks/33_SAILING/domain.pddl",
+      "instances_glob": "benchmarks/33_SAILING/instances/*.pddl",
+      "instance_count": 20,
+      "domain_sha256": "8b6179c824ccc91196dd6d1224b1bd9e8157be59d4b0f728b339096faf1204b6",
+      "instance_set_sha256": "3f5a65ee83e4f99a9a5170598333680383eb1ae4621234af1521c9f65c148113",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":fluents"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "34_SETTLERSNUMERIC",
+      "source": "IPC-2023",
+      "domain": "benchmarks/34_SETTLERSNUMERIC/domain.pddl",
+      "instances_glob": "benchmarks/34_SETTLERSNUMERIC/instances/*.pddl",
+      "instance_count": 20,
+      "domain_sha256": "1855223e8660cd0412191d1f2044c36e0f0e2ae7724e9638c3f7d87def4e71ef",
+      "instance_set_sha256": "545936e72c084828d49029fcc0e2c7f79d3bb96853de1a52dfbaed482fa76712",
+      "features": {
+        "requirements": [
+          ":fluents",
+          ":typing",
+          ":conditional-effects"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": true,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "35_SUGAR",
+      "source": "IPC-2023",
+      "domain": "benchmarks/35_SUGAR/domain.pddl",
+      "instances_glob": "benchmarks/35_SUGAR/instances/*.pddl",
+      "instance_count": 20,
+      "domain_sha256": "afe00f168e93dbd55c3d6926c76fe722a632cfb79ebf2c8d1aa0c3f32d5d44bb",
+      "instance_set_sha256": "7b2595c60713ada76351b151a1f7db0a6ac2bf726be8bdacc60ed9d1a3eff39e",
+      "features": {
+        "requirements": [
+          ":typing",
+          ":fluents",
+          ":equality"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "36_TPP",
+      "source": "IPC-2023",
+      "domain": "benchmarks/36_TPP/domain.pddl",
+      "instances_glob": "benchmarks/36_TPP/instances/*.pddl",
+      "instance_count": 20,
+      "domain_sha256": "c921412dced08f3f10ebc44920254ae44ad35e82e4434e027c709b808026bf5b",
+      "instance_set_sha256": "24609c0e3dc6fe002f08944a639b20a191de738efd42a4938b5fac5e571ff055",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":fluents",
+          ":action-costs"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": true
+      }
+    },
+    {
+      "id": "37_ZENOTRAVEL",
+      "source": "IPC-2023",
+      "domain": "benchmarks/37_ZENOTRAVEL/domain.pddl",
+      "instances_glob": "benchmarks/37_ZENOTRAVEL/instances/*.pddl",
+      "instance_count": 20,
+      "domain_sha256": "f9a5a55e081fe006df75b60a3d930d0417aefd5f62025f92ae5395d863cce752",
+      "instance_set_sha256": "01f38df59d3b1822950577e4fac3237a7521f77d4c7b4865320cd0893f173d30",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":fluents"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "38_SETTLERS_IPC04",
+      "source": "IPC-2004",
+      "domain": "benchmarks/38_SETTLERS_IPC04/domain.pddl",
+      "instances_glob": "benchmarks/38_SETTLERS_IPC04/instances/*.pddl",
+      "instance_count": 20,
+      "domain_sha256": "0ffd41de7a05be1b059d5788614e5307f92a5f87b5c75e0832b4afbefe081bf9",
+      "instance_set_sha256": "3fe996964963d1bc158e131a778cc8d6f7e6ffa68513bbe81216dc0795d3d0ff",
+      "features": {
+        "requirements": [
+          ":fluents",
+          ":typing",
+          ":conditional-effects"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": true,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "39_PSR_LARGE_IPC04",
+      "source": "IPC-2004",
+      "domain": "benchmarks/39_PSR_LARGE_IPC04/domain.pddl",
+      "instances_glob": "benchmarks/39_PSR_LARGE_IPC04/instances/*.pddl",
+      "instance_count": 50,
+      "domain_sha256": "9c82dc9e9a5cbd9cc1a2b24e3fcc2976b6373e955e6910a95a47e454aa842cec",
+      "instance_set_sha256": "3971d9a26fb66a6297980a92311e21c63cdc73bc440c26a84c2885ab38cb3af8",
+      "features": {
+        "requirements": [
+          ":adl",
+          ":derived-predicates"
+        ],
+        "numeric": false,
+        "temporal": false,
+        "derived_predicates": true,
+        "conditional_effects": true,
+        "quantified": true,
+        "disjunctive": true,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "changmin_01_blocksworld",
+      "source": "changmin-robot-benchmark",
+      "domain": "changmin_benchmark/01_blocksworld/domain.pddl",
+      "instances_glob": "changmin_benchmark/01_blocksworld/instances/*.pddl",
+      "instance_count": 5,
+      "domain_sha256": "fa70e379033a6429b68c61bb9ebe831fcf759c15d319ffaf33ce92430fb57ba6",
+      "instance_set_sha256": "d1ed362ef6aeb2a587bec39e3429e8713940b63acfbb7827852861acdd227c2c",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":action-costs"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": true
+      }
+    },
+    {
+      "id": "changmin_02_logistics",
+      "source": "changmin-robot-benchmark",
+      "domain": "changmin_benchmark/02_logistics/domain.pddl",
+      "instances_glob": "changmin_benchmark/02_logistics/instances/*.pddl",
+      "instance_count": 5,
+      "domain_sha256": "e156955a56320111f42b7d92cfd91df68480b4ca57572884fec7b3e1ca3aba90",
+      "instance_set_sha256": "dfb8ac10fa44935a5310bdc6640aec064196e73d3c2b7a7f060d52341d4e0658",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":fluents",
+          ":action-costs"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": true
+      }
+    },
+    {
+      "id": "changmin_03_books",
+      "source": "changmin-robot-benchmark",
+      "domain": "changmin_benchmark/03_books/domain.pddl",
+      "instances_glob": "changmin_benchmark/03_books/instances/*.pddl",
+      "instance_count": 5,
+      "domain_sha256": "b8873a11e1a73cded7322c859c3d6280ee5c6b116a1c2bb6a33cf35d7dc5814d",
+      "instance_set_sha256": "503fa591bdb095ed0ad9ea9e210cbaf451d818aba6d5d4bd78b66af3c4800bb0",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":fluents"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "changmin_04_watering",
+      "source": "changmin-robot-benchmark",
+      "domain": "changmin_benchmark/04_watering/domain.pddl",
+      "instances_glob": "changmin_benchmark/04_watering/instances/*.pddl",
+      "instance_count": 5,
+      "domain_sha256": "a79ea82b8b51749da998e01ae9503b40d7865cc0669373447edddb364b750215",
+      "instance_set_sha256": "835cd4ff453889b358143d7d3fa797a494013a4e0ab92073f483fb3818a5ed04",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":fluents"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "changmin_05_barman",
+      "source": "changmin-robot-benchmark",
+      "domain": "changmin_benchmark/05_barman/domain.pddl",
+      "instances_glob": "changmin_benchmark/05_barman/instances/*.pddl",
+      "instance_count": 5,
+      "domain_sha256": "ac2bebd3766b90aa1af230407f1e654ee2b1b1f1e0d9be874bb2f755e47a2608",
+      "instance_set_sha256": "ebf359c0c34840f8295987817b1d3292c9ccd6e6b24142507074aa63bf25ff1a",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":fluents"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    },
+    {
+      "id": "changmin_06_assembly",
+      "source": "changmin-robot-benchmark",
+      "domain": "changmin_benchmark/06_assembly/domain.pddl",
+      "instances_glob": "changmin_benchmark/06_assembly/instances/*.pddl",
+      "instance_count": 5,
+      "domain_sha256": "c911bfaa47b4ed7478a3d16a31d7c1be0b8bacac4cc2229705db23600ae5a049",
+      "instance_set_sha256": "2b4ba4c34128f3e13c7dfe82b804d8d0d190d93276fa6400db2bff6657213ed5",
+      "features": {
+        "requirements": [
+          ":strips",
+          ":typing",
+          ":fluents"
+        ],
+        "numeric": true,
+        "temporal": false,
+        "derived_predicates": false,
+        "conditional_effects": false,
+        "quantified": false,
+        "disjunctive": false,
+        "action_costs": false
+      }
+    }
+  ]
+}

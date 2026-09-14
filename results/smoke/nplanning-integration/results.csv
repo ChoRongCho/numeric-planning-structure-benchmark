@@ -1,0 +1,5 @@
+planner,benchmark,instance,status,compatible,return_code,wall_seconds,max_rss_kb,plan_length,metric_value,validation,case_directory
+nplanning-lnp-agile-1,19_COUNTERS,p001.pddl,solved,true,0,0.19,59796,12,,valid,results/smoke/nplanning-integration/cases/nplanning-lnp-agile-1/19_COUNTERS/p001
+nplanning-lnp-agile-2,19_COUNTERS,p001.pddl,solved,true,0,0.19,60112,12,,valid,results/smoke/nplanning-integration/cases/nplanning-lnp-agile-2/19_COUNTERS/p001
+nplanning-lnp-sat-1,19_COUNTERS,p001.pddl,solved,true,0,0.19,60344,12,,valid,results/smoke/nplanning-integration/cases/nplanning-lnp-sat-1/19_COUNTERS/p001
+nplanning-lnp-sat-2,19_COUNTERS,p001.pddl,solved,true,0,0.20,59888,12,,valid,results/smoke/nplanning-integration/cases/nplanning-lnp-sat-2/19_COUNTERS/p001

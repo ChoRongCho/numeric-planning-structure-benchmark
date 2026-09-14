@@ -1,0 +1,2 @@
+planner,benchmark,instance,status,compatible,return_code,wall_seconds,max_rss_kb,plan_length,metric_value,validation,case_directory
+tamerlite-ipc2026-sat-2,19_COUNTERS,p001.pddl,solved,true,0,2.78,145424,12,,valid,results/smoke/tamerlite-ipc2026-sat-2-integration/cases/tamerlite-ipc2026-sat-2/19_COUNTERS/p001

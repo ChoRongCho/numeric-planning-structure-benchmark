@@ -1,0 +1,87 @@
+(define (problem library-rearrangement-p001) (:domain library-books)
+  (:objects
+    robot1 - robot
+    book001 book002 book003 book004 book005 - book
+    cart1 - cart
+    return-room aisle1 aisle2 - room
+    shelf1 shelf2 - shelf
+    step1 - step
+    s1-slot1 s1-slot2 s1-slot3 s2-slot1 s2-slot2 - slot
+    s1-end s2-end - end-marker
+  )
+
+  (:init
+    (at-robot robot1 return-room)
+    (hand-free robot1)
+    (without-cart robot1)
+    (grounded robot1)
+    (cart-at cart1 return-room)
+    (staging-area return-room)
+    (staging-area aisle1)
+    (staging-area aisle2)
+    (connected aisle1 return-room) (connected return-room aisle1)
+    (connected aisle2 return-room) (connected return-room aisle2)
+    (shelf-at shelf1 aisle1)
+    (shelf-at shelf2 aisle2)
+    (step-at step1 aisle2)
+    (step-ready step1)
+
+    (on-shelf book001 shelf1 s1-slot1)
+    (on-shelf book003 shelf1 s1-slot2)
+    (next-to-fill shelf1 s1-slot3)
+    (successor s1-slot1 s1-slot2 shelf1)
+    (successor s1-slot2 s1-slot3 shelf1)
+    (successor s1-slot3 s1-end shelf1)
+    (on-shelf book004 shelf2 s2-slot1)
+    (next-to-fill shelf2 s2-slot2)
+    (successor s2-slot1 s2-slot2 shelf2)
+    (successor s2-slot2 s2-end shelf2)
+    (assigned book001 shelf1 s1-slot1)
+    (book-at book002 return-room)
+    (assigned book002 shelf1 s1-slot2)
+    (assigned book003 shelf1 s1-slot3)
+    (assigned book004 shelf2 s2-slot1)
+    (book-at book005 return-room)
+    (assigned book005 shelf2 s2-slot2)
+
+    (= (book-weight book001) 2)
+    (= (book-thickness book001) 3)
+    (= (book-weight book002) 4)
+    (= (book-thickness book002) 2)
+    (= (book-weight book003) 4)
+    (= (book-thickness book003) 3)
+    (= (book-weight book004) 5)
+    (= (book-thickness book004) 2)
+    (= (book-weight book005) 5)
+    (= (book-thickness book005) 2)
+    (= (cart-capacity cart1) 5)
+    (= (cart-load cart1) 0)
+    (= (shelf-capacity shelf1) 8)
+    (= (shelf-used-space shelf1) 6)
+    (= (shelf-height shelf1) 174)
+    (= (shelf-capacity shelf2) 4)
+    (= (shelf-used-space shelf2) 2)
+    (= (shelf-height shelf2) 234)
+    (= (current-reach robot1) 180)
+    (= (step-boost step1) 60)
+    (= (move-alone-time) 8)
+    (= (move-cart-time) 10)
+    (= (cart-handling-time) 2)
+    (= (book-handling-time) 1)
+    (= (shelf-handling-time) 2)
+    (= (step-handling-time) 5)
+    (= (total-library-time) 0)
+  )
+
+  (:goal (and
+    (on-shelf book001 shelf1 s1-slot1)
+    (on-shelf book002 shelf1 s1-slot2)
+    (on-shelf book003 shelf1 s1-slot3)
+    (on-shelf book004 shelf2 s2-slot1)
+    (on-shelf book005 shelf2 s2-slot2)
+    (next-to-fill shelf1 s1-end)
+    (next-to-fill shelf2 s2-end)
+  ))
+
+  (:metric minimize (total-library-time))
+)

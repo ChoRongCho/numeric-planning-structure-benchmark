@@ -1,0 +1,6 @@
+id	revision	purpose
+CoinUtils	4054af6f350ed5b432018e283ce6b0dbbb1ca13e	COIN-OR utility layer for POPF/OPTIC
+Osi	b0480262c88459e661e6167fc038a8ba4dd6d807	COIN-OR solver interface for POPF/OPTIC
+Cgl	c40870f57925887be75881a6528886a720f69984	COIN-OR cut generation for CBC
+gsl	cf180cd7fbd06039a577f9c9ff0b428784765ac1	GNU Scientific Library for OPTIC
+rust	1.98.1	isolated Rust toolchain under planners/toolchains

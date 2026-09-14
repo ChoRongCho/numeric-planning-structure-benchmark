@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-12T04:59:48.689699+00:00",
+  "experiment_name": "selected-13-changmin-benchmark-p001-smoke",
+  "experiment_config": "scripts/run/experiments/changmin-13-p001-smoke.yaml",
+  "experiment_config_sha256": "87e8e13cf0ea081affd4ee4ceb7f94545ee04290cc291f312668c3d38392a695",
+  "timeout_seconds": 120.0,
+  "jobs": 1,
+  "max_cpu_cores": 2,
+  "cpu_affinity": [
+    0,
+    1
+  ],
+  "nice_level": 10,
+  "memory_limit_mb": 8192,
+  "max_processes_per_case": 256,
+  "max_log_size_mb": 64,
+  "monitor_interval_seconds": 0.2,
+  "minimum_available_memory_mb": 4096,
+  "available_memory_mb_at_start": 20507,
+  "planners": [
+    "enhsp",
+    "metric-ff-cross-v1",
+    "count-downward-agile",
+    "planforge-ipc2026",
+    "patty-ipc2026-agile-1",
+    "panino-lnp-agile",
+    "tamerlite-ipc2026-agile-1",
+    "pattint-bitwuzla",
+    "tempest-numeric-ipc2026",
+    "optic",
+    "optic-cplex",
+    "popf-static-v2",
+    "numeric-fast-downward-local"
+  ],
+  "benchmarks": [
+    "changmin_01_blocksworld",
+    "changmin_02_logistics",
+    "changmin_03_books",
+    "changmin_04_watering",
+    "changmin_05_barman",
+    "changmin_06_assembly"
+  ],
+  "runtime_status": {
+    "enhsp": "verified-plan",
+    "metric-ff-cross-v1": "verified-plan",
+    "count-downward-agile": "verified-plan",
+    "planforge-ipc2026": "verified-plan",
+    "patty-ipc2026-agile-1": "verified-plan",
+    "panino-lnp-agile": "verified-plan",
+    "tamerlite-ipc2026-agile-1": "verified-plan",
+    "pattint-bitwuzla": "verified-plan",
+    "tempest-numeric-ipc2026": "verified-plan",
+    "optic": "verified-plan",
+    "optic-cplex": "verified-plan",
+    "popf-static-v2": "verified-plan",
+    "numeric-fast-downward-local": "verified-plan"
+  },
+  "force_unsupported": false,
+  "dry_run": false,
+  "benchmark_manifest_sha256": "3caf7c92c2d0ad7dc3d89aab489b98623c779303980368a98947efb3657972fe",
+  "runner_wall_seconds": 1643.760536,
+  "status_counts": {
+    "solved": 59,
+    "timeout": 11,
+    "unknown": 4,
+    "unsolved": 2,
+    "memory-limit": 2
+  },
+  "completed_at": "2026-09-12T05:27:12.451066+00:00"
+}

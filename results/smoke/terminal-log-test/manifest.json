@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-07T08:29:32.369924+00:00",
+  "experiment_name": "terminal-log-smoke-test",
+  "experiment_config": "scripts/run/experiment.terminal-log-test.yaml",
+  "experiment_config_sha256": "e8129b1089de6f3ab94e996d95055b1dafadd029578771b0f1105988bb3188c8",
+  "timeout_seconds": 30.0,
+  "jobs": 1,
+  "planners": [
+    "enhsp"
+  ],
+  "benchmarks": [
+    "19_COUNTERS"
+  ],
+  "runtime_status": {
+    "enhsp": "verified-plan"
+  },
+  "force_unsupported": false,
+  "dry_run": false,
+  "benchmark_manifest_sha256": "13203143a526e67d35c05c07b8c7feef1007887d91b58abb5f77842f2907874d",
+  "runner_wall_seconds": 0.21897,
+  "status_counts": {
+    "solved": 1
+  },
+  "completed_at": "2026-09-07T08:29:32.589151+00:00"
+}

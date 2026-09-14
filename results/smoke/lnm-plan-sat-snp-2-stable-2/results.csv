@@ -1,0 +1,2 @@
+planner,benchmark,instance,status,compatible,return_code,wall_seconds,max_rss_kb,plan_length,metric_value,validation,case_directory
+lnm-plan-sat-snp-2,19_COUNTERS,p001.pddl,solved,true,0,0.06,14332,,0,not-extracted,results/smoke/lnm-plan-sat-snp-2-stable-2/cases/lnm-plan-sat-snp-2/19_COUNTERS/p001

@@ -1,0 +1,2 @@
+planner,benchmark,instance,status,compatible,return_code,wall_seconds,max_rss_kb,peak_group_rss_kb,limit_reason,plan_length,metric_value,validation,case_directory
+optic-cplex,changmin_02_logistics,p000.pddl,solved,true,timeout,120.185676,3611672,3611672,timeout,3,,valid,results/raw/optic-cplex-logistics-p000-incumbent-smoke-20260912-134049-659151/cases/optic-cplex/changmin_02_logistics/p000

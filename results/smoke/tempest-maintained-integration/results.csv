@@ -1,0 +1,3 @@
+planner,benchmark,instance,status,compatible,return_code,wall_seconds,max_rss_kb,plan_length,metric_value,validation,case_directory
+tempest,19_COUNTERS,p001.pddl,solved,true,0,1.70,153248,12,,valid,results/smoke/tempest-maintained-integration/cases/tempest/19_COUNTERS/p001
+tempest-opt,19_COUNTERS,p001.pddl,solved,true,0,1.98,159788,12,,valid,results/smoke/tempest-maintained-integration/cases/tempest-opt/19_COUNTERS/p001

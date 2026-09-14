@@ -1,0 +1,4 @@
+planner,benchmark,instance,status,compatible,return_code,wall_seconds,max_rss_kb,plan_length,metric_value,validation,case_directory
+count-downward-agile,19_COUNTERS,p001.pddl,solved,true,0,0.07,14208,12,12,valid,results/smoke/count-downward-integration/cases/count-downward-agile/19_COUNTERS/p001
+count-downward-opt-pdbs,19_COUNTERS,p001.pddl,solved,true,0,0.22,19620,12,12,valid,results/smoke/count-downward-integration/cases/count-downward-opt-pdbs/19_COUNTERS/p001
+count-downward-sat,19_COUNTERS,p001.pddl,solved,true,0,0.20,14336,,12,not-extracted,results/smoke/count-downward-integration/cases/count-downward-sat/19_COUNTERS/p001

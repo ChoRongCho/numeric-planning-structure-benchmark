@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-12T04:40:49.664413+00:00",
+  "experiment_name": "optic-cplex-logistics-p000-incumbent-smoke",
+  "experiment_config": "scripts/run/experiments/changmin-optic-cplex-logistics-p000-smoke.yaml",
+  "experiment_config_sha256": "71dc882b092411542dd4530f88f498ef5f1e17fa153abca993ed2a2fadb76e60",
+  "timeout_seconds": 120.0,
+  "jobs": 1,
+  "max_cpu_cores": 2,
+  "cpu_affinity": [
+    0,
+    1
+  ],
+  "nice_level": 10,
+  "memory_limit_mb": 8192,
+  "max_processes_per_case": 256,
+  "max_log_size_mb": 64,
+  "monitor_interval_seconds": 0.2,
+  "minimum_available_memory_mb": 4096,
+  "available_memory_mb_at_start": 22004,
+  "planners": [
+    "optic-cplex"
+  ],
+  "benchmarks": [
+    "changmin_02_logistics"
+  ],
+  "runtime_status": {
+    "optic-cplex": "verified-plan"
+  },
+  "force_unsupported": false,
+  "dry_run": false,
+  "benchmark_manifest_sha256": "3caf7c92c2d0ad7dc3d89aab489b98623c779303980368a98947efb3657972fe",
+  "runner_wall_seconds": 120.191927,
+  "status_counts": {
+    "solved": 1
+  },
+  "completed_at": "2026-09-12T04:42:49.856589+00:00"
+}

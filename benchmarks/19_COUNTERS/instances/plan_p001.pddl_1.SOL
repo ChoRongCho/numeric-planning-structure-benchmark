@@ -1,0 +1,36 @@
+
+; Version LPG-td-1.4
+; Seed 50961026
+; Command line: planners/external/up-lpg/up_lpg/lpg -o benchmarks/19_COUNTERS/domain.pddl -f benchmarks/19_COUNTERS/instances/p001.pddl -n 1 
+; Problem benchmarks/19_COUNTERS/instances
+; Actions having STRIPS duration
+; Time 0.01
+; Search time 0.01
+; Parsing time 0.00
+; Mutex time 0.00
+; MetricValue 24.00
+
+0:   (DECREMENT C1) [1]
+0:   (INCREMENT C3) [1]
+0:   (INCREMENT C2) [1]
+0:   (DECREMENT C0) [1]
+1:   (INCREMENT C3) [1]
+1:   (DECREMENT C1) [1]
+1:   (INCREMENT C2) [1]
+1:   (DECREMENT C0) [1]
+2:   (INCREMENT C3) [1]
+2:   (INCREMENT C1) [1]
+2:   (DECREMENT C2) [1]
+2:   (DECREMENT C0) [1]
+3:   (INCREMENT C3) [1]
+3:   (DECREMENT C1) [1]
+3:   (DECREMENT C0) [1]
+3:   (INCREMENT C2) [1]
+4:   (INCREMENT C1) [1]
+4:   (INCREMENT C3) [1]
+5:   (DECREMENT C1) [1]
+6:   (INCREMENT C1) [1]
+7:   (DECREMENT C1) [1]
+8:   (INCREMENT C1) [1]
+9:   (DECREMENT C1) [1]
+10:   (INCREMENT C1) [1]

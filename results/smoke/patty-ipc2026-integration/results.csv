@@ -1,0 +1,5 @@
+planner,benchmark,instance,status,compatible,return_code,wall_seconds,max_rss_kb,plan_length,metric_value,validation,case_directory
+patty-ipc2026-agile-1,19_COUNTERS,p001.pddl,solved,true,0,1.29,184804,22,,valid,results/smoke/patty-ipc2026-integration/cases/patty-ipc2026-agile-1/19_COUNTERS/p001
+patty-ipc2026-agile-2,19_COUNTERS,p001.pddl,solved,true,0,1.28,186452,16,,valid,results/smoke/patty-ipc2026-integration/cases/patty-ipc2026-agile-2/19_COUNTERS/p001
+patty-ipc2026-sat-1,19_COUNTERS,p001.pddl,solved,true,0,1.24,185168,16,,invalid,results/smoke/patty-ipc2026-integration/cases/patty-ipc2026-sat-1/19_COUNTERS/p001
+patty-ipc2026-sat-2,19_COUNTERS,p001.pddl,solved,true,0,1.26,186240,20,,invalid,results/smoke/patty-ipc2026-integration/cases/patty-ipc2026-sat-2/19_COUNTERS/p001

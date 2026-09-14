@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+"""Advanced command-line interface for the benchmark engine."""
+
+from benchmark_core import main
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

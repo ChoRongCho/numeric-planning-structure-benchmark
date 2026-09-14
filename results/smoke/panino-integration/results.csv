@@ -1,0 +1,3 @@
+planner,benchmark,instance,status,compatible,return_code,wall_seconds,max_rss_kb,plan_length,metric_value,validation,case_directory
+panino-lnp-agile,19_COUNTERS,p001.pddl,solved,true,0,0.21,73092,12,12.0,valid,results/smoke/panino-integration/cases/panino-lnp-agile/19_COUNTERS/p001
+panino-lnp-sat,19_COUNTERS,p001.pddl,solved,true,0,0.28,99640,12,12.0,valid,results/smoke/panino-integration/cases/panino-lnp-sat/19_COUNTERS/p001

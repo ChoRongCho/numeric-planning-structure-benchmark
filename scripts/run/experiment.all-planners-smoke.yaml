@@ -1,0 +1,35 @@
+schema_version: 1
+
+experiment:
+  name: "all-planners-all-domains-p001"
+
+# 현재 verified-plan + batch=true인 planner 구성을 모두 선택합니다.
+planners: ["*"]
+
+# 모든 benchmark domain의 p001만 선택합니다.
+tasks:
+  - domain: "**"
+    problems: "p001"
+
+planner_arguments: {}
+
+execution:
+  timeout_seconds: 300
+  parallel_jobs: 4
+  # 모든 planner × 모든 domain 조합을 빠짐없이 실행합니다.
+  force_unsupported: true
+  dry_run: false
+  # 일부 조합이 실패해도 전체 실험은 계속하고 결과 CSV에 기록합니다.
+  fail_on_case_error: false
+
+output:
+  root: "results/raw"
+  run_id: "auto"
+  keep_work_directories: true
+
+validation:
+  plans: true
+
+preflight:
+  regenerate_manifest: false
+  validate_pddl: true

@@ -1,0 +1,6 @@
+(define (problem temporal-smoke-p1)
+  (:domain temporal-smoke)
+  (:init (ready))
+  (:goal (done))
+  (:metric minimize (total-time))
+)

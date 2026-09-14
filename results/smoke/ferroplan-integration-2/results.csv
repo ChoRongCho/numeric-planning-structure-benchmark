@@ -1,0 +1,2 @@
+planner,benchmark,instance,status,compatible,return_code,wall_seconds,max_rss_kb,plan_length,metric_value,validation,case_directory
+ferroplan,19_COUNTERS,p001.pddl,solved,true,0,0.01,5232,12,,valid,results/smoke/ferroplan-integration-2/cases/ferroplan/19_COUNTERS/p001

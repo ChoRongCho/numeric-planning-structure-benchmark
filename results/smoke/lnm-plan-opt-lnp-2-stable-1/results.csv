@@ -1,0 +1,2 @@
+planner,benchmark,instance,status,compatible,return_code,wall_seconds,max_rss_kb,plan_length,metric_value,validation,case_directory
+lnm-plan-opt-lnp-2,19_COUNTERS,p001.pddl,solved,true,1,0.10,14208,,,not-extracted,results/smoke/lnm-plan-opt-lnp-2-stable-1/cases/lnm-plan-opt-lnp-2/19_COUNTERS/p001

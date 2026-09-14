@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-07T07:35:02.263745+00:00",
+  "timeout_seconds": 5.0,
+  "jobs": 2,
+  "planners": [
+    "panino-lnp-agile",
+    "panino-lnp-sat"
+  ],
+  "benchmarks": [
+    "19_COUNTERS"
+  ],
+  "runtime_status": {
+    "panino-lnp-agile": "verified-plan",
+    "panino-lnp-sat": "verified-plan"
+  },
+  "force_unsupported": false,
+  "dry_run": false,
+  "benchmark_manifest_sha256": "13203143a526e67d35c05c07b8c7feef1007887d91b58abb5f77842f2907874d",
+  "status_counts": {
+    "solved": 2
+  },
+  "completed_at": "2026-09-07T07:35:02.582873+00:00"
+}

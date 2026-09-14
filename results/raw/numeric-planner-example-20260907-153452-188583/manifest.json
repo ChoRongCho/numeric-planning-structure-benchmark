@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-07T06:34:52.194011+00:00",
+  "experiment_name": "numeric-planner-example",
+  "experiment_config": "scripts/run/experiment.yaml",
+  "experiment_config_sha256": "d11e4a12005216ec1e02ef1ca273cc30e538729c7706863a9845111980beef6f",
+  "timeout_seconds": 300.0,
+  "jobs": 1,
+  "planners": [
+    "enhsp"
+  ],
+  "benchmarks": [
+    "19_COUNTERS"
+  ],
+  "runtime_status": {
+    "enhsp": "verified-plan"
+  },
+  "force_unsupported": false,
+  "dry_run": false,
+  "benchmark_manifest_sha256": "13203143a526e67d35c05c07b8c7feef1007887d91b58abb5f77842f2907874d",
+  "status_counts": {
+    "solved": 1
+  },
+  "completed_at": "2026-09-07T06:34:52.412818+00:00"
+}

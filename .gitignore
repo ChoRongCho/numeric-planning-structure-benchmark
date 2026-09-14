@@ -1,0 +1,111 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.venv/
+venv/
+env/
+
+# Packaging and native build products
+build/
+dist/
+*.egg-info/
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.class
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+cmake-build-*/
+
+# Editors, OS, and temporary files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.local.yaml
+*.local.yml
+
+# Logs and crash dumps
+*.log
+*.out
+*.err
+core
+core.*
+hs_err_pid*
+
+# Root-level planner scratch files
+/sas_plan
+/sas_plan.*
+/output.sas
+/plan.soln
+
+# Generated benchmark archive; source benchmark files remain tracked
+/changmin_benchmark.zip
+/changmin_benchmark_portable_*.tar.gz
+
+# Third-party planner sources, binaries, solvers, toolchains, and downloads.
+# Keep planners/README.md, capabilities.json, plannerctl, and locks/ tracked.
+/planners/external/
+/planners/runtime/
+/planners/archives/
+/planners/local/
+/planners/deps/
+/planners/toolchains/
+/planners/download-logs/
+
+# Raw experiment payloads are large. Keep only one-run metadata and summary CSVs.
+/results/raw/**
+!/results/raw/.gitkeep
+!/results/raw/*/
+!/results/raw/*/results.csv
+!/results/raw/*/manifest.json
+!/results/raw/*/experiment.yaml
+
+# Smoke-test case directories are also generated; retain only summaries.
+/results/smoke/**
+!/results/smoke/*/
+!/results/smoke/*/results.csv
+!/results/smoke/*/manifest.json
+!/results/smoke/*/experiment.yaml
+
+# GUI runs are disposable copies of inputs, logs, and plans.
+/results/gui/
+
+# processed/, tables/, and figures/ are intentionally trackable publication outputs.
+
+# Downloaded language models and training checkpoints
+/models/checkpoints/
+/models/cache/
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+*.onnx
+
+# Internal documents and presentation assets are not repository material.
+# Keep the asset overview and Markdown research notes only.
+/asset/**
+!/asset/README.md
+!/asset/03_Paper/
+!/asset/03_Paper/*.md

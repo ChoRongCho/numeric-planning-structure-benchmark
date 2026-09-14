@@ -1,0 +1,132 @@
+# 이 파일만 수정한 뒤 ./run 을 실행하세요.
+schema_version: 1
+
+experiment:
+  # 결과 metadata에 기록되는 실험 이름입니다.
+  name: "selected-13-changmin-benchmark-p000-smoke"
+
+# 실행할 planner ID입니다.
+# YAML batch 실행 가능 ID (43개; `popf-static-v2`는 사용자 host 확인):
+#   metric-ff, metric-ff-2.0, metric-ff-cross-v1, metric-ff-cross-v2,
+#   enhsp, tamerlite, nextflap, omtplan, patty, springroll, popf, popf-static-v2, optic, optic-cplex,
+#   ferroplan, planforge, planforge-ipc2026, tempest-numeric-ipc2026,
+#   numeric-fast-downward-local,
+#   nplanning-lnp-sat-1, nplanning-lnp-sat-2,
+#   nplanning-lnp-agile-1, nplanning-lnp-agile-2, count-downward-sat,
+#   count-downward-agile, count-downward-opt-pdbs,
+#   count-downward-together-opt-1, tempest, tempest-opt,
+#   patty-ipc2026-sat-1, patty-ipc2026-sat-2,
+#   patty-ipc2026-agile-1, patty-ipc2026-agile-2, lpg-td,
+#   up-lpg-native, panino-lnp-agile, panino-lnp-sat, pattint-bitwuzla,
+#   tamerlite-ipc2026-agile-1, tamerlite-ipc2026-agile-2,
+#   tamerlite-ipc2026-sat-1, tamerlite-ipc2026-sat-2, crikey2
+# planners: ["*"] 또는 planners: "*"는 위 batch-ready 43개만 선택합니다.
+# 다운로드된 항목 전체를 뜻하지 않으며, 실패가 확정된 runtime을 실험에 섞지 않습니다.
+#
+# 등록됐지만 batch 대상이 아닌 runtime/config:
+#   bitblast (compiler), aries, fape, fape-1.0, sapa (CLI만 검증),
+#   numeric-fast-downward와 lnm-plan-* (build 성공, 반복 검증 비결정적),
+#   count-downward-opt-domain-abstractions, count-downward-together-opt-2
+#   (tiny smoke에서도 120초 내 plan 없음)
+# 현재 환경에서 차단된 등록 runtime (11개):
+#   cpt, crikey, tsgp (host-blocked)
+#   mips-xxl-seq, mips-xxl-netben, gamer-netben, hspsp-netben,
+#   sgplan6-seq, sgplan6-seq-fixed, sgplan6-temporal-fixed (build-blocked)
+#   tfd-ipc2008 (runtime-blocked)
+#
+# POPF/OPTIC maintained 소스는 각각 popf, optic ID로 build·검증 완료했습니다.
+# 별도로 제공된 static CPLEX binary는 optic-cplex ID입니다.
+# optic-alt-fork 및 POPF/OPTIC 과거 archive는 별도 보존·검증 단위입니다.
+# 그 밖의 확보 소스에는 numeric-fast-downward, LNM-Plan, RantanPlan,
+# PlanForge, FerroPlan, TFD, Tempest, DiNo, SMTPlan+ 및 IPC 2023/2026
+# planner들이 있습니다.
+#
+# 전체 등록 runtime/config 상태: ./benchmarkctl planners
+# 전체 Git 소스 57개:     ./benchmarkctl sources
+planners:
+  - "enhsp"
+  - "metric-ff-cross-v1"
+  - "count-downward-agile"
+  - "planforge-ipc2026"
+  - "patty-ipc2026-agile-1"
+  - "panino-lnp-agile"
+  - "tamerlite-ipc2026-agile-1"
+  - "pattint-bitwuzla"
+  - "tempest-numeric-ipc2026"
+  - "optic"
+  - "optic-cplex"
+  - "popf-static-v2"
+  - "numeric-fast-downward-local"
+
+# domain별 problem 선택입니다.
+# domain은 benchmark ID 또는 benchmarks/.../domain.pddl 경로를 사용할 수 있습니다.
+# domain: "*" 또는 domain: "**"를 쓰면 모든 domain을 선택합니다.
+# domain: "*_SAILING" 같은 glob 패턴도 사용할 수 있습니다.
+# problems는 "p001"처럼 문자열 하나 또는 ["p001", "p002"] 목록을 허용합니다.
+# problems: "*" 또는 problems: ["*"]는 해당 domain의 모든 problem을 선택합니다.
+tasks:
+  - domain: "changmin_01_blocksworld"
+    problems: "p000"
+  - domain: "changmin_02_logistics"
+    problems: "p000"
+  - domain: "changmin_03_books"
+    problems: "p000"
+  - domain: "changmin_04_watering"
+    problems: "p000"
+  - domain: "changmin_05_barman"
+    problems: "p000"
+  - domain: "changmin_06_assembly"
+    problems: "p000"
+
+# planner 기본 명령 뒤에 추가할 인자입니다. 기본값은 빈 목록입니다.
+planner_arguments:
+  # p000은 최적화 성능이 아니라 첫 valid plan을 찾는 호환성 검사다.
+  optic: ["-N"]
+  optic-cplex: ["-N"]
+
+execution:
+  # case 하나당 제한시간의 기본값입니다.
+  timeout_seconds: 120
+  # 동시에 실행할 case 수의 기본값입니다.
+  # 한 번에 하나만 실행하여 여러 planner가 CPU를 동시에 점유하지 않게 합니다.
+  parallel_jobs: 1
+  # 멀티스레드 planner도 이 개수보다 많은 논리 CPU를 사용하지 못합니다.
+  max_cpu_cores: 2
+  # planner를 낮은 CPU 스케줄링 우선순위로 실행해 시스템 응답성을 보존합니다.
+  nice_level: 10
+  # planner와 그 자식 프로세스의 합산 RSS가 8 GiB를 넘으면 case를 종료합니다.
+  memory_limit_mb: 8192
+  # 비정상적인 process fork 폭증을 막습니다.
+  max_processes_per_case: 256
+  # planner 출력 폭증으로 디스크와 메모리를 소모하지 않게 합니다.
+  max_log_size_mb: 64
+  # 자원 제한 감시 주기입니다.
+  monitor_interval_seconds: 0.2
+  # 실험 시작 시 이만큼의 가용 RAM이 없으면 실행 자체를 중단합니다.
+  minimum_available_memory_mb: 4096
+  # capability상 미지원인 조합도 강제 실행할지 여부입니다.
+  # 미지원 조합은 실행하지 않아 불필요한 CPU 사용과 오해하기 쉬운 crash를 피합니다.
+  force_unsupported: false
+  # true이면 실제 planner를 실행하지 않고 선택 결과만 생성합니다.
+  dry_run: false
+  # crash, parse-error, invalid plan이 있으면 ./run을 실패 코드로 종료합니다.
+  # 한 case가 실패해도 나머지 조합을 모두 끝까지 실행합니다.
+  fail_on_case_error: false
+
+output:
+  # 프로젝트 루트 기준 기본 저장 위치입니다.
+  root: "results/raw"
+  # "auto"이면 <experiment.name>-<실행시각>을 사용합니다.
+  run_id: "auto"
+  # false이면 실행 후 각 case의 복사된 domain/problem 작업 폴더를 삭제합니다.
+  keep_work_directories: true
+
+validation:
+  # 추출 가능한 plan을 VAL로 검증합니다.
+  plans: true
+
+preflight:
+  # true이면 실행 전에 benchmark manifest를 다시 생성합니다.
+  regenerate_manifest: false
+  # true이면 실행 전에 전체 526개 PDDL 조합을 VAL parser로 검사합니다.
+  validate_pddl: true

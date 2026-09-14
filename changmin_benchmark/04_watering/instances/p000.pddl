@@ -1,0 +1,40 @@
+(define (problem robotic-watering-p000)
+  (:domain robotic-watering)
+  (:objects
+    robot1 - robot
+    watering-can1 - container
+    plant1 - plant
+    base - location
+  )
+  (:init
+    (at-robot robot1 base)
+    (container-at watering-can1 base)
+    (hand-free robot1)
+    (home base)
+    (tap base)
+    (charging-station base)
+    (plant-at plant1 base)
+    (= (battery-capacity robot1) 10)
+    (= (battery-level robot1) 10)
+    (= (container-capacity watering-can1) 2)
+    (= (water-level watering-can1) 1)
+    (= (plant-demand plant1) 1)
+    (= (watered-amount plant1) 0)
+    (= (pick-time) 1)
+    (= (drop-time) 1)
+    (= (fill-time) 1)
+    (= (watering-unit-time) 1)
+    (= (charge-time) 1)
+    (= (pick-energy) 1)
+    (= (drop-energy) 1)
+    (= (fill-energy) 1)
+    (= (watering-unit-energy) 1)
+    (= (total-watering-time) 0)
+  )
+  (:goal (and
+    (>= (watered-amount plant1) (plant-demand plant1))
+    (container-at watering-can1 base)
+    (hand-free robot1)
+  ))
+  (:metric minimize (total-watering-time))
+)

@@ -1,0 +1,321 @@
+#!/usr/bin/env python3
+"""Run a planner experiment described entirely by YAML."""
+
+from __future__ import annotations
+
+import fnmatch
+import hashlib
+import json
+import os
+import re
+import shutil
+import subprocess
+import sys
+import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+
+sys.dont_write_bytecode = True
+
+try:
+    import yaml
+except ImportError as error:
+    raise SystemExit("PyYAML is required. Install it with: python3 -m pip install PyYAML") from error
+
+import benchmark_core as core
+
+
+DEFAULT_CONFIG = Path(__file__).with_name("experiment.yaml")
+
+
+def required(mapping: dict[str, Any], key: str, section: str) -> Any:
+    if key not in mapping:
+        raise SystemExit(f"Missing YAML setting: {section}.{key}")
+    return mapping[key]
+
+
+def load_config(path: Path) -> dict[str, Any]:
+    if not path.is_file():
+        raise SystemExit(f"Experiment YAML not found: {path}")
+    payload = yaml.safe_load(path.read_text())
+    if not isinstance(payload, dict):
+        raise SystemExit("Experiment YAML must contain a mapping at the top level")
+    if payload.get("schema_version") != 1:
+        raise SystemExit("Unsupported or missing schema_version; expected 1")
+    return payload
+
+
+def select_entries(value: str, benchmarks: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
+    if value in {"*", "**"}:
+        return list(benchmarks.values())
+    if value in benchmarks:
+        return [benchmarks[value]]
+    normalized = str(Path(value))
+    matches = [entry for entry in benchmarks.values() if entry["domain"] == normalized]
+    if not matches:
+        matches = [
+            entry for entry in benchmarks.values()
+            if fnmatch.fnmatch(entry["id"], value) or fnmatch.fnmatch(entry["domain"], normalized)
+        ]
+    if matches:
+        return matches
+    raise SystemExit(f"Unknown domain/benchmark in YAML: {value}")
+
+
+def select_problems(entry: dict[str, Any], patterns: Any) -> list[Path]:
+    available = sorted(core.ROOT.glob(entry["instances_glob"]))
+    if patterns in {"*", "**"} if isinstance(patterns, str) else patterns in (["*"], ["**"]):
+        return available
+    if isinstance(patterns, str):
+        patterns = [patterns]
+    if not isinstance(patterns, list) or not patterns or not all(isinstance(item, str) for item in patterns):
+        raise SystemExit(f"{entry['id']}.problems must be a non-empty list or '*' ")
+    selected = []
+    for problem in available:
+        relative = str(problem.relative_to(core.ROOT))
+        if any(fnmatch.fnmatch(problem.name, pattern) or fnmatch.fnmatch(problem.stem, pattern) or fnmatch.fnmatch(relative, pattern) for pattern in patterns):
+            selected.append(problem)
+    if not selected:
+        raise SystemExit(f"No problems matched for {entry['id']}: {patterns}")
+    return selected
+
+
+def automatic_run_id(name: str) -> str:
+    safe = re.sub(r"[^A-Za-z0-9._-]+", "-", name).strip("-.") or "experiment"
+    return f"{safe}-{datetime.now().strftime('%Y%m%d-%H%M%S-%f')}"
+
+
+def available_memory_mb() -> int:
+    for line in Path("/proc/meminfo").read_text().splitlines():
+        if line.startswith("MemAvailable:"):
+            return int(line.split()[1]) // 1024
+    raise SystemExit("Could not read MemAvailable from /proc/meminfo")
+
+
+def main() -> int:
+    if len(sys.argv) > 2:
+        raise SystemExit("Usage: ./run [experiment.yaml]")
+    if len(sys.argv) == 2 and sys.argv[1] in {"-h", "--help"}:
+        print("Usage: ./run [experiment.yaml]")
+        print(f"Default YAML: {DEFAULT_CONFIG.name}")
+        print("Edit the YAML, then run this command without other options.")
+        return 0
+    config_path = Path(sys.argv[1]).resolve() if len(sys.argv) == 2 else DEFAULT_CONFIG.resolve()
+    config = load_config(config_path)
+
+    experiment = required(config, "experiment", "root")
+    execution = required(config, "execution", "root")
+    output = required(config, "output", "root")
+    validation = required(config, "validation", "root")
+    preflight = required(config, "preflight", "root")
+    if not all(isinstance(section, dict) for section in (experiment, execution, output, validation, preflight)):
+        raise SystemExit("experiment, execution, output, validation, and preflight must be mappings")
+
+    name = str(required(experiment, "name", "experiment"))
+    planner_selection = required(config, "planners", "root")
+    tasks = required(config, "tasks", "root")
+    planner_arguments = config.get("planner_arguments", {})
+    if isinstance(planner_selection, str):
+        planner_selection = [planner_selection]
+    if not isinstance(planner_selection, list) or not planner_selection or not all(isinstance(item, str) for item in planner_selection):
+        raise SystemExit("planners must be a planner ID, '*', or a non-empty list")
+    if not isinstance(tasks, list) or not tasks:
+        raise SystemExit("tasks must be a non-empty list")
+    if not isinstance(planner_arguments, dict):
+        raise SystemExit("planner_arguments must be a mapping")
+
+    regenerate = bool(required(preflight, "regenerate_manifest", "preflight"))
+    validate_pddl = bool(required(preflight, "validate_pddl", "preflight"))
+    if regenerate:
+        result = subprocess.run([str(core.ROOT / "scripts/run/generate_benchmark_manifest.py")], cwd=core.ROOT, check=False)
+        if result.returncode:
+            return result.returncode
+    if validate_pddl and core.validate_pddl():
+        return 1
+
+    benchmarks = core.benchmark_map()
+    capabilities = core.planner_map()
+    if any(value in {"*", "**"} for value in planner_selection):
+        planners = [name for name, capability in capabilities.items() if capability.get("batch_enabled")]
+    else:
+        planners = planner_selection
+    unknown = [planner for planner in planners if planner not in capabilities]
+    if unknown:
+        raise SystemExit(f"Unknown planners in YAML: {unknown}")
+
+    selected_cases: list[tuple[dict[str, Any], Path]] = []
+    seen_cases = set()
+    for index, task in enumerate(tasks):
+        if not isinstance(task, dict):
+            raise SystemExit(f"tasks[{index}] must be a mapping")
+        entries = select_entries(str(required(task, "domain", f"tasks[{index}]")), benchmarks)
+        for entry in entries:
+            for problem in select_problems(entry, required(task, "problems", f"tasks[{index}]")):
+                key = (entry["id"], problem.name)
+                if key not in seen_cases:
+                    selected_cases.append((entry, problem))
+                    seen_cases.add(key)
+
+    timeout = float(required(execution, "timeout_seconds", "execution"))
+    jobs = int(required(execution, "parallel_jobs", "execution"))
+    max_cpu_cores_value = execution.get("max_cpu_cores")
+    max_cpu_cores = int(max_cpu_cores_value) if max_cpu_cores_value is not None else None
+    nice_level_value = execution.get("nice_level")
+    nice_level = int(nice_level_value) if nice_level_value is not None else None
+    memory_limit_value = execution.get("memory_limit_mb")
+    memory_limit_mb = int(memory_limit_value) if memory_limit_value is not None else None
+    process_limit_value = execution.get("max_processes_per_case")
+    process_limit = int(process_limit_value) if process_limit_value is not None else None
+    log_limit_value = execution.get("max_log_size_mb")
+    log_limit_mb = int(log_limit_value) if log_limit_value is not None else None
+    monitor_interval = float(execution.get("monitor_interval_seconds", 0.2))
+    reserve_value = execution.get("minimum_available_memory_mb")
+    minimum_available_memory_mb = int(reserve_value) if reserve_value is not None else None
+    force = bool(required(execution, "force_unsupported", "execution"))
+    dry_run = bool(required(execution, "dry_run", "execution"))
+    fail_on_error = bool(required(execution, "fail_on_case_error", "execution"))
+    if timeout <= 0 or jobs <= 0:
+        raise SystemExit("timeout_seconds and parallel_jobs must be positive")
+    if max_cpu_cores is not None and max_cpu_cores <= 0:
+        raise SystemExit("execution.max_cpu_cores must be positive")
+    for key, value in (
+        ("memory_limit_mb", memory_limit_mb),
+        ("max_processes_per_case", process_limit),
+        ("max_log_size_mb", log_limit_mb),
+        ("minimum_available_memory_mb", minimum_available_memory_mb),
+    ):
+        if value is not None and value <= 0:
+            raise SystemExit(f"execution.{key} must be positive")
+    if not 0.05 <= monitor_interval <= 5.0:
+        raise SystemExit("execution.monitor_interval_seconds must be between 0.05 and 5.0")
+    if nice_level is not None and not 0 <= nice_level <= 19:
+        raise SystemExit("execution.nice_level must be between 0 and 19")
+
+    selected_cpus: list[int] | None = None
+    if max_cpu_cores is not None:
+        if not hasattr(os, "sched_getaffinity") or not hasattr(os, "sched_setaffinity"):
+            raise SystemExit("execution.max_cpu_cores requires Linux CPU affinity support")
+        allowed_cpus = sorted(os.sched_getaffinity(0))
+        selected_cpus = allowed_cpus[:max_cpu_cores]
+        os.sched_setaffinity(0, selected_cpus)
+    if nice_level is not None:
+        current_nice = os.getpriority(os.PRIO_PROCESS, 0)
+        if nice_level < current_nice:
+            raise SystemExit(
+                f"execution.nice_level={nice_level} cannot raise priority from current level {current_nice}"
+            )
+        if nice_level > current_nice:
+            os.nice(nice_level - current_nice)
+    available_mb = available_memory_mb()
+    if minimum_available_memory_mb is not None and available_mb < minimum_available_memory_mb:
+        raise SystemExit(
+            f"Preflight memory guard: only {available_mb} MiB available; "
+            f"requires at least {minimum_available_memory_mb} MiB"
+        )
+
+    validate_plans = bool(required(validation, "plans", "validation"))
+    output_root_value = str(required(output, "root", "output"))
+    output_root = Path(output_root_value)
+    if not output_root.is_absolute():
+        output_root = core.ROOT / output_root
+    requested_run_id = str(required(output, "run_id", "output"))
+    run_id = automatic_run_id(name) if requested_run_id.lower() == "auto" else requested_run_id
+    keep_work = bool(required(output, "keep_work_directories", "output"))
+
+    statuses = {planner: core.runtime_status(planner) for planner in planners}
+    unavailable = {planner: status for planner, status in statuses.items() if status != "verified-plan"}
+    if unavailable and not dry_run:
+        raise SystemExit("Non-runnable planners: " + ", ".join(f"{p}={s}" for p, s in unavailable.items()))
+
+    run_dir = core.unique_run_dir(output_root.resolve(), run_id)
+    shutil.copy2(config_path, run_dir / "experiment.yaml")
+    metadata = {
+        "schema_version": 1,
+        "created_at": datetime.now(timezone.utc).isoformat(),
+        "experiment_name": name,
+        "experiment_config": core.display_path(config_path),
+        "experiment_config_sha256": hashlib.sha256(config_path.read_bytes()).hexdigest(),
+        "timeout_seconds": timeout,
+        "jobs": jobs,
+        "max_cpu_cores": max_cpu_cores,
+        "cpu_affinity": selected_cpus,
+        "nice_level": os.getpriority(os.PRIO_PROCESS, 0),
+        "memory_limit_mb": memory_limit_mb,
+        "max_processes_per_case": process_limit,
+        "max_log_size_mb": log_limit_mb,
+        "monitor_interval_seconds": monitor_interval,
+        "minimum_available_memory_mb": minimum_available_memory_mb,
+        "available_memory_mb_at_start": available_mb,
+        "planners": planners,
+        "benchmarks": sorted({entry["id"] for entry, _ in selected_cases}),
+        "runtime_status": statuses,
+        "force_unsupported": force,
+        "dry_run": dry_run,
+        "benchmark_manifest_sha256": core.sha256(core.MANIFEST),
+    }
+
+    work = []
+    for planner in planners:
+        extra = planner_arguments.get(planner, [])
+        if not isinstance(extra, list) or not all(isinstance(item, str) for item in extra):
+            raise SystemExit(f"planner_arguments.{planner} must be a list of strings")
+        for entry, problem in selected_cases:
+            work.append((planner, entry, problem, extra))
+
+    results = []
+    run_started = time.monotonic()
+    terminal_log_path = run_dir / "terminal.log"
+    with terminal_log_path.open("w", buffering=1) as terminal_log:
+        def emit(message: str) -> None:
+            print(message, flush=True)
+            terminal_log.write(message + "\n")
+
+        emit(f"experiment: {name}")
+        emit(f"cases: {len(work)}")
+        emit(
+            f"resources: jobs={jobs}, max_cpu_cores={max_cpu_cores or 'unlimited'}, "
+            f"cpu_affinity={selected_cpus or 'inherited'}, nice_level={os.getpriority(os.PRIO_PROCESS, 0)}, "
+            f"memory_limit_mb={memory_limit_mb or 'unlimited'}, "
+            f"process_limit={process_limit or 'unlimited'}, log_limit_mb={log_limit_mb or 'unlimited'}"
+        )
+        emit(f"results: {core.display_path(run_dir)}")
+        emit("progress\tplanner\tdomain\tproblem\tstatus\tvalidation\twall_seconds\telapsed_seconds")
+        with ThreadPoolExecutor(max_workers=jobs) as executor:
+            futures = {
+                executor.submit(
+                    core.run_case, run_dir, planner, entry, problem, capabilities[planner],
+                    timeout, force, dry_run, validate_plans, extra,
+                    memory_limit_mb, process_limit, log_limit_mb, monitor_interval,
+                ): (planner, entry["id"], problem.name)
+                for planner, entry, problem, extra in work
+            }
+            for completed, future in enumerate(as_completed(futures), start=1):
+                row = future.result()
+                results.append(row)
+                elapsed = time.monotonic() - run_started
+                emit(
+                    f"[{completed}/{len(work)}]\t{row['planner']}\t{row['benchmark']}\t"
+                    f"{row['instance']}\t{row['status']}\t{row['validation']}\t"
+                    f"{float(row['wall_seconds']):.3f}s\t{elapsed:.3f}s"
+                )
+        total_elapsed = time.monotonic() - run_started
+        metadata["runner_wall_seconds"] = round(total_elapsed, 6)
+        emit(f"completed: {len(results)}/{len(work)} cases in {total_elapsed:.3f}s")
+        emit(f"terminal_log: {core.display_path(terminal_log_path)}")
+
+    core.write_results(run_dir, results, metadata)
+    if not keep_work:
+        for work_dir in run_dir.glob("cases/*/*/*/work"):
+            shutil.rmtree(work_dir)
+    bad_statuses = {
+        "crash", "parse-error", "unknown",
+        "memory-limit", "process-limit", "output-limit",
+    }
+    failed = any(row["status"] in bad_statuses or row["validation"] == "invalid" for row in results)
+    return 1 if fail_on_error and failed else 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

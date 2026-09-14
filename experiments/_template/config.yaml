@@ -1,0 +1,16 @@
+experiment:
+  name: "NNN_short_name"
+  seeds: [0]
+
+domain:
+  name: "TBD"
+  parameters: {}
+
+planner:
+  name: "TBD"
+  heuristic: "TBD"
+  timeout_seconds: 300
+
+output:
+  raw_dir: "results/raw/NNN_short_name"
+

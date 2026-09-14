@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-11T11:02:38.423713+00:00",
+  "experiment_name": "popf-static-v2-changmin-benchmark-p001-host-smoke",
+  "experiment_config": "scripts/run/experiments/changmin-popf-host-smoke.yaml",
+  "experiment_config_sha256": "c010f52bb9687ee15a17b4dbe9a8bbfaa05c1306050e6b62f6b3c51ff378be10",
+  "timeout_seconds": 120.0,
+  "jobs": 1,
+  "max_cpu_cores": 2,
+  "cpu_affinity": [
+    0,
+    1
+  ],
+  "nice_level": 10,
+  "memory_limit_mb": 8192,
+  "max_processes_per_case": 256,
+  "max_log_size_mb": 64,
+  "monitor_interval_seconds": 0.2,
+  "minimum_available_memory_mb": 4096,
+  "available_memory_mb_at_start": 24283,
+  "planners": [
+    "popf-static-v2"
+  ],
+  "benchmarks": [
+    "changmin_01_blocksworld",
+    "changmin_02_logistics",
+    "changmin_03_books",
+    "changmin_04_watering",
+    "changmin_05_barman",
+    "changmin_06_assembly"
+  ],
+  "runtime_status": {
+    "popf-static-v2": "verified-plan"
+  },
+  "force_unsupported": false,
+  "dry_run": false,
+  "benchmark_manifest_sha256": "a83af98ff8f87648b15c91f1444a263c0291febc4999f2bcd88a969baf322ba1",
+  "runner_wall_seconds": 121.109489,
+  "status_counts": {
+    "solved": 3,
+    "timeout": 1,
+    "unsolved": 2
+  },
+  "completed_at": "2026-09-11T11:04:39.533471+00:00"
+}

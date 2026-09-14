@@ -1,0 +1,90 @@
+# 이 파일만 수정한 뒤 ./run 을 실행하세요.
+schema_version: 1
+
+experiment:
+  # 결과 metadata에 기록되는 실험 이름입니다.
+  name: "all-planners-all-domains-p001"
+
+# 실행할 planner ID입니다.
+# YAML batch 실행 및 VAL 검증 완료 ID (40개):
+#   metric-ff, metric-ff-2.0, metric-ff-cross-v1, metric-ff-cross-v2,
+#   enhsp, tamerlite, nextflap, omtplan, patty, springroll, popf, optic,
+#   ferroplan, planforge, planforge-ipc2026, tempest-numeric-ipc2026,
+#   nplanning-lnp-sat-1, nplanning-lnp-sat-2,
+#   nplanning-lnp-agile-1, nplanning-lnp-agile-2, count-downward-sat,
+#   count-downward-agile, count-downward-opt-pdbs,
+#   count-downward-together-opt-1, tempest, tempest-opt,
+#   patty-ipc2026-sat-1, patty-ipc2026-sat-2,
+#   patty-ipc2026-agile-1, patty-ipc2026-agile-2, lpg-td,
+#   up-lpg-native, panino-lnp-agile, panino-lnp-sat, pattint-bitwuzla,
+#   tamerlite-ipc2026-agile-1, tamerlite-ipc2026-agile-2,
+#   tamerlite-ipc2026-sat-1, tamerlite-ipc2026-sat-2, crikey2
+# planners: ["*"] 또는 planners: "*"는 위 batch-ready 40개만 선택합니다.
+# 다운로드된 항목 전체를 뜻하지 않으며, 실패가 확정된 runtime을 실험에 섞지 않습니다.
+#
+# 등록됐지만 batch 대상이 아닌 runtime/config:
+#   bitblast (compiler), aries, fape, fape-1.0, sapa (CLI만 검증),
+#   numeric-fast-downward와 lnm-plan-* (build 성공, 반복 검증 비결정적),
+#   count-downward-opt-domain-abstractions, count-downward-together-opt-2
+#   (tiny smoke에서도 120초 내 plan 없음)
+# 현재 환경에서 차단된 등록 runtime (11개):
+#   cpt, crikey, tsgp (host-blocked)
+#   mips-xxl-seq, mips-xxl-netben, gamer-netben, hspsp-netben,
+#   sgplan6-seq, sgplan6-seq-fixed, sgplan6-temporal-fixed (build-blocked)
+#   tfd-ipc2008 (runtime-blocked)
+#
+# POPF/OPTIC maintained 소스는 각각 popf, optic ID로 build·검증 완료했습니다.
+# optic-alt-fork 및 POPF/OPTIC 과거 archive는 별도 보존·검증 단위입니다.
+# 그 밖의 확보 소스에는 numeric-fast-downward, LNM-Plan, RantanPlan,
+# PlanForge, FerroPlan, TFD, Tempest, DiNo, SMTPlan+ 및 IPC 2023/2026
+# planner들이 있습니다.
+#
+# 전체 등록 runtime/config 상태: ./benchmarkctl planners
+# 전체 Git 소스 57개:     ./benchmarkctl sources
+planners: ["*"]
+
+# domain별 problem 선택입니다.
+# domain은 benchmark ID 또는 benchmarks/.../domain.pddl 경로를 사용할 수 있습니다.
+# domain: "*" 또는 domain: "**"를 쓰면 모든 domain을 선택합니다.
+# domain: "*_SAILING" 같은 glob 패턴도 사용할 수 있습니다.
+# problems는 "p001"처럼 문자열 하나 또는 ["p001", "p002"] 목록을 허용합니다.
+# problems: "*" 또는 problems: ["*"]는 해당 domain의 모든 problem을 선택합니다.
+tasks:
+  - domain: "**"
+    problems: "p001"
+
+# planner 기본 명령 뒤에 추가할 인자입니다. 기본값은 빈 목록입니다.
+planner_arguments: {}
+
+execution:
+  # case 하나당 제한시간의 기본값입니다.
+  timeout_seconds: 300
+  # 동시에 실행할 case 수의 기본값입니다.
+  parallel_jobs: 4
+  # capability상 미지원인 조합도 강제 실행할지 여부입니다.
+  # 모든 planner × 모든 domain 조합을 빠짐없이 실제 시도합니다.
+  # false이면 capability상 미지원인 172개 조합이 실행 전에 제외됩니다.
+  force_unsupported: true
+  # true이면 실제 planner를 실행하지 않고 선택 결과만 생성합니다.
+  dry_run: false
+  # crash, parse-error, invalid plan이 있으면 ./run을 실패 코드로 종료합니다.
+  # 한 case가 실패해도 나머지 조합을 모두 끝까지 실행합니다.
+  fail_on_case_error: false
+
+output:
+  # 프로젝트 루트 기준 기본 저장 위치입니다.
+  root: "results/raw"
+  # "auto"이면 <experiment.name>-<실행시각>을 사용합니다.
+  run_id: "auto"
+  # false이면 실행 후 각 case의 복사된 domain/problem 작업 폴더를 삭제합니다.
+  keep_work_directories: true
+
+validation:
+  # 추출 가능한 plan을 VAL로 검증합니다.
+  plans: true
+
+preflight:
+  # true이면 실행 전에 benchmark manifest를 다시 생성합니다.
+  regenerate_manifest: false
+  # true이면 실행 전에 전체 526개 PDDL 조합을 VAL parser로 검사합니다.
+  validate_pddl: true

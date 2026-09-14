@@ -1,0 +1,34 @@
+schema_version: 1
+
+experiment:
+  name: "terminal-log-smoke-test"
+
+planners:
+  - "enhsp"
+
+tasks:
+  - domain: "19_COUNTERS"
+    problems:
+      - "p001"
+
+planner_arguments:
+  enhsp: []
+
+execution:
+  timeout_seconds: 30
+  parallel_jobs: 1
+  force_unsupported: false
+  dry_run: false
+  fail_on_case_error: true
+
+output:
+  root: "results/smoke"
+  run_id: "terminal-log-test"
+  keep_work_directories: false
+
+validation:
+  plans: true
+
+preflight:
+  regenerate_manifest: false
+  validate_pddl: false

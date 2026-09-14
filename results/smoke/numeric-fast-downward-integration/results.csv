@@ -1,0 +1,2 @@
+planner,benchmark,instance,status,compatible,return_code,wall_seconds,max_rss_kb,plan_length,metric_value,validation,case_directory
+numeric-fast-downward,01_LOGISTIC,p001.pddl,solved,true,0,0.08,14716,15,15,valid,results/smoke/numeric-fast-downward-integration/cases/numeric-fast-downward/01_LOGISTIC/p001

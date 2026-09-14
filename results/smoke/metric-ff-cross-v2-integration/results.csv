@@ -1,0 +1,2 @@
+planner,benchmark,instance,status,compatible,return_code,wall_seconds,max_rss_kb,plan_length,metric_value,validation,case_directory
+metric-ff-cross-v2,19_COUNTERS,p001.pddl,solved,true,0,0.00,3200,14,,valid,results/smoke/metric-ff-cross-v2-integration/cases/metric-ff-cross-v2/19_COUNTERS/p001

@@ -1,0 +1,243 @@
+#!/usr/bin/env bash
+set -u
+
+planner_root="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+runtime_root="$planner_root/runtime"
+runtime_status_file="$planner_root/download-logs/runtime-status.tsv"
+revision_file="$planner_root/locks/downloaded-revisions.tsv"
+
+usage() {
+    cat <<'EOF'
+Usage:
+  planners/plannerctl list
+  planners/plannerctl sources
+  planners/plannerctl source <git-id>
+  planners/plannerctl status <id>
+  planners/plannerctl run <id> [planner arguments...]
+
+Runnable IDs:
+  metric-ff, metric-ff-2.0, sapa, lpg-td, aries, fape, fape-1.0,
+  enhsp, tamerlite, nextflap, omtplan, bitblast, patty, springroll,
+  popf, optic, optic-cplex, ferroplan, planforge, planforge-ipc2026,
+  tempest-numeric-ipc2026, numeric-fast-downward, numeric-fast-downward-local,
+  nplanning-lnp-sat-1, nplanning-lnp-sat-2,
+  nplanning-lnp-agile-1, nplanning-lnp-agile-2,
+  count-downward-sat, count-downward-agile,
+  count-downward-opt-pdbs, count-downward-opt-domain-abstractions,
+  count-downward-together-opt-1, count-downward-together-opt-2,
+  tempest, tempest-opt,
+  metric-ff-cross-v1, metric-ff-cross-v2,
+  patty-ipc2026-sat-1, patty-ipc2026-sat-2,
+  patty-ipc2026-agile-1, patty-ipc2026-agile-2,
+  up-lpg-native,
+  panino-lnp-agile, panino-lnp-sat,
+  pattint-bitwuzla,
+  lnm-plan-ipc2023,
+  lnm-plan-opt-lnp-1, lnm-plan-opt-lnp-2,
+  lnm-plan-sat-lnp-1, lnm-plan-sat-snp-2,
+  tamerlite-ipc2026-agile-1, tamerlite-ipc2026-agile-2,
+  tamerlite-ipc2026-sat-1, tamerlite-ipc2026-sat-2,
+  popf-static-v2, cpt, crikey, crikey2, tsgp,
+  mips-xxl-seq, mips-xxl-netben, gamer-netben, hspsp-netben,
+  sgplan6-seq, sgplan6-seq-fixed, sgplan6-temporal-fixed, tfd-ipc2008
+EOF
+}
+
+resolve_command() {
+    planner_id="$1"
+    case "$planner_id" in
+        metric-ff) command_path="$runtime_root/metric-ff/bin/metric-ff" ; command_kind=native ;;
+        metric-ff-2.0) command_path="$runtime_root/metric-ff-2.0/bin/metric-ff" ; command_kind=native ;;
+        sapa) command_path="$runtime_root/sapa/bin/SapaReplan.jar" ; command_kind=jar ;;
+        lpg-td) command_path="$runtime_root/lpg-td/LPG-td-1.4/lpg-td" ; command_kind=native ;;
+        aries) command_path="$runtime_root/aries/bin/up-aries" ; command_kind=native ;;
+        fape) command_path="$runtime_root/fape/bin/fape.jar" ; command_kind=jar ;;
+        fape-1.0) command_path="$runtime_root/fape-1.0/bin/fape.jar" ; command_kind=jar ;;
+        enhsp) command_path="$runtime_root/enhsp/bin/enhsp.jar" ; command_kind=jar ;;
+        tamerlite) command_path="$runtime_root/tamerlite/site-packages" ; command_kind=up-python ;;
+        nextflap) command_path="$runtime_root/nextflap/site-packages" ; command_kind=up-python ;;
+        omtplan) command_path="$planner_root/external/omtplan/omtplan.py" ; command_kind=python-source ;;
+        bitblast) command_path="$planner_root/external/bitblast/bin/compile.py" ; command_kind=python-source ;;
+        patty) command_path="$planner_root/external/patty/main.py" ; command_kind=python-source ;;
+        springroll) command_path="$planner_root/external/springroll/dist/springroll.jar" ; command_kind=springroll ;;
+        popf) command_path="$planner_root/external/popf-maintained/build/popf" ; command_kind=native ;;
+        optic) command_path="$planner_root/external/optic-maintained/build/src/optic/optic-clp" ; command_kind=native ;;
+        optic-cplex) command_path="$planner_root/local/optic-cplex" ; command_kind=native ;;
+        ferroplan) command_path="$planner_root/external/ferroplan/target/release/ff" ; command_kind=native ;;
+        planforge) command_path="$planner_root/external/planforge/target/release/planforge" ; command_kind=native ;;
+        planforge-ipc2026) command_path="$planner_root/external/planforge-ipc2026/target/release/planforge" ; command_kind=native ;;
+        tempest-numeric-ipc2026) command_path="$planner_root/external/tempest-numeric-ipc2026/target/release/planner" ; command_kind=native ;;
+        numeric-fast-downward) command_path="$planner_root/external/numeric-fast-downward/fast-downward.py" ; command_kind=fast-downward ;;
+        numeric-fast-downward-local) command_path="$planner_root/local/numeric-fast-downward/fast-downward.py" ; command_kind=fast-downward ;;
+        nplanning-lnp-sat-1) command_path="$runtime_root/nplanning-ipc2026/bin/nplanning" ; command_kind=nplanning; nplanning_config=sat-1 ;;
+        nplanning-lnp-sat-2) command_path="$runtime_root/nplanning-ipc2026/bin/nplanning" ; command_kind=nplanning; nplanning_config=sat-2 ;;
+        nplanning-lnp-agile-1) command_path="$runtime_root/nplanning-ipc2026/bin/nplanning" ; command_kind=nplanning; nplanning_config=agile-1 ;;
+        nplanning-lnp-agile-2) command_path="$runtime_root/nplanning-ipc2026/bin/nplanning" ; command_kind=nplanning; nplanning_config=agile-2 ;;
+        count-downward-sat) command_path="$planner_root/external/count-downward-ipc2026/fast-downward.py" ; command_kind=count-downward; count_downward_alias=nipc26-sat-hff ;;
+        count-downward-agile) command_path="$planner_root/external/count-downward-ipc2026/fast-downward.py" ; command_kind=count-downward; count_downward_alias=nipc26-agl-hff ;;
+        count-downward-opt-pdbs) command_path="$planner_root/external/count-downward-ipc2026/fast-downward.py" ; command_kind=count-downward; count_downward_alias=nipc26-opt-pdbs ;;
+        count-downward-opt-domain-abstractions) command_path="$planner_root/external/count-downward-ipc2026/fast-downward.py" ; command_kind=count-downward; count_downward_alias=nipc26-opt-domain-abstractions ;;
+        count-downward-together-opt-1) command_path="$planner_root/external/count-downward-together-ipc2026/fast-downward.py" ; command_kind=count-downward; count_downward_alias=seq_opt_nipc_2026_1 ;;
+        count-downward-together-opt-2) command_path="$planner_root/external/count-downward-together-ipc2026/fast-downward.py" ; command_kind=count-downward; count_downward_alias=seq_opt_nipc_2026_2 ;;
+        tempest) command_path="$planner_root/external/tempest-maintained/src" ; command_kind=up-tempest ;;
+        tempest-opt) command_path="$planner_root/external/tempest-maintained/src" ; command_kind=up-tempest ;;
+        metric-ff-cross-v1) command_path="$planner_root/external/metric-ff-crossplatform/ff-v1.0" ; command_kind=native ;;
+        metric-ff-cross-v2) command_path="$planner_root/external/metric-ff-crossplatform/ff-v2.1" ; command_kind=native ;;
+        patty-ipc2026-sat-1|patty-ipc2026-sat-2|patty-ipc2026-agile-1|patty-ipc2026-agile-2) command_path="$planner_root/external/patty-ipc2026/main.py" ; command_kind=patty-ipc ;;
+        up-lpg-native) command_path="$planner_root/external/up-lpg/up_lpg/lpg" ; command_kind=native ;;
+        panino-lnp-agile) command_path="$planner_root/external/panino-ipc2026/src/jpddlplus-private/jpddlplus.jar" ; command_kind=panino; panino_config=agile ;;
+        panino-lnp-sat) command_path="$planner_root/external/panino-ipc2026/src/jpddlplus-private/jpddlplus.jar" ; command_kind=panino; panino_config=sat ;;
+        pattint-bitwuzla) command_path="$planner_root/external/pattint-ipc2026/main_bv.py" ; command_kind=pattint ;;
+        lnm-plan-ipc2023) command_path="$planner_root/external/lnm-plan-ipc2023/fast-downward.py" ; command_kind=fast-downward ;;
+        lnm-plan-opt-lnp-1) command_path="$planner_root/external/lnm-plan-ipc2023/fast-downward.py" ; command_kind=lnm-plan; lnm_seed=4; lnm_search='astar(lmcutnumeric(use_second_order_simple=true, bound_iterations=10, ceiling_less_than_one=true))' ;;
+        lnm-plan-opt-lnp-2) command_path="$planner_root/external/lnm-plan-ipc2023/fast-downward.py" ; command_kind=lnm-plan; lnm_seed=4; lnm_search='orbit_astar(lmcutnumeric(use_second_order_simple=true, bound_iterations=10, ceiling_less_than_one=true), symmetry=symmetry_state_pruning(goal_only))' ;;
+        lnm-plan-sat-lnp-1) command_path="$planner_root/external/lnm-plan-ipc2023/fast-downward.py" ; command_kind=lnm-plan; lnm_seed=0; lnm_search='lazy_greedy([lmcutnumeric(use_second_order_simple=true, bound_iterations=10, ceiling_less_than_one=true)])' ;;
+        lnm-plan-sat-snp-2) command_path="$planner_root/external/lnm-plan-ipc2023/fast-downward.py" ; command_kind=lnm-plan; lnm_seed=6; lnm_search='lazy_greedy([lmcutnumeric(ceiling_less_than_one=true)])' ;;
+        tamerlite-ipc2026-agile-1|tamerlite-ipc2026-agile-2|tamerlite-ipc2026-sat-1|tamerlite-ipc2026-sat-2) command_path="$planner_root/external/tamerlite-ipc2026/src" ; command_kind=tamerlite-ipc ;;
+        popf-static-v2) command_path="$planner_root/local/popf" ; command_kind=native ;;
+        cpt) command_path="$runtime_root/cpt/bin/cpt" ; command_kind=native ;;
+        crikey) command_path="$runtime_root/crikey/bin/crikey" ; command_kind=native ;;
+        crikey2) command_path="$runtime_root/crikey2/bin/CRIKEY.jar" ; command_kind=jar ;;
+        tsgp) command_path="$runtime_root/tsgp/bin/tsgp" ; command_kind=native ;;
+        mips-xxl-seq) command_path="$runtime_root/seq-opt-mips-xxl/seq-opt-mips-xxl/plan" ; command_kind=script ;;
+        mips-xxl-netben) command_path="$runtime_root/netben-opt-mips-xxl/netben-opt-mips-xxl/plan" ; command_kind=script ;;
+        gamer-netben) command_path="$runtime_root/netben-opt-gamer/netben-opt-gamer/plan" ; command_kind=script ;;
+        hspsp-netben) command_path="$runtime_root/netben-opt-hspsp/netben-opt-hspsp/plan" ; command_kind=script ;;
+        sgplan6-seq) command_path="$runtime_root/seq-sat-sgplan6/seq-sat-sgplan6/plan" ; command_kind=script ;;
+        sgplan6-seq-fixed) command_path="$runtime_root/seq-sat-sgplan6x/tempo-sat-sgplan6/plan" ; command_kind=script ;;
+        sgplan6-temporal-fixed) command_path="$runtime_root/tempo-sat-sgplan6x/tempo-sat-sgplan6/plan" ; command_kind=script ;;
+        tfd-ipc2008) command_path="$runtime_root/tempo-sat-temporal-fast-downward/tempo-sat-temporal-fast-downward/plan" ; command_kind=script ;;
+        *) return 1 ;;
+    esac
+}
+
+status_one() {
+    planner_id="$1"
+    if ! resolve_command "$planner_id"; then
+        printf '%s\tunknown\n' "$planner_id"
+        return 1
+    fi
+    if [ -e "$command_path" ]; then
+        tested_status=""
+        if [ -f "$runtime_status_file" ]; then
+            tested_status="$(awk -F '\t' -v id="$planner_id" '$1 == id {print $2; exit}' "$runtime_status_file")"
+        fi
+        if [ "$command_kind" = jar ] || [ "$command_kind" = panino ] || [ "$command_kind" = pattint ] || [ "$command_kind" = tamerlite-ipc ] || [ "$command_kind" = up-python ] || [ "$command_kind" = python-source ] || [ "$command_kind" = patty-ipc ] || [ "$command_kind" = springroll ] || [ -x "$command_path" ]; then
+            printf '%s\t%s\t%s\t%s\n' "$planner_id" "${tested_status:-staged}" "$command_kind" "$command_path"
+        else
+            printf '%s\tnot-executable\t%s\t%s\n' "$planner_id" "$command_kind" "$command_path"
+        fi
+    else
+        printf '%s\tmissing\t%s\t%s\n' "$planner_id" "$command_kind" "$command_path"
+    fi
+}
+
+action="${1:-}"
+case "$action" in
+    list)
+        for planner_id in metric-ff metric-ff-2.0 metric-ff-cross-v1 metric-ff-cross-v2 sapa lpg-td up-lpg-native aries fape fape-1.0 enhsp tamerlite tamerlite-ipc2026-agile-1 tamerlite-ipc2026-agile-2 tamerlite-ipc2026-sat-1 tamerlite-ipc2026-sat-2 nextflap omtplan bitblast patty patty-ipc2026-sat-1 patty-ipc2026-sat-2 patty-ipc2026-agile-1 patty-ipc2026-agile-2 panino-lnp-agile panino-lnp-sat pattint-bitwuzla lnm-plan-ipc2023 lnm-plan-opt-lnp-1 lnm-plan-opt-lnp-2 lnm-plan-sat-lnp-1 lnm-plan-sat-snp-2 springroll popf popf-static-v2 optic optic-cplex ferroplan planforge planforge-ipc2026 tempest-numeric-ipc2026 numeric-fast-downward numeric-fast-downward-local nplanning-lnp-sat-1 nplanning-lnp-sat-2 nplanning-lnp-agile-1 nplanning-lnp-agile-2 count-downward-sat count-downward-agile count-downward-opt-pdbs count-downward-opt-domain-abstractions count-downward-together-opt-1 count-downward-together-opt-2 tempest tempest-opt cpt crikey crikey2 tsgp mips-xxl-seq mips-xxl-netben gamer-netben hspsp-netben sgplan6-seq sgplan6-seq-fixed sgplan6-temporal-fixed tfd-ipc2008; do
+            status_one "$planner_id"
+        done
+        ;;
+    sources)
+        awk -F '\t' 'NR > 1 {print $1 "\t" $2 "\t" $3}' "$revision_file"
+        ;;
+    source)
+        [ "$#" -eq 2 ] || { usage; exit 2; }
+        source_id="$2"
+        if awk -F '\t' -v id="$source_id" 'NR > 1 && $1 == id {found=1} END {exit !found}' "$revision_file"; then
+            printf '%s\n' "$planner_root/external/$source_id"
+        else
+            printf 'Unknown Git source ID: %s\n' "$source_id" >&2
+            exit 2
+        fi
+        ;;
+    status)
+        [ "$#" -eq 2 ] || { usage; exit 2; }
+        status_one "$2"
+        ;;
+    run)
+        [ "$#" -ge 2 ] || { usage; exit 2; }
+        planner_id="$2"
+        shift 2
+        resolve_command "$planner_id" || { printf 'Unknown runnable ID: %s\n' "$planner_id" >&2; exit 2; }
+        [ -e "$command_path" ] || { printf 'Runtime is not staged: %s\n' "$command_path" >&2; exit 3; }
+        # The locally built OPTIC/COIN-OR binaries may contain an absolute
+        # build-time RUNPATH. Prefer the repository-local libraries so the
+        # planner bundle remains usable after moving the project directory.
+        if [ -d "$planner_root/deps/local/lib" ]; then
+            export LD_LIBRARY_PATH="$planner_root/deps/local/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+        fi
+        working_dir="$(dirname "$command_path")"
+        if [ "$command_kind" = jar ]; then
+            cd "$working_dir" && exec java -jar "$command_path" "$@"
+        elif [ "$command_kind" = panino ]; then
+            [ "$#" -eq 2 ] || { printf 'Usage: plannerctl run %s DOMAIN PROBLEM\n' "$planner_id" >&2; exit 2; }
+            if [ "$panino_config" = sat ]; then
+                exec java -Xms256m -Xmx5734m -Xss1m -jar "$command_path" -o "$1" -f "$2" -s novbfs_lg -anytime
+            else
+                exec java -Xms256m -Xmx5734m -Xss1m -jar "$command_path" -o "$1" -f "$2" -s novbfs_hg
+            fi
+        elif [ "$command_kind" = up-python ]; then
+            [ "$#" -eq 2 ] || { printf 'Usage: plannerctl run %s DOMAIN PROBLEM\n' "$planner_id" >&2; exit 2; }
+            if [ "$planner_id" = tamerlite ]; then
+                export PYTHONPATH="$planner_root/external/unified-planning:$command_path"
+            else
+                export PYTHONPATH="$command_path"
+            fi
+            exec python3 "$planner_root/../scripts/run/run_up_engine.py" "$planner_id" "$@"
+        elif [ "$command_kind" = python-source ]; then
+            export PYTHONPATH="$runtime_root/$planner_id/site-packages:$planner_root/external/$planner_id"
+            cd "$planner_root/external/$planner_id" && exec python3 "$command_path" "$@"
+        elif [ "$command_kind" = springroll ]; then
+            springroll_root="$planner_root/external/springroll"
+            export PATH="$runtime_root/omtplan/site-packages/bin:$PATH"
+            cd "$springroll_root" && exec java -cp 'dist/lib/*:dist/springroll.jar:.' runner.SMTHybridPlanner "$@"
+        elif [ "$command_kind" = fast-downward ]; then
+            # Keep the caller's case-specific working directory: Fast Downward
+            # writes output.sas, output and sas_plan there.
+            if [ "$planner_id" = numeric-fast-downward ] || [ "$planner_id" = numeric-fast-downward-local ]; then
+                export PYTHONHASHSEED=1
+            fi
+            exec python3 "$command_path" --build=release64 "$@"
+        elif [ "$command_kind" = lnm-plan ]; then
+            [ "$#" -eq 2 ] || { printf 'Usage: plannerctl run %s DOMAIN PROBLEM\n' "$planner_id" >&2; exit 2; }
+            export PYTHONHASHSEED="$lnm_seed"
+            exec python3 "$command_path" --build release64 --plan-file sas_plan "$1" "$2" --search "$lnm_search"
+        elif [ "$command_kind" = nplanning ]; then
+            exec "$command_path" "$nplanning_config" "$@"
+        elif [ "$command_kind" = count-downward ]; then
+            # Keep each benchmark case isolated because the driver writes
+            # output.sas, output and sas_plan in the current directory.
+            exec python3 "$command_path" --build release64 --alias "$count_downward_alias" "$@"
+        elif [ "$command_kind" = up-tempest ]; then
+            [ "$#" -eq 2 ] || { printf 'Usage: plannerctl run %s DOMAIN PROBLEM\n' "$planner_id" >&2; exit 2; }
+            export PYTHONPATH="$runtime_root/tempest/site-packages:$runtime_root/tamerlite/site-packages:$command_path"
+            exec python3 "$planner_root/../scripts/run/run_up_engine.py" "$planner_id" "$@"
+        elif [ "$command_kind" = patty-ipc ]; then
+            export PYTHONPATH="$runtime_root/patty-ipc2026/site-packages:$runtime_root/tamerlite/site-packages:$runtime_root/patty/site-packages:$planner_root/external/patty-ipc2026"
+            cd "$planner_root/external/patty-ipc2026" && exec python3 "$command_path" "$@"
+        elif [ "$command_kind" = pattint ]; then
+            # Keep the benchmark case directory so --save-plan is isolated.
+            export PYTHONPATH="$runtime_root/pattint-ipc2026/site-packages:$planner_root/external/pattint-ipc2026"
+            exec python3 "$command_path" "$@"
+        elif [ "$command_kind" = tamerlite-ipc ]; then
+            { [ "$#" -eq 2 ] || [ "$#" -eq 5 ]; } || { printf 'Usage: plannerctl run %s DOMAIN PROBLEM [SEARCH HEURISTIC WEIGHT]\n' "$planner_id" >&2; exit 2; }
+            export PYTHONPATH="$planner_root/external/unified-planning:$runtime_root/tamerlite/site-packages"
+            case "$planner_id" in
+                tamerlite-ipc2026-agile-1)
+                    if [ "$#" -eq 5 ]; then
+                        exec python3 "$command_path/run_oneshot.py" "$1" "$2" tamerlite.plan "$3" "$4" "$5"
+                    fi
+                    exec python3 "$command_path/run_oneshot.py" "$1" "$2" tamerlite.plan gbfs hadd 1
+                    ;;
+                tamerlite-ipc2026-agile-2) exec python3 "$command_path/run_oneshot.py" "$1" "$2" tamerlite.plan wastar hadd 1 ;;
+                tamerlite-ipc2026-sat-1) exec python3 "$command_path/run_anytime.py" "$1" "$2" tamerlite.plan wastar hadd 1 ;;
+                tamerlite-ipc2026-sat-2) exec python3 "$command_path/run_anytime.py" "$1" "$2" tamerlite.plan wastar hadd 1 900 ;;
+            esac
+        else
+            cd "$working_dir" && exec "$command_path" "$@"
+        fi
+        ;;
+    *) usage; exit 2 ;;
+esac

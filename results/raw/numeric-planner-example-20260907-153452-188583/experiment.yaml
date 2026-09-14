@@ -1,0 +1,52 @@
+# 이 파일만 수정한 뒤 ./run 을 실행하세요.
+schema_version: 1
+
+experiment:
+  # 결과 metadata에 기록되는 실험 이름입니다.
+  name: "numeric-planner-example"
+
+# 실행할 planner ID입니다. 사용 가능한 ID는 ./benchmarkctl planners 로 확인합니다.
+planners:
+  - "enhsp"
+
+# domain별 problem 선택입니다.
+# domain은 benchmark ID 또는 benchmarks/.../domain.pddl 경로를 사용할 수 있습니다.
+# problems에 ["*"]를 쓰면 해당 domain의 모든 problem을 실행합니다.
+tasks:
+  - domain: "19_COUNTERS"
+    problems:
+      - "p001"
+
+# planner 기본 명령 뒤에 추가할 인자입니다. 기본값은 빈 목록입니다.
+planner_arguments:
+  enhsp: []
+
+execution:
+  # case 하나당 제한시간의 기본값입니다.
+  timeout_seconds: 300
+  # 동시에 실행할 case 수의 기본값입니다.
+  parallel_jobs: 1
+  # capability상 미지원인 조합도 강제 실행할지 여부입니다.
+  force_unsupported: false
+  # true이면 실제 planner를 실행하지 않고 선택 결과만 생성합니다.
+  dry_run: false
+  # crash, parse-error, invalid plan이 있으면 ./run을 실패 코드로 종료합니다.
+  fail_on_case_error: true
+
+output:
+  # 프로젝트 루트 기준 기본 저장 위치입니다.
+  root: "results/raw"
+  # "auto"이면 <experiment.name>-<실행시각>을 사용합니다.
+  run_id: "auto"
+  # false이면 실행 후 각 case의 복사된 domain/problem 작업 폴더를 삭제합니다.
+  keep_work_directories: true
+
+validation:
+  # 추출 가능한 plan을 VAL로 검증합니다.
+  plans: true
+
+preflight:
+  # true이면 실행 전에 benchmark manifest를 다시 생성합니다.
+  regenerate_manifest: false
+  # true이면 실행 전에 전체 526개 PDDL 조합을 VAL parser로 검사합니다.
+  validate_pddl: true

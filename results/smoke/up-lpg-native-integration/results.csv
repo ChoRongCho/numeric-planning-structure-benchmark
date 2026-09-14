@@ -1,0 +1,2 @@
+planner,benchmark,instance,status,compatible,return_code,wall_seconds,max_rss_kb,plan_length,metric_value,validation,case_directory
+up-lpg-native,19_COUNTERS,p001.pddl,solved,true,0,0.06,130048,34,34.000,valid,results/smoke/up-lpg-native-integration/cases/up-lpg-native/19_COUNTERS/p001

@@ -1,0 +1,34 @@
+schema_version: 1
+
+experiment:
+  name: "all-numeric-planners-smoke"
+
+# 현재 verified-plan + batch=true인 planner 구성을 모두 선택합니다.
+planners: ["*"]
+
+# 모든 benchmark domain의 p001만 선택합니다.
+tasks:
+  - domain: "**"
+    problems: "p001"
+
+planner_arguments: {}
+
+execution:
+  timeout_seconds: 300
+  parallel_jobs: 4
+  force_unsupported: false
+  # 목록과 호환성 조합만 확인하려면 true, 실제 smoke run은 false입니다.
+  dry_run: true
+  fail_on_case_error: true
+
+output:
+  root: "results/smoke"
+  run_id: "auto"
+  keep_work_directories: true
+
+validation:
+  plans: true
+
+preflight:
+  regenerate_manifest: false
+  validate_pddl: true

@@ -1,0 +1,3 @@
+planner,benchmark,instance,status,compatible,return_code,wall_seconds,max_rss_kb,plan_length,metric_value,validation,case_directory
+patty-ipc2026-sat-1,19_COUNTERS,p001.pddl,solved,true,0,1.02,185368,12,,valid,results/smoke/patty-ipc2026-sat-integration/cases/patty-ipc2026-sat-1/19_COUNTERS/p001
+patty-ipc2026-sat-2,19_COUNTERS,p001.pddl,solved,true,0,1.04,186012,16,,valid,results/smoke/patty-ipc2026-sat-integration/cases/patty-ipc2026-sat-2/19_COUNTERS/p001
