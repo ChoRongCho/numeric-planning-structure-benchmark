@@ -78,8 +78,14 @@ paired comparison으로 분석한다.
 - Planning wall time, expanded nodes, heuristic value, plan length와 PDDL objective를 분리해 기록한다.
 - N1의 time은 누적 objective이며 durative/temporal planning을 의미하지 않는다.
 
-현재 `07~22`에는 디렉터리만 만들었으며 PDDL, instance, generator와 README는 아직
-작성하지 않았다.
+현재 `07~22`에는 N0~N7의 `domain.pddl`을 작성했다. 16개 domain은 VAL parser를
+통과했다. Instance, problem generator와 단계별 reference plan은 아직 작성하지
+않았다.
+
+구현상 N7은 N6와 같은 전체 action schema를 사용한다. N7의 차이는 package/order 수를
+늘리는 것이 아니라 이후 problem generator에서 fuel, budget, stock, capacity의 slack을
+줄이는 데서 만든다. 따라서 N6→N7 비교는 domain 표현력 변화가 아니라 동일 표현에서의
+constraint tightness 변화로 해석한다.
 
 ## 02, 03, 04, 05, 06의 공통 목적
 
