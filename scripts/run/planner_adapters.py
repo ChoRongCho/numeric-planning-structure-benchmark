@@ -79,6 +79,7 @@ def classify(returncode: int | None, timed_out: bool, output: str) -> str:
         "solved: true",
         "solution found:",
         "solution found!",
+        ";;;; solution found",
         "plan computed:",
         "search: solved",
     )
@@ -175,7 +176,7 @@ def extract_plan(planner: str, output: str, domain_text: str = "") -> list[str]:
         for match in re.finditer(r"^\s*(\d+(?:\.\d+)?):\s*(\([^\n]+?\))\s*(?:\[D:?(\d+(?:\.\d+)?)[^]]*\]|\[(\d+(?:\.\d+)?)\])", output, re.M | re.I):
             duration = match.group(3) or match.group(4)
             actions.append(f"{match.group(1)}: {match.group(2)} [{duration}]")
-    elif planner in {"popf", "popf-static-v2", "optic", "optic-cplex"}:
+    elif planner in {"popf", "popf-static-v2", "optic", "optic-cplex", "lprpg"}:
         # OPTIC may print an incumbent and then the final solution.  Only the
         # final Solution Found section is a plan to validate.
         final = output.rsplit(";;;; Solution Found", 1)[-1]

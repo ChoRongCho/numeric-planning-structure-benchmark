@@ -4,3 +4,4 @@ Osi	b0480262c88459e661e6167fc038a8ba4dd6d807	COIN-OR solver interface for POPF/O
 Cgl	c40870f57925887be75881a6528886a720f69984	COIN-OR cut generation for CBC
 gsl	cf180cd7fbd06039a577f9c9ff0b428784765ac1	GNU Scientific Library for OPTIC
 rust	1.98.1	isolated Rust toolchain under planners/toolchains
+lpsolve55	system-shared-64bit	copied into planners/runtime/lprpg/lib for LPRPG Public Release 2

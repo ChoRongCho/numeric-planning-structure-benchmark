@@ -17,7 +17,7 @@ Usage:
 
 Runnable IDs:
   metric-ff, metric-ff-2.0, sapa, lpg-td, aries, fape, fape-1.0,
-  enhsp, tamerlite, nextflap, omtplan, bitblast, patty, springroll,
+  enhsp, lprpg, tamerlite, nextflap, omtplan, bitblast, patty, springroll,
   popf, optic, optic-cplex, ferroplan, planforge, planforge-ipc2026,
   tempest-numeric-ipc2026, numeric-fast-downward, numeric-fast-downward-local, numeric-cegar,
   nplanning-lnp-sat-1, nplanning-lnp-sat-2,
@@ -54,6 +54,7 @@ resolve_command() {
         fape) command_path="$runtime_root/fape/bin/fape.jar" ; command_kind=jar ;;
         fape-1.0) command_path="$runtime_root/fape-1.0/bin/fape.jar" ; command_kind=jar ;;
         enhsp) command_path="$runtime_root/enhsp/bin/enhsp.jar" ; command_kind=jar ;;
+        lprpg) command_path="$runtime_root/lprpg/bin/lprpg" ; command_kind=native ;;
         tamerlite) command_path="$runtime_root/tamerlite/site-packages" ; command_kind=up-python ;;
         nextflap) command_path="$runtime_root/nextflap/site-packages" ; command_kind=up-python ;;
         omtplan) command_path="$planner_root/external/omtplan/omtplan.py" ; command_kind=python-source ;;
@@ -136,7 +137,7 @@ status_one() {
 action="${1:-}"
 case "$action" in
     list)
-        for planner_id in metric-ff metric-ff-2.0 metric-ff-cross-v1 metric-ff-cross-v2 sapa lpg-td up-lpg-native aries fape fape-1.0 enhsp tamerlite tamerlite-ipc2026-agile-1 tamerlite-ipc2026-agile-2 tamerlite-ipc2026-sat-1 tamerlite-ipc2026-sat-2 nextflap omtplan bitblast patty patty-ipc2026-sat-1 patty-ipc2026-sat-2 patty-ipc2026-agile-1 patty-ipc2026-agile-2 panino-lnp-agile panino-lnp-sat pattint-bitwuzla lnm-plan-ipc2023 lnm-plan-opt-lnp-1 lnm-plan-opt-lnp-2 lnm-plan-sat-lnp-1 lnm-plan-sat-snp-2 springroll popf popf-static-v2 optic optic-cplex ferroplan planforge planforge-ipc2026 tempest-numeric-ipc2026 numeric-fast-downward numeric-fast-downward-local numeric-cegar nplanning-lnp-sat-1 nplanning-lnp-sat-2 nplanning-lnp-agile-1 nplanning-lnp-agile-2 count-downward-sat count-downward-agile count-downward-opt-pdbs count-downward-opt-domain-abstractions count-downward-together-opt-1 count-downward-together-opt-2 tempest tempest-opt cpt crikey crikey2 tsgp mips-xxl-seq mips-xxl-netben gamer-netben hspsp-netben sgplan6-seq sgplan6-seq-fixed sgplan6-temporal-fixed tfd-ipc2008; do
+        for planner_id in metric-ff metric-ff-2.0 metric-ff-cross-v1 metric-ff-cross-v2 sapa lpg-td up-lpg-native aries fape fape-1.0 enhsp lprpg tamerlite tamerlite-ipc2026-agile-1 tamerlite-ipc2026-agile-2 tamerlite-ipc2026-sat-1 tamerlite-ipc2026-sat-2 nextflap omtplan bitblast patty patty-ipc2026-sat-1 patty-ipc2026-sat-2 patty-ipc2026-agile-1 patty-ipc2026-agile-2 panino-lnp-agile panino-lnp-sat pattint-bitwuzla lnm-plan-ipc2023 lnm-plan-opt-lnp-1 lnm-plan-opt-lnp-2 lnm-plan-sat-lnp-1 lnm-plan-sat-snp-2 springroll popf popf-static-v2 optic optic-cplex ferroplan planforge planforge-ipc2026 tempest-numeric-ipc2026 numeric-fast-downward numeric-fast-downward-local numeric-cegar nplanning-lnp-sat-1 nplanning-lnp-sat-2 nplanning-lnp-agile-1 nplanning-lnp-agile-2 count-downward-sat count-downward-agile count-downward-opt-pdbs count-downward-opt-domain-abstractions count-downward-together-opt-1 count-downward-together-opt-2 tempest tempest-opt cpt crikey crikey2 tsgp mips-xxl-seq mips-xxl-netben gamer-netben hspsp-netben sgplan6-seq sgplan6-seq-fixed sgplan6-temporal-fixed tfd-ipc2008; do
             status_one "$planner_id"
         done
         ;;

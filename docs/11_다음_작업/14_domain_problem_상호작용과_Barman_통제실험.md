@@ -175,7 +175,107 @@ stock decrease, 용기 재사용 또는 hand occupancy의 상관관계를 잃으
 따라서 난도 곡선은 자원량에 대해 단조 증가가 아니라 중간이나 loose 영역에서도
 정점이 나타날 수 있다.
 
-## 6. 연구 질문으로 바꿀 때
+## 6. 기존의 일반 방법과 이번 분석의 위치
+
+먼 미래의 numeric constraint를 휴리스틱에 반영하려는 시도 자체는 새로운 발상이
+아니다. Numeric planning에는 이미 다음과 같은 일반적인 방법 계열이 있다.
+
+| 기존 방법 계열 | 미래 제약을 다루는 방식 | 주요 한계 |
+|---|---|---|
+| Numeric relaxed planning graph | 목표까지 필요한 action을 빠르게 전개 | decrease와 목표 간 자원 경쟁을 약하게 볼 수 있음 |
+| Interval relaxation | numeric variable의 도달 가능한 하한·상한을 전파 | 변수·목표 사이의 상관관계를 잃을 수 있음 |
+| LP/MIP resource-flow heuristic | action 횟수와 총생산·총소비 제약을 함께 계산 | 정확한 action ordering을 약하게 보거나 계산비용이 커짐 |
+| Numeric landmark | 모든 plan에 반드시 필요한 수치 조건·action을 추출 | landmark 사이의 긴 순서와 결합을 모두 표현하지 못함 |
+| PDB/domain/Cartesian abstraction | 일부 numeric·symbolic 변수를 보존한 축약 문제를 미리 풂 | 추상화 범위와 크기에 따라 정보 손실 또는 큰 계산비용 발생 |
+| CEGAR | 가짜 abstract plan이 실패한 원인만 찾아 정밀화 | 현재 numeric 적용 범위가 제한적이고 refinement 비용이 있음 |
+
+따라서 `남은 목표의 최소 자원 수요`, `최소 refill 횟수`, `LP 자원 보존식`,
+`numeric landmark`, `CEGAR refinement`는 각각 기존 연구에서 사용되는 일반적 아이디어다.
+
+그러나 다음 명제가 하나의 표준 휴리스틱으로 확립된 것은 아니다.
+
+> Domain–problem pair의 난도를 `가능한 action이 오래 유지되는 정도`와 `numeric 모순이
+> 드러나는 깊이`로 측정하고, 이를 이용해 delayed resource conflict를 선택적으로 현재
+> heuristic 값에 전파한다.
+
+이번 실험에서 새롭게 얻은 부분은 특정 자료구조나 알고리즘의 발명보다, Watering,
+Logistics, Barman의 비단조적인 난도를 **feasibility ambiguity와 pruning depth**라는
+하나의 설명으로 연결한 것이다. 이를 실제 휴리스틱으로 구현한다면 기존 RPG, LP,
+landmark 또는 CEGAR 중 하나를 기반으로 해야 한다.
+
+또한 완전히 일반적인 해결법은 기대하기 어렵다. 먼 미래의 constraint를 정확하게
+판정하는 일은 원래 planning 문제를 푸는 것과 가까워지기 때문이다. 실제 설계의 핵심은
+정확도와 계산비용 사이의 선택이다.
+
+- 빠른 방법: 총수요 하한, interval, refill 횟수만 계산
+- 중간 방법: relaxed plan의 layer별 resource balance 또는 작은 LP 계산
+- 강한 방법: abstraction refinement, MIP 또는 깊은 lookahead 적용
+
+Barman의 finite stock처럼 복구 불가능한 additive resource는 총수요 하한으로 비교적
+일반적으로 다룰 수 있다. Watering의 refill과 공간 detour, Logistics의 경로별 연료·예산
+상관관계는 ordering과 위치가 포함되므로 더 강한 표현이 필요하다. 임의의 비선형 effect,
+`assign`, 여러 변수의 결합까지 모두 허용하면 적용 범위는 더 제한된다.
+
+### 6.1 Hybrid LP–RPG가 보여주는 기존 접근의 경계
+
+Hybrid LP–RPG는 이 연구 질문과 가장 가까운 기존 접근 중 하나다. 이 방법은 relaxed
+planning graph로 명제의 도달 가능성을 계산하면서, LP로 action 횟수와 resource의
+생산·소비를 함께 제한한다. 따라서 목표에서 필요한 수치 자원을 현재 휴리스틱에
+반영한다는 발상 자체는 이미 존재한다.
+
+그러나 원본 LPRPG의 분석과 LP encoding은 numeric fluent가 대체로
+producer–consumer resource처럼 동작한다는 가정을 둔다. 로봇 문제에서 흔한 다음
+구조는 이 범위를 벗어나거나 원본 구현이 안정적으로 처리하지 못한다.
+
+- 다른 numeric fluent가 effect의 변화량을 결정하는 경우
+- `assign`으로 용량이나 충전량을 다시 설정하는 경우
+- 보충 action과 위치·순서가 결합되는 경우
+- 여러 numeric variable과 symbolic 상태가 함께 action 가능성을 결정하는 경우
+
+Public Release 2를 현재 공통 planner에 설치해 strict 모드로 실행한 결과는 다음과
+같았다. 생성된 plan은 공통 adapter로 추출한 뒤 VAL로 검증했다.
+
+| Domain p000 | 원본 LPRPG 결과 | 해석 |
+|---|---|---|
+| Books | 2-action plan, VAL valid | 원본이 처리할 수 있는 resource 구조 |
+| Assembly | 6-action plan, VAL valid | 원본이 처리할 수 있는 resource 구조 |
+| Barman | fragment 위반 경고 후 중단 | `liquid-volume`에 적용되는 non-constant effect를 거부 |
+| Watering | signal 11 | recharge·assignment가 섞인 분석 중 원본 구현 crash |
+| Blocksworld | parser 중단 | `:numeric-fluents`를 읽지 못하는 구형 parser 문제 |
+| Logistics | parser 중단 | `:numeric-fluents`를 읽지 못하는 구형 parser 문제 |
+
+Barman에서 fragment 검사를 끄는 `-plananyway`도 signal 11로 종료됐다. 따라서 원본
+LPRPG는 여섯 domain을 같은 조건에서 비교할 공통 baseline으로 사용할 수 없다.
+Books와 Assembly의 성공은 LP resource reasoning의 가능성을 보여주지만, Barman과
+Watering의 결과는 목표로 하는 일반 로봇 numeric 구조에 그대로 적용되지 않음을
+보여준다.
+
+여기서 Blocksworld와 Logistics의 실패는 이론적 한계의 증거가 아니다. requirement
+표기만 정규화하면 해결될 수 있는 parser 호환 문제다. 반면 Barman의 fragment 거부와
+Watering의 crash는 numeric effect 분석 및 LP encoding의 적용 범위와 직접 관련된다.
+또한 이 결과는 모든 LP 기반 휴리스틱의 한계를 뜻하지 않는다. 원본 Hybrid LP–RPG의
+가정과 공개 구현에 대한 관찰이며, 더 일반적인 LP/MILP encoding은 별도로 설계할 수
+있다.
+
+### 6.2 이 결과가 만드는 연구 공백
+
+따라서 연구 동기는 다음처럼 정리할 수 있다.
+
+> Hybrid LP–RPG는 미래의 resource requirement를 LP로 현재 탐색에 반영할 수 있음을
+> 보여준다. 그러나 원본 방법과 구현은 producer–consumer 중심의 numeric 구조를
+> 대상으로 하며, assignment, replenishment, fluent-dependent effect와 긴 공간적
+> detour가 결합된 일반 로봇 문제에는 그대로 적용하기 어렵다. 한편 더 일반적인
+> relaxed-plan 휴리스틱은 빠르고 coverage가 높지만 delayed resource conflict를 늦게
+> 발견한다. 그러므로 넓은 numeric 표현을 유지하면서 미래의 수치적 불가능성을 낮은
+> 비용으로 조기에 전파하는 방법이 필요하다.
+
+현재 단계에서 LPRPG 자체를 개조하는 것을 연구 방향으로 확정하지 않는다. LPRPG는
+`미래 자원 추론이 이미 존재한다`는 선행연구인 동시에 `그 추론이 현재 목표 domain에
+바로 적용되지는 않는다`는 적용 범위 분석에 사용한다. 이후 제안 방법은 RPG 보강,
+부분 LP, interval, landmark, abstraction 중 어느 기반을 택하더라도 이 공백을
+해결하는지를 기준으로 평가할 수 있다.
+
+## 7. 연구 질문으로 바꿀 때
 
 아직 특정 planner 구조를 연구 주제로 확정할 필요는 없다. 현재 결과에서 바로 도출되는
 연구 질문은 다음과 같다.
@@ -195,7 +295,12 @@ stock decrease, 용기 재사용 또는 hand occupancy의 상관관계를 잃으
 - 처음 명백한 자원 충돌이 나타나는 relaxed-plan layer
 - numeric gate를 통과한 뒤 필요한 symbolic preparation 길이
 
-## 7. 한계와 다음 통제실험
+기존 휴리스틱 계열별 정보 손실, 방법론에 독립적인 중심 연구 문제와 평가 요구사항은
+[방법론을 열어 둔 문제 정의](./15_방법론을_열어둔_numeric_planning_문제정의.md)에
+별도로 정리했다. 이 단계에서는 LLM, anytime search, LP, RPG 보강과 abstraction을
+모두 경쟁 후보로 두며 어느 하나를 제안 방법으로 전제하지 않는다.
+
+## 8. 한계와 다음 통제실험
 
 - p001, p002, p004는 완전히 nested된 problem이 아니다. 주문 수뿐 아니라 recipe와
   shaker 구성이 달라지므로 cross-instance 차이를 순수 horizon 효과로 단정할 수 없다.
@@ -209,8 +314,9 @@ stock decrease, 용기 재사용 또는 hand occupancy의 상관관계를 잃으
 - Watering에서는 동일 graph에서 refill 횟수와 수도 거리를 독립적으로 변화시키고,
   Logistics에서는 선택 가능한 경로 수와 연료·예산 gate를 독립적으로 변화시켜야 한다.
 
-## 8. 재현 자료
+## 9. 재현 자료
 
+- LPRPG 설치·호환성 기록: [`12_LPRPG_설치와_실행.md`](../10_플래너_자료/12_LPRPG_설치와_실행.md)
 - 실행기: [`controlled_barman_experiment.py`](../../scripts/run/controlled_barman_experiment.py)
 - 분석기: [`analyze_controlled_barman_experiment.py`](../../scripts/analyze_controlled_barman_experiment.py)
 - 통합 결과: [`combined.csv`](./figures/controlled-barman/combined.csv)

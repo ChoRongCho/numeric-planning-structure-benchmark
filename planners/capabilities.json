@@ -6,6 +6,7 @@
     "metric-ff-cross-v1": {"adapter": "metric-ff-cross-v1", "batch_enabled": true, "numeric": true, "temporal": false, "derived_predicates": false, "conditional_effects": true, "quantified": true, "disjunctive": true},
     "metric-ff-cross-v2": {"adapter": "metric-ff-cross-v2", "batch_enabled": true, "numeric": true, "temporal": false, "derived_predicates": false, "conditional_effects": true, "quantified": true, "disjunctive": true},
     "enhsp": {"adapter": "enhsp", "batch_enabled": true, "numeric": true, "temporal": false, "derived_predicates": false, "conditional_effects": true, "quantified": false, "disjunctive": true},
+    "lprpg": {"adapter": "lprpg", "batch_enabled": false, "kind": "Hybrid LP-RPG; producer-consumer numeric fragment; force mode is experimental", "numeric": true, "temporal": true, "derived_predicates": false, "conditional_effects": false, "quantified": false, "disjunctive": false},
     "tamerlite": {"adapter": "tamerlite", "batch_enabled": true, "numeric": true, "temporal": false, "derived_predicates": false, "conditional_effects": false, "quantified": false, "disjunctive": false},
     "nextflap": {"adapter": "nextflap", "batch_enabled": true, "numeric": true, "temporal": true, "derived_predicates": false, "conditional_effects": false, "quantified": false, "disjunctive": false},
     "omtplan": {"adapter": "omtplan", "batch_enabled": true, "numeric": true, "temporal": false, "derived_predicates": false, "conditional_effects": false, "quantified": false, "disjunctive": false},

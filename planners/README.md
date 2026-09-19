@@ -75,3 +75,18 @@ scripts/run/benchmarkctl planners
 `numeric-cegar`는 논문 배포본의 별도 runtime이다. 기존 13개 비교군 설정은 유지한다.
 GUI, `plannerctl`, batch adapter와 논문 465개 문제용 로컬 runner에 연결돼 있다.
 [빌드·실행 안내](../docs/10_플래너_자료/11_Numeric_Cartesian_CEGAR_실행.md)를 참고한다.
+
+## Hybrid LP–RPG (LPRPG)
+
+`lprpg`는 ICAPS 2008 Hybrid LP–RPG의 Public Release 2를 현대 Ubuntu에서
+빌드한 별도 runtime이다. GUI와 `plannerctl`에서 선택할 수 있지만, 논문 구현이
+가정하는 producer–consumer numeric fragment 밖에서는 동작을 보장하지 않으므로
+기본 batch 비교군에는 넣지 않았다.
+
+```bash
+./scripts/setup_lprpg.sh
+./planners/plannerctl status lprpg
+./planners/plannerctl run lprpg /absolute/domain.pddl /absolute/problem.pddl
+```
+
+[설치·실행 및 호환성 안내](../docs/10_플래너_자료/12_LPRPG_설치와_실행.md)를 참고한다.

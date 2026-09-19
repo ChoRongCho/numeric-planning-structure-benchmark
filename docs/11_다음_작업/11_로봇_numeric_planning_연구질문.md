@@ -1,4 +1,10 @@
-# 로봇 Numeric Planning을 위한 적응형 휴리스틱 연구 방향
+# 로봇 Numeric Planning 연구 문제와 방법 후보
+
+> **현재 상태:** 특정 방법론은 아직 선택하지 않았다. 최신 문제 정의와 기존
+> 휴리스틱의 한계 종합은
+> [방법론을 열어 둔 문제 정의](./15_방법론을_열어둔_numeric_planning_문제정의.md)를
+> 기준으로 한다. 이 문서의 LLM, anytime, cost partitioning 항목은 확정안이 아니라
+> 비교할 후보들이다.
 
 ## 1. 연구 배경
 
@@ -32,7 +38,7 @@ Metric-FF `numeric-hff`는 30개 문제를 모두 풀었고 valid plan 생성 �
 0.227초였다. Count Downward Agile `irhff`도 30개 중 28개를 풀었다. 이들은
 문제를 단순화한 relaxed plan을 만들어 탐색의 길잡이로 사용한다.
 
-이 방식은 놀은 coverage와 빠른 속도를 보였다. 하지만 자원 경쟁이 심한 문제에서는
+이 방식은 높은 coverage와 빠른 속도를 보였다. 하지만 자원 경쟁이 심한 문제에서는
 plan objective가 높아지기도 했다. Metric-FF가 찾은 Logistics p004 plan의 objective는
 774였으며, 같은 문제의 관측 최저값은 196이었다. Watering p004에서도 Metric-FF는
 0.225초 만에 plan을 찾았지만 objective는 관측 최저값보다 59.0% 높았다.
@@ -72,20 +78,21 @@ package를 각각 배송하는 구조와 하위 목표의 비용을 더하는 `i
 
 ## 3. 연구 문제 정의
 
-본 연구가 다루려는 문제는 다음과 같다.
+통제실험을 반영해 연구 문제를 다음과 같이 수정한다.
 
-> **로봇 numeric planning 도메인의 자원 구조에 따라 휴리스틱 전략을 조정하여,
-> 실행 가능한 첫 plan을 빠르게 확보하고 주어진 시간 안에 plan quality를 개선할 수
-> 있는가?**
+> **일반적인 numeric effect를 포함한 로봇 planning에서, 긴 행동열 뒤에 드러나는
+> 수치적 불가능성과 비용을 현재 상태의 휴리스틱에 낮은 계산비용으로 반영하여,
+> 빠른 첫 valid plan과 효과적인 탐색을 함께 달성할 수 있는가?**
 
 영문 연구 질문은 다음과 같이 표현할 수 있다.
 
-> **How can a numeric planner rapidly obtain an executable first plan and subsequently
-> improve its quality by adapting its heuristic strategy to the resource structure of
-> a robotic planning domain?**
+> **How can heuristic search for robotic numeric planning anticipate delayed numeric
+> infeasibility and cost while retaining broad numeric expressiveness and low first-plan
+> latency?**
 
-이 질문은 일반적인 "가장 좋은 휴리스틱은 무엇인가?"보다 더 적합하다. 실험에서
-단일 휴리스틱이 모든 도메인과 모든 평가 축에서 항상 우수하지는 않았기 때문이다.
+이 정의는 휴리스틱 선택이나 전환을 미리 답으로 넣지 않는다. 핵심 대상은 현재에는
+가능해 보이지만 긴 action sequence 뒤에서 실패하는 **delayed numeric conflict**다.
+휴리스틱 선택·전환, RPG 보강, LP, abstraction과 LLM은 이를 해결할 수 있는 후보일 뿐이다.
 
 ## 4. 세부 연구 질문
 
@@ -95,10 +102,10 @@ package를 각각 배송하는 구조와 하위 목표의 비용을 더하는 `i
 Watering·Logistics의 핵심 자원을 독립적으로 변경한 첫 검증 결과는
 [2×2 통제 실험 보고서](./13_수치자원_2x2_통제실험_결과.md)에 정리했다.
 
-### RQ1. 도메인의 어떤 특성이 휴리스틱 성능을 결정하는가?
+### RQ1. 어떤 domain–problem 구조가 지연된 수치 충돌을 만드는가?
 
-> 수치 planning 도메인의 구조적 특성만으로 relaxed-plan, interval, additive,
-> abstraction 휴리스틱의 성능을 예측할 수 있는가?
+> 자원 slack, 보충 가능성, 위치 의존성, 목표 간 자원 공유와 horizon이 잘못된
+> 선택의 실패가 드러나는 깊이와 탐색량을 얼마나 설명하는가?
 
 분석 후보로는 다음과 같은 특성을 고려할 수 있다.
 
@@ -111,23 +118,25 @@ Watering·Logistics의 핵심 자원을 독립적으로 변경한 첫 검증 결
 - 충전소나 급수지처럼 자원 보충 장소가 제한되는지 여부
 - 탐색에서 사용하는 action cost와 PDDL objective의 일치 정도
 
-### RQ2. 휴리스틱 선택과 전환이 고정 휴리스틱보다 좋은가?
+### RQ2. 기존 휴리스틱은 어느 정보를 잃어서 실패하는가?
 
-> 도메인의 구조적 특성을 이용해 휴리스틱을 선택하거나 탐색 중에 전환하면,
-> 하나의 고정 휴리스틱보다 coverage와 plan quality를 함께 개선할 수 있는가?
+> Relaxed plan, interval, additive, LP와 abstraction 휴리스틱이 decrease, ordering,
+> numeric–symbolic correlation과 objective 정보를 어디서 잃는가?
 
-이 질문은 빠른 휴리스틱과 정밀한 휴리스틱 중 하나만 고르는 대신, 두 방법의
-장점을 시간에 따라 사용할 수 있는지를 묻는다.
+### RQ3. 미래 제약을 어느 정도까지 계산해야 이득인가?
 
-### RQ3. LLM이 추출한 도메인 지식이 새로운 도메인에도 일반화되는가?
+> 총수요 lower bound, interval, 작은 LP, landmark, abstraction과 bounded lookahead
+> 중 어떤 추론이 추가 계산비용보다 큰 pruning 이득을 만드는가?
 
-> LLM이 PDDL에서 추출한 자원 관계와 보조 수치 조건을 사용하면, 수작업 규칙이나
-> 전통적인 특징 추출 방식보다 보지 못한 로봇 도메인에서 잘 일반화되는가?
+### RQ4. 그 이득이 새로운 domain과 problem에도 유지되는가?
 
-LLM의 필요성은 고정 휴리스틱, 수작업 규칙 기반 선택기, 일반적인 머신러닝 선택기,
-단순 portfolio와의 비교를 통해 검증해야 한다.
+> 특정 benchmark에 맞춘 규칙을 넘어, 보지 못한 자원 구조와 더 긴 horizon에서도
+> coverage, first-plan latency 또는 objective를 개선하는가?
 
-## 5. 해결 방법 후보
+## 5. 해결 방법 후보: 아직 선택하지 않음
+
+다음 항목은 서로 경쟁하는 방법 후보다. 현재 결과는 어느 하나를 핵심 방법론으로
+확정할 만큼 충분하지 않다.
 
 ### 5.1 LLM 기반 휴리스틱 선택
 
@@ -208,10 +217,10 @@ Watering의 경우 남은 총 물 수요와 현재 물의 차이로 최소 급�
 - 탐색이 정체되면 다른 휴리스틱으로 전환
 - 여러 open list를 두고 서로 다른 평가값에 따라 번갈아 확장
 
-## 6. 제안하는 핵심 접근: 자원 구조 기반 anytime planning
+## 6. 방법 후보 A: 자원 구조 기반 anytime planning
 
-현재 결과에서 가장 자연스러운 해결 방식은 하나의 휴리스틱으로 모든 목표를 달성하려
-하기보다, 탐색 시간에 따라 휴리스틱의 역할을 나누는 것이다.
+한 가지 후보는 하나의 휴리스틱으로 모든 목표를 달성하려 하기보다, 탐색 시간에 따라
+휴리스틱의 역할을 나누는 것이다. 이는 아직 제안 방법으로 확정된 구성이 아니다.
 
 1. Metric-FF 또는 `irhff`로 실행 가능한 첫 plan을 빠르게 찾는다.
 2. 첫 plan의 objective를 현재 upper bound로 저장한다.
@@ -287,34 +296,30 @@ LLM 기반 방법은 단순 portfolio나 작은 규칙 기반 선택기보다 �
 
 ## 8. 단계별 연구 계획
 
-### 1단계: 휴리스틱 적합성 분석
+### 1단계: 문제 구조와 실패 시점 계측
 
-PDDL에서 자원과 action의 관계를 추출하고, 각 특징이 planner의 coverage, 탐색량,
-objective와 어떻게 연결되는지 분석한다. 이 단계에서 RQ1을 먼저 다룬다.
+자원 slack과 horizon을 독립적으로 바꾸고, 잘못된 선택이 몇 action 또는 relaxed-plan
+layer 뒤에 dead end로 드러나는지 측정한다. 휴리스틱별로 잃는 상관관계도 기록한다.
 
-### 2단계: 빠른 첫 plan과 plan 개선의 결합
+### 2단계: 최소 정보 추가 실험
 
-Metric-FF나 `irhff`로 첫 plan을 찾고, 이를 upper bound로 사용하여 numeric-aware 탐색을
-진행하는 anytime prototype을 구현한다. 고정 휴리스틱과 단순 portfolio를 먼저
-비교한다.
+총수요, refill lower bound, interval coupling, 작은 LP 등 비용이 낮은 후보부터
+추가한다. 휴리스틱 계산시간 증가와 확장 감소를 함께 비교해 실제 순이득을 확인한다.
 
-### 3단계: LLM 기반 도메인 지식 생성
+### 3단계: 방법 후보 선택과 일반화 검증
 
-LLM이 자원 관계, redundant numeric constraint, abstraction pattern과 휴리스틱 시간 배분을
-생성하게 한다. 이 정보가 새로운 도메인에서도 유용한지를 수작업 및 학습 기반
-방법과 비교한다.
+RPG 보강, LP, landmark, abstraction, portfolio와 LLM 보조 중 통제실험에서 지지되는
+후보만 구현한다. 이후 보지 못한 domain과 더 긴 problem에서 일반화를 검증한다.
 
 ## 9. 예상 기여
 
-이 연구가 목표로 하는 기여는 다음과 같다.
+방법을 확정하기 전 단계에서 기대할 수 있는 기여는 다음과 같다.
 
-1. 로봇 numeric planning에서 휴리스틱 성능을 결정하는 자원 구조 특징을 정리한다.
-2. 빠른 첫 plan과 낮은 최종 objective를 함께 고려하는 anytime numeric planning 방법을
-   제안한다.
-3. 고정된 휴리스틱이 아니라 도메인 구조에 따라 선택·전환되는 적응형 탐색
-   구조를 검증한다.
-4. LLM을 planner 대체제가 아닌 도메인 구조 분석과 휴리스틱 구성 도구로 사용할
-   수 있는지 평가한다.
+1. Delayed numeric conflict와 failure revelation depth를 측정 가능한 형태로 정의한다.
+2. 기존 휴리스틱이 잃는 미래성, ordering, numeric–symbolic correlation과 표현 범위를
+   체계적으로 비교한다.
+3. 추가 추론비용과 pruning 이득의 관계를 밝힌다.
+4. 선택된 방법이 빠른 첫 plan, coverage와 objective에 주는 효과를 검증한다.
 
 ## 10. 현재 결론과 다음 검증 과제
 
@@ -325,12 +330,11 @@ planning의 일반적인 해답이라고 결론낼 수는 없다. 확인된 사�
 
 다음 단계에서는 다음을 우선 검증해야 한다.
 
-1. 로봇 도메인의 자원 결합도를 정량화할 수 있는가?
-2. 빠른 첫 plan을 upper bound로 제공했을 때 numeric-aware 탐색이 실제로 빨라지는가?
-3. 휴리스틱 선택보다 탐색 중 전환이 더 효과적인가?
-4. LLM 없이 규칙 기반 접근만으로 어느 정도까지 해결할 수 있는가?
-5. LLM이 추가로 제공하는 정보가 보지 못한 도메인에서도 실질적인 이득을 주는가?
+1. Delayed numeric conflict와 failure revelation depth를 재현성 있게 측정할 수 있는가?
+2. 각 휴리스틱이 실제로 어느 numeric–symbolic 관계를 잃는가?
+3. 가장 작은 추가 정보로 실패 경로를 얼마나 일찍 제거할 수 있는가?
+4. 추가된 휴리스틱 계산비용보다 상태 확장 감소가 큰가?
+5. 그 효과가 새로운 domain과 더 긴 problem에서도 유지되는가?
 
-이 검증을 통해 수단을 먼저 정한 연구가 아니라, 빠른 반응과 자원 효율이 모두 필요한
-로봇 planning 문제를 해결하기 위해 적합한 휴리스틱 전략을 찾는 연구로 범위를
-구체화할 수 있다.
+이 검증을 마친 뒤에 RPG 보강, LP, abstraction, portfolio 또는 LLM 보조 중 어떤
+방법을 사용할지 결정한다. 현재는 문제와 평가 기준만 고정하고 해결 수단은 열어 둔다.

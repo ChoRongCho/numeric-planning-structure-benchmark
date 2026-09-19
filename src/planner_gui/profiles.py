@@ -76,6 +76,19 @@ PROFILES: tuple[PlannerProfile, ...] = (
         ),
     ),
     PlannerProfile(
+        "lprpg", "LPRPG", "Hybrid LP–RPG resource flow",
+        "RPG와 LP/MIP 자원 흐름을 결합합니다. 기본 모드는 producer–consumer fragment만 허용합니다.",
+        choices(("LP-RPG resource-flow (fixed)", "lp-rpg")),
+        choices(("Steepest descent → best-first", "default"), ("Best-first만", "best-first")),
+        (
+            OptionSpec("fragment", "Numeric fragment", choices(
+                ("안전 검사", "strict"),
+                ("범위 밖 강제 실행 (불안정)", "force"),
+            )),
+            OptionSpec("helpful", "Helpful actions", choices(("사용", "true"), ("미사용", "false"))),
+        ),
+    ),
+    PlannerProfile(
         "metric-ff-cross-v1", "Metric-FF", "Numeric RPG / hFF",
         "Metric-FF의 monotonic numeric relaxation과 hFF는 고정입니다.",
         choices(("numeric hFF (고정)", "numeric-hff")),
@@ -239,6 +252,15 @@ def build_command(
         if options.get("ties"):
             argv += ["-ties", options["ties"]]
         return argv
+    if planner_id == "lprpg":
+        argv = base
+        if options.get("fragment") == "force":
+            argv.append("-plananyway")
+        if search == "best-first":
+            argv.append("-E")
+        if options.get("helpful") == "false":
+            argv.append("-h")
+        return argv + [d, p]
     if planner_id == "metric-ff-cross-v1":
         argv = base + ["-o", d, "-f", p]
         if search == "best-first":

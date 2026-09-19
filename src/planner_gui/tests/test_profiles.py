@@ -27,7 +27,7 @@ class ProfileTests(unittest.TestCase):
 
     def test_profile_ids_are_unique(self):
         self.assertEqual(len(PROFILES), len(PROFILE_BY_ID))
-        self.assertEqual(len(PROFILES), 14)
+        self.assertEqual(len(PROFILES), 15)
 
     def test_local_artifacts_have_visible_short_names(self):
         self.assertEqual(GUI_PLANNER_NAMES[:3], ("optic-cplex", "popf", "nfd"))
@@ -45,6 +45,21 @@ class ProfileTests(unittest.TestCase):
         self.assertIn("hmrp", command)
         self.assertIn("gbfs", command)
         self.assertEqual(command[-4:], ["-ha", "true", "-ties", "larger_g"])
+
+    def test_lprpg_safe_and_force_modes_reach_cli(self):
+        safe = build_command(self.root, "lprpg", self.domain, self.problem,
+                             "lp-rpg", "default", {"fragment": "strict", "helpful": "true"})
+        self.assertEqual(safe[-2:], [str(self.domain), str(self.problem)])
+        self.assertNotIn("-plananyway", safe)
+        forced = build_command(self.root, "lprpg", self.domain, self.problem,
+                               "lp-rpg", "best-first", {"fragment": "force", "helpful": "false"})
+        self.assertIn("-plananyway", forced)
+        self.assertIn("-E", forced)
+        self.assertIn("-h", forced)
+
+    def test_lprpg_sequential_plan_is_extracted(self):
+        output = ";;;; Solution Found\n; Time 0.00\n0.001: (finish) [1.000]\n"
+        self.assertEqual(extract_plan("lprpg", output), ["(finish)"])
 
     def test_planforge_recursive_search(self):
         command = build_command(self.root, "planforge-ipc2026", self.domain, self.problem,
