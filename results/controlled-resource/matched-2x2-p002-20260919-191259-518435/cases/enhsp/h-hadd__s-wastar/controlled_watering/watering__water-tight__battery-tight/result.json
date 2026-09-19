@@ -1,0 +1,22 @@
+{
+  "planner": "enhsp",
+  "configuration": "h-hadd__s-wastar",
+  "heuristic": "hadd",
+  "search": "WAStar",
+  "benchmark": "controlled_watering",
+  "instance": "watering__water-tight__battery-tight.pddl",
+  "compatible": "true",
+  "return_code": "0",
+  "wall_seconds": "3.813265",
+  "max_rss_kb": "613876",
+  "peak_group_rss_kb": "605676",
+  "limit_reason": "",
+  "plan_length": "30",
+  "expanded_nodes": "152822",
+  "metric_value": "114.0",
+  "objective_value": "114",
+  "validation": "valid",
+  "plan_path": "results/controlled-resource/matched-2x2-p002-20260919-191259-518435/cases/enhsp/h-hadd__s-wastar/controlled_watering/watering__water-tight__battery-tight/plan.val",
+  "case_directory": "results/controlled-resource/matched-2x2-p002-20260919-191259-518435/cases/enhsp/h-hadd__s-wastar/controlled_watering/watering__water-tight__battery-tight",
+  "status": "solved"
+}

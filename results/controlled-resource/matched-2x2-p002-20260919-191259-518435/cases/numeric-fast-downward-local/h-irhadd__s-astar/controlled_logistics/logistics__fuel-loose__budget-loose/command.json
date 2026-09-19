@@ -1,0 +1,9 @@
+[
+  "/home/changmin/PyProject/53_KIST_Research/planners/plannerctl",
+  "run",
+  "numeric-fast-downward-local",
+  "/home/changmin/PyProject/53_KIST_Research/results/controlled-resource/matched-2x2-p002-20260919-191259-518435/cases/numeric-fast-downward-local/h-irhadd__s-astar/controlled_logistics/logistics__fuel-loose__budget-loose/work/domain.pddl",
+  "/home/changmin/PyProject/53_KIST_Research/results/controlled-resource/matched-2x2-p002-20260919-191259-518435/cases/numeric-fast-downward-local/h-irhadd__s-astar/controlled_logistics/logistics__fuel-loose__budget-loose/work/problem.pddl",
+  "--search",
+  "astar(irhadd())"
+]

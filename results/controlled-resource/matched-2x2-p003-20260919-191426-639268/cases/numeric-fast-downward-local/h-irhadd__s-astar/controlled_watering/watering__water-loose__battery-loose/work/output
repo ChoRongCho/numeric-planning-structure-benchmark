@@ -1,0 +1,886 @@
+begin_version
+4
+end_version
+begin_metric
+< 35
+end_metric
+25
+begin_variable
+var3
+25
+2
+Atom new-axiom@0()
+NegatedAtom new-axiom@0()
+end_variable
+begin_variable
+var12
+24
+3
+>= PNE derived!difference_PNE battery-level(?robot)_PNE move-energy(?from, ?to)(robot1, zone2, zone3), PNE derived!0.0()
+< PNE derived!difference_PNE battery-level(?robot)_PNE move-energy(?from, ?to)(robot1, zone2, zone3), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var5
+24
+3
+>= PNE derived!difference_PNE battery-level(?robot)_PNE drop-energy()(robot1), PNE derived!0.0()
+< PNE derived!difference_PNE battery-level(?robot)_PNE drop-energy()(robot1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var15
+24
+3
+< PNE derived!difference_PNE water-level(?container)_PNE container-capacity(?container)(watering-can1, watering-can1), PNE derived!0.0()
+>= PNE derived!difference_PNE water-level(?container)_PNE container-capacity(?container)(watering-can1, watering-can1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var9
+24
+3
+>= PNE derived!difference_PNE water-level(?container)_PNE derived!1.0()(watering-can1), PNE derived!0.0()
+< PNE derived!difference_PNE water-level(?container)_PNE derived!1.0()(watering-can1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var17
+24
+3
+< PNE derived!difference_PNE watered-amount(plant5)_PNE plant-demand(plant5)(plant1, plant1), PNE derived!0.0()
+>= PNE derived!difference_PNE watered-amount(plant5)_PNE plant-demand(plant5)(plant1, plant1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var13
+24
+3
+< PNE derived!difference_PNE watered-amount(plant2)_PNE plant-demand(plant2)(plant2, plant2), PNE derived!0.0()
+>= PNE derived!difference_PNE watered-amount(plant2)_PNE plant-demand(plant2)(plant2, plant2), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var18
+24
+3
+< PNE derived!difference_PNE watered-amount(plant5)_PNE plant-demand(plant5)(plant3, plant3), PNE derived!0.0()
+>= PNE derived!difference_PNE watered-amount(plant5)_PNE plant-demand(plant5)(plant3, plant3), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var10
+24
+3
+< PNE derived!difference_PNE watered-amount(plant3)_PNE plant-demand(plant3)(plant4, plant4), PNE derived!0.0()
+>= PNE derived!difference_PNE watered-amount(plant3)_PNE plant-demand(plant3)(plant4, plant4), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var19
+24
+3
+< PNE derived!difference_PNE watered-amount(?plant)_PNE plant-demand(?plant)(plant5, plant5), PNE derived!0.0()
+>= PNE derived!difference_PNE watered-amount(?plant)_PNE plant-demand(?plant)(plant5, plant5), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var16
+24
+3
+>= PNE derived!difference_PNE battery-level(?robot)_PNE fill-energy()(robot1), PNE derived!0.0()
+< PNE derived!difference_PNE battery-level(?robot)_PNE fill-energy()(robot1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var8
+24
+3
+>= PNE derived!difference_PNE battery-level(?robot)_PNE move-energy(?from, ?to)(robot1, zone5, zone2), PNE derived!0.0()
+< PNE derived!difference_PNE battery-level(?robot)_PNE move-energy(?from, ?to)(robot1, zone5, zone2), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var6
+24
+3
+< PNE derived!difference_PNE battery-level(?robot)_PNE battery-capacity(?robot)(robot1, robot1), PNE derived!0.0()
+>= PNE derived!difference_PNE battery-level(?robot)_PNE battery-capacity(?robot)(robot1, robot1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var11
+24
+3
+>= PNE derived!difference_PNE battery-level(?robot)_PNE move-energy(?from, ?to)(robot1, zone1, zone4), PNE derived!0.0()
+< PNE derived!difference_PNE battery-level(?robot)_PNE move-energy(?from, ?to)(robot1, zone1, zone4), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var7
+24
+3
+>= PNE derived!difference_PNE battery-level(?robot)_PNE move-energy(?from, ?to)(robot1, base, zone1), PNE derived!0.0()
+< PNE derived!difference_PNE battery-level(?robot)_PNE move-energy(?from, ?to)(robot1, base, zone1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var14
+24
+3
+>= PNE derived!difference_PNE battery-level(?robot)_PNE move-energy(?from, ?to)(robot1, zone6, zone3), PNE derived!0.0()
+< PNE derived!difference_PNE battery-level(?robot)_PNE move-energy(?from, ?to)(robot1, zone6, zone3), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var0
+-1
+7
+Atom at-robot(robot1, base)
+Atom at-robot(robot1, zone1)
+Atom at-robot(robot1, zone2)
+Atom at-robot(robot1, zone3)
+Atom at-robot(robot1, zone4)
+Atom at-robot(robot1, zone5)
+Atom at-robot(robot1, zone6)
+end_variable
+begin_variable
+var1
+-1
+8
+Atom container-at(watering-can1, base)
+Atom container-at(watering-can1, zone1)
+Atom container-at(watering-can1, zone2)
+Atom container-at(watering-can1, zone3)
+Atom container-at(watering-can1, zone4)
+Atom container-at(watering-can1, zone5)
+Atom container-at(watering-can1, zone6)
+Atom holding(robot1, watering-can1)
+end_variable
+begin_variable
+var2
+-1
+2
+Atom hand-free(robot1)
+NegatedAtom hand-free(robot1)
+end_variable
+begin_variable
+var22
+24
+3
+>= PNE derived!difference_PNE watered-amount(?plant)_PNE plant-demand(?plant)(plant5, plant5), PNE derived!0.0()
+< PNE derived!difference_PNE watered-amount(?plant)_PNE plant-demand(?plant)(plant5, plant5), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var21
+24
+3
+>= PNE derived!difference_PNE watered-amount(plant3)_PNE plant-demand(plant3)(plant4, plant4), PNE derived!0.0()
+< PNE derived!difference_PNE watered-amount(plant3)_PNE plant-demand(plant3)(plant4, plant4), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var20
+24
+3
+>= PNE derived!difference_PNE watered-amount(plant5)_PNE plant-demand(plant5)(plant3, plant3), PNE derived!0.0()
+< PNE derived!difference_PNE watered-amount(plant5)_PNE plant-demand(plant5)(plant3, plant3), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var23
+24
+3
+>= PNE derived!difference_PNE watered-amount(plant2)_PNE plant-demand(plant2)(plant2, plant2), PNE derived!0.0()
+< PNE derived!difference_PNE watered-amount(plant2)_PNE plant-demand(plant2)(plant2, plant2), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var24
+24
+3
+>= PNE derived!difference_PNE watered-amount(plant5)_PNE plant-demand(plant5)(plant1, plant1), PNE derived!0.0()
+< PNE derived!difference_PNE watered-amount(plant5)_PNE plant-demand(plant5)(plant1, plant1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var4
+25
+2
+Atom new-axiom@1()
+NegatedAtom new-axiom@1()
+end_variable
+36
+begin_numeric_variables
+C -1 PNE derived!222.0()
+C -1 PNE derived!15.0()
+C -1 PNE derived!5.0()
+C -1 PNE derived!10.0()
+C -1 PNE derived!12.0()
+C -1 PNE derived!9.0()
+C -1 PNE derived!0.0()
+C -1 PNE derived!6.0()
+C -1 PNE derived!7.0()
+C -1 PNE derived!1.0()
+C -1 PNE derived!8.0()
+C -1 PNE derived!2.0()
+C -1 PNE derived!20.0()
+D 6 PNE derived!difference_PNE battery-level(?robot)_PNE move-energy(?from, ?to)(robot1, zone2, zone3)
+D 7 PNE derived!difference_PNE battery-level(?robot)_PNE drop-energy()(robot1)
+D 8 PNE derived!difference_PNE water-level(?container)_PNE container-capacity(?container)(watering-can1, watering-can1)
+D 9 PNE derived!difference_PNE water-level(?container)_PNE derived!1.0()(watering-can1)
+D 19 PNE derived!difference_PNE watered-amount(plant5)_PNE plant-demand(plant5)(plant1, plant1)
+D 23 PNE derived!difference_PNE watered-amount(plant2)_PNE plant-demand(plant2)(plant2, plant2)
+D 21 PNE derived!difference_PNE watered-amount(plant5)_PNE plant-demand(plant5)(plant3, plant3)
+D 14 PNE derived!difference_PNE watered-amount(plant3)_PNE plant-demand(plant3)(plant4, plant4)
+D 18 PNE derived!difference_PNE watered-amount(?plant)_PNE plant-demand(?plant)(plant5, plant5)
+D 1 PNE derived!difference_PNE battery-level(?robot)_PNE fill-energy()(robot1)
+D 4 PNE derived!difference_PNE battery-level(?robot)_PNE move-energy(?from, ?to)(robot1, zone5, zone2)
+D 0 PNE derived!difference_PNE battery-level(?robot)_PNE battery-capacity(?robot)(robot1, robot1)
+D 5 PNE derived!difference_PNE battery-level(?robot)_PNE move-energy(?from, ?to)(robot1, zone1, zone4)
+D 2 PNE derived!difference_PNE battery-level(?robot)_PNE move-energy(?from, ?to)(robot1, base, zone1)
+D 3 PNE derived!difference_PNE battery-level(?robot)_PNE move-energy(?from, ?to)(robot1, zone6, zone3)
+R -1 PNE watered-amount(plant1)
+R -1 PNE watered-amount(plant2)
+R -1 PNE watered-amount(plant3)
+R -1 PNE watered-amount(plant4)
+R -1 PNE watered-amount(plant5)
+R -1 PNE water-level(watering-can1)
+R -1 PNE battery-level(robot1)
+I -1 PNE total-watering-time()
+end_numeric_variables
+1
+begin_mutex_group
+2
+17 7
+18 0
+end_mutex_group
+begin_state
+1
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+0
+0
+0
+2
+2
+2
+2
+2
+1
+end_state
+begin_numeric_state
+222
+15
+5
+10
+12
+9
+0
+6
+7
+1
+8
+2
+20
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+222
+0
+end_numeric_state
+begin_goal
+1
+24 0
+end_goal
+40
+begin_operator
+charge-battery robot1 base
+2
+16 0
+12 0
+0
+2
+0 34 = 0
+0 35 + 1
+1
+end_operator
+begin_operator
+charge-battery robot1 zone2
+2
+16 2
+12 0
+0
+2
+0 34 = 0
+0 35 + 1
+1
+end_operator
+begin_operator
+drop-container robot1 watering-can1 base
+2
+16 0
+2 0
+2
+0 17 7 0
+0 18 -1 0
+2
+0 34 - 9
+0 35 + 9
+1
+end_operator
+begin_operator
+drop-container robot1 watering-can1 zone1
+2
+16 1
+2 0
+2
+0 17 7 1
+0 18 -1 0
+2
+0 34 - 9
+0 35 + 9
+1
+end_operator
+begin_operator
+drop-container robot1 watering-can1 zone2
+2
+16 2
+2 0
+2
+0 17 7 2
+0 18 -1 0
+2
+0 34 - 9
+0 35 + 9
+1
+end_operator
+begin_operator
+drop-container robot1 watering-can1 zone3
+2
+16 3
+2 0
+2
+0 17 7 3
+0 18 -1 0
+2
+0 34 - 9
+0 35 + 9
+1
+end_operator
+begin_operator
+drop-container robot1 watering-can1 zone4
+2
+16 4
+2 0
+2
+0 17 7 4
+0 18 -1 0
+2
+0 34 - 9
+0 35 + 9
+1
+end_operator
+begin_operator
+drop-container robot1 watering-can1 zone5
+2
+16 5
+2 0
+2
+0 17 7 5
+0 18 -1 0
+2
+0 34 - 9
+0 35 + 9
+1
+end_operator
+begin_operator
+drop-container robot1 watering-can1 zone6
+2
+16 6
+2 0
+2
+0 17 7 6
+0 18 -1 0
+2
+0 34 - 9
+0 35 + 9
+1
+end_operator
+begin_operator
+fill-container robot1 watering-can1 zone6
+4
+16 6
+17 7
+3 0
+10 0
+0
+3
+0 34 - 11
+0 35 + 7
+0 33 = 12
+1
+end_operator
+begin_operator
+move robot1 base zone1
+1
+14 0
+1
+0 16 0 1
+2
+0 34 - 8
+0 35 + 10
+1
+end_operator
+begin_operator
+move robot1 base zone4
+1
+11 0
+1
+0 16 0 4
+2
+0 34 - 7
+0 35 + 5
+1
+end_operator
+begin_operator
+move robot1 zone1 base
+1
+14 0
+1
+0 16 1 0
+2
+0 34 - 8
+0 35 + 10
+1
+end_operator
+begin_operator
+move robot1 zone1 zone3
+1
+14 0
+1
+0 16 1 3
+2
+0 34 - 8
+0 35 + 10
+1
+end_operator
+begin_operator
+move robot1 zone1 zone4
+1
+13 0
+1
+0 16 1 4
+2
+0 34 - 10
+0 35 + 5
+1
+end_operator
+begin_operator
+move robot1 zone2 zone3
+1
+1 0
+1
+0 16 2 3
+2
+0 34 - 5
+0 35 + 3
+1
+end_operator
+begin_operator
+move robot1 zone2 zone5
+1
+11 0
+1
+0 16 2 5
+2
+0 34 - 7
+0 35 + 3
+1
+end_operator
+begin_operator
+move robot1 zone3 zone1
+1
+14 0
+1
+0 16 3 1
+2
+0 34 - 8
+0 35 + 10
+1
+end_operator
+begin_operator
+move robot1 zone3 zone2
+1
+1 0
+1
+0 16 3 2
+2
+0 34 - 5
+0 35 + 3
+1
+end_operator
+begin_operator
+move robot1 zone3 zone4
+1
+1 0
+1
+0 16 3 4
+2
+0 34 - 5
+0 35 + 3
+1
+end_operator
+begin_operator
+move robot1 zone3 zone6
+1
+15 0
+1
+0 16 3 6
+2
+0 34 - 2
+0 35 + 5
+1
+end_operator
+begin_operator
+move robot1 zone4 base
+1
+11 0
+1
+0 16 4 0
+2
+0 34 - 7
+0 35 + 5
+1
+end_operator
+begin_operator
+move robot1 zone4 zone1
+1
+13 0
+1
+0 16 4 1
+2
+0 34 - 10
+0 35 + 5
+1
+end_operator
+begin_operator
+move robot1 zone4 zone3
+1
+1 0
+1
+0 16 4 3
+2
+0 34 - 5
+0 35 + 3
+1
+end_operator
+begin_operator
+move robot1 zone5 zone2
+1
+11 0
+1
+0 16 5 2
+2
+0 34 - 7
+0 35 + 3
+1
+end_operator
+begin_operator
+move robot1 zone5 zone6
+1
+1 0
+1
+0 16 5 6
+2
+0 34 - 5
+0 35 + 4
+1
+end_operator
+begin_operator
+move robot1 zone6 zone3
+1
+15 0
+1
+0 16 6 3
+2
+0 34 - 2
+0 35 + 5
+1
+end_operator
+begin_operator
+move robot1 zone6 zone5
+1
+1 0
+1
+0 16 6 5
+2
+0 34 - 5
+0 35 + 4
+1
+end_operator
+begin_operator
+pick-container robot1 watering-can1 base
+2
+16 0
+2 0
+2
+0 17 0 7
+0 18 0 1
+2
+0 34 - 9
+0 35 + 9
+1
+end_operator
+begin_operator
+pick-container robot1 watering-can1 zone1
+2
+16 1
+2 0
+2
+0 17 1 7
+0 18 0 1
+2
+0 34 - 9
+0 35 + 9
+1
+end_operator
+begin_operator
+pick-container robot1 watering-can1 zone2
+2
+16 2
+2 0
+2
+0 17 2 7
+0 18 0 1
+2
+0 34 - 9
+0 35 + 9
+1
+end_operator
+begin_operator
+pick-container robot1 watering-can1 zone3
+2
+16 3
+2 0
+2
+0 17 3 7
+0 18 0 1
+2
+0 34 - 9
+0 35 + 9
+1
+end_operator
+begin_operator
+pick-container robot1 watering-can1 zone4
+2
+16 4
+2 0
+2
+0 17 4 7
+0 18 0 1
+2
+0 34 - 9
+0 35 + 9
+1
+end_operator
+begin_operator
+pick-container robot1 watering-can1 zone5
+2
+16 5
+2 0
+2
+0 17 5 7
+0 18 0 1
+2
+0 34 - 9
+0 35 + 9
+1
+end_operator
+begin_operator
+pick-container robot1 watering-can1 zone6
+2
+16 6
+2 0
+2
+0 17 6 7
+0 18 0 1
+2
+0 34 - 9
+0 35 + 9
+1
+end_operator
+begin_operator
+water-one-unit robot1 watering-can1 plant1 zone2
+5
+16 2
+17 7
+2 0
+4 0
+5 0
+0
+4
+0 34 - 9
+0 35 + 11
+0 33 - 9
+0 28 + 9
+1
+end_operator
+begin_operator
+water-one-unit robot1 watering-can1 plant2 zone3
+5
+16 3
+17 7
+2 0
+4 0
+6 0
+0
+4
+0 34 - 9
+0 35 + 11
+0 33 - 9
+0 29 + 9
+1
+end_operator
+begin_operator
+water-one-unit robot1 watering-can1 plant3 zone2
+5
+16 2
+17 7
+2 0
+4 0
+7 0
+0
+4
+0 34 - 9
+0 35 + 11
+0 33 - 9
+0 30 + 9
+1
+end_operator
+begin_operator
+water-one-unit robot1 watering-can1 plant4 zone4
+5
+16 4
+17 7
+2 0
+4 0
+8 0
+0
+4
+0 34 - 9
+0 35 + 11
+0 33 - 9
+0 31 + 9
+1
+end_operator
+begin_operator
+water-one-unit robot1 watering-can1 plant5 zone6
+5
+16 6
+17 7
+2 0
+4 0
+9 0
+0
+4
+0 34 - 9
+0 35 + 11
+0 33 - 9
+0 32 + 9
+1
+end_operator
+2
+begin_rule
+0
+0 1 0
+end_rule
+begin_rule
+8
+16 0
+17 0
+18 0
+21 0
+20 0
+19 0
+22 0
+23 0
+24 1 0
+end_rule
+20
+begin_comparison_axioms
+3 < 15 6
+23 >= 17 6
+22 >= 18 6
+19 >= 21 6
+20 >= 20 6
+21 >= 19 6
+9 < 21 6
+7 < 19 6
+5 < 17 6
+10 >= 22 6
+2 >= 14 6
+15 >= 27 6
+6 < 18 6
+1 >= 13 6
+13 >= 25 6
+8 < 20 6
+4 >= 16 6
+11 >= 23 6
+14 >= 26 6
+12 < 24 6
+end_comparison_axioms
+15
+begin_numeric_axioms
+24 - 34 0
+22 - 34 11
+26 - 34 8
+27 - 34 2
+23 - 34 7
+25 - 34 10
+13 - 34 5
+14 - 34 9
+15 - 33 12
+16 - 33 9
+20 - 31 2
+21 - 32 11
+17 - 28 11
+19 - 30 7
+18 - 29 2
+end_numeric_axioms
+begin_global_constraint
+0 0
+end_global_constraint
+begin_SG

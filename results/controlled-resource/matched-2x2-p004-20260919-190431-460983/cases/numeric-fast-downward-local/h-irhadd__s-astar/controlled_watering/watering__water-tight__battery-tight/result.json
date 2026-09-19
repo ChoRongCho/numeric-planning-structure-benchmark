@@ -1,0 +1,22 @@
+{
+  "planner": "numeric-fast-downward-local",
+  "configuration": "h-irhadd__s-astar",
+  "heuristic": "irhadd",
+  "search": "astar",
+  "benchmark": "controlled_watering",
+  "instance": "watering__water-tight__battery-tight.pddl",
+  "compatible": "true",
+  "return_code": "timeout",
+  "wall_seconds": "60.036825",
+  "max_rss_kb": "1516832",
+  "peak_group_rss_kb": "1516832",
+  "limit_reason": "timeout",
+  "plan_length": "",
+  "expanded_nodes": "431000",
+  "metric_value": "",
+  "objective_value": "",
+  "validation": "not-run",
+  "plan_path": "",
+  "case_directory": "results/controlled-resource/matched-2x2-p004-20260919-190431-460983/cases/numeric-fast-downward-local/h-irhadd__s-astar/controlled_watering/watering__water-tight__battery-tight",
+  "status": "timeout"
+}

@@ -1,0 +1,15 @@
+[
+  "/home/changmin/PyProject/53_KIST_Research/planners/plannerctl",
+  "run",
+  "enhsp",
+  "-o",
+  "/home/changmin/PyProject/53_KIST_Research/results/controlled-resource/matched-2x2-p004-20260919-191158-193347/cases/enhsp/h-hadd__s-wastar/controlled_logistics/logistics__fuel-loose__budget-loose/work/domain.pddl",
+  "-f",
+  "/home/changmin/PyProject/53_KIST_Research/results/controlled-resource/matched-2x2-p004-20260919-191158-193347/cases/enhsp/h-hadd__s-wastar/controlled_logistics/logistics__fuel-loose__budget-loose/work/problem.pddl",
+  "-h",
+  "hadd",
+  "-s",
+  "WAStar",
+  "-ties",
+  "arbitrary"
+]

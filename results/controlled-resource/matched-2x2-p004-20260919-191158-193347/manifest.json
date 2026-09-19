@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-09-19T10:12:55.594437+00:00",
+  "source_instance": "p004",
+  "timeout_seconds": 60.0,
+  "memory_limit_mb": 12288,
+  "case_count": 20,
+  "runner_wall_seconds": 57.372676,
+  "controlled_variables": {
+    "watering": [
+      "container-capacity",
+      "battery-capacity",
+      "battery-level"
+    ],
+    "logistics": [
+      "fuel-capacity",
+      "fuel-level",
+      "budget"
+    ]
+  }
+}

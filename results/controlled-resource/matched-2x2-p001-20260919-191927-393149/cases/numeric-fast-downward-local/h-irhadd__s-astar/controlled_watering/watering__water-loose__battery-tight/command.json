@@ -1,0 +1,9 @@
+[
+  "/home/changmin/PyProject/53_KIST_Research/planners/plannerctl",
+  "run",
+  "numeric-fast-downward-local",
+  "/home/changmin/PyProject/53_KIST_Research/results/controlled-resource/matched-2x2-p001-20260919-191927-393149/cases/numeric-fast-downward-local/h-irhadd__s-astar/controlled_watering/watering__water-loose__battery-tight/work/domain.pddl",
+  "/home/changmin/PyProject/53_KIST_Research/results/controlled-resource/matched-2x2-p001-20260919-191927-393149/cases/numeric-fast-downward-local/h-irhadd__s-astar/controlled_watering/watering__water-loose__battery-tight/work/problem.pddl",
+  "--search",
+  "astar(irhadd())"
+]

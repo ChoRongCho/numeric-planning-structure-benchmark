@@ -1,0 +1,22 @@
+{
+  "planner": "numeric-fast-downward-local",
+  "configuration": "h-irhadd__s-astar",
+  "heuristic": "irhadd",
+  "search": "astar",
+  "benchmark": "controlled_watering",
+  "instance": "watering__water-tight__battery-loose.pddl",
+  "compatible": "true",
+  "return_code": "0",
+  "wall_seconds": "41.359473",
+  "max_rss_kb": "1062452",
+  "peak_group_rss_kb": "1062452",
+  "limit_reason": "",
+  "plan_length": "37",
+  "expanded_nodes": "1177378",
+  "metric_value": "169",
+  "objective_value": "169",
+  "validation": "valid",
+  "plan_path": "results/controlled-resource/matched-2x2-p003-20260919-191426-639268/cases/numeric-fast-downward-local/h-irhadd__s-astar/controlled_watering/watering__water-tight__battery-loose/plan.val",
+  "case_directory": "results/controlled-resource/matched-2x2-p003-20260919-191426-639268/cases/numeric-fast-downward-local/h-irhadd__s-astar/controlled_watering/watering__water-tight__battery-loose",
+  "status": "solved"
+}

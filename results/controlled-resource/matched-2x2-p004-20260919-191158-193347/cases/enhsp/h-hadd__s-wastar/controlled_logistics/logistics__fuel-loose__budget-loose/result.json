@@ -1,0 +1,22 @@
+{
+  "planner": "enhsp",
+  "configuration": "h-hadd__s-wastar",
+  "heuristic": "hadd",
+  "search": "WAStar",
+  "benchmark": "controlled_logistics",
+  "instance": "logistics__fuel-loose__budget-loose.pddl",
+  "compatible": "true",
+  "return_code": "0",
+  "wall_seconds": "3.413004",
+  "max_rss_kb": "1295864",
+  "peak_group_rss_kb": "1273480",
+  "limit_reason": "",
+  "plan_length": "63",
+  "expanded_nodes": "392",
+  "metric_value": "228.0",
+  "objective_value": "228",
+  "validation": "valid",
+  "plan_path": "results/controlled-resource/matched-2x2-p004-20260919-191158-193347/cases/enhsp/h-hadd__s-wastar/controlled_logistics/logistics__fuel-loose__budget-loose/plan.val",
+  "case_directory": "results/controlled-resource/matched-2x2-p004-20260919-191158-193347/cases/enhsp/h-hadd__s-wastar/controlled_logistics/logistics__fuel-loose__budget-loose",
+  "status": "solved"
+}

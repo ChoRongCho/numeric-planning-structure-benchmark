@@ -1,0 +1,22 @@
+{
+  "planner": "metric-ff-cross-v1",
+  "configuration": "h-numeric-hff__s-default",
+  "heuristic": "numeric-hff",
+  "search": "default",
+  "benchmark": "controlled_watering",
+  "instance": "watering__water-loose__battery-tight.pddl",
+  "compatible": "true",
+  "return_code": "0",
+  "wall_seconds": "0.201042",
+  "max_rss_kb": "4224",
+  "peak_group_rss_kb": "596",
+  "limit_reason": "",
+  "plan_length": "49",
+  "expanded_nodes": "",
+  "metric_value": "",
+  "objective_value": "244",
+  "validation": "valid",
+  "plan_path": "results/controlled-resource/matched-2x2-p004-20260919-190431-460983/cases/metric-ff-cross-v1/h-numeric-hff__s-default/controlled_watering/watering__water-loose__battery-tight/plan.val",
+  "case_directory": "results/controlled-resource/matched-2x2-p004-20260919-190431-460983/cases/metric-ff-cross-v1/h-numeric-hff__s-default/controlled_watering/watering__water-loose__battery-tight",
+  "status": "solved"
+}

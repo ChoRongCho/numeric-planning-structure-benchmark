@@ -1,0 +1,22 @@
+{
+  "planner": "numeric-fast-downward-local",
+  "configuration": "h-irhadd__s-astar",
+  "heuristic": "irhadd",
+  "search": "astar",
+  "benchmark": "controlled_logistics",
+  "instance": "logistics__fuel-loose__budget-loose.pddl",
+  "compatible": "true",
+  "return_code": "0",
+  "wall_seconds": "0.803849",
+  "max_rss_kb": "35204",
+  "peak_group_rss_kb": "35204",
+  "limit_reason": "",
+  "plan_length": "63",
+  "expanded_nodes": "365",
+  "metric_value": "228",
+  "objective_value": "228",
+  "validation": "valid",
+  "plan_path": "results/controlled-resource/matched-2x2-p004-20260919-190431-460983/cases/numeric-fast-downward-local/h-irhadd__s-astar/controlled_logistics/logistics__fuel-loose__budget-loose/plan.val",
+  "case_directory": "results/controlled-resource/matched-2x2-p004-20260919-190431-460983/cases/numeric-fast-downward-local/h-irhadd__s-astar/controlled_logistics/logistics__fuel-loose__budget-loose",
+  "status": "solved"
+}

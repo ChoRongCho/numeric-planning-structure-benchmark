@@ -1,0 +1,7 @@
+[
+  "/home/changmin/PyProject/53_KIST_Research/planners/plannerctl",
+  "run",
+  "count-downward-agile",
+  "/home/changmin/PyProject/53_KIST_Research/results/controlled-resource/matched-2x2-p004-20260919-191158-193347/cases/count-downward-agile/h-irhff__s-alias/controlled_logistics/logistics__fuel-loose__budget-loose/work/domain.pddl",
+  "/home/changmin/PyProject/53_KIST_Research/results/controlled-resource/matched-2x2-p004-20260919-191158-193347/cases/count-downward-agile/h-irhff__s-alias/controlled_logistics/logistics__fuel-loose__budget-loose/work/problem.pddl"
+]

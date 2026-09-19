@@ -1,0 +1,22 @@
+{
+  "planner": "metric-ff-cross-v1",
+  "configuration": "h-numeric-hff__s-default",
+  "heuristic": "numeric-hff",
+  "search": "default",
+  "benchmark": "controlled_logistics",
+  "instance": "logistics__fuel-tight__budget-tight.pddl",
+  "compatible": "true",
+  "return_code": "0",
+  "wall_seconds": "0.201244",
+  "max_rss_kb": "10496",
+  "peak_group_rss_kb": "604",
+  "limit_reason": "",
+  "plan_length": "55",
+  "expanded_nodes": "",
+  "metric_value": "",
+  "objective_value": "774",
+  "validation": "valid",
+  "plan_path": "results/controlled-resource/matched-2x2-p004-20260919-190431-460983/cases/metric-ff-cross-v1/h-numeric-hff__s-default/controlled_logistics/logistics__fuel-tight__budget-tight/plan.val",
+  "case_directory": "results/controlled-resource/matched-2x2-p004-20260919-190431-460983/cases/metric-ff-cross-v1/h-numeric-hff__s-default/controlled_logistics/logistics__fuel-tight__budget-tight",
+  "status": "solved"
+}

@@ -1,0 +1,22 @@
+{
+  "planner": "numeric-fast-downward-local",
+  "configuration": "h-irhadd__s-astar",
+  "heuristic": "irhadd",
+  "search": "astar",
+  "benchmark": "controlled_logistics",
+  "instance": "logistics__fuel-tight__budget-tight.pddl",
+  "compatible": "true",
+  "return_code": "0",
+  "wall_seconds": "0.201007",
+  "max_rss_kb": "15232",
+  "peak_group_rss_kb": "740",
+  "limit_reason": "",
+  "plan_length": "19",
+  "expanded_nodes": "34",
+  "metric_value": "90",
+  "objective_value": "90",
+  "validation": "valid",
+  "plan_path": "results/controlled-resource/matched-2x2-p001-20260919-191927-393149/cases/numeric-fast-downward-local/h-irhadd__s-astar/controlled_logistics/logistics__fuel-tight__budget-tight/plan.val",
+  "case_directory": "results/controlled-resource/matched-2x2-p001-20260919-191927-393149/cases/numeric-fast-downward-local/h-irhadd__s-astar/controlled_logistics/logistics__fuel-tight__budget-tight",
+  "status": "solved"
+}

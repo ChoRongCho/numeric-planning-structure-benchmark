@@ -92,6 +92,8 @@ package를 각각 배송하는 구조와 하위 목표의 비용을 더하는 `i
 6개 benchmark의 domain–problem 구조를 이 질문에 맞춰 분석한 결과는
 [Changmin Benchmark 도메인·문제 구조 분석](./12_changmin_benchmark_도메인_문제_구조_분석.md)에
 정리했다.
+Watering·Logistics의 핵심 자원을 독립적으로 변경한 첫 검증 결과는
+[2×2 통제 실험 보고서](./13_수치자원_2x2_통제실험_결과.md)에 정리했다.
 
 ### RQ1. 도메인의 어떤 특성이 휴리스틱 성능을 결정하는가?
 

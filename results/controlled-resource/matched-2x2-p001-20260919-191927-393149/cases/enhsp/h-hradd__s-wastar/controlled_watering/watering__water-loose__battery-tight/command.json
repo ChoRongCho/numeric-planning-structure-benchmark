@@ -1,0 +1,15 @@
+[
+  "/home/changmin/PyProject/53_KIST_Research/planners/plannerctl",
+  "run",
+  "enhsp",
+  "-o",
+  "/home/changmin/PyProject/53_KIST_Research/results/controlled-resource/matched-2x2-p001-20260919-191927-393149/cases/enhsp/h-hradd__s-wastar/controlled_watering/watering__water-loose__battery-tight/work/domain.pddl",
+  "-f",
+  "/home/changmin/PyProject/53_KIST_Research/results/controlled-resource/matched-2x2-p001-20260919-191927-393149/cases/enhsp/h-hradd__s-wastar/controlled_watering/watering__water-loose__battery-tight/work/problem.pddl",
+  "-h",
+  "hradd",
+  "-s",
+  "WAStar",
+  "-ties",
+  "arbitrary"
+]

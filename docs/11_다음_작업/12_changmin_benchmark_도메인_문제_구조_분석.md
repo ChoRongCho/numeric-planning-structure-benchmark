@@ -415,3 +415,8 @@ setup 재사용과 exact numeric completion을 함께 보아야 한다.
 다음 실험에서는 우선 Watering의 물·배터리 축과 Logistics의 fuel·budget 축을 각각
 고정·변화하여, 어떤 구조가 relaxed-plan의 plan quality 저하와 numeric-aware 휴리스틱의
 coverage 저하를 만드는지 먼저 분리하는 것이 적합하다.
+
+이 추가 분석은
+[Watering·Logistics 수치 자원 2×2 통제 실험](./13_수치자원_2x2_통제실험_결과.md)으로
+수행했다. 그 결과 Watering에서는 물과 배터리의 동시 tightness보다 반복 refill을
+요구하는 물 용량이 numeric-aware 탐색량을 가장 크게 늘린 요인으로 나타났다.

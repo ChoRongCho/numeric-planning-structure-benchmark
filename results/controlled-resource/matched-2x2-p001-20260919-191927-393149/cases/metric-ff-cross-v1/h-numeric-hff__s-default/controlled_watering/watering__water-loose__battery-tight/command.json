@@ -1,0 +1,9 @@
+[
+  "/home/changmin/PyProject/53_KIST_Research/planners/plannerctl",
+  "run",
+  "metric-ff-cross-v1",
+  "-o",
+  "/home/changmin/PyProject/53_KIST_Research/results/controlled-resource/matched-2x2-p001-20260919-191927-393149/cases/metric-ff-cross-v1/h-numeric-hff__s-default/controlled_watering/watering__water-loose__battery-tight/work/domain.pddl",
+  "-f",
+  "/home/changmin/PyProject/53_KIST_Research/results/controlled-resource/matched-2x2-p001-20260919-191927-393149/cases/metric-ff-cross-v1/h-numeric-hff__s-default/controlled_watering/watering__water-loose__battery-tight/work/problem.pddl"
+]

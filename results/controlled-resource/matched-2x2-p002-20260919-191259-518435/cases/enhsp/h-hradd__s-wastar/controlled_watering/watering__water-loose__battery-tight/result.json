@@ -1,0 +1,22 @@
+{
+  "planner": "enhsp",
+  "configuration": "h-hradd__s-wastar",
+  "heuristic": "hradd",
+  "search": "WAStar",
+  "benchmark": "controlled_watering",
+  "instance": "watering__water-loose__battery-tight.pddl",
+  "compatible": "true",
+  "return_code": "0",
+  "wall_seconds": "0.401847",
+  "max_rss_kb": "93820",
+  "peak_group_rss_kb": "77036",
+  "limit_reason": "",
+  "plan_length": "27",
+  "expanded_nodes": "32",
+  "metric_value": "86.0",
+  "objective_value": "86",
+  "validation": "valid",
+  "plan_path": "results/controlled-resource/matched-2x2-p002-20260919-191259-518435/cases/enhsp/h-hradd__s-wastar/controlled_watering/watering__water-loose__battery-tight/plan.val",
+  "case_directory": "results/controlled-resource/matched-2x2-p002-20260919-191259-518435/cases/enhsp/h-hradd__s-wastar/controlled_watering/watering__water-loose__battery-tight",
+  "status": "solved"
+}

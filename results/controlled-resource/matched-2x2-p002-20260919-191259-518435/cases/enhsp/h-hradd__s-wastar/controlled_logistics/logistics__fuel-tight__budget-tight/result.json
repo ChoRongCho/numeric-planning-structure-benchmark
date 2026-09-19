@@ -1,0 +1,22 @@
+{
+  "planner": "enhsp",
+  "configuration": "h-hradd__s-wastar",
+  "heuristic": "hradd",
+  "search": "WAStar",
+  "benchmark": "controlled_logistics",
+  "instance": "logistics__fuel-tight__budget-tight.pddl",
+  "compatible": "true",
+  "return_code": "0",
+  "wall_seconds": "2.611150",
+  "max_rss_kb": "1048196",
+  "peak_group_rss_kb": "1032532",
+  "limit_reason": "",
+  "plan_length": "28",
+  "expanded_nodes": "1216",
+  "metric_value": "89.0",
+  "objective_value": "89",
+  "validation": "valid",
+  "plan_path": "results/controlled-resource/matched-2x2-p002-20260919-191259-518435/cases/enhsp/h-hradd__s-wastar/controlled_logistics/logistics__fuel-tight__budget-tight/plan.val",
+  "case_directory": "results/controlled-resource/matched-2x2-p002-20260919-191259-518435/cases/enhsp/h-hradd__s-wastar/controlled_logistics/logistics__fuel-tight__budget-tight",
+  "status": "solved"
+}

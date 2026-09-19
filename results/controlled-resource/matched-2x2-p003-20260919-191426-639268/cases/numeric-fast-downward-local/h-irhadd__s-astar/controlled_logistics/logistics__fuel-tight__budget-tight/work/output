@@ -1,0 +1,10869 @@
+begin_version
+4
+end_version
+begin_metric
+< 83
+end_metric
+44
+begin_variable
+var25
+51
+3
+<= PNE derived!difference_PNE package-weight(?package)_PNE manual-capacity(?driver)(pack4, driver1), PNE derived!0.0()
+> PNE derived!difference_PNE package-weight(?package)_PNE manual-capacity(?driver)(pack4, driver1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var24
+51
+3
+<= PNE derived!difference_PNE package-weight(?package)_PNE manual-capacity(?driver)(pack2, driver1), PNE derived!0.0()
+> PNE derived!difference_PNE package-weight(?package)_PNE manual-capacity(?driver)(pack2, driver1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var23
+51
+3
+<= PNE derived!difference_PNE package-weight(?package)_PNE manual-capacity(?driver)(pack1, driver1), PNE derived!0.0()
+> PNE derived!difference_PNE package-weight(?package)_PNE manual-capacity(?driver)(pack1, driver1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var13
+51
+3
+<= PNE derived!5.0(), PNE derived!0.0()
+> PNE derived!5.0(), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var12
+51
+3
+<= PNE derived!difference_PNE package-weight(?package)_PNE manual-capacity(?driver)(pack6, driver1), PNE derived!0.0()
+> PNE derived!difference_PNE package-weight(?package)_PNE manual-capacity(?driver)(pack6, driver1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var11
+51
+3
+<= PNE derived!difference_PNE package-weight(?package)_PNE manual-capacity(?driver)(pack3, driver1), PNE derived!0.0()
+> PNE derived!difference_PNE package-weight(?package)_PNE manual-capacity(?driver)(pack3, driver1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var10
+52
+2
+Atom new-axiom@0()
+NegatedAtom new-axiom@0()
+end_variable
+begin_variable
+var27
+51
+3
+<= PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack6, truck1, truck1), PNE derived!0.0()
+> PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack6, truck1, truck1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var30
+51
+3
+<= PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack1, truck2, truck2), PNE derived!0.0()
+> PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack1, truck2, truck2), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var32
+51
+3
+<= PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack2, truck2, truck2), PNE derived!0.0()
+> PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack2, truck2, truck2), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var29
+51
+3
+<= PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack5, truck2, truck2), PNE derived!0.0()
+> PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack5, truck2, truck2), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var34
+51
+3
+<= PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack4, truck2, truck2), PNE derived!0.0()
+> PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack4, truck2, truck2), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var43
+51
+3
+<= PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack6, truck2, truck2), PNE derived!0.0()
+> PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack6, truck2, truck2), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var28
+51
+3
+<= PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack3, truck2, truck2), PNE derived!0.0()
+> PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack3, truck2, truck2), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var26
+51
+3
+<= PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack5, truck1, truck1), PNE derived!0.0()
+> PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack5, truck1, truck1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var31
+51
+3
+<= PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack1, truck1, truck1), PNE derived!0.0()
+> PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack1, truck1, truck1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var33
+51
+3
+<= PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack2, truck1, truck1), PNE derived!0.0()
+> PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack2, truck1, truck1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var35
+51
+3
+<= PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack4, truck1, truck1), PNE derived!0.0()
+> PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack4, truck1, truck1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var42
+51
+3
+<= PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack3, truck1, truck1), PNE derived!0.0()
+> PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack3, truck1, truck1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var15
+51
+3
+>= PNE derived!difference_PNE budget()_PNE refuel-cost(?truck)(truck1), PNE derived!0.0()
+< PNE derived!difference_PNE budget()_PNE refuel-cost(?truck)(truck1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var18
+51
+3
+>= PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck1, place2, place7), PNE derived!0.0()
+< PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck1, place2, place7), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var17
+51
+3
+>= PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck1, place7, place4), PNE derived!0.0()
+< PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck1, place7, place4), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var36
+51
+3
+>= PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck1, place5, place6), PNE derived!0.0()
+< PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck1, place5, place6), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var14
+51
+3
+< PNE derived!difference_PNE fuel-level(?truck)_PNE fuel-capacity(?truck)(truck1, truck2), PNE derived!0.0()
+>= PNE derived!difference_PNE fuel-level(?truck)_PNE fuel-capacity(?truck)(truck1, truck2), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var40
+51
+3
+>= PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck1, place7, place5), PNE derived!0.0()
+< PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck1, place7, place5), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var37
+51
+3
+>= PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck1, place3, place7), PNE derived!0.0()
+< PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck1, place3, place7), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var20
+51
+3
+>= PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck2, place1, place4), PNE derived!0.0()
+< PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck2, place1, place4), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var39
+51
+3
+>= PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck2, place6, place1), PNE derived!0.0()
+< PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck2, place6, place1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var22
+51
+3
+>= PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck2, place6, place4), PNE derived!0.0()
+< PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck2, place6, place4), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var38
+51
+3
+>= PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck2, place7, place2), PNE derived!0.0()
+< PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck2, place7, place2), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var16
+51
+3
+< PNE derived!difference_PNE fuel-level(?truck)_PNE fuel-capacity(?truck)(truck2, truck2), PNE derived!0.0()
+>= PNE derived!difference_PNE fuel-level(?truck)_PNE fuel-capacity(?truck)(truck2, truck2), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var41
+51
+3
+>= PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck2, place7, place5), PNE derived!0.0()
+< PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck2, place7, place5), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var19
+51
+3
+>= PNE derived!difference_PNE budget()_PNE toll-cost(?from, ?to)(place7, place8), PNE derived!0.0()
+< PNE derived!difference_PNE budget()_PNE toll-cost(?from, ?to)(place7, place8), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var21
+51
+3
+>= PNE derived!difference_PNE budget()_PNE toll-cost(?from, ?to)(place1, place4), PNE derived!0.0()
+< PNE derived!difference_PNE budget()_PNE toll-cost(?from, ?to)(place1, place4), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var8
+-1
+8
+Atom at(truck1, place1)
+Atom at(truck1, place2)
+Atom at(truck1, place3)
+Atom at(truck1, place4)
+Atom at(truck1, place5)
+Atom at(truck1, place6)
+Atom at(truck1, place7)
+Atom at(truck1, place8)
+end_variable
+begin_variable
+var9
+-1
+8
+Atom at(truck2, place1)
+Atom at(truck2, place2)
+Atom at(truck2, place3)
+Atom at(truck2, place4)
+Atom at(truck2, place5)
+Atom at(truck2, place6)
+Atom at(truck2, place7)
+Atom at(truck2, place8)
+end_variable
+begin_variable
+var0
+-1
+10
+Atom at(driver1, place1)
+Atom at(driver1, place2)
+Atom at(driver1, place3)
+Atom at(driver1, place4)
+Atom at(driver1, place5)
+Atom at(driver1, place6)
+Atom at(driver1, place7)
+Atom at(driver1, place8)
+Atom in(driver1, truck1)
+Atom in(driver1, truck2)
+end_variable
+begin_variable
+var1
+-1
+10
+Atom at(driver2, place1)
+Atom at(driver2, place2)
+Atom at(driver2, place3)
+Atom at(driver2, place4)
+Atom at(driver2, place5)
+Atom at(driver2, place6)
+Atom at(driver2, place7)
+Atom at(driver2, place8)
+Atom in(driver2, truck1)
+Atom in(driver2, truck2)
+end_variable
+begin_variable
+var2
+-1
+10
+Atom at(pack1, place1)
+Atom at(pack1, place2)
+Atom at(pack1, place3)
+Atom at(pack1, place4)
+Atom at(pack1, place5)
+Atom at(pack1, place6)
+Atom at(pack1, place7)
+Atom at(pack1, place8)
+Atom loaded(pack1, truck1)
+Atom loaded(pack1, truck2)
+end_variable
+begin_variable
+var3
+-1
+10
+Atom at(pack2, place1)
+Atom at(pack2, place2)
+Atom at(pack2, place3)
+Atom at(pack2, place4)
+Atom at(pack2, place5)
+Atom at(pack2, place6)
+Atom at(pack2, place7)
+Atom at(pack2, place8)
+Atom loaded(pack2, truck1)
+Atom loaded(pack2, truck2)
+end_variable
+begin_variable
+var4
+-1
+10
+Atom at(pack3, place1)
+Atom at(pack3, place2)
+Atom at(pack3, place3)
+Atom at(pack3, place4)
+Atom at(pack3, place5)
+Atom at(pack3, place6)
+Atom at(pack3, place7)
+Atom at(pack3, place8)
+Atom loaded(pack3, truck1)
+Atom loaded(pack3, truck2)
+end_variable
+begin_variable
+var5
+-1
+10
+Atom at(pack4, place1)
+Atom at(pack4, place2)
+Atom at(pack4, place3)
+Atom at(pack4, place4)
+Atom at(pack4, place5)
+Atom at(pack4, place6)
+Atom at(pack4, place7)
+Atom at(pack4, place8)
+Atom loaded(pack4, truck1)
+Atom loaded(pack4, truck2)
+end_variable
+begin_variable
+var6
+-1
+10
+Atom at(pack5, place1)
+Atom at(pack5, place2)
+Atom at(pack5, place3)
+Atom at(pack5, place4)
+Atom at(pack5, place5)
+Atom at(pack5, place6)
+Atom at(pack5, place7)
+Atom at(pack5, place8)
+Atom loaded(pack5, truck1)
+Atom loaded(pack5, truck2)
+end_variable
+begin_variable
+var7
+-1
+10
+Atom at(pack6, place1)
+Atom at(pack6, place2)
+Atom at(pack6, place3)
+Atom at(pack6, place4)
+Atom at(pack6, place5)
+Atom at(pack6, place6)
+Atom at(pack6, place7)
+Atom at(pack6, place8)
+Atom loaded(pack6, truck1)
+Atom loaded(pack6, truck2)
+end_variable
+84
+begin_numeric_variables
+C -1 PNE derived!74.0()
+C -1 PNE derived!12.0()
+C -1 PNE derived!16.0()
+C -1 PNE derived!26.0()
+C -1 PNE derived!130.0()
+C -1 PNE derived!51.0()
+C -1 PNE derived!15.0()
+C -1 PNE derived!28.0()
+C -1 PNE derived!6.0()
+C -1 PNE derived!9.0()
+C -1 PNE derived!105.0()
+C -1 PNE derived!23.0()
+C -1 PNE derived!34.0()
+C -1 PNE derived!17.0()
+C -1 PNE derived!5.0()
+C -1 PNE derived!32.0()
+C -1 PNE derived!21.0()
+C -1 PNE derived!4.0()
+C -1 PNE derived!0.0()
+C -1 PNE derived!difference_PNE package-weight(?package)_PNE manual-capacity(?driver)(pack2, driver1)
+C -1 PNE derived!3.0()
+C -1 PNE derived!14.0()
+C -1 PNE derived!22.0()
+C -1 PNE derived!13.0()
+C -1 PNE derived!906.0()
+C -1 PNE derived!1.0()
+C -1 PNE derived!18.0()
+C -1 PNE derived!11.0()
+C -1 PNE derived!37.0()
+C -1 PNE derived!difference_PNE package-weight(?package)_PNE manual-capacity(?driver)(pack4, driver1)
+C -1 PNE derived!8.0()
+C -1 PNE derived!1062.0()
+C -1 PNE derived!20.0()
+C -1 PNE derived!difference_PNE package-weight(?package)_PNE manual-capacity(?driver)(pack3, driver1)
+C -1 PNE derived!difference_PNE package-weight(?package)_PNE manual-capacity(?driver)(pack6, driver1)
+C -1 PNE derived!difference_PNE package-weight(?package)_PNE manual-capacity(?driver)(pack1, driver1)
+C -1 PNE derived!124.0()
+C -1 PNE derived!129.0()
+C -1 PNE derived!10.0()
+D 25 PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(pack6, truck1)
+D 47 PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack6, truck1, truck1)
+D 16 PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(pack1, truck2)
+D 30 PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack1, truck2, truck2)
+D 18 PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(pack2, truck2)
+D 34 PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack2, truck2, truck2)
+D 24 PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(pack5, truck2)
+D 46 PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack5, truck2, truck2)
+D 22 PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(pack4, truck2)
+D 42 PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack4, truck2, truck2)
+D 26 PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(pack6, truck2)
+D 50 PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack6, truck2, truck2)
+D 20 PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(pack3, truck2)
+D 38 PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack3, truck2, truck2)
+D 23 PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(pack5, truck1)
+D 43 PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack5, truck1, truck1)
+D 15 PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(pack1, truck1)
+D 27 PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack1, truck1, truck1)
+D 17 PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(pack2, truck1)
+D 31 PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack2, truck1, truck1)
+D 21 PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(pack4, truck1)
+D 39 PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack4, truck1, truck1)
+D 19 PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(pack3, truck1)
+D 35 PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack3, truck1, truck1)
+D 0 PNE derived!difference_PNE budget()_PNE refuel-cost(?truck)(truck1)
+D 7 PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck1, place2, place7)
+D 5 PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck1, place7, place4)
+D 3 PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck1, place5, place6)
+D 13 PNE derived!difference_PNE fuel-level(?truck)_PNE fuel-capacity(?truck)(truck1, truck2)
+D 6 PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck1, place7, place5)
+D 4 PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck1, place3, place7)
+D 12 PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck2, place1, place4)
+D 8 PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck2, place6, place1)
+D 11 PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck2, place6, place4)
+D 9 PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck2, place7, place2)
+D 14 PNE derived!difference_PNE fuel-level(?truck)_PNE fuel-capacity(?truck)(truck2, truck2)
+D 10 PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck2, place7, place5)
+D 1 PNE derived!difference_PNE budget()_PNE toll-cost(?from, ?to)(place7, place8)
+D 2 PNE derived!difference_PNE budget()_PNE toll-cost(?from, ?to)(place1, place4)
+R -1 PNE budget()
+R -1 PNE fuel-level(truck1)
+R -1 PNE fuel-level(truck2)
+R -1 PNE truck-load(truck1)
+R -1 PNE truck-load(truck2)
+I -1 PNE total-delivery-time()
+end_numeric_variables
+0
+begin_state
+2
+2
+2
+2
+2
+2
+1
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+1
+3
+1
+3
+2
+7
+3
+7
+4
+1
+end_state
+begin_numeric_state
+74
+12
+16
+26
+130
+51
+15
+28
+6
+9
+105
+23
+34
+17
+5
+32
+21
+4
+0
+29
+3
+14
+22
+13
+906
+1
+18
+11
+37
+30
+8
+1062
+20
+-26
+-49
+24
+124
+129
+10
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+24
+37
+37
+0
+0
+0
+end_numeric_state
+begin_goal
+6
+38 7
+39 5
+40 6
+41 1
+42 0
+43 5
+end_goal
+860
+begin_operator
+board-truck driver1 truck1 place1
+1
+34 0
+1
+0 36 0 8
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver1 truck1 place2
+1
+34 1
+1
+0 36 1 8
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver1 truck1 place3
+1
+34 2
+1
+0 36 2 8
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver1 truck1 place4
+1
+34 3
+1
+0 36 3 8
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver1 truck1 place5
+1
+34 4
+1
+0 36 4 8
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver1 truck1 place6
+1
+34 5
+1
+0 36 5 8
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver1 truck1 place7
+1
+34 6
+1
+0 36 6 8
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver1 truck1 place8
+1
+34 7
+1
+0 36 7 8
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver1 truck2 place1
+1
+35 0
+1
+0 36 0 9
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver1 truck2 place2
+1
+35 1
+1
+0 36 1 9
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver1 truck2 place3
+1
+35 2
+1
+0 36 2 9
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver1 truck2 place4
+1
+35 3
+1
+0 36 3 9
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver1 truck2 place5
+1
+35 4
+1
+0 36 4 9
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver1 truck2 place6
+1
+35 5
+1
+0 36 5 9
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver1 truck2 place7
+1
+35 6
+1
+0 36 6 9
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver1 truck2 place8
+1
+35 7
+1
+0 36 7 9
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver2 truck1 place1
+1
+34 0
+1
+0 37 0 8
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver2 truck1 place2
+1
+34 1
+1
+0 37 1 8
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver2 truck1 place3
+1
+34 2
+1
+0 37 2 8
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver2 truck1 place4
+1
+34 3
+1
+0 37 3 8
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver2 truck1 place5
+1
+34 4
+1
+0 37 4 8
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver2 truck1 place6
+1
+34 5
+1
+0 37 5 8
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver2 truck1 place7
+1
+34 6
+1
+0 37 6 8
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver2 truck1 place8
+1
+34 7
+1
+0 37 7 8
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver2 truck2 place1
+1
+35 0
+1
+0 37 0 9
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver2 truck2 place2
+1
+35 1
+1
+0 37 1 9
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver2 truck2 place3
+1
+35 2
+1
+0 37 2 9
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver2 truck2 place4
+1
+35 3
+1
+0 37 3 9
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver2 truck2 place5
+1
+35 4
+1
+0 37 4 9
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver2 truck2 place6
+1
+35 5
+1
+0 37 5 9
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver2 truck2 place7
+1
+35 6
+1
+0 37 6 9
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+board-truck driver2 truck2 place8
+1
+35 7
+1
+0 37 7 9
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+drive-highway driver1 truck1 place1 place4
+3
+36 8
+33 0
+22 0
+1
+0 34 0 3
+3
+0 78 - 20
+0 79 - 30
+0 83 + 20
+3
+end_operator
+begin_operator
+drive-highway driver1 truck1 place2 place7
+3
+36 8
+20 0
+32 0
+1
+0 34 1 6
+3
+0 78 - 17
+0 79 - 38
+0 83 + 14
+4
+end_operator
+begin_operator
+drive-highway driver1 truck1 place4 place1
+3
+36 8
+33 0
+22 0
+1
+0 34 3 0
+3
+0 78 - 20
+0 79 - 30
+0 83 + 20
+3
+end_operator
+begin_operator
+drive-highway driver1 truck1 place4 place7
+3
+36 8
+21 0
+32 0
+1
+0 34 3 6
+3
+0 78 - 17
+0 79 - 27
+0 83 + 8
+4
+end_operator
+begin_operator
+drive-highway driver1 truck1 place5 place7
+3
+36 8
+33 0
+24 0
+1
+0 34 4 6
+3
+0 78 - 20
+0 79 - 9
+0 83 + 17
+3
+end_operator
+begin_operator
+drive-highway driver1 truck1 place7 place2
+3
+36 8
+20 0
+32 0
+1
+0 34 6 1
+3
+0 78 - 17
+0 79 - 38
+0 83 + 14
+4
+end_operator
+begin_operator
+drive-highway driver1 truck1 place7 place4
+3
+36 8
+21 0
+32 0
+1
+0 34 6 3
+3
+0 78 - 17
+0 79 - 27
+0 83 + 8
+4
+end_operator
+begin_operator
+drive-highway driver1 truck1 place7 place5
+3
+36 8
+33 0
+24 0
+1
+0 34 6 4
+3
+0 78 - 20
+0 79 - 9
+0 83 + 17
+3
+end_operator
+begin_operator
+drive-highway driver1 truck1 place7 place8
+3
+36 8
+20 0
+32 0
+1
+0 34 6 7
+3
+0 78 - 17
+0 79 - 38
+0 83 + 8
+4
+end_operator
+begin_operator
+drive-highway driver1 truck1 place8 place7
+3
+36 8
+20 0
+32 0
+1
+0 34 7 6
+3
+0 78 - 17
+0 79 - 38
+0 83 + 8
+4
+end_operator
+begin_operator
+drive-highway driver1 truck2 place1 place4
+3
+36 9
+26 0
+33 0
+1
+0 35 0 3
+3
+0 78 - 20
+0 80 - 30
+0 83 + 20
+3
+end_operator
+begin_operator
+drive-highway driver1 truck2 place2 place7
+3
+36 9
+32 0
+29 0
+1
+0 35 1 6
+3
+0 78 - 17
+0 80 - 38
+0 83 + 14
+4
+end_operator
+begin_operator
+drive-highway driver1 truck2 place4 place1
+3
+36 9
+26 0
+33 0
+1
+0 35 3 0
+3
+0 78 - 20
+0 80 - 30
+0 83 + 20
+3
+end_operator
+begin_operator
+drive-highway driver1 truck2 place4 place7
+3
+36 9
+32 0
+28 0
+1
+0 35 3 6
+3
+0 78 - 17
+0 80 - 27
+0 83 + 8
+4
+end_operator
+begin_operator
+drive-highway driver1 truck2 place5 place7
+3
+36 9
+33 0
+31 0
+1
+0 35 4 6
+3
+0 78 - 20
+0 80 - 9
+0 83 + 17
+3
+end_operator
+begin_operator
+drive-highway driver1 truck2 place7 place2
+3
+36 9
+32 0
+29 0
+1
+0 35 6 1
+3
+0 78 - 17
+0 80 - 38
+0 83 + 14
+4
+end_operator
+begin_operator
+drive-highway driver1 truck2 place7 place4
+3
+36 9
+32 0
+28 0
+1
+0 35 6 3
+3
+0 78 - 17
+0 80 - 27
+0 83 + 8
+4
+end_operator
+begin_operator
+drive-highway driver1 truck2 place7 place5
+3
+36 9
+33 0
+31 0
+1
+0 35 6 4
+3
+0 78 - 20
+0 80 - 9
+0 83 + 17
+3
+end_operator
+begin_operator
+drive-highway driver1 truck2 place7 place8
+3
+36 9
+32 0
+29 0
+1
+0 35 6 7
+3
+0 78 - 17
+0 80 - 38
+0 83 + 8
+4
+end_operator
+begin_operator
+drive-highway driver1 truck2 place8 place7
+3
+36 9
+32 0
+29 0
+1
+0 35 7 6
+3
+0 78 - 17
+0 80 - 38
+0 83 + 8
+4
+end_operator
+begin_operator
+drive-highway driver2 truck1 place1 place4
+3
+37 8
+33 0
+22 0
+1
+0 34 0 3
+3
+0 78 - 20
+0 79 - 30
+0 83 + 20
+3
+end_operator
+begin_operator
+drive-highway driver2 truck1 place2 place7
+3
+37 8
+20 0
+32 0
+1
+0 34 1 6
+3
+0 78 - 17
+0 79 - 38
+0 83 + 14
+4
+end_operator
+begin_operator
+drive-highway driver2 truck1 place4 place1
+3
+37 8
+33 0
+22 0
+1
+0 34 3 0
+3
+0 78 - 20
+0 79 - 30
+0 83 + 20
+3
+end_operator
+begin_operator
+drive-highway driver2 truck1 place4 place7
+3
+37 8
+21 0
+32 0
+1
+0 34 3 6
+3
+0 78 - 17
+0 79 - 27
+0 83 + 8
+4
+end_operator
+begin_operator
+drive-highway driver2 truck1 place5 place7
+3
+37 8
+33 0
+24 0
+1
+0 34 4 6
+3
+0 78 - 20
+0 79 - 9
+0 83 + 17
+3
+end_operator
+begin_operator
+drive-highway driver2 truck1 place7 place2
+3
+37 8
+20 0
+32 0
+1
+0 34 6 1
+3
+0 78 - 17
+0 79 - 38
+0 83 + 14
+4
+end_operator
+begin_operator
+drive-highway driver2 truck1 place7 place4
+3
+37 8
+21 0
+32 0
+1
+0 34 6 3
+3
+0 78 - 17
+0 79 - 27
+0 83 + 8
+4
+end_operator
+begin_operator
+drive-highway driver2 truck1 place7 place5
+3
+37 8
+33 0
+24 0
+1
+0 34 6 4
+3
+0 78 - 20
+0 79 - 9
+0 83 + 17
+3
+end_operator
+begin_operator
+drive-highway driver2 truck1 place7 place8
+3
+37 8
+20 0
+32 0
+1
+0 34 6 7
+3
+0 78 - 17
+0 79 - 38
+0 83 + 8
+4
+end_operator
+begin_operator
+drive-highway driver2 truck1 place8 place7
+3
+37 8
+20 0
+32 0
+1
+0 34 7 6
+3
+0 78 - 17
+0 79 - 38
+0 83 + 8
+4
+end_operator
+begin_operator
+drive-highway driver2 truck2 place1 place4
+3
+37 9
+26 0
+33 0
+1
+0 35 0 3
+3
+0 78 - 20
+0 80 - 30
+0 83 + 20
+3
+end_operator
+begin_operator
+drive-highway driver2 truck2 place2 place7
+3
+37 9
+32 0
+29 0
+1
+0 35 1 6
+3
+0 78 - 17
+0 80 - 38
+0 83 + 14
+4
+end_operator
+begin_operator
+drive-highway driver2 truck2 place4 place1
+3
+37 9
+26 0
+33 0
+1
+0 35 3 0
+3
+0 78 - 20
+0 80 - 30
+0 83 + 20
+3
+end_operator
+begin_operator
+drive-highway driver2 truck2 place4 place7
+3
+37 9
+32 0
+28 0
+1
+0 35 3 6
+3
+0 78 - 17
+0 80 - 27
+0 83 + 8
+4
+end_operator
+begin_operator
+drive-highway driver2 truck2 place5 place7
+3
+37 9
+33 0
+31 0
+1
+0 35 4 6
+3
+0 78 - 20
+0 80 - 9
+0 83 + 17
+3
+end_operator
+begin_operator
+drive-highway driver2 truck2 place7 place2
+3
+37 9
+32 0
+29 0
+1
+0 35 6 1
+3
+0 78 - 17
+0 80 - 38
+0 83 + 14
+4
+end_operator
+begin_operator
+drive-highway driver2 truck2 place7 place4
+3
+37 9
+32 0
+28 0
+1
+0 35 6 3
+3
+0 78 - 17
+0 80 - 27
+0 83 + 8
+4
+end_operator
+begin_operator
+drive-highway driver2 truck2 place7 place5
+3
+37 9
+33 0
+31 0
+1
+0 35 6 4
+3
+0 78 - 20
+0 80 - 9
+0 83 + 17
+3
+end_operator
+begin_operator
+drive-highway driver2 truck2 place7 place8
+3
+37 9
+32 0
+29 0
+1
+0 35 6 7
+3
+0 78 - 17
+0 80 - 38
+0 83 + 8
+4
+end_operator
+begin_operator
+drive-highway driver2 truck2 place8 place7
+3
+37 9
+32 0
+29 0
+1
+0 35 7 6
+3
+0 78 - 17
+0 80 - 38
+0 83 + 8
+4
+end_operator
+begin_operator
+drive-local-road driver1 truck1 place1 place3
+2
+36 8
+20 0
+1
+0 34 0 2
+2
+0 79 - 38
+0 83 + 23
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 place1 place4
+2
+36 8
+22 0
+1
+0 34 0 3
+2
+0 79 - 30
+0 83 + 6
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 place1 place6
+2
+36 8
+25 0
+1
+0 34 0 5
+2
+0 79 - 14
+0 83 + 38
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 place1 place8
+2
+36 8
+20 0
+1
+0 34 0 7
+2
+0 79 - 38
+0 83 + 13
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 place2 place5
+2
+36 8
+21 0
+1
+0 34 1 4
+2
+0 79 - 27
+0 83 + 21
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 place3 place1
+2
+36 8
+20 0
+1
+0 34 2 0
+2
+0 79 - 38
+0 83 + 23
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 place3 place7
+2
+36 8
+25 0
+1
+0 34 2 6
+2
+0 79 - 14
+0 83 + 30
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 place4 place1
+2
+36 8
+22 0
+1
+0 34 3 0
+2
+0 79 - 30
+0 83 + 6
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 place4 place6
+2
+36 8
+21 0
+1
+0 34 3 5
+2
+0 79 - 27
+0 83 + 6
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 place5 place2
+2
+36 8
+21 0
+1
+0 34 4 1
+2
+0 79 - 27
+0 83 + 21
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 place5 place6
+2
+36 8
+22 0
+1
+0 34 4 5
+2
+0 79 - 30
+0 83 + 27
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 place6 place1
+2
+36 8
+25 0
+1
+0 34 5 0
+2
+0 79 - 14
+0 83 + 38
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 place6 place4
+2
+36 8
+21 0
+1
+0 34 5 3
+2
+0 79 - 27
+0 83 + 6
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 place6 place5
+2
+36 8
+22 0
+1
+0 34 5 4
+2
+0 79 - 30
+0 83 + 27
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 place6 place8
+2
+36 8
+22 0
+1
+0 34 5 7
+2
+0 79 - 30
+0 83 + 1
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 place7 place3
+2
+36 8
+25 0
+1
+0 34 6 2
+2
+0 79 - 14
+0 83 + 30
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 place7 place8
+2
+36 8
+20 0
+1
+0 34 6 7
+2
+0 79 - 38
+0 83 + 2
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 place8 place1
+2
+36 8
+20 0
+1
+0 34 7 0
+2
+0 79 - 38
+0 83 + 13
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 place8 place6
+2
+36 8
+22 0
+1
+0 34 7 5
+2
+0 79 - 30
+0 83 + 1
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 place8 place7
+2
+36 8
+20 0
+1
+0 34 7 6
+2
+0 79 - 38
+0 83 + 2
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck2 place1 place3
+2
+36 9
+29 0
+1
+0 35 0 2
+2
+0 80 - 38
+0 83 + 23
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck2 place1 place4
+2
+36 9
+26 0
+1
+0 35 0 3
+2
+0 80 - 30
+0 83 + 6
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck2 place1 place6
+2
+36 9
+27 0
+1
+0 35 0 5
+2
+0 80 - 14
+0 83 + 38
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck2 place1 place8
+2
+36 9
+29 0
+1
+0 35 0 7
+2
+0 80 - 38
+0 83 + 13
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck2 place2 place5
+2
+36 9
+28 0
+1
+0 35 1 4
+2
+0 80 - 27
+0 83 + 21
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck2 place3 place1
+2
+36 9
+29 0
+1
+0 35 2 0
+2
+0 80 - 38
+0 83 + 23
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck2 place3 place7
+2
+36 9
+27 0
+1
+0 35 2 6
+2
+0 80 - 14
+0 83 + 30
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck2 place4 place1
+2
+36 9
+26 0
+1
+0 35 3 0
+2
+0 80 - 30
+0 83 + 6
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck2 place4 place6
+2
+36 9
+28 0
+1
+0 35 3 5
+2
+0 80 - 27
+0 83 + 6
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck2 place5 place2
+2
+36 9
+28 0
+1
+0 35 4 1
+2
+0 80 - 27
+0 83 + 21
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck2 place5 place6
+2
+36 9
+26 0
+1
+0 35 4 5
+2
+0 80 - 30
+0 83 + 27
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck2 place6 place1
+2
+36 9
+27 0
+1
+0 35 5 0
+2
+0 80 - 14
+0 83 + 38
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck2 place6 place4
+2
+36 9
+28 0
+1
+0 35 5 3
+2
+0 80 - 27
+0 83 + 6
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck2 place6 place5
+2
+36 9
+26 0
+1
+0 35 5 4
+2
+0 80 - 30
+0 83 + 27
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck2 place6 place8
+2
+36 9
+26 0
+1
+0 35 5 7
+2
+0 80 - 30
+0 83 + 1
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck2 place7 place3
+2
+36 9
+27 0
+1
+0 35 6 2
+2
+0 80 - 14
+0 83 + 30
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck2 place7 place8
+2
+36 9
+29 0
+1
+0 35 6 7
+2
+0 80 - 38
+0 83 + 2
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck2 place8 place1
+2
+36 9
+29 0
+1
+0 35 7 0
+2
+0 80 - 38
+0 83 + 13
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck2 place8 place6
+2
+36 9
+26 0
+1
+0 35 7 5
+2
+0 80 - 30
+0 83 + 1
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck2 place8 place7
+2
+36 9
+29 0
+1
+0 35 7 6
+2
+0 80 - 38
+0 83 + 2
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck1 place1 place3
+2
+37 8
+20 0
+1
+0 34 0 2
+2
+0 79 - 38
+0 83 + 23
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck1 place1 place4
+2
+37 8
+22 0
+1
+0 34 0 3
+2
+0 79 - 30
+0 83 + 6
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck1 place1 place6
+2
+37 8
+25 0
+1
+0 34 0 5
+2
+0 79 - 14
+0 83 + 38
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck1 place1 place8
+2
+37 8
+20 0
+1
+0 34 0 7
+2
+0 79 - 38
+0 83 + 13
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck1 place2 place5
+2
+37 8
+21 0
+1
+0 34 1 4
+2
+0 79 - 27
+0 83 + 21
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck1 place3 place1
+2
+37 8
+20 0
+1
+0 34 2 0
+2
+0 79 - 38
+0 83 + 23
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck1 place3 place7
+2
+37 8
+25 0
+1
+0 34 2 6
+2
+0 79 - 14
+0 83 + 30
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck1 place4 place1
+2
+37 8
+22 0
+1
+0 34 3 0
+2
+0 79 - 30
+0 83 + 6
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck1 place4 place6
+2
+37 8
+21 0
+1
+0 34 3 5
+2
+0 79 - 27
+0 83 + 6
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck1 place5 place2
+2
+37 8
+21 0
+1
+0 34 4 1
+2
+0 79 - 27
+0 83 + 21
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck1 place5 place6
+2
+37 8
+22 0
+1
+0 34 4 5
+2
+0 79 - 30
+0 83 + 27
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck1 place6 place1
+2
+37 8
+25 0
+1
+0 34 5 0
+2
+0 79 - 14
+0 83 + 38
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck1 place6 place4
+2
+37 8
+21 0
+1
+0 34 5 3
+2
+0 79 - 27
+0 83 + 6
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck1 place6 place5
+2
+37 8
+22 0
+1
+0 34 5 4
+2
+0 79 - 30
+0 83 + 27
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck1 place6 place8
+2
+37 8
+22 0
+1
+0 34 5 7
+2
+0 79 - 30
+0 83 + 1
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck1 place7 place3
+2
+37 8
+25 0
+1
+0 34 6 2
+2
+0 79 - 14
+0 83 + 30
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck1 place7 place8
+2
+37 8
+20 0
+1
+0 34 6 7
+2
+0 79 - 38
+0 83 + 2
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck1 place8 place1
+2
+37 8
+20 0
+1
+0 34 7 0
+2
+0 79 - 38
+0 83 + 13
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck1 place8 place6
+2
+37 8
+22 0
+1
+0 34 7 5
+2
+0 79 - 30
+0 83 + 1
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck1 place8 place7
+2
+37 8
+20 0
+1
+0 34 7 6
+2
+0 79 - 38
+0 83 + 2
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck2 place1 place3
+2
+37 9
+29 0
+1
+0 35 0 2
+2
+0 80 - 38
+0 83 + 23
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck2 place1 place4
+2
+37 9
+26 0
+1
+0 35 0 3
+2
+0 80 - 30
+0 83 + 6
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck2 place1 place6
+2
+37 9
+27 0
+1
+0 35 0 5
+2
+0 80 - 14
+0 83 + 38
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck2 place1 place8
+2
+37 9
+29 0
+1
+0 35 0 7
+2
+0 80 - 38
+0 83 + 13
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck2 place2 place5
+2
+37 9
+28 0
+1
+0 35 1 4
+2
+0 80 - 27
+0 83 + 21
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck2 place3 place1
+2
+37 9
+29 0
+1
+0 35 2 0
+2
+0 80 - 38
+0 83 + 23
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck2 place3 place7
+2
+37 9
+27 0
+1
+0 35 2 6
+2
+0 80 - 14
+0 83 + 30
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck2 place4 place1
+2
+37 9
+26 0
+1
+0 35 3 0
+2
+0 80 - 30
+0 83 + 6
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck2 place4 place6
+2
+37 9
+28 0
+1
+0 35 3 5
+2
+0 80 - 27
+0 83 + 6
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck2 place5 place2
+2
+37 9
+28 0
+1
+0 35 4 1
+2
+0 80 - 27
+0 83 + 21
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck2 place5 place6
+2
+37 9
+26 0
+1
+0 35 4 5
+2
+0 80 - 30
+0 83 + 27
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck2 place6 place1
+2
+37 9
+27 0
+1
+0 35 5 0
+2
+0 80 - 14
+0 83 + 38
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck2 place6 place4
+2
+37 9
+28 0
+1
+0 35 5 3
+2
+0 80 - 27
+0 83 + 6
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck2 place6 place5
+2
+37 9
+26 0
+1
+0 35 5 4
+2
+0 80 - 30
+0 83 + 27
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck2 place6 place8
+2
+37 9
+26 0
+1
+0 35 5 7
+2
+0 80 - 30
+0 83 + 1
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck2 place7 place3
+2
+37 9
+27 0
+1
+0 35 6 2
+2
+0 80 - 14
+0 83 + 30
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck2 place7 place8
+2
+37 9
+29 0
+1
+0 35 6 7
+2
+0 80 - 38
+0 83 + 2
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck2 place8 place1
+2
+37 9
+29 0
+1
+0 35 7 0
+2
+0 80 - 38
+0 83 + 13
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck2 place8 place6
+2
+37 9
+26 0
+1
+0 35 7 5
+2
+0 80 - 30
+0 83 + 1
+1
+end_operator
+begin_operator
+drive-local-road driver2 truck2 place8 place7
+2
+37 9
+29 0
+1
+0 35 7 6
+2
+0 80 - 38
+0 83 + 2
+1
+end_operator
+begin_operator
+get-out driver1 truck1 place1
+1
+34 0
+1
+0 36 8 0
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver1 truck1 place2
+1
+34 1
+1
+0 36 8 1
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver1 truck1 place3
+1
+34 2
+1
+0 36 8 2
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver1 truck1 place4
+1
+34 3
+1
+0 36 8 3
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver1 truck1 place5
+1
+34 4
+1
+0 36 8 4
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver1 truck1 place6
+1
+34 5
+1
+0 36 8 5
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver1 truck1 place7
+1
+34 6
+1
+0 36 8 6
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver1 truck1 place8
+1
+34 7
+1
+0 36 8 7
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver1 truck2 place1
+1
+35 0
+1
+0 36 9 0
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver1 truck2 place2
+1
+35 1
+1
+0 36 9 1
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver1 truck2 place3
+1
+35 2
+1
+0 36 9 2
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver1 truck2 place4
+1
+35 3
+1
+0 36 9 3
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver1 truck2 place5
+1
+35 4
+1
+0 36 9 4
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver1 truck2 place6
+1
+35 5
+1
+0 36 9 5
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver1 truck2 place7
+1
+35 6
+1
+0 36 9 6
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver1 truck2 place8
+1
+35 7
+1
+0 36 9 7
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver2 truck1 place1
+1
+34 0
+1
+0 37 8 0
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver2 truck1 place2
+1
+34 1
+1
+0 37 8 1
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver2 truck1 place3
+1
+34 2
+1
+0 37 8 2
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver2 truck1 place4
+1
+34 3
+1
+0 37 8 3
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver2 truck1 place5
+1
+34 4
+1
+0 37 8 4
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver2 truck1 place6
+1
+34 5
+1
+0 37 8 5
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver2 truck1 place7
+1
+34 6
+1
+0 37 8 6
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver2 truck1 place8
+1
+34 7
+1
+0 37 8 7
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver2 truck2 place1
+1
+35 0
+1
+0 37 9 0
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver2 truck2 place2
+1
+35 1
+1
+0 37 9 1
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver2 truck2 place3
+1
+35 2
+1
+0 37 9 2
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver2 truck2 place4
+1
+35 3
+1
+0 37 9 3
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver2 truck2 place5
+1
+35 4
+1
+0 37 9 4
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver2 truck2 place6
+1
+35 5
+1
+0 37 9 5
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver2 truck2 place7
+1
+35 6
+1
+0 37 9 6
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+get-out driver2 truck2 place8
+1
+35 7
+1
+0 37 9 7
+1
+0 83 + 25
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck1 place1
+3
+36 0
+34 0
+15 0
+1
+0 38 0 8
+2
+0 83 + 25
+0 81 + 36
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck1 place2
+3
+36 1
+34 1
+15 0
+1
+0 38 1 8
+2
+0 83 + 25
+0 81 + 36
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck1 place3
+3
+36 2
+34 2
+15 0
+1
+0 38 2 8
+2
+0 83 + 25
+0 81 + 36
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck1 place4
+3
+36 3
+34 3
+15 0
+1
+0 38 3 8
+2
+0 83 + 25
+0 81 + 36
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck1 place5
+3
+36 4
+34 4
+15 0
+1
+0 38 4 8
+2
+0 83 + 25
+0 81 + 36
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck1 place6
+3
+36 5
+34 5
+15 0
+1
+0 38 5 8
+2
+0 83 + 25
+0 81 + 36
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck1 place7
+3
+36 6
+34 6
+15 0
+1
+0 38 6 8
+2
+0 83 + 25
+0 81 + 36
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck1 place8
+3
+36 7
+34 7
+15 0
+1
+0 38 7 8
+2
+0 83 + 25
+0 81 + 36
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck2 place1
+3
+36 0
+35 0
+8 0
+1
+0 38 0 9
+2
+0 83 + 25
+0 82 + 36
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck2 place2
+3
+36 1
+35 1
+8 0
+1
+0 38 1 9
+2
+0 83 + 25
+0 82 + 36
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck2 place3
+3
+36 2
+35 2
+8 0
+1
+0 38 2 9
+2
+0 83 + 25
+0 82 + 36
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck2 place4
+3
+36 3
+35 3
+8 0
+1
+0 38 3 9
+2
+0 83 + 25
+0 82 + 36
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck2 place5
+3
+36 4
+35 4
+8 0
+1
+0 38 4 9
+2
+0 83 + 25
+0 82 + 36
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck2 place6
+3
+36 5
+35 5
+8 0
+1
+0 38 5 9
+2
+0 83 + 25
+0 82 + 36
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck2 place7
+3
+36 6
+35 6
+8 0
+1
+0 38 6 9
+2
+0 83 + 25
+0 82 + 36
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck2 place8
+3
+36 7
+35 7
+8 0
+1
+0 38 7 9
+2
+0 83 + 25
+0 82 + 36
+1
+end_operator
+begin_operator
+load-truck driver1 pack2 truck1 place1
+3
+36 0
+34 0
+16 0
+1
+0 39 0 8
+2
+0 83 + 25
+0 81 + 37
+1
+end_operator
+begin_operator
+load-truck driver1 pack2 truck1 place2
+3
+36 1
+34 1
+16 0
+1
+0 39 1 8
+2
+0 83 + 25
+0 81 + 37
+1
+end_operator
+begin_operator
+load-truck driver1 pack2 truck1 place3
+3
+36 2
+34 2
+16 0
+1
+0 39 2 8
+2
+0 83 + 25
+0 81 + 37
+1
+end_operator
+begin_operator
+load-truck driver1 pack2 truck1 place4
+3
+36 3
+34 3
+16 0
+1
+0 39 3 8
+2
+0 83 + 25
+0 81 + 37
+1
+end_operator
+begin_operator
+load-truck driver1 pack2 truck1 place5
+3
+36 4
+34 4
+16 0
+1
+0 39 4 8
+2
+0 83 + 25
+0 81 + 37
+1
+end_operator
+begin_operator
+load-truck driver1 pack2 truck1 place6
+3
+36 5
+34 5
+16 0
+1
+0 39 5 8
+2
+0 83 + 25
+0 81 + 37
+1
+end_operator
+begin_operator
+load-truck driver1 pack2 truck1 place7
+3
+36 6
+34 6
+16 0
+1
+0 39 6 8
+2
+0 83 + 25
+0 81 + 37
+1
+end_operator
+begin_operator
+load-truck driver1 pack2 truck1 place8
+3
+36 7
+34 7
+16 0
+1
+0 39 7 8
+2
+0 83 + 25
+0 81 + 37
+1
+end_operator
+begin_operator
+load-truck driver1 pack2 truck2 place1
+3
+36 0
+35 0
+9 0
+1
+0 39 0 9
+2
+0 83 + 25
+0 82 + 37
+1
+end_operator
+begin_operator
+load-truck driver1 pack2 truck2 place2
+3
+36 1
+35 1
+9 0
+1
+0 39 1 9
+2
+0 83 + 25
+0 82 + 37
+1
+end_operator
+begin_operator
+load-truck driver1 pack2 truck2 place3
+3
+36 2
+35 2
+9 0
+1
+0 39 2 9
+2
+0 83 + 25
+0 82 + 37
+1
+end_operator
+begin_operator
+load-truck driver1 pack2 truck2 place4
+3
+36 3
+35 3
+9 0
+1
+0 39 3 9
+2
+0 83 + 25
+0 82 + 37
+1
+end_operator
+begin_operator
+load-truck driver1 pack2 truck2 place5
+3
+36 4
+35 4
+9 0
+1
+0 39 4 9
+2
+0 83 + 25
+0 82 + 37
+1
+end_operator
+begin_operator
+load-truck driver1 pack2 truck2 place6
+3
+36 5
+35 5
+9 0
+1
+0 39 5 9
+2
+0 83 + 25
+0 82 + 37
+1
+end_operator
+begin_operator
+load-truck driver1 pack2 truck2 place7
+3
+36 6
+35 6
+9 0
+1
+0 39 6 9
+2
+0 83 + 25
+0 82 + 37
+1
+end_operator
+begin_operator
+load-truck driver1 pack2 truck2 place8
+3
+36 7
+35 7
+9 0
+1
+0 39 7 9
+2
+0 83 + 25
+0 82 + 37
+1
+end_operator
+begin_operator
+load-truck driver1 pack3 truck1 place1
+3
+36 0
+34 0
+18 0
+1
+0 40 0 8
+2
+0 83 + 25
+0 81 + 0
+1
+end_operator
+begin_operator
+load-truck driver1 pack3 truck1 place2
+3
+36 1
+34 1
+18 0
+1
+0 40 1 8
+2
+0 83 + 25
+0 81 + 0
+1
+end_operator
+begin_operator
+load-truck driver1 pack3 truck1 place3
+3
+36 2
+34 2
+18 0
+1
+0 40 2 8
+2
+0 83 + 25
+0 81 + 0
+1
+end_operator
+begin_operator
+load-truck driver1 pack3 truck1 place4
+3
+36 3
+34 3
+18 0
+1
+0 40 3 8
+2
+0 83 + 25
+0 81 + 0
+1
+end_operator
+begin_operator
+load-truck driver1 pack3 truck1 place5
+3
+36 4
+34 4
+18 0
+1
+0 40 4 8
+2
+0 83 + 25
+0 81 + 0
+1
+end_operator
+begin_operator
+load-truck driver1 pack3 truck1 place6
+3
+36 5
+34 5
+18 0
+1
+0 40 5 8
+2
+0 83 + 25
+0 81 + 0
+1
+end_operator
+begin_operator
+load-truck driver1 pack3 truck1 place7
+3
+36 6
+34 6
+18 0
+1
+0 40 6 8
+2
+0 83 + 25
+0 81 + 0
+1
+end_operator
+begin_operator
+load-truck driver1 pack3 truck1 place8
+3
+36 7
+34 7
+18 0
+1
+0 40 7 8
+2
+0 83 + 25
+0 81 + 0
+1
+end_operator
+begin_operator
+load-truck driver1 pack3 truck2 place1
+3
+36 0
+35 0
+13 0
+1
+0 40 0 9
+2
+0 83 + 25
+0 82 + 0
+1
+end_operator
+begin_operator
+load-truck driver1 pack3 truck2 place2
+3
+36 1
+35 1
+13 0
+1
+0 40 1 9
+2
+0 83 + 25
+0 82 + 0
+1
+end_operator
+begin_operator
+load-truck driver1 pack3 truck2 place3
+3
+36 2
+35 2
+13 0
+1
+0 40 2 9
+2
+0 83 + 25
+0 82 + 0
+1
+end_operator
+begin_operator
+load-truck driver1 pack3 truck2 place4
+3
+36 3
+35 3
+13 0
+1
+0 40 3 9
+2
+0 83 + 25
+0 82 + 0
+1
+end_operator
+begin_operator
+load-truck driver1 pack3 truck2 place5
+3
+36 4
+35 4
+13 0
+1
+0 40 4 9
+2
+0 83 + 25
+0 82 + 0
+1
+end_operator
+begin_operator
+load-truck driver1 pack3 truck2 place6
+3
+36 5
+35 5
+13 0
+1
+0 40 5 9
+2
+0 83 + 25
+0 82 + 0
+1
+end_operator
+begin_operator
+load-truck driver1 pack3 truck2 place7
+3
+36 6
+35 6
+13 0
+1
+0 40 6 9
+2
+0 83 + 25
+0 82 + 0
+1
+end_operator
+begin_operator
+load-truck driver1 pack3 truck2 place8
+3
+36 7
+35 7
+13 0
+1
+0 40 7 9
+2
+0 83 + 25
+0 82 + 0
+1
+end_operator
+begin_operator
+load-truck driver1 pack4 truck1 place1
+3
+36 0
+34 0
+17 0
+1
+0 41 0 8
+2
+0 83 + 25
+0 81 + 4
+1
+end_operator
+begin_operator
+load-truck driver1 pack4 truck1 place2
+3
+36 1
+34 1
+17 0
+1
+0 41 1 8
+2
+0 83 + 25
+0 81 + 4
+1
+end_operator
+begin_operator
+load-truck driver1 pack4 truck1 place3
+3
+36 2
+34 2
+17 0
+1
+0 41 2 8
+2
+0 83 + 25
+0 81 + 4
+1
+end_operator
+begin_operator
+load-truck driver1 pack4 truck1 place4
+3
+36 3
+34 3
+17 0
+1
+0 41 3 8
+2
+0 83 + 25
+0 81 + 4
+1
+end_operator
+begin_operator
+load-truck driver1 pack4 truck1 place5
+3
+36 4
+34 4
+17 0
+1
+0 41 4 8
+2
+0 83 + 25
+0 81 + 4
+1
+end_operator
+begin_operator
+load-truck driver1 pack4 truck1 place6
+3
+36 5
+34 5
+17 0
+1
+0 41 5 8
+2
+0 83 + 25
+0 81 + 4
+1
+end_operator
+begin_operator
+load-truck driver1 pack4 truck1 place7
+3
+36 6
+34 6
+17 0
+1
+0 41 6 8
+2
+0 83 + 25
+0 81 + 4
+1
+end_operator
+begin_operator
+load-truck driver1 pack4 truck1 place8
+3
+36 7
+34 7
+17 0
+1
+0 41 7 8
+2
+0 83 + 25
+0 81 + 4
+1
+end_operator
+begin_operator
+load-truck driver1 pack4 truck2 place1
+3
+36 0
+35 0
+11 0
+1
+0 41 0 9
+2
+0 83 + 25
+0 82 + 4
+1
+end_operator
+begin_operator
+load-truck driver1 pack4 truck2 place2
+3
+36 1
+35 1
+11 0
+1
+0 41 1 9
+2
+0 83 + 25
+0 82 + 4
+1
+end_operator
+begin_operator
+load-truck driver1 pack4 truck2 place3
+3
+36 2
+35 2
+11 0
+1
+0 41 2 9
+2
+0 83 + 25
+0 82 + 4
+1
+end_operator
+begin_operator
+load-truck driver1 pack4 truck2 place4
+3
+36 3
+35 3
+11 0
+1
+0 41 3 9
+2
+0 83 + 25
+0 82 + 4
+1
+end_operator
+begin_operator
+load-truck driver1 pack4 truck2 place5
+3
+36 4
+35 4
+11 0
+1
+0 41 4 9
+2
+0 83 + 25
+0 82 + 4
+1
+end_operator
+begin_operator
+load-truck driver1 pack4 truck2 place6
+3
+36 5
+35 5
+11 0
+1
+0 41 5 9
+2
+0 83 + 25
+0 82 + 4
+1
+end_operator
+begin_operator
+load-truck driver1 pack4 truck2 place7
+3
+36 6
+35 6
+11 0
+1
+0 41 6 9
+2
+0 83 + 25
+0 82 + 4
+1
+end_operator
+begin_operator
+load-truck driver1 pack4 truck2 place8
+3
+36 7
+35 7
+11 0
+1
+0 41 7 9
+2
+0 83 + 25
+0 82 + 4
+1
+end_operator
+begin_operator
+load-truck driver1 pack5 truck1 place1
+3
+36 0
+34 0
+14 0
+1
+0 42 0 8
+2
+0 83 + 25
+0 81 + 10
+1
+end_operator
+begin_operator
+load-truck driver1 pack5 truck1 place2
+3
+36 1
+34 1
+14 0
+1
+0 42 1 8
+2
+0 83 + 25
+0 81 + 10
+1
+end_operator
+begin_operator
+load-truck driver1 pack5 truck1 place3
+3
+36 2
+34 2
+14 0
+1
+0 42 2 8
+2
+0 83 + 25
+0 81 + 10
+1
+end_operator
+begin_operator
+load-truck driver1 pack5 truck1 place4
+3
+36 3
+34 3
+14 0
+1
+0 42 3 8
+2
+0 83 + 25
+0 81 + 10
+1
+end_operator
+begin_operator
+load-truck driver1 pack5 truck1 place5
+3
+36 4
+34 4
+14 0
+1
+0 42 4 8
+2
+0 83 + 25
+0 81 + 10
+1
+end_operator
+begin_operator
+load-truck driver1 pack5 truck1 place6
+3
+36 5
+34 5
+14 0
+1
+0 42 5 8
+2
+0 83 + 25
+0 81 + 10
+1
+end_operator
+begin_operator
+load-truck driver1 pack5 truck1 place7
+3
+36 6
+34 6
+14 0
+1
+0 42 6 8
+2
+0 83 + 25
+0 81 + 10
+1
+end_operator
+begin_operator
+load-truck driver1 pack5 truck1 place8
+3
+36 7
+34 7
+14 0
+1
+0 42 7 8
+2
+0 83 + 25
+0 81 + 10
+1
+end_operator
+begin_operator
+load-truck driver1 pack5 truck2 place1
+3
+36 0
+35 0
+10 0
+1
+0 42 0 9
+2
+0 83 + 25
+0 82 + 10
+1
+end_operator
+begin_operator
+load-truck driver1 pack5 truck2 place2
+3
+36 1
+35 1
+10 0
+1
+0 42 1 9
+2
+0 83 + 25
+0 82 + 10
+1
+end_operator
+begin_operator
+load-truck driver1 pack5 truck2 place3
+3
+36 2
+35 2
+10 0
+1
+0 42 2 9
+2
+0 83 + 25
+0 82 + 10
+1
+end_operator
+begin_operator
+load-truck driver1 pack5 truck2 place4
+3
+36 3
+35 3
+10 0
+1
+0 42 3 9
+2
+0 83 + 25
+0 82 + 10
+1
+end_operator
+begin_operator
+load-truck driver1 pack5 truck2 place5
+3
+36 4
+35 4
+10 0
+1
+0 42 4 9
+2
+0 83 + 25
+0 82 + 10
+1
+end_operator
+begin_operator
+load-truck driver1 pack5 truck2 place6
+3
+36 5
+35 5
+10 0
+1
+0 42 5 9
+2
+0 83 + 25
+0 82 + 10
+1
+end_operator
+begin_operator
+load-truck driver1 pack5 truck2 place7
+3
+36 6
+35 6
+10 0
+1
+0 42 6 9
+2
+0 83 + 25
+0 82 + 10
+1
+end_operator
+begin_operator
+load-truck driver1 pack5 truck2 place8
+3
+36 7
+35 7
+10 0
+1
+0 42 7 9
+2
+0 83 + 25
+0 82 + 10
+1
+end_operator
+begin_operator
+load-truck driver1 pack6 truck1 place1
+3
+36 0
+34 0
+7 0
+1
+0 43 0 8
+2
+0 83 + 25
+0 81 + 5
+1
+end_operator
+begin_operator
+load-truck driver1 pack6 truck1 place2
+3
+36 1
+34 1
+7 0
+1
+0 43 1 8
+2
+0 83 + 25
+0 81 + 5
+1
+end_operator
+begin_operator
+load-truck driver1 pack6 truck1 place3
+3
+36 2
+34 2
+7 0
+1
+0 43 2 8
+2
+0 83 + 25
+0 81 + 5
+1
+end_operator
+begin_operator
+load-truck driver1 pack6 truck1 place4
+3
+36 3
+34 3
+7 0
+1
+0 43 3 8
+2
+0 83 + 25
+0 81 + 5
+1
+end_operator
+begin_operator
+load-truck driver1 pack6 truck1 place5
+3
+36 4
+34 4
+7 0
+1
+0 43 4 8
+2
+0 83 + 25
+0 81 + 5
+1
+end_operator
+begin_operator
+load-truck driver1 pack6 truck1 place6
+3
+36 5
+34 5
+7 0
+1
+0 43 5 8
+2
+0 83 + 25
+0 81 + 5
+1
+end_operator
+begin_operator
+load-truck driver1 pack6 truck1 place7
+3
+36 6
+34 6
+7 0
+1
+0 43 6 8
+2
+0 83 + 25
+0 81 + 5
+1
+end_operator
+begin_operator
+load-truck driver1 pack6 truck1 place8
+3
+36 7
+34 7
+7 0
+1
+0 43 7 8
+2
+0 83 + 25
+0 81 + 5
+1
+end_operator
+begin_operator
+load-truck driver1 pack6 truck2 place1
+3
+36 0
+35 0
+12 0
+1
+0 43 0 9
+2
+0 83 + 25
+0 82 + 5
+1
+end_operator
+begin_operator
+load-truck driver1 pack6 truck2 place2
+3
+36 1
+35 1
+12 0
+1
+0 43 1 9
+2
+0 83 + 25
+0 82 + 5
+1
+end_operator
+begin_operator
+load-truck driver1 pack6 truck2 place3
+3
+36 2
+35 2
+12 0
+1
+0 43 2 9
+2
+0 83 + 25
+0 82 + 5
+1
+end_operator
+begin_operator
+load-truck driver1 pack6 truck2 place4
+3
+36 3
+35 3
+12 0
+1
+0 43 3 9
+2
+0 83 + 25
+0 82 + 5
+1
+end_operator
+begin_operator
+load-truck driver1 pack6 truck2 place5
+3
+36 4
+35 4
+12 0
+1
+0 43 4 9
+2
+0 83 + 25
+0 82 + 5
+1
+end_operator
+begin_operator
+load-truck driver1 pack6 truck2 place6
+3
+36 5
+35 5
+12 0
+1
+0 43 5 9
+2
+0 83 + 25
+0 82 + 5
+1
+end_operator
+begin_operator
+load-truck driver1 pack6 truck2 place7
+3
+36 6
+35 6
+12 0
+1
+0 43 6 9
+2
+0 83 + 25
+0 82 + 5
+1
+end_operator
+begin_operator
+load-truck driver1 pack6 truck2 place8
+3
+36 7
+35 7
+12 0
+1
+0 43 7 9
+2
+0 83 + 25
+0 82 + 5
+1
+end_operator
+begin_operator
+load-truck driver2 pack1 truck1 place1
+3
+37 0
+34 0
+15 0
+1
+0 38 0 8
+2
+0 83 + 25
+0 81 + 36
+1
+end_operator
+begin_operator
+load-truck driver2 pack1 truck1 place2
+3
+37 1
+34 1
+15 0
+1
+0 38 1 8
+2
+0 83 + 25
+0 81 + 36
+1
+end_operator
+begin_operator
+load-truck driver2 pack1 truck1 place3
+3
+37 2
+34 2
+15 0
+1
+0 38 2 8
+2
+0 83 + 25
+0 81 + 36
+1
+end_operator
+begin_operator
+load-truck driver2 pack1 truck1 place4
+3
+37 3
+34 3
+15 0
+1
+0 38 3 8
+2
+0 83 + 25
+0 81 + 36
+1
+end_operator
+begin_operator
+load-truck driver2 pack1 truck1 place5
+3
+37 4
+34 4
+15 0
+1
+0 38 4 8
+2
+0 83 + 25
+0 81 + 36
+1
+end_operator
+begin_operator
+load-truck driver2 pack1 truck1 place6
+3
+37 5
+34 5
+15 0
+1
+0 38 5 8
+2
+0 83 + 25
+0 81 + 36
+1
+end_operator
+begin_operator
+load-truck driver2 pack1 truck1 place7
+3
+37 6
+34 6
+15 0
+1
+0 38 6 8
+2
+0 83 + 25
+0 81 + 36
+1
+end_operator
+begin_operator
+load-truck driver2 pack1 truck1 place8
+3
+37 7
+34 7
+15 0
+1
+0 38 7 8
+2
+0 83 + 25
+0 81 + 36
+1
+end_operator
+begin_operator
+load-truck driver2 pack1 truck2 place1
+3
+37 0
+35 0
+8 0
+1
+0 38 0 9
+2
+0 83 + 25
+0 82 + 36
+1
+end_operator
+begin_operator
+load-truck driver2 pack1 truck2 place2
+3
+37 1
+35 1
+8 0
+1
+0 38 1 9
+2
+0 83 + 25
+0 82 + 36
+1
+end_operator
+begin_operator
+load-truck driver2 pack1 truck2 place3
+3
+37 2
+35 2
+8 0
+1
+0 38 2 9
+2
+0 83 + 25
+0 82 + 36
+1
+end_operator
+begin_operator
+load-truck driver2 pack1 truck2 place4
+3
+37 3
+35 3
+8 0
+1
+0 38 3 9
+2
+0 83 + 25
+0 82 + 36
+1
+end_operator
+begin_operator
+load-truck driver2 pack1 truck2 place5
+3
+37 4
+35 4
+8 0
+1
+0 38 4 9
+2
+0 83 + 25
+0 82 + 36
+1
+end_operator
+begin_operator
+load-truck driver2 pack1 truck2 place6
+3
+37 5
+35 5
+8 0
+1
+0 38 5 9
+2
+0 83 + 25
+0 82 + 36
+1
+end_operator
+begin_operator
+load-truck driver2 pack1 truck2 place7
+3
+37 6
+35 6
+8 0
+1
+0 38 6 9
+2
+0 83 + 25
+0 82 + 36
+1
+end_operator
+begin_operator
+load-truck driver2 pack1 truck2 place8
+3
+37 7
+35 7
+8 0
+1
+0 38 7 9
+2
+0 83 + 25
+0 82 + 36
+1
+end_operator
+begin_operator
+load-truck driver2 pack2 truck1 place1
+3
+37 0
+34 0
+16 0
+1
+0 39 0 8
+2
+0 83 + 25
+0 81 + 37
+1
+end_operator
+begin_operator
+load-truck driver2 pack2 truck1 place2
+3
+37 1
+34 1
+16 0
+1
+0 39 1 8
+2
+0 83 + 25
+0 81 + 37
+1
+end_operator
+begin_operator
+load-truck driver2 pack2 truck1 place3
+3
+37 2
+34 2
+16 0
+1
+0 39 2 8
+2
+0 83 + 25
+0 81 + 37
+1
+end_operator
+begin_operator
+load-truck driver2 pack2 truck1 place4
+3
+37 3
+34 3
+16 0
+1
+0 39 3 8
+2
+0 83 + 25
+0 81 + 37
+1
+end_operator
+begin_operator
+load-truck driver2 pack2 truck1 place5
+3
+37 4
+34 4
+16 0
+1
+0 39 4 8
+2
+0 83 + 25
+0 81 + 37
+1
+end_operator
+begin_operator
+load-truck driver2 pack2 truck1 place6
+3
+37 5
+34 5
+16 0
+1
+0 39 5 8
+2
+0 83 + 25
+0 81 + 37
+1
+end_operator
+begin_operator
+load-truck driver2 pack2 truck1 place7
+3
+37 6
+34 6
+16 0
+1
+0 39 6 8
+2
+0 83 + 25
+0 81 + 37
+1
+end_operator
+begin_operator
+load-truck driver2 pack2 truck1 place8
+3
+37 7
+34 7
+16 0
+1
+0 39 7 8
+2
+0 83 + 25
+0 81 + 37
+1
+end_operator
+begin_operator
+load-truck driver2 pack2 truck2 place1
+3
+37 0
+35 0
+9 0
+1
+0 39 0 9
+2
+0 83 + 25
+0 82 + 37
+1
+end_operator
+begin_operator
+load-truck driver2 pack2 truck2 place2
+3
+37 1
+35 1
+9 0
+1
+0 39 1 9
+2
+0 83 + 25
+0 82 + 37
+1
+end_operator
+begin_operator
+load-truck driver2 pack2 truck2 place3
+3
+37 2
+35 2
+9 0
+1
+0 39 2 9
+2
+0 83 + 25
+0 82 + 37
+1
+end_operator
+begin_operator
+load-truck driver2 pack2 truck2 place4
+3
+37 3
+35 3
+9 0
+1
+0 39 3 9
+2
+0 83 + 25
+0 82 + 37
+1
+end_operator
+begin_operator
+load-truck driver2 pack2 truck2 place5
+3
+37 4
+35 4
+9 0
+1
+0 39 4 9
+2
+0 83 + 25
+0 82 + 37
+1
+end_operator
+begin_operator
+load-truck driver2 pack2 truck2 place6
+3
+37 5
+35 5
+9 0
+1
+0 39 5 9
+2
+0 83 + 25
+0 82 + 37
+1
+end_operator
+begin_operator
+load-truck driver2 pack2 truck2 place7
+3
+37 6
+35 6
+9 0
+1
+0 39 6 9
+2
+0 83 + 25
+0 82 + 37
+1
+end_operator
+begin_operator
+load-truck driver2 pack2 truck2 place8
+3
+37 7
+35 7
+9 0
+1
+0 39 7 9
+2
+0 83 + 25
+0 82 + 37
+1
+end_operator
+begin_operator
+load-truck driver2 pack3 truck1 place1
+3
+37 0
+34 0
+18 0
+1
+0 40 0 8
+2
+0 83 + 25
+0 81 + 0
+1
+end_operator
+begin_operator
+load-truck driver2 pack3 truck1 place2
+3
+37 1
+34 1
+18 0
+1
+0 40 1 8
+2
+0 83 + 25
+0 81 + 0
+1
+end_operator
+begin_operator
+load-truck driver2 pack3 truck1 place3
+3
+37 2
+34 2
+18 0
+1
+0 40 2 8
+2
+0 83 + 25
+0 81 + 0
+1
+end_operator
+begin_operator
+load-truck driver2 pack3 truck1 place4
+3
+37 3
+34 3
+18 0
+1
+0 40 3 8
+2
+0 83 + 25
+0 81 + 0
+1
+end_operator
+begin_operator
+load-truck driver2 pack3 truck1 place5
+3
+37 4
+34 4
+18 0
+1
+0 40 4 8
+2
+0 83 + 25
+0 81 + 0
+1
+end_operator
+begin_operator
+load-truck driver2 pack3 truck1 place6
+3
+37 5
+34 5
+18 0
+1
+0 40 5 8
+2
+0 83 + 25
+0 81 + 0
+1
+end_operator
+begin_operator
+load-truck driver2 pack3 truck1 place7
+3
+37 6
+34 6
+18 0
+1
+0 40 6 8
+2
+0 83 + 25
+0 81 + 0
+1
+end_operator
+begin_operator
+load-truck driver2 pack3 truck1 place8
+3
+37 7
+34 7
+18 0
+1
+0 40 7 8
+2
+0 83 + 25
+0 81 + 0
+1
+end_operator
+begin_operator
+load-truck driver2 pack3 truck2 place1
+3
+37 0
+35 0
+13 0
+1
+0 40 0 9
+2
+0 83 + 25
+0 82 + 0
+1
+end_operator
+begin_operator
+load-truck driver2 pack3 truck2 place2
+3
+37 1
+35 1
+13 0
+1
+0 40 1 9
+2
+0 83 + 25
+0 82 + 0
+1
+end_operator
+begin_operator
+load-truck driver2 pack3 truck2 place3
+3
+37 2
+35 2
+13 0
+1
+0 40 2 9
+2
+0 83 + 25
+0 82 + 0
+1
+end_operator
+begin_operator
+load-truck driver2 pack3 truck2 place4
+3
+37 3
+35 3
+13 0
+1
+0 40 3 9
+2
+0 83 + 25
+0 82 + 0
+1
+end_operator
+begin_operator
+load-truck driver2 pack3 truck2 place5
+3
+37 4
+35 4
+13 0
+1
+0 40 4 9
+2
+0 83 + 25
+0 82 + 0
+1
+end_operator
+begin_operator
+load-truck driver2 pack3 truck2 place6
+3
+37 5
+35 5
+13 0
+1
+0 40 5 9
+2
+0 83 + 25
+0 82 + 0
+1
+end_operator
+begin_operator
+load-truck driver2 pack3 truck2 place7
+3
+37 6
+35 6
+13 0
+1
+0 40 6 9
+2
+0 83 + 25
+0 82 + 0
+1
+end_operator
+begin_operator
+load-truck driver2 pack3 truck2 place8
+3
+37 7
+35 7
+13 0
+1
+0 40 7 9
+2
+0 83 + 25
+0 82 + 0
+1
+end_operator
+begin_operator
+load-truck driver2 pack4 truck1 place1
+3
+37 0
+34 0
+17 0
+1
+0 41 0 8
+2
+0 83 + 25
+0 81 + 4
+1
+end_operator
+begin_operator
+load-truck driver2 pack4 truck1 place2
+3
+37 1
+34 1
+17 0
+1
+0 41 1 8
+2
+0 83 + 25
+0 81 + 4
+1
+end_operator
+begin_operator
+load-truck driver2 pack4 truck1 place3
+3
+37 2
+34 2
+17 0
+1
+0 41 2 8
+2
+0 83 + 25
+0 81 + 4
+1
+end_operator
+begin_operator
+load-truck driver2 pack4 truck1 place4
+3
+37 3
+34 3
+17 0
+1
+0 41 3 8
+2
+0 83 + 25
+0 81 + 4
+1
+end_operator
+begin_operator
+load-truck driver2 pack4 truck1 place5
+3
+37 4
+34 4
+17 0
+1
+0 41 4 8
+2
+0 83 + 25
+0 81 + 4
+1
+end_operator
+begin_operator
+load-truck driver2 pack4 truck1 place6
+3
+37 5
+34 5
+17 0
+1
+0 41 5 8
+2
+0 83 + 25
+0 81 + 4
+1
+end_operator
+begin_operator
+load-truck driver2 pack4 truck1 place7
+3
+37 6
+34 6
+17 0
+1
+0 41 6 8
+2
+0 83 + 25
+0 81 + 4
+1
+end_operator
+begin_operator
+load-truck driver2 pack4 truck1 place8
+3
+37 7
+34 7
+17 0
+1
+0 41 7 8
+2
+0 83 + 25
+0 81 + 4
+1
+end_operator
+begin_operator
+load-truck driver2 pack4 truck2 place1
+3
+37 0
+35 0
+11 0
+1
+0 41 0 9
+2
+0 83 + 25
+0 82 + 4
+1
+end_operator
+begin_operator
+load-truck driver2 pack4 truck2 place2
+3
+37 1
+35 1
+11 0
+1
+0 41 1 9
+2
+0 83 + 25
+0 82 + 4
+1
+end_operator
+begin_operator
+load-truck driver2 pack4 truck2 place3
+3
+37 2
+35 2
+11 0
+1
+0 41 2 9
+2
+0 83 + 25
+0 82 + 4
+1
+end_operator
+begin_operator
+load-truck driver2 pack4 truck2 place4
+3
+37 3
+35 3
+11 0
+1
+0 41 3 9
+2
+0 83 + 25
+0 82 + 4
+1
+end_operator
+begin_operator
+load-truck driver2 pack4 truck2 place5
+3
+37 4
+35 4
+11 0
+1
+0 41 4 9
+2
+0 83 + 25
+0 82 + 4
+1
+end_operator
+begin_operator
+load-truck driver2 pack4 truck2 place6
+3
+37 5
+35 5
+11 0
+1
+0 41 5 9
+2
+0 83 + 25
+0 82 + 4
+1
+end_operator
+begin_operator
+load-truck driver2 pack4 truck2 place7
+3
+37 6
+35 6
+11 0
+1
+0 41 6 9
+2
+0 83 + 25
+0 82 + 4
+1
+end_operator
+begin_operator
+load-truck driver2 pack4 truck2 place8
+3
+37 7
+35 7
+11 0
+1
+0 41 7 9
+2
+0 83 + 25
+0 82 + 4
+1
+end_operator
+begin_operator
+load-truck driver2 pack5 truck1 place1
+3
+37 0
+34 0
+14 0
+1
+0 42 0 8
+2
+0 83 + 25
+0 81 + 10
+1
+end_operator
+begin_operator
+load-truck driver2 pack5 truck1 place2
+3
+37 1
+34 1
+14 0
+1
+0 42 1 8
+2
+0 83 + 25
+0 81 + 10
+1
+end_operator
+begin_operator
+load-truck driver2 pack5 truck1 place3
+3
+37 2
+34 2
+14 0
+1
+0 42 2 8
+2
+0 83 + 25
+0 81 + 10
+1
+end_operator
+begin_operator
+load-truck driver2 pack5 truck1 place4
+3
+37 3
+34 3
+14 0
+1
+0 42 3 8
+2
+0 83 + 25
+0 81 + 10
+1
+end_operator
+begin_operator
+load-truck driver2 pack5 truck1 place5
+3
+37 4
+34 4
+14 0
+1
+0 42 4 8
+2
+0 83 + 25
+0 81 + 10
+1
+end_operator
+begin_operator
+load-truck driver2 pack5 truck1 place6
+3
+37 5
+34 5
+14 0
+1
+0 42 5 8
+2
+0 83 + 25
+0 81 + 10
+1
+end_operator
+begin_operator
+load-truck driver2 pack5 truck1 place7
+3
+37 6
+34 6
+14 0
+1
+0 42 6 8
+2
+0 83 + 25
+0 81 + 10
+1
+end_operator
+begin_operator
+load-truck driver2 pack5 truck1 place8
+3
+37 7
+34 7
+14 0
+1
+0 42 7 8
+2
+0 83 + 25
+0 81 + 10
+1
+end_operator
+begin_operator
+load-truck driver2 pack5 truck2 place1
+3
+37 0
+35 0
+10 0
+1
+0 42 0 9
+2
+0 83 + 25
+0 82 + 10
+1
+end_operator
+begin_operator
+load-truck driver2 pack5 truck2 place2
+3
+37 1
+35 1
+10 0
+1
+0 42 1 9
+2
+0 83 + 25
+0 82 + 10
+1
+end_operator
+begin_operator
+load-truck driver2 pack5 truck2 place3
+3
+37 2
+35 2
+10 0
+1
+0 42 2 9
+2
+0 83 + 25
+0 82 + 10
+1
+end_operator
+begin_operator
+load-truck driver2 pack5 truck2 place4
+3
+37 3
+35 3
+10 0
+1
+0 42 3 9
+2
+0 83 + 25
+0 82 + 10
+1
+end_operator
+begin_operator
+load-truck driver2 pack5 truck2 place5
+3
+37 4
+35 4
+10 0
+1
+0 42 4 9
+2
+0 83 + 25
+0 82 + 10
+1
+end_operator
+begin_operator
+load-truck driver2 pack5 truck2 place6
+3
+37 5
+35 5
+10 0
+1
+0 42 5 9
+2
+0 83 + 25
+0 82 + 10
+1
+end_operator
+begin_operator
+load-truck driver2 pack5 truck2 place7
+3
+37 6
+35 6
+10 0
+1
+0 42 6 9
+2
+0 83 + 25
+0 82 + 10
+1
+end_operator
+begin_operator
+load-truck driver2 pack5 truck2 place8
+3
+37 7
+35 7
+10 0
+1
+0 42 7 9
+2
+0 83 + 25
+0 82 + 10
+1
+end_operator
+begin_operator
+load-truck driver2 pack6 truck1 place1
+3
+37 0
+34 0
+7 0
+1
+0 43 0 8
+2
+0 83 + 25
+0 81 + 5
+1
+end_operator
+begin_operator
+load-truck driver2 pack6 truck1 place2
+3
+37 1
+34 1
+7 0
+1
+0 43 1 8
+2
+0 83 + 25
+0 81 + 5
+1
+end_operator
+begin_operator
+load-truck driver2 pack6 truck1 place3
+3
+37 2
+34 2
+7 0
+1
+0 43 2 8
+2
+0 83 + 25
+0 81 + 5
+1
+end_operator
+begin_operator
+load-truck driver2 pack6 truck1 place4
+3
+37 3
+34 3
+7 0
+1
+0 43 3 8
+2
+0 83 + 25
+0 81 + 5
+1
+end_operator
+begin_operator
+load-truck driver2 pack6 truck1 place5
+3
+37 4
+34 4
+7 0
+1
+0 43 4 8
+2
+0 83 + 25
+0 81 + 5
+1
+end_operator
+begin_operator
+load-truck driver2 pack6 truck1 place6
+3
+37 5
+34 5
+7 0
+1
+0 43 5 8
+2
+0 83 + 25
+0 81 + 5
+1
+end_operator
+begin_operator
+load-truck driver2 pack6 truck1 place7
+3
+37 6
+34 6
+7 0
+1
+0 43 6 8
+2
+0 83 + 25
+0 81 + 5
+1
+end_operator
+begin_operator
+load-truck driver2 pack6 truck1 place8
+3
+37 7
+34 7
+7 0
+1
+0 43 7 8
+2
+0 83 + 25
+0 81 + 5
+1
+end_operator
+begin_operator
+load-truck driver2 pack6 truck2 place1
+3
+37 0
+35 0
+12 0
+1
+0 43 0 9
+2
+0 83 + 25
+0 82 + 5
+1
+end_operator
+begin_operator
+load-truck driver2 pack6 truck2 place2
+3
+37 1
+35 1
+12 0
+1
+0 43 1 9
+2
+0 83 + 25
+0 82 + 5
+1
+end_operator
+begin_operator
+load-truck driver2 pack6 truck2 place3
+3
+37 2
+35 2
+12 0
+1
+0 43 2 9
+2
+0 83 + 25
+0 82 + 5
+1
+end_operator
+begin_operator
+load-truck driver2 pack6 truck2 place4
+3
+37 3
+35 3
+12 0
+1
+0 43 3 9
+2
+0 83 + 25
+0 82 + 5
+1
+end_operator
+begin_operator
+load-truck driver2 pack6 truck2 place5
+3
+37 4
+35 4
+12 0
+1
+0 43 4 9
+2
+0 83 + 25
+0 82 + 5
+1
+end_operator
+begin_operator
+load-truck driver2 pack6 truck2 place6
+3
+37 5
+35 5
+12 0
+1
+0 43 5 9
+2
+0 83 + 25
+0 82 + 5
+1
+end_operator
+begin_operator
+load-truck driver2 pack6 truck2 place7
+3
+37 6
+35 6
+12 0
+1
+0 43 6 9
+2
+0 83 + 25
+0 82 + 5
+1
+end_operator
+begin_operator
+load-truck driver2 pack6 truck2 place8
+3
+37 7
+35 7
+12 0
+1
+0 43 7 9
+2
+0 83 + 25
+0 82 + 5
+1
+end_operator
+begin_operator
+refuel-truck driver1 truck1 place2
+4
+36 8
+34 1
+23 0
+19 0
+0
+3
+0 78 - 30
+0 79 = 28
+0 83 + 17
+8
+end_operator
+begin_operator
+refuel-truck driver1 truck1 place4
+4
+36 8
+34 3
+23 0
+19 0
+0
+3
+0 78 - 30
+0 79 = 28
+0 83 + 17
+8
+end_operator
+begin_operator
+refuel-truck driver1 truck1 place6
+4
+36 8
+34 5
+23 0
+19 0
+0
+3
+0 78 - 30
+0 79 = 28
+0 83 + 17
+8
+end_operator
+begin_operator
+refuel-truck driver1 truck2 place2
+4
+36 9
+35 1
+19 0
+30 0
+0
+3
+0 78 - 30
+0 80 = 28
+0 83 + 17
+8
+end_operator
+begin_operator
+refuel-truck driver1 truck2 place4
+4
+36 9
+35 3
+19 0
+30 0
+0
+3
+0 78 - 30
+0 80 = 28
+0 83 + 17
+8
+end_operator
+begin_operator
+refuel-truck driver1 truck2 place6
+4
+36 9
+35 5
+19 0
+30 0
+0
+3
+0 78 - 30
+0 80 = 28
+0 83 + 17
+8
+end_operator
+begin_operator
+refuel-truck driver2 truck1 place2
+4
+37 8
+34 1
+23 0
+19 0
+0
+3
+0 78 - 30
+0 79 = 28
+0 83 + 17
+8
+end_operator
+begin_operator
+refuel-truck driver2 truck1 place4
+4
+37 8
+34 3
+23 0
+19 0
+0
+3
+0 78 - 30
+0 79 = 28
+0 83 + 17
+8
+end_operator
+begin_operator
+refuel-truck driver2 truck1 place6
+4
+37 8
+34 5
+23 0
+19 0
+0
+3
+0 78 - 30
+0 79 = 28
+0 83 + 17
+8
+end_operator
+begin_operator
+refuel-truck driver2 truck2 place2
+4
+37 9
+35 1
+19 0
+30 0
+0
+3
+0 78 - 30
+0 80 = 28
+0 83 + 17
+8
+end_operator
+begin_operator
+refuel-truck driver2 truck2 place4
+4
+37 9
+35 3
+19 0
+30 0
+0
+3
+0 78 - 30
+0 80 = 28
+0 83 + 17
+8
+end_operator
+begin_operator
+refuel-truck driver2 truck2 place6
+4
+37 9
+35 5
+19 0
+30 0
+0
+3
+0 78 - 30
+0 80 = 28
+0 83 + 17
+8
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck1 place1
+2
+36 0
+34 0
+1
+0 38 8 0
+2
+0 83 + 25
+0 81 - 36
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck1 place2
+2
+36 1
+34 1
+1
+0 38 8 1
+2
+0 83 + 25
+0 81 - 36
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck1 place3
+2
+36 2
+34 2
+1
+0 38 8 2
+2
+0 83 + 25
+0 81 - 36
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck1 place4
+2
+36 3
+34 3
+1
+0 38 8 3
+2
+0 83 + 25
+0 81 - 36
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck1 place5
+2
+36 4
+34 4
+1
+0 38 8 4
+2
+0 83 + 25
+0 81 - 36
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck1 place6
+2
+36 5
+34 5
+1
+0 38 8 5
+2
+0 83 + 25
+0 81 - 36
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck1 place7
+2
+36 6
+34 6
+1
+0 38 8 6
+2
+0 83 + 25
+0 81 - 36
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck1 place8
+2
+36 7
+34 7
+1
+0 38 8 7
+2
+0 83 + 25
+0 81 - 36
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck2 place1
+2
+36 0
+35 0
+1
+0 38 9 0
+2
+0 83 + 25
+0 82 - 36
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck2 place2
+2
+36 1
+35 1
+1
+0 38 9 1
+2
+0 83 + 25
+0 82 - 36
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck2 place3
+2
+36 2
+35 2
+1
+0 38 9 2
+2
+0 83 + 25
+0 82 - 36
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck2 place4
+2
+36 3
+35 3
+1
+0 38 9 3
+2
+0 83 + 25
+0 82 - 36
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck2 place5
+2
+36 4
+35 4
+1
+0 38 9 4
+2
+0 83 + 25
+0 82 - 36
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck2 place6
+2
+36 5
+35 5
+1
+0 38 9 5
+2
+0 83 + 25
+0 82 - 36
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck2 place7
+2
+36 6
+35 6
+1
+0 38 9 6
+2
+0 83 + 25
+0 82 - 36
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck2 place8
+2
+36 7
+35 7
+1
+0 38 9 7
+2
+0 83 + 25
+0 82 - 36
+1
+end_operator
+begin_operator
+unload-truck driver1 pack2 truck1 place1
+2
+36 0
+34 0
+1
+0 39 8 0
+2
+0 83 + 25
+0 81 - 37
+1
+end_operator
+begin_operator
+unload-truck driver1 pack2 truck1 place2
+2
+36 1
+34 1
+1
+0 39 8 1
+2
+0 83 + 25
+0 81 - 37
+1
+end_operator
+begin_operator
+unload-truck driver1 pack2 truck1 place3
+2
+36 2
+34 2
+1
+0 39 8 2
+2
+0 83 + 25
+0 81 - 37
+1
+end_operator
+begin_operator
+unload-truck driver1 pack2 truck1 place4
+2
+36 3
+34 3
+1
+0 39 8 3
+2
+0 83 + 25
+0 81 - 37
+1
+end_operator
+begin_operator
+unload-truck driver1 pack2 truck1 place5
+2
+36 4
+34 4
+1
+0 39 8 4
+2
+0 83 + 25
+0 81 - 37
+1
+end_operator
+begin_operator
+unload-truck driver1 pack2 truck1 place6
+2
+36 5
+34 5
+1
+0 39 8 5
+2
+0 83 + 25
+0 81 - 37
+1
+end_operator
+begin_operator
+unload-truck driver1 pack2 truck1 place7
+2
+36 6
+34 6
+1
+0 39 8 6
+2
+0 83 + 25
+0 81 - 37
+1
+end_operator
+begin_operator
+unload-truck driver1 pack2 truck1 place8
+2
+36 7
+34 7
+1
+0 39 8 7
+2
+0 83 + 25
+0 81 - 37
+1
+end_operator
+begin_operator
+unload-truck driver1 pack2 truck2 place1
+2
+36 0
+35 0
+1
+0 39 9 0
+2
+0 83 + 25
+0 82 - 37
+1
+end_operator
+begin_operator
+unload-truck driver1 pack2 truck2 place2
+2
+36 1
+35 1
+1
+0 39 9 1
+2
+0 83 + 25
+0 82 - 37
+1
+end_operator
+begin_operator
+unload-truck driver1 pack2 truck2 place3
+2
+36 2
+35 2
+1
+0 39 9 2
+2
+0 83 + 25
+0 82 - 37
+1
+end_operator
+begin_operator
+unload-truck driver1 pack2 truck2 place4
+2
+36 3
+35 3
+1
+0 39 9 3
+2
+0 83 + 25
+0 82 - 37
+1
+end_operator
+begin_operator
+unload-truck driver1 pack2 truck2 place5
+2
+36 4
+35 4
+1
+0 39 9 4
+2
+0 83 + 25
+0 82 - 37
+1
+end_operator
+begin_operator
+unload-truck driver1 pack2 truck2 place6
+2
+36 5
+35 5
+1
+0 39 9 5
+2
+0 83 + 25
+0 82 - 37
+1
+end_operator
+begin_operator
+unload-truck driver1 pack2 truck2 place7
+2
+36 6
+35 6
+1
+0 39 9 6
+2
+0 83 + 25
+0 82 - 37
+1
+end_operator
+begin_operator
+unload-truck driver1 pack2 truck2 place8
+2
+36 7
+35 7
+1
+0 39 9 7
+2
+0 83 + 25
+0 82 - 37
+1
+end_operator
+begin_operator
+unload-truck driver1 pack3 truck1 place1
+2
+36 0
+34 0
+1
+0 40 8 0
+2
+0 83 + 25
+0 81 - 0
+1
+end_operator
+begin_operator
+unload-truck driver1 pack3 truck1 place2
+2
+36 1
+34 1
+1
+0 40 8 1
+2
+0 83 + 25
+0 81 - 0
+1
+end_operator
+begin_operator
+unload-truck driver1 pack3 truck1 place3
+2
+36 2
+34 2
+1
+0 40 8 2
+2
+0 83 + 25
+0 81 - 0
+1
+end_operator
+begin_operator
+unload-truck driver1 pack3 truck1 place4
+2
+36 3
+34 3
+1
+0 40 8 3
+2
+0 83 + 25
+0 81 - 0
+1
+end_operator
+begin_operator
+unload-truck driver1 pack3 truck1 place5
+2
+36 4
+34 4
+1
+0 40 8 4
+2
+0 83 + 25
+0 81 - 0
+1
+end_operator
+begin_operator
+unload-truck driver1 pack3 truck1 place6
+2
+36 5
+34 5
+1
+0 40 8 5
+2
+0 83 + 25
+0 81 - 0
+1
+end_operator
+begin_operator
+unload-truck driver1 pack3 truck1 place7
+2
+36 6
+34 6
+1
+0 40 8 6
+2
+0 83 + 25
+0 81 - 0
+1
+end_operator
+begin_operator
+unload-truck driver1 pack3 truck1 place8
+2
+36 7
+34 7
+1
+0 40 8 7
+2
+0 83 + 25
+0 81 - 0
+1
+end_operator
+begin_operator
+unload-truck driver1 pack3 truck2 place1
+2
+36 0
+35 0
+1
+0 40 9 0
+2
+0 83 + 25
+0 82 - 0
+1
+end_operator
+begin_operator
+unload-truck driver1 pack3 truck2 place2
+2
+36 1
+35 1
+1
+0 40 9 1
+2
+0 83 + 25
+0 82 - 0
+1
+end_operator
+begin_operator
+unload-truck driver1 pack3 truck2 place3
+2
+36 2
+35 2
+1
+0 40 9 2
+2
+0 83 + 25
+0 82 - 0
+1
+end_operator
+begin_operator
+unload-truck driver1 pack3 truck2 place4
+2
+36 3
+35 3
+1
+0 40 9 3
+2
+0 83 + 25
+0 82 - 0
+1
+end_operator
+begin_operator
+unload-truck driver1 pack3 truck2 place5
+2
+36 4
+35 4
+1
+0 40 9 4
+2
+0 83 + 25
+0 82 - 0
+1
+end_operator
+begin_operator
+unload-truck driver1 pack3 truck2 place6
+2
+36 5
+35 5
+1
+0 40 9 5
+2
+0 83 + 25
+0 82 - 0
+1
+end_operator
+begin_operator
+unload-truck driver1 pack3 truck2 place7
+2
+36 6
+35 6
+1
+0 40 9 6
+2
+0 83 + 25
+0 82 - 0
+1
+end_operator
+begin_operator
+unload-truck driver1 pack3 truck2 place8
+2
+36 7
+35 7
+1
+0 40 9 7
+2
+0 83 + 25
+0 82 - 0
+1
+end_operator
+begin_operator
+unload-truck driver1 pack4 truck1 place1
+2
+36 0
+34 0
+1
+0 41 8 0
+2
+0 83 + 25
+0 81 - 4
+1
+end_operator
+begin_operator
+unload-truck driver1 pack4 truck1 place2
+2
+36 1
+34 1
+1
+0 41 8 1
+2
+0 83 + 25
+0 81 - 4
+1
+end_operator
+begin_operator
+unload-truck driver1 pack4 truck1 place3
+2
+36 2
+34 2
+1
+0 41 8 2
+2
+0 83 + 25
+0 81 - 4
+1
+end_operator
+begin_operator
+unload-truck driver1 pack4 truck1 place4
+2
+36 3
+34 3
+1
+0 41 8 3
+2
+0 83 + 25
+0 81 - 4
+1
+end_operator
+begin_operator
+unload-truck driver1 pack4 truck1 place5
+2
+36 4
+34 4
+1
+0 41 8 4
+2
+0 83 + 25
+0 81 - 4
+1
+end_operator
+begin_operator
+unload-truck driver1 pack4 truck1 place6
+2
+36 5
+34 5
+1
+0 41 8 5
+2
+0 83 + 25
+0 81 - 4
+1
+end_operator
+begin_operator
+unload-truck driver1 pack4 truck1 place7
+2
+36 6
+34 6
+1
+0 41 8 6
+2
+0 83 + 25
+0 81 - 4
+1
+end_operator
+begin_operator
+unload-truck driver1 pack4 truck1 place8
+2
+36 7
+34 7
+1
+0 41 8 7
+2
+0 83 + 25
+0 81 - 4
+1
+end_operator
+begin_operator
+unload-truck driver1 pack4 truck2 place1
+2
+36 0
+35 0
+1
+0 41 9 0
+2
+0 83 + 25
+0 82 - 4
+1
+end_operator
+begin_operator
+unload-truck driver1 pack4 truck2 place2
+2
+36 1
+35 1
+1
+0 41 9 1
+2
+0 83 + 25
+0 82 - 4
+1
+end_operator
+begin_operator
+unload-truck driver1 pack4 truck2 place3
+2
+36 2
+35 2
+1
+0 41 9 2
+2
+0 83 + 25
+0 82 - 4
+1
+end_operator
+begin_operator
+unload-truck driver1 pack4 truck2 place4
+2
+36 3
+35 3
+1
+0 41 9 3
+2
+0 83 + 25
+0 82 - 4
+1
+end_operator
+begin_operator
+unload-truck driver1 pack4 truck2 place5
+2
+36 4
+35 4
+1
+0 41 9 4
+2
+0 83 + 25
+0 82 - 4
+1
+end_operator
+begin_operator
+unload-truck driver1 pack4 truck2 place6
+2
+36 5
+35 5
+1
+0 41 9 5
+2
+0 83 + 25
+0 82 - 4
+1
+end_operator
+begin_operator
+unload-truck driver1 pack4 truck2 place7
+2
+36 6
+35 6
+1
+0 41 9 6
+2
+0 83 + 25
+0 82 - 4
+1
+end_operator
+begin_operator
+unload-truck driver1 pack4 truck2 place8
+2
+36 7
+35 7
+1
+0 41 9 7
+2
+0 83 + 25
+0 82 - 4
+1
+end_operator
+begin_operator
+unload-truck driver1 pack5 truck1 place1
+2
+36 0
+34 0
+1
+0 42 8 0
+2
+0 83 + 25
+0 81 - 10
+1
+end_operator
+begin_operator
+unload-truck driver1 pack5 truck1 place2
+2
+36 1
+34 1
+1
+0 42 8 1
+2
+0 83 + 25
+0 81 - 10
+1
+end_operator
+begin_operator
+unload-truck driver1 pack5 truck1 place3
+2
+36 2
+34 2
+1
+0 42 8 2
+2
+0 83 + 25
+0 81 - 10
+1
+end_operator
+begin_operator
+unload-truck driver1 pack5 truck1 place4
+2
+36 3
+34 3
+1
+0 42 8 3
+2
+0 83 + 25
+0 81 - 10
+1
+end_operator
+begin_operator
+unload-truck driver1 pack5 truck1 place5
+2
+36 4
+34 4
+1
+0 42 8 4
+2
+0 83 + 25
+0 81 - 10
+1
+end_operator
+begin_operator
+unload-truck driver1 pack5 truck1 place6
+2
+36 5
+34 5
+1
+0 42 8 5
+2
+0 83 + 25
+0 81 - 10
+1
+end_operator
+begin_operator
+unload-truck driver1 pack5 truck1 place7
+2
+36 6
+34 6
+1
+0 42 8 6
+2
+0 83 + 25
+0 81 - 10
+1
+end_operator
+begin_operator
+unload-truck driver1 pack5 truck1 place8
+2
+36 7
+34 7
+1
+0 42 8 7
+2
+0 83 + 25
+0 81 - 10
+1
+end_operator
+begin_operator
+unload-truck driver1 pack5 truck2 place1
+2
+36 0
+35 0
+1
+0 42 9 0
+2
+0 83 + 25
+0 82 - 10
+1
+end_operator
+begin_operator
+unload-truck driver1 pack5 truck2 place2
+2
+36 1
+35 1
+1
+0 42 9 1
+2
+0 83 + 25
+0 82 - 10
+1
+end_operator
+begin_operator
+unload-truck driver1 pack5 truck2 place3
+2
+36 2
+35 2
+1
+0 42 9 2
+2
+0 83 + 25
+0 82 - 10
+1
+end_operator
+begin_operator
+unload-truck driver1 pack5 truck2 place4
+2
+36 3
+35 3
+1
+0 42 9 3
+2
+0 83 + 25
+0 82 - 10
+1
+end_operator
+begin_operator
+unload-truck driver1 pack5 truck2 place5
+2
+36 4
+35 4
+1
+0 42 9 4
+2
+0 83 + 25
+0 82 - 10
+1
+end_operator
+begin_operator
+unload-truck driver1 pack5 truck2 place6
+2
+36 5
+35 5
+1
+0 42 9 5
+2
+0 83 + 25
+0 82 - 10
+1
+end_operator
+begin_operator
+unload-truck driver1 pack5 truck2 place7
+2
+36 6
+35 6
+1
+0 42 9 6
+2
+0 83 + 25
+0 82 - 10
+1
+end_operator
+begin_operator
+unload-truck driver1 pack5 truck2 place8
+2
+36 7
+35 7
+1
+0 42 9 7
+2
+0 83 + 25
+0 82 - 10
+1
+end_operator
+begin_operator
+unload-truck driver1 pack6 truck1 place1
+2
+36 0
+34 0
+1
+0 43 8 0
+2
+0 83 + 25
+0 81 - 5
+1
+end_operator
+begin_operator
+unload-truck driver1 pack6 truck1 place2
+2
+36 1
+34 1
+1
+0 43 8 1
+2
+0 83 + 25
+0 81 - 5
+1
+end_operator
+begin_operator
+unload-truck driver1 pack6 truck1 place3
+2
+36 2
+34 2
+1
+0 43 8 2
+2
+0 83 + 25
+0 81 - 5
+1
+end_operator
+begin_operator
+unload-truck driver1 pack6 truck1 place4
+2
+36 3
+34 3
+1
+0 43 8 3
+2
+0 83 + 25
+0 81 - 5
+1
+end_operator
+begin_operator
+unload-truck driver1 pack6 truck1 place5
+2
+36 4
+34 4
+1
+0 43 8 4
+2
+0 83 + 25
+0 81 - 5
+1
+end_operator
+begin_operator
+unload-truck driver1 pack6 truck1 place6
+2
+36 5
+34 5
+1
+0 43 8 5
+2
+0 83 + 25
+0 81 - 5
+1
+end_operator
+begin_operator
+unload-truck driver1 pack6 truck1 place7
+2
+36 6
+34 6
+1
+0 43 8 6
+2
+0 83 + 25
+0 81 - 5
+1
+end_operator
+begin_operator
+unload-truck driver1 pack6 truck1 place8
+2
+36 7
+34 7
+1
+0 43 8 7
+2
+0 83 + 25
+0 81 - 5
+1
+end_operator
+begin_operator
+unload-truck driver1 pack6 truck2 place1
+2
+36 0
+35 0
+1
+0 43 9 0
+2
+0 83 + 25
+0 82 - 5
+1
+end_operator
+begin_operator
+unload-truck driver1 pack6 truck2 place2
+2
+36 1
+35 1
+1
+0 43 9 1
+2
+0 83 + 25
+0 82 - 5
+1
+end_operator
+begin_operator
+unload-truck driver1 pack6 truck2 place3
+2
+36 2
+35 2
+1
+0 43 9 2
+2
+0 83 + 25
+0 82 - 5
+1
+end_operator
+begin_operator
+unload-truck driver1 pack6 truck2 place4
+2
+36 3
+35 3
+1
+0 43 9 3
+2
+0 83 + 25
+0 82 - 5
+1
+end_operator
+begin_operator
+unload-truck driver1 pack6 truck2 place5
+2
+36 4
+35 4
+1
+0 43 9 4
+2
+0 83 + 25
+0 82 - 5
+1
+end_operator
+begin_operator
+unload-truck driver1 pack6 truck2 place6
+2
+36 5
+35 5
+1
+0 43 9 5
+2
+0 83 + 25
+0 82 - 5
+1
+end_operator
+begin_operator
+unload-truck driver1 pack6 truck2 place7
+2
+36 6
+35 6
+1
+0 43 9 6
+2
+0 83 + 25
+0 82 - 5
+1
+end_operator
+begin_operator
+unload-truck driver1 pack6 truck2 place8
+2
+36 7
+35 7
+1
+0 43 9 7
+2
+0 83 + 25
+0 82 - 5
+1
+end_operator
+begin_operator
+unload-truck driver2 pack1 truck1 place1
+2
+37 0
+34 0
+1
+0 38 8 0
+2
+0 83 + 25
+0 81 - 36
+1
+end_operator
+begin_operator
+unload-truck driver2 pack1 truck1 place2
+2
+37 1
+34 1
+1
+0 38 8 1
+2
+0 83 + 25
+0 81 - 36
+1
+end_operator
+begin_operator
+unload-truck driver2 pack1 truck1 place3
+2
+37 2
+34 2
+1
+0 38 8 2
+2
+0 83 + 25
+0 81 - 36
+1
+end_operator
+begin_operator
+unload-truck driver2 pack1 truck1 place4
+2
+37 3
+34 3
+1
+0 38 8 3
+2
+0 83 + 25
+0 81 - 36
+1
+end_operator
+begin_operator
+unload-truck driver2 pack1 truck1 place5
+2
+37 4
+34 4
+1
+0 38 8 4
+2
+0 83 + 25
+0 81 - 36
+1
+end_operator
+begin_operator
+unload-truck driver2 pack1 truck1 place6
+2
+37 5
+34 5
+1
+0 38 8 5
+2
+0 83 + 25
+0 81 - 36
+1
+end_operator
+begin_operator
+unload-truck driver2 pack1 truck1 place7
+2
+37 6
+34 6
+1
+0 38 8 6
+2
+0 83 + 25
+0 81 - 36
+1
+end_operator
+begin_operator
+unload-truck driver2 pack1 truck1 place8
+2
+37 7
+34 7
+1
+0 38 8 7
+2
+0 83 + 25
+0 81 - 36
+1
+end_operator
+begin_operator
+unload-truck driver2 pack1 truck2 place1
+2
+37 0
+35 0
+1
+0 38 9 0
+2
+0 83 + 25
+0 82 - 36
+1
+end_operator
+begin_operator
+unload-truck driver2 pack1 truck2 place2
+2
+37 1
+35 1
+1
+0 38 9 1
+2
+0 83 + 25
+0 82 - 36
+1
+end_operator
+begin_operator
+unload-truck driver2 pack1 truck2 place3
+2
+37 2
+35 2
+1
+0 38 9 2
+2
+0 83 + 25
+0 82 - 36
+1
+end_operator
+begin_operator
+unload-truck driver2 pack1 truck2 place4
+2
+37 3
+35 3
+1
+0 38 9 3
+2
+0 83 + 25
+0 82 - 36
+1
+end_operator
+begin_operator
+unload-truck driver2 pack1 truck2 place5
+2
+37 4
+35 4
+1
+0 38 9 4
+2
+0 83 + 25
+0 82 - 36
+1
+end_operator
+begin_operator
+unload-truck driver2 pack1 truck2 place6
+2
+37 5
+35 5
+1
+0 38 9 5
+2
+0 83 + 25
+0 82 - 36
+1
+end_operator
+begin_operator
+unload-truck driver2 pack1 truck2 place7
+2
+37 6
+35 6
+1
+0 38 9 6
+2
+0 83 + 25
+0 82 - 36
+1
+end_operator
+begin_operator
+unload-truck driver2 pack1 truck2 place8
+2
+37 7
+35 7
+1
+0 38 9 7
+2
+0 83 + 25
+0 82 - 36
+1
+end_operator
+begin_operator
+unload-truck driver2 pack2 truck1 place1
+2
+37 0
+34 0
+1
+0 39 8 0
+2
+0 83 + 25
+0 81 - 37
+1
+end_operator
+begin_operator
+unload-truck driver2 pack2 truck1 place2
+2
+37 1
+34 1
+1
+0 39 8 1
+2
+0 83 + 25
+0 81 - 37
+1
+end_operator
+begin_operator
+unload-truck driver2 pack2 truck1 place3
+2
+37 2
+34 2
+1
+0 39 8 2
+2
+0 83 + 25
+0 81 - 37
+1
+end_operator
+begin_operator
+unload-truck driver2 pack2 truck1 place4
+2
+37 3
+34 3
+1
+0 39 8 3
+2
+0 83 + 25
+0 81 - 37
+1
+end_operator
+begin_operator
+unload-truck driver2 pack2 truck1 place5
+2
+37 4
+34 4
+1
+0 39 8 4
+2
+0 83 + 25
+0 81 - 37
+1
+end_operator
+begin_operator
+unload-truck driver2 pack2 truck1 place6
+2
+37 5
+34 5
+1
+0 39 8 5
+2
+0 83 + 25
+0 81 - 37
+1
+end_operator
+begin_operator
+unload-truck driver2 pack2 truck1 place7
+2
+37 6
+34 6
+1
+0 39 8 6
+2
+0 83 + 25
+0 81 - 37
+1
+end_operator
+begin_operator
+unload-truck driver2 pack2 truck1 place8
+2
+37 7
+34 7
+1
+0 39 8 7
+2
+0 83 + 25
+0 81 - 37
+1
+end_operator
+begin_operator
+unload-truck driver2 pack2 truck2 place1
+2
+37 0
+35 0
+1
+0 39 9 0
+2
+0 83 + 25
+0 82 - 37
+1
+end_operator
+begin_operator
+unload-truck driver2 pack2 truck2 place2
+2
+37 1
+35 1
+1
+0 39 9 1
+2
+0 83 + 25
+0 82 - 37
+1
+end_operator
+begin_operator
+unload-truck driver2 pack2 truck2 place3
+2
+37 2
+35 2
+1
+0 39 9 2
+2
+0 83 + 25
+0 82 - 37
+1
+end_operator
+begin_operator
+unload-truck driver2 pack2 truck2 place4
+2
+37 3
+35 3
+1
+0 39 9 3
+2
+0 83 + 25
+0 82 - 37
+1
+end_operator
+begin_operator
+unload-truck driver2 pack2 truck2 place5
+2
+37 4
+35 4
+1
+0 39 9 4
+2
+0 83 + 25
+0 82 - 37
+1
+end_operator
+begin_operator
+unload-truck driver2 pack2 truck2 place6
+2
+37 5
+35 5
+1
+0 39 9 5
+2
+0 83 + 25
+0 82 - 37
+1
+end_operator
+begin_operator
+unload-truck driver2 pack2 truck2 place7
+2
+37 6
+35 6
+1
+0 39 9 6
+2
+0 83 + 25
+0 82 - 37
+1
+end_operator
+begin_operator
+unload-truck driver2 pack2 truck2 place8
+2
+37 7
+35 7
+1
+0 39 9 7
+2
+0 83 + 25
+0 82 - 37
+1
+end_operator
+begin_operator
+unload-truck driver2 pack3 truck1 place1
+2
+37 0
+34 0
+1
+0 40 8 0
+2
+0 83 + 25
+0 81 - 0
+1
+end_operator
+begin_operator
+unload-truck driver2 pack3 truck1 place2
+2
+37 1
+34 1
+1
+0 40 8 1
+2
+0 83 + 25
+0 81 - 0
+1
+end_operator
+begin_operator
+unload-truck driver2 pack3 truck1 place3
+2
+37 2
+34 2
+1
+0 40 8 2
+2
+0 83 + 25
+0 81 - 0
+1
+end_operator
+begin_operator
+unload-truck driver2 pack3 truck1 place4
+2
+37 3
+34 3
+1
+0 40 8 3
+2
+0 83 + 25
+0 81 - 0
+1
+end_operator
+begin_operator
+unload-truck driver2 pack3 truck1 place5
+2
+37 4
+34 4
+1
+0 40 8 4
+2
+0 83 + 25
+0 81 - 0
+1
+end_operator
+begin_operator
+unload-truck driver2 pack3 truck1 place6
+2
+37 5
+34 5
+1
+0 40 8 5
+2
+0 83 + 25
+0 81 - 0
+1
+end_operator
+begin_operator
+unload-truck driver2 pack3 truck1 place7
+2
+37 6
+34 6
+1
+0 40 8 6
+2
+0 83 + 25
+0 81 - 0
+1
+end_operator
+begin_operator
+unload-truck driver2 pack3 truck1 place8
+2
+37 7
+34 7
+1
+0 40 8 7
+2
+0 83 + 25
+0 81 - 0
+1
+end_operator
+begin_operator
+unload-truck driver2 pack3 truck2 place1
+2
+37 0
+35 0
+1
+0 40 9 0
+2
+0 83 + 25
+0 82 - 0
+1
+end_operator
+begin_operator
+unload-truck driver2 pack3 truck2 place2
+2
+37 1
+35 1
+1
+0 40 9 1
+2
+0 83 + 25
+0 82 - 0
+1
+end_operator
+begin_operator
+unload-truck driver2 pack3 truck2 place3
+2
+37 2
+35 2
+1
+0 40 9 2
+2
+0 83 + 25
+0 82 - 0
+1
+end_operator
+begin_operator
+unload-truck driver2 pack3 truck2 place4
+2
+37 3
+35 3
+1
+0 40 9 3
+2
+0 83 + 25
+0 82 - 0
+1
+end_operator
+begin_operator
+unload-truck driver2 pack3 truck2 place5
+2
+37 4
+35 4
+1
+0 40 9 4
+2
+0 83 + 25
+0 82 - 0
+1
+end_operator
+begin_operator
+unload-truck driver2 pack3 truck2 place6
+2
+37 5
+35 5
+1
+0 40 9 5
+2
+0 83 + 25
+0 82 - 0
+1
+end_operator
+begin_operator
+unload-truck driver2 pack3 truck2 place7
+2
+37 6
+35 6
+1
+0 40 9 6
+2
+0 83 + 25
+0 82 - 0
+1
+end_operator
+begin_operator
+unload-truck driver2 pack3 truck2 place8
+2
+37 7
+35 7
+1
+0 40 9 7
+2
+0 83 + 25
+0 82 - 0
+1
+end_operator
+begin_operator
+unload-truck driver2 pack4 truck1 place1
+2
+37 0
+34 0
+1
+0 41 8 0
+2
+0 83 + 25
+0 81 - 4
+1
+end_operator
+begin_operator
+unload-truck driver2 pack4 truck1 place2
+2
+37 1
+34 1
+1
+0 41 8 1
+2
+0 83 + 25
+0 81 - 4
+1
+end_operator
+begin_operator
+unload-truck driver2 pack4 truck1 place3
+2
+37 2
+34 2
+1
+0 41 8 2
+2
+0 83 + 25
+0 81 - 4
+1
+end_operator
+begin_operator
+unload-truck driver2 pack4 truck1 place4
+2
+37 3
+34 3
+1
+0 41 8 3
+2
+0 83 + 25
+0 81 - 4
+1
+end_operator
+begin_operator
+unload-truck driver2 pack4 truck1 place5
+2
+37 4
+34 4
+1
+0 41 8 4
+2
+0 83 + 25
+0 81 - 4
+1
+end_operator
+begin_operator
+unload-truck driver2 pack4 truck1 place6
+2
+37 5
+34 5
+1
+0 41 8 5
+2
+0 83 + 25
+0 81 - 4
+1
+end_operator
+begin_operator
+unload-truck driver2 pack4 truck1 place7
+2
+37 6
+34 6
+1
+0 41 8 6
+2
+0 83 + 25
+0 81 - 4
+1
+end_operator
+begin_operator
+unload-truck driver2 pack4 truck1 place8
+2
+37 7
+34 7
+1
+0 41 8 7
+2
+0 83 + 25
+0 81 - 4
+1
+end_operator
+begin_operator
+unload-truck driver2 pack4 truck2 place1
+2
+37 0
+35 0
+1
+0 41 9 0
+2
+0 83 + 25
+0 82 - 4
+1
+end_operator
+begin_operator
+unload-truck driver2 pack4 truck2 place2
+2
+37 1
+35 1
+1
+0 41 9 1
+2
+0 83 + 25
+0 82 - 4
+1
+end_operator
+begin_operator
+unload-truck driver2 pack4 truck2 place3
+2
+37 2
+35 2
+1
+0 41 9 2
+2
+0 83 + 25
+0 82 - 4
+1
+end_operator
+begin_operator
+unload-truck driver2 pack4 truck2 place4
+2
+37 3
+35 3
+1
+0 41 9 3
+2
+0 83 + 25
+0 82 - 4
+1
+end_operator
+begin_operator
+unload-truck driver2 pack4 truck2 place5
+2
+37 4
+35 4
+1
+0 41 9 4
+2
+0 83 + 25
+0 82 - 4
+1
+end_operator
+begin_operator
+unload-truck driver2 pack4 truck2 place6
+2
+37 5
+35 5
+1
+0 41 9 5
+2
+0 83 + 25
+0 82 - 4
+1
+end_operator
+begin_operator
+unload-truck driver2 pack4 truck2 place7
+2
+37 6
+35 6
+1
+0 41 9 6
+2
+0 83 + 25
+0 82 - 4
+1
+end_operator
+begin_operator
+unload-truck driver2 pack4 truck2 place8
+2
+37 7
+35 7
+1
+0 41 9 7
+2
+0 83 + 25
+0 82 - 4
+1
+end_operator
+begin_operator
+unload-truck driver2 pack5 truck1 place1
+2
+37 0
+34 0
+1
+0 42 8 0
+2
+0 83 + 25
+0 81 - 10
+1
+end_operator
+begin_operator
+unload-truck driver2 pack5 truck1 place2
+2
+37 1
+34 1
+1
+0 42 8 1
+2
+0 83 + 25
+0 81 - 10
+1
+end_operator
+begin_operator
+unload-truck driver2 pack5 truck1 place3
+2
+37 2
+34 2
+1
+0 42 8 2
+2
+0 83 + 25
+0 81 - 10
+1
+end_operator
+begin_operator
+unload-truck driver2 pack5 truck1 place4
+2
+37 3
+34 3
+1
+0 42 8 3
+2
+0 83 + 25
+0 81 - 10
+1
+end_operator
+begin_operator
+unload-truck driver2 pack5 truck1 place5
+2
+37 4
+34 4
+1
+0 42 8 4
+2
+0 83 + 25
+0 81 - 10
+1
+end_operator
+begin_operator
+unload-truck driver2 pack5 truck1 place6
+2
+37 5
+34 5
+1
+0 42 8 5
+2
+0 83 + 25
+0 81 - 10
+1
+end_operator
+begin_operator
+unload-truck driver2 pack5 truck1 place7
+2
+37 6
+34 6
+1
+0 42 8 6
+2
+0 83 + 25
+0 81 - 10
+1
+end_operator
+begin_operator
+unload-truck driver2 pack5 truck1 place8
+2
+37 7
+34 7
+1
+0 42 8 7
+2
+0 83 + 25
+0 81 - 10
+1
+end_operator
+begin_operator
+unload-truck driver2 pack5 truck2 place1
+2
+37 0
+35 0
+1
+0 42 9 0
+2
+0 83 + 25
+0 82 - 10
+1
+end_operator
+begin_operator
+unload-truck driver2 pack5 truck2 place2
+2
+37 1
+35 1
+1
+0 42 9 1
+2
+0 83 + 25
+0 82 - 10
+1
+end_operator
+begin_operator
+unload-truck driver2 pack5 truck2 place3
+2
+37 2
+35 2
+1
+0 42 9 2
+2
+0 83 + 25
+0 82 - 10
+1
+end_operator
+begin_operator
+unload-truck driver2 pack5 truck2 place4
+2
+37 3
+35 3
+1
+0 42 9 3
+2
+0 83 + 25
+0 82 - 10
+1
+end_operator
+begin_operator
+unload-truck driver2 pack5 truck2 place5
+2
+37 4
+35 4
+1
+0 42 9 4
+2
+0 83 + 25
+0 82 - 10
+1
+end_operator
+begin_operator
+unload-truck driver2 pack5 truck2 place6
+2
+37 5
+35 5
+1
+0 42 9 5
+2
+0 83 + 25
+0 82 - 10
+1
+end_operator
+begin_operator
+unload-truck driver2 pack5 truck2 place7
+2
+37 6
+35 6
+1
+0 42 9 6
+2
+0 83 + 25
+0 82 - 10
+1
+end_operator
+begin_operator
+unload-truck driver2 pack5 truck2 place8
+2
+37 7
+35 7
+1
+0 42 9 7
+2
+0 83 + 25
+0 82 - 10
+1
+end_operator
+begin_operator
+unload-truck driver2 pack6 truck1 place1
+2
+37 0
+34 0
+1
+0 43 8 0
+2
+0 83 + 25
+0 81 - 5
+1
+end_operator
+begin_operator
+unload-truck driver2 pack6 truck1 place2
+2
+37 1
+34 1
+1
+0 43 8 1
+2
+0 83 + 25
+0 81 - 5
+1
+end_operator
+begin_operator
+unload-truck driver2 pack6 truck1 place3
+2
+37 2
+34 2
+1
+0 43 8 2
+2
+0 83 + 25
+0 81 - 5
+1
+end_operator
+begin_operator
+unload-truck driver2 pack6 truck1 place4
+2
+37 3
+34 3
+1
+0 43 8 3
+2
+0 83 + 25
+0 81 - 5
+1
+end_operator
+begin_operator
+unload-truck driver2 pack6 truck1 place5
+2
+37 4
+34 4
+1
+0 43 8 4
+2
+0 83 + 25
+0 81 - 5
+1
+end_operator
+begin_operator
+unload-truck driver2 pack6 truck1 place6
+2
+37 5
+34 5
+1
+0 43 8 5
+2
+0 83 + 25
+0 81 - 5
+1
+end_operator
+begin_operator
+unload-truck driver2 pack6 truck1 place7
+2
+37 6
+34 6
+1
+0 43 8 6
+2
+0 83 + 25
+0 81 - 5
+1
+end_operator
+begin_operator
+unload-truck driver2 pack6 truck1 place8
+2
+37 7
+34 7
+1
+0 43 8 7
+2
+0 83 + 25
+0 81 - 5
+1
+end_operator
+begin_operator
+unload-truck driver2 pack6 truck2 place1
+2
+37 0
+35 0
+1
+0 43 9 0
+2
+0 83 + 25
+0 82 - 5
+1
+end_operator
+begin_operator
+unload-truck driver2 pack6 truck2 place2
+2
+37 1
+35 1
+1
+0 43 9 1
+2
+0 83 + 25
+0 82 - 5
+1
+end_operator
+begin_operator
+unload-truck driver2 pack6 truck2 place3
+2
+37 2
+35 2
+1
+0 43 9 2
+2
+0 83 + 25
+0 82 - 5
+1
+end_operator
+begin_operator
+unload-truck driver2 pack6 truck2 place4
+2
+37 3
+35 3
+1
+0 43 9 3
+2
+0 83 + 25
+0 82 - 5
+1
+end_operator
+begin_operator
+unload-truck driver2 pack6 truck2 place5
+2
+37 4
+35 4
+1
+0 43 9 4
+2
+0 83 + 25
+0 82 - 5
+1
+end_operator
+begin_operator
+unload-truck driver2 pack6 truck2 place6
+2
+37 5
+35 5
+1
+0 43 9 5
+2
+0 83 + 25
+0 82 - 5
+1
+end_operator
+begin_operator
+unload-truck driver2 pack6 truck2 place7
+2
+37 6
+35 6
+1
+0 43 9 6
+2
+0 83 + 25
+0 82 - 5
+1
+end_operator
+begin_operator
+unload-truck driver2 pack6 truck2 place8
+2
+37 7
+35 7
+1
+0 43 9 7
+2
+0 83 + 25
+0 82 - 5
+1
+end_operator
+begin_operator
+walk-alone driver1 place1 place3
+0
+1
+0 36 0 2
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-alone driver1 place1 place4
+0
+1
+0 36 0 3
+1
+0 83 + 11
+1
+end_operator
+begin_operator
+walk-alone driver1 place1 place6
+0
+1
+0 36 0 5
+1
+0 83 + 6
+1
+end_operator
+begin_operator
+walk-alone driver1 place1 place8
+0
+1
+0 36 0 7
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-alone driver1 place2 place5
+0
+1
+0 36 1 4
+1
+0 83 + 16
+1
+end_operator
+begin_operator
+walk-alone driver1 place3 place1
+0
+1
+0 36 2 0
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-alone driver1 place3 place7
+0
+1
+0 36 2 6
+1
+0 83 + 1
+1
+end_operator
+begin_operator
+walk-alone driver1 place4 place1
+0
+1
+0 36 3 0
+1
+0 83 + 11
+1
+end_operator
+begin_operator
+walk-alone driver1 place4 place6
+0
+1
+0 36 3 5
+1
+0 83 + 11
+1
+end_operator
+begin_operator
+walk-alone driver1 place5 place2
+0
+1
+0 36 4 1
+1
+0 83 + 16
+1
+end_operator
+begin_operator
+walk-alone driver1 place5 place6
+0
+1
+0 36 4 5
+1
+0 83 + 13
+1
+end_operator
+begin_operator
+walk-alone driver1 place6 place1
+0
+1
+0 36 5 0
+1
+0 83 + 6
+1
+end_operator
+begin_operator
+walk-alone driver1 place6 place4
+0
+1
+0 36 5 3
+1
+0 83 + 11
+1
+end_operator
+begin_operator
+walk-alone driver1 place6 place5
+0
+1
+0 36 5 4
+1
+0 83 + 13
+1
+end_operator
+begin_operator
+walk-alone driver1 place6 place8
+0
+1
+0 36 5 7
+1
+0 83 + 26
+1
+end_operator
+begin_operator
+walk-alone driver1 place7 place3
+0
+1
+0 36 6 2
+1
+0 83 + 1
+1
+end_operator
+begin_operator
+walk-alone driver1 place7 place8
+0
+1
+0 36 6 7
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-alone driver1 place8 place1
+0
+1
+0 36 7 0
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-alone driver1 place8 place6
+0
+1
+0 36 7 5
+1
+0 83 + 26
+1
+end_operator
+begin_operator
+walk-alone driver1 place8 place7
+0
+1
+0 36 7 6
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-alone driver2 place1 place3
+0
+1
+0 37 0 2
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-alone driver2 place1 place4
+0
+1
+0 37 0 3
+1
+0 83 + 11
+1
+end_operator
+begin_operator
+walk-alone driver2 place1 place6
+0
+1
+0 37 0 5
+1
+0 83 + 6
+1
+end_operator
+begin_operator
+walk-alone driver2 place1 place8
+0
+1
+0 37 0 7
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-alone driver2 place2 place5
+0
+1
+0 37 1 4
+1
+0 83 + 16
+1
+end_operator
+begin_operator
+walk-alone driver2 place3 place1
+0
+1
+0 37 2 0
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-alone driver2 place3 place7
+0
+1
+0 37 2 6
+1
+0 83 + 1
+1
+end_operator
+begin_operator
+walk-alone driver2 place4 place1
+0
+1
+0 37 3 0
+1
+0 83 + 11
+1
+end_operator
+begin_operator
+walk-alone driver2 place4 place6
+0
+1
+0 37 3 5
+1
+0 83 + 11
+1
+end_operator
+begin_operator
+walk-alone driver2 place5 place2
+0
+1
+0 37 4 1
+1
+0 83 + 16
+1
+end_operator
+begin_operator
+walk-alone driver2 place5 place6
+0
+1
+0 37 4 5
+1
+0 83 + 13
+1
+end_operator
+begin_operator
+walk-alone driver2 place6 place1
+0
+1
+0 37 5 0
+1
+0 83 + 6
+1
+end_operator
+begin_operator
+walk-alone driver2 place6 place4
+0
+1
+0 37 5 3
+1
+0 83 + 11
+1
+end_operator
+begin_operator
+walk-alone driver2 place6 place5
+0
+1
+0 37 5 4
+1
+0 83 + 13
+1
+end_operator
+begin_operator
+walk-alone driver2 place6 place8
+0
+1
+0 37 5 7
+1
+0 83 + 26
+1
+end_operator
+begin_operator
+walk-alone driver2 place7 place3
+0
+1
+0 37 6 2
+1
+0 83 + 1
+1
+end_operator
+begin_operator
+walk-alone driver2 place7 place8
+0
+1
+0 37 6 7
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-alone driver2 place8 place1
+0
+1
+0 37 7 0
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-alone driver2 place8 place6
+0
+1
+0 37 7 5
+1
+0 83 + 26
+1
+end_operator
+begin_operator
+walk-alone driver2 place8 place7
+0
+1
+0 37 7 6
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack1 place1 place3
+1
+2 0
+2
+0 36 0 2
+0 38 0 2
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack1 place1 place4
+1
+2 0
+2
+0 36 0 3
+0 38 0 3
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack1 place1 place6
+1
+2 0
+2
+0 36 0 5
+0 38 0 5
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack1 place1 place8
+1
+2 0
+2
+0 36 0 7
+0 38 0 7
+1
+0 83 + 12
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack1 place2 place5
+1
+2 0
+2
+0 36 1 4
+0 38 1 4
+1
+0 83 + 7
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack1 place3 place1
+1
+2 0
+2
+0 36 2 0
+0 38 2 0
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack1 place3 place7
+1
+2 0
+2
+0 36 2 6
+0 38 2 6
+1
+0 83 + 2
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack1 place4 place1
+1
+2 0
+2
+0 36 3 0
+0 38 3 0
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack1 place4 place6
+1
+2 0
+2
+0 36 3 5
+0 38 3 5
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack1 place5 place2
+1
+2 0
+2
+0 36 4 1
+0 38 4 1
+1
+0 83 + 7
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack1 place5 place6
+1
+2 0
+2
+0 36 4 5
+0 38 4 5
+1
+0 83 + 22
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack1 place6 place1
+1
+2 0
+2
+0 36 5 0
+0 38 5 0
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack1 place6 place4
+1
+2 0
+2
+0 36 5 3
+0 38 5 3
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack1 place6 place5
+1
+2 0
+2
+0 36 5 4
+0 38 5 4
+1
+0 83 + 22
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack1 place6 place8
+1
+2 0
+2
+0 36 5 7
+0 38 5 7
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack1 place7 place3
+1
+2 0
+2
+0 36 6 2
+0 38 6 2
+1
+0 83 + 2
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack1 place7 place8
+1
+2 0
+2
+0 36 6 7
+0 38 6 7
+1
+0 83 + 15
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack1 place8 place1
+1
+2 0
+2
+0 36 7 0
+0 38 7 0
+1
+0 83 + 12
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack1 place8 place6
+1
+2 0
+2
+0 36 7 5
+0 38 7 5
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack1 place8 place7
+1
+2 0
+2
+0 36 7 6
+0 38 7 6
+1
+0 83 + 15
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack2 place1 place3
+1
+1 0
+2
+0 36 0 2
+0 39 0 2
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack2 place1 place4
+1
+1 0
+2
+0 36 0 3
+0 39 0 3
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack2 place1 place6
+1
+1 0
+2
+0 36 0 5
+0 39 0 5
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack2 place1 place8
+1
+1 0
+2
+0 36 0 7
+0 39 0 7
+1
+0 83 + 12
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack2 place2 place5
+1
+1 0
+2
+0 36 1 4
+0 39 1 4
+1
+0 83 + 7
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack2 place3 place1
+1
+1 0
+2
+0 36 2 0
+0 39 2 0
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack2 place3 place7
+1
+1 0
+2
+0 36 2 6
+0 39 2 6
+1
+0 83 + 2
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack2 place4 place1
+1
+1 0
+2
+0 36 3 0
+0 39 3 0
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack2 place4 place6
+1
+1 0
+2
+0 36 3 5
+0 39 3 5
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack2 place5 place2
+1
+1 0
+2
+0 36 4 1
+0 39 4 1
+1
+0 83 + 7
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack2 place5 place6
+1
+1 0
+2
+0 36 4 5
+0 39 4 5
+1
+0 83 + 22
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack2 place6 place1
+1
+1 0
+2
+0 36 5 0
+0 39 5 0
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack2 place6 place4
+1
+1 0
+2
+0 36 5 3
+0 39 5 3
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack2 place6 place5
+1
+1 0
+2
+0 36 5 4
+0 39 5 4
+1
+0 83 + 22
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack2 place6 place8
+1
+1 0
+2
+0 36 5 7
+0 39 5 7
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack2 place7 place3
+1
+1 0
+2
+0 36 6 2
+0 39 6 2
+1
+0 83 + 2
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack2 place7 place8
+1
+1 0
+2
+0 36 6 7
+0 39 6 7
+1
+0 83 + 15
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack2 place8 place1
+1
+1 0
+2
+0 36 7 0
+0 39 7 0
+1
+0 83 + 12
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack2 place8 place6
+1
+1 0
+2
+0 36 7 5
+0 39 7 5
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack2 place8 place7
+1
+1 0
+2
+0 36 7 6
+0 39 7 6
+1
+0 83 + 15
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack3 place1 place3
+1
+5 0
+2
+0 36 0 2
+0 40 0 2
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack3 place1 place4
+1
+5 0
+2
+0 36 0 3
+0 40 0 3
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack3 place1 place6
+1
+5 0
+2
+0 36 0 5
+0 40 0 5
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack3 place1 place8
+1
+5 0
+2
+0 36 0 7
+0 40 0 7
+1
+0 83 + 12
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack3 place2 place5
+1
+5 0
+2
+0 36 1 4
+0 40 1 4
+1
+0 83 + 7
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack3 place3 place1
+1
+5 0
+2
+0 36 2 0
+0 40 2 0
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack3 place3 place7
+1
+5 0
+2
+0 36 2 6
+0 40 2 6
+1
+0 83 + 2
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack3 place4 place1
+1
+5 0
+2
+0 36 3 0
+0 40 3 0
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack3 place4 place6
+1
+5 0
+2
+0 36 3 5
+0 40 3 5
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack3 place5 place2
+1
+5 0
+2
+0 36 4 1
+0 40 4 1
+1
+0 83 + 7
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack3 place5 place6
+1
+5 0
+2
+0 36 4 5
+0 40 4 5
+1
+0 83 + 22
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack3 place6 place1
+1
+5 0
+2
+0 36 5 0
+0 40 5 0
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack3 place6 place4
+1
+5 0
+2
+0 36 5 3
+0 40 5 3
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack3 place6 place5
+1
+5 0
+2
+0 36 5 4
+0 40 5 4
+1
+0 83 + 22
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack3 place6 place8
+1
+5 0
+2
+0 36 5 7
+0 40 5 7
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack3 place7 place3
+1
+5 0
+2
+0 36 6 2
+0 40 6 2
+1
+0 83 + 2
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack3 place7 place8
+1
+5 0
+2
+0 36 6 7
+0 40 6 7
+1
+0 83 + 15
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack3 place8 place1
+1
+5 0
+2
+0 36 7 0
+0 40 7 0
+1
+0 83 + 12
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack3 place8 place6
+1
+5 0
+2
+0 36 7 5
+0 40 7 5
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack3 place8 place7
+1
+5 0
+2
+0 36 7 6
+0 40 7 6
+1
+0 83 + 15
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack4 place1 place3
+1
+0 0
+2
+0 36 0 2
+0 41 0 2
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack4 place1 place4
+1
+0 0
+2
+0 36 0 3
+0 41 0 3
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack4 place1 place6
+1
+0 0
+2
+0 36 0 5
+0 41 0 5
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack4 place1 place8
+1
+0 0
+2
+0 36 0 7
+0 41 0 7
+1
+0 83 + 12
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack4 place2 place5
+1
+0 0
+2
+0 36 1 4
+0 41 1 4
+1
+0 83 + 7
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack4 place3 place1
+1
+0 0
+2
+0 36 2 0
+0 41 2 0
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack4 place3 place7
+1
+0 0
+2
+0 36 2 6
+0 41 2 6
+1
+0 83 + 2
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack4 place4 place1
+1
+0 0
+2
+0 36 3 0
+0 41 3 0
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack4 place4 place6
+1
+0 0
+2
+0 36 3 5
+0 41 3 5
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack4 place5 place2
+1
+0 0
+2
+0 36 4 1
+0 41 4 1
+1
+0 83 + 7
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack4 place5 place6
+1
+0 0
+2
+0 36 4 5
+0 41 4 5
+1
+0 83 + 22
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack4 place6 place1
+1
+0 0
+2
+0 36 5 0
+0 41 5 0
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack4 place6 place4
+1
+0 0
+2
+0 36 5 3
+0 41 5 3
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack4 place6 place5
+1
+0 0
+2
+0 36 5 4
+0 41 5 4
+1
+0 83 + 22
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack4 place6 place8
+1
+0 0
+2
+0 36 5 7
+0 41 5 7
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack4 place7 place3
+1
+0 0
+2
+0 36 6 2
+0 41 6 2
+1
+0 83 + 2
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack4 place7 place8
+1
+0 0
+2
+0 36 6 7
+0 41 6 7
+1
+0 83 + 15
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack4 place8 place1
+1
+0 0
+2
+0 36 7 0
+0 41 7 0
+1
+0 83 + 12
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack4 place8 place6
+1
+0 0
+2
+0 36 7 5
+0 41 7 5
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack4 place8 place7
+1
+0 0
+2
+0 36 7 6
+0 41 7 6
+1
+0 83 + 15
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack5 place1 place3
+1
+3 0
+2
+0 36 0 2
+0 42 0 2
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack5 place1 place4
+1
+3 0
+2
+0 36 0 3
+0 42 0 3
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack5 place1 place6
+1
+3 0
+2
+0 36 0 5
+0 42 0 5
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack5 place1 place8
+1
+3 0
+2
+0 36 0 7
+0 42 0 7
+1
+0 83 + 12
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack5 place2 place5
+1
+3 0
+2
+0 36 1 4
+0 42 1 4
+1
+0 83 + 7
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack5 place3 place1
+1
+3 0
+2
+0 36 2 0
+0 42 2 0
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack5 place3 place7
+1
+3 0
+2
+0 36 2 6
+0 42 2 6
+1
+0 83 + 2
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack5 place4 place1
+1
+3 0
+2
+0 36 3 0
+0 42 3 0
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack5 place4 place6
+1
+3 0
+2
+0 36 3 5
+0 42 3 5
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack5 place5 place2
+1
+3 0
+2
+0 36 4 1
+0 42 4 1
+1
+0 83 + 7
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack5 place5 place6
+1
+3 0
+2
+0 36 4 5
+0 42 4 5
+1
+0 83 + 22
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack5 place6 place1
+1
+3 0
+2
+0 36 5 0
+0 42 5 0
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack5 place6 place4
+1
+3 0
+2
+0 36 5 3
+0 42 5 3
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack5 place6 place5
+1
+3 0
+2
+0 36 5 4
+0 42 5 4
+1
+0 83 + 22
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack5 place6 place8
+1
+3 0
+2
+0 36 5 7
+0 42 5 7
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack5 place7 place3
+1
+3 0
+2
+0 36 6 2
+0 42 6 2
+1
+0 83 + 2
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack5 place7 place8
+1
+3 0
+2
+0 36 6 7
+0 42 6 7
+1
+0 83 + 15
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack5 place8 place1
+1
+3 0
+2
+0 36 7 0
+0 42 7 0
+1
+0 83 + 12
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack5 place8 place6
+1
+3 0
+2
+0 36 7 5
+0 42 7 5
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack5 place8 place7
+1
+3 0
+2
+0 36 7 6
+0 42 7 6
+1
+0 83 + 15
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack6 place1 place3
+1
+4 0
+2
+0 36 0 2
+0 43 0 2
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack6 place1 place4
+1
+4 0
+2
+0 36 0 3
+0 43 0 3
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack6 place1 place6
+1
+4 0
+2
+0 36 0 5
+0 43 0 5
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack6 place1 place8
+1
+4 0
+2
+0 36 0 7
+0 43 0 7
+1
+0 83 + 12
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack6 place2 place5
+1
+4 0
+2
+0 36 1 4
+0 43 1 4
+1
+0 83 + 7
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack6 place3 place1
+1
+4 0
+2
+0 36 2 0
+0 43 2 0
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack6 place3 place7
+1
+4 0
+2
+0 36 2 6
+0 43 2 6
+1
+0 83 + 2
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack6 place4 place1
+1
+4 0
+2
+0 36 3 0
+0 43 3 0
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack6 place4 place6
+1
+4 0
+2
+0 36 3 5
+0 43 3 5
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack6 place5 place2
+1
+4 0
+2
+0 36 4 1
+0 43 4 1
+1
+0 83 + 7
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack6 place5 place6
+1
+4 0
+2
+0 36 4 5
+0 43 4 5
+1
+0 83 + 22
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack6 place6 place1
+1
+4 0
+2
+0 36 5 0
+0 43 5 0
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack6 place6 place4
+1
+4 0
+2
+0 36 5 3
+0 43 5 3
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack6 place6 place5
+1
+4 0
+2
+0 36 5 4
+0 43 5 4
+1
+0 83 + 22
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack6 place6 place8
+1
+4 0
+2
+0 36 5 7
+0 43 5 7
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack6 place7 place3
+1
+4 0
+2
+0 36 6 2
+0 43 6 2
+1
+0 83 + 2
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack6 place7 place8
+1
+4 0
+2
+0 36 6 7
+0 43 6 7
+1
+0 83 + 15
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack6 place8 place1
+1
+4 0
+2
+0 36 7 0
+0 43 7 0
+1
+0 83 + 12
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack6 place8 place6
+1
+4 0
+2
+0 36 7 5
+0 43 7 5
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver1 pack6 place8 place7
+1
+4 0
+2
+0 36 7 6
+0 43 7 6
+1
+0 83 + 15
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack1 place1 place3
+1
+2 0
+2
+0 37 0 2
+0 38 0 2
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack1 place1 place4
+1
+2 0
+2
+0 37 0 3
+0 38 0 3
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack1 place1 place6
+1
+2 0
+2
+0 37 0 5
+0 38 0 5
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack1 place1 place8
+1
+2 0
+2
+0 37 0 7
+0 38 0 7
+1
+0 83 + 12
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack1 place2 place5
+1
+2 0
+2
+0 37 1 4
+0 38 1 4
+1
+0 83 + 7
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack1 place3 place1
+1
+2 0
+2
+0 37 2 0
+0 38 2 0
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack1 place3 place7
+1
+2 0
+2
+0 37 2 6
+0 38 2 6
+1
+0 83 + 2
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack1 place4 place1
+1
+2 0
+2
+0 37 3 0
+0 38 3 0
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack1 place4 place6
+1
+2 0
+2
+0 37 3 5
+0 38 3 5
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack1 place5 place2
+1
+2 0
+2
+0 37 4 1
+0 38 4 1
+1
+0 83 + 7
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack1 place5 place6
+1
+2 0
+2
+0 37 4 5
+0 38 4 5
+1
+0 83 + 22
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack1 place6 place1
+1
+2 0
+2
+0 37 5 0
+0 38 5 0
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack1 place6 place4
+1
+2 0
+2
+0 37 5 3
+0 38 5 3
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack1 place6 place5
+1
+2 0
+2
+0 37 5 4
+0 38 5 4
+1
+0 83 + 22
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack1 place6 place8
+1
+2 0
+2
+0 37 5 7
+0 38 5 7
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack1 place7 place3
+1
+2 0
+2
+0 37 6 2
+0 38 6 2
+1
+0 83 + 2
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack1 place7 place8
+1
+2 0
+2
+0 37 6 7
+0 38 6 7
+1
+0 83 + 15
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack1 place8 place1
+1
+2 0
+2
+0 37 7 0
+0 38 7 0
+1
+0 83 + 12
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack1 place8 place6
+1
+2 0
+2
+0 37 7 5
+0 38 7 5
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack1 place8 place7
+1
+2 0
+2
+0 37 7 6
+0 38 7 6
+1
+0 83 + 15
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack2 place1 place3
+1
+1 0
+2
+0 37 0 2
+0 39 0 2
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack2 place1 place4
+1
+1 0
+2
+0 37 0 3
+0 39 0 3
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack2 place1 place6
+1
+1 0
+2
+0 37 0 5
+0 39 0 5
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack2 place1 place8
+1
+1 0
+2
+0 37 0 7
+0 39 0 7
+1
+0 83 + 12
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack2 place2 place5
+1
+1 0
+2
+0 37 1 4
+0 39 1 4
+1
+0 83 + 7
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack2 place3 place1
+1
+1 0
+2
+0 37 2 0
+0 39 2 0
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack2 place3 place7
+1
+1 0
+2
+0 37 2 6
+0 39 2 6
+1
+0 83 + 2
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack2 place4 place1
+1
+1 0
+2
+0 37 3 0
+0 39 3 0
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack2 place4 place6
+1
+1 0
+2
+0 37 3 5
+0 39 3 5
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack2 place5 place2
+1
+1 0
+2
+0 37 4 1
+0 39 4 1
+1
+0 83 + 7
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack2 place5 place6
+1
+1 0
+2
+0 37 4 5
+0 39 4 5
+1
+0 83 + 22
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack2 place6 place1
+1
+1 0
+2
+0 37 5 0
+0 39 5 0
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack2 place6 place4
+1
+1 0
+2
+0 37 5 3
+0 39 5 3
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack2 place6 place5
+1
+1 0
+2
+0 37 5 4
+0 39 5 4
+1
+0 83 + 22
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack2 place6 place8
+1
+1 0
+2
+0 37 5 7
+0 39 5 7
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack2 place7 place3
+1
+1 0
+2
+0 37 6 2
+0 39 6 2
+1
+0 83 + 2
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack2 place7 place8
+1
+1 0
+2
+0 37 6 7
+0 39 6 7
+1
+0 83 + 15
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack2 place8 place1
+1
+1 0
+2
+0 37 7 0
+0 39 7 0
+1
+0 83 + 12
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack2 place8 place6
+1
+1 0
+2
+0 37 7 5
+0 39 7 5
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack2 place8 place7
+1
+1 0
+2
+0 37 7 6
+0 39 7 6
+1
+0 83 + 15
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack3 place1 place3
+1
+5 0
+2
+0 37 0 2
+0 40 0 2
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack3 place1 place4
+1
+5 0
+2
+0 37 0 3
+0 40 0 3
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack3 place1 place6
+1
+5 0
+2
+0 37 0 5
+0 40 0 5
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack3 place1 place8
+1
+5 0
+2
+0 37 0 7
+0 40 0 7
+1
+0 83 + 12
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack3 place2 place5
+1
+5 0
+2
+0 37 1 4
+0 40 1 4
+1
+0 83 + 7
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack3 place3 place1
+1
+5 0
+2
+0 37 2 0
+0 40 2 0
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack3 place3 place7
+1
+5 0
+2
+0 37 2 6
+0 40 2 6
+1
+0 83 + 2
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack3 place4 place1
+1
+5 0
+2
+0 37 3 0
+0 40 3 0
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack3 place4 place6
+1
+5 0
+2
+0 37 3 5
+0 40 3 5
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack3 place5 place2
+1
+5 0
+2
+0 37 4 1
+0 40 4 1
+1
+0 83 + 7
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack3 place5 place6
+1
+5 0
+2
+0 37 4 5
+0 40 4 5
+1
+0 83 + 22
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack3 place6 place1
+1
+5 0
+2
+0 37 5 0
+0 40 5 0
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack3 place6 place4
+1
+5 0
+2
+0 37 5 3
+0 40 5 3
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack3 place6 place5
+1
+5 0
+2
+0 37 5 4
+0 40 5 4
+1
+0 83 + 22
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack3 place6 place8
+1
+5 0
+2
+0 37 5 7
+0 40 5 7
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack3 place7 place3
+1
+5 0
+2
+0 37 6 2
+0 40 6 2
+1
+0 83 + 2
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack3 place7 place8
+1
+5 0
+2
+0 37 6 7
+0 40 6 7
+1
+0 83 + 15
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack3 place8 place1
+1
+5 0
+2
+0 37 7 0
+0 40 7 0
+1
+0 83 + 12
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack3 place8 place6
+1
+5 0
+2
+0 37 7 5
+0 40 7 5
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack3 place8 place7
+1
+5 0
+2
+0 37 7 6
+0 40 7 6
+1
+0 83 + 15
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack4 place1 place3
+1
+0 0
+2
+0 37 0 2
+0 41 0 2
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack4 place1 place4
+1
+0 0
+2
+0 37 0 3
+0 41 0 3
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack4 place1 place6
+1
+0 0
+2
+0 37 0 5
+0 41 0 5
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack4 place1 place8
+1
+0 0
+2
+0 37 0 7
+0 41 0 7
+1
+0 83 + 12
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack4 place2 place5
+1
+0 0
+2
+0 37 1 4
+0 41 1 4
+1
+0 83 + 7
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack4 place3 place1
+1
+0 0
+2
+0 37 2 0
+0 41 2 0
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack4 place3 place7
+1
+0 0
+2
+0 37 2 6
+0 41 2 6
+1
+0 83 + 2
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack4 place4 place1
+1
+0 0
+2
+0 37 3 0
+0 41 3 0
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack4 place4 place6
+1
+0 0
+2
+0 37 3 5
+0 41 3 5
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack4 place5 place2
+1
+0 0
+2
+0 37 4 1
+0 41 4 1
+1
+0 83 + 7
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack4 place5 place6
+1
+0 0
+2
+0 37 4 5
+0 41 4 5
+1
+0 83 + 22
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack4 place6 place1
+1
+0 0
+2
+0 37 5 0
+0 41 5 0
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack4 place6 place4
+1
+0 0
+2
+0 37 5 3
+0 41 5 3
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack4 place6 place5
+1
+0 0
+2
+0 37 5 4
+0 41 5 4
+1
+0 83 + 22
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack4 place6 place8
+1
+0 0
+2
+0 37 5 7
+0 41 5 7
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack4 place7 place3
+1
+0 0
+2
+0 37 6 2
+0 41 6 2
+1
+0 83 + 2
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack4 place7 place8
+1
+0 0
+2
+0 37 6 7
+0 41 6 7
+1
+0 83 + 15
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack4 place8 place1
+1
+0 0
+2
+0 37 7 0
+0 41 7 0
+1
+0 83 + 12
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack4 place8 place6
+1
+0 0
+2
+0 37 7 5
+0 41 7 5
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack4 place8 place7
+1
+0 0
+2
+0 37 7 6
+0 41 7 6
+1
+0 83 + 15
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack5 place1 place3
+1
+3 0
+2
+0 37 0 2
+0 42 0 2
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack5 place1 place4
+1
+3 0
+2
+0 37 0 3
+0 42 0 3
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack5 place1 place6
+1
+3 0
+2
+0 37 0 5
+0 42 0 5
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack5 place1 place8
+1
+3 0
+2
+0 37 0 7
+0 42 0 7
+1
+0 83 + 12
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack5 place2 place5
+1
+3 0
+2
+0 37 1 4
+0 42 1 4
+1
+0 83 + 7
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack5 place3 place1
+1
+3 0
+2
+0 37 2 0
+0 42 2 0
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack5 place3 place7
+1
+3 0
+2
+0 37 2 6
+0 42 2 6
+1
+0 83 + 2
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack5 place4 place1
+1
+3 0
+2
+0 37 3 0
+0 42 3 0
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack5 place4 place6
+1
+3 0
+2
+0 37 3 5
+0 42 3 5
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack5 place5 place2
+1
+3 0
+2
+0 37 4 1
+0 42 4 1
+1
+0 83 + 7
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack5 place5 place6
+1
+3 0
+2
+0 37 4 5
+0 42 4 5
+1
+0 83 + 22
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack5 place6 place1
+1
+3 0
+2
+0 37 5 0
+0 42 5 0
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack5 place6 place4
+1
+3 0
+2
+0 37 5 3
+0 42 5 3
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack5 place6 place5
+1
+3 0
+2
+0 37 5 4
+0 42 5 4
+1
+0 83 + 22
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack5 place6 place8
+1
+3 0
+2
+0 37 5 7
+0 42 5 7
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack5 place7 place3
+1
+3 0
+2
+0 37 6 2
+0 42 6 2
+1
+0 83 + 2
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack5 place7 place8
+1
+3 0
+2
+0 37 6 7
+0 42 6 7
+1
+0 83 + 15
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack5 place8 place1
+1
+3 0
+2
+0 37 7 0
+0 42 7 0
+1
+0 83 + 12
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack5 place8 place6
+1
+3 0
+2
+0 37 7 5
+0 42 7 5
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack5 place8 place7
+1
+3 0
+2
+0 37 7 6
+0 42 7 6
+1
+0 83 + 15
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack6 place1 place3
+1
+4 0
+2
+0 37 0 2
+0 43 0 2
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack6 place1 place4
+1
+4 0
+2
+0 37 0 3
+0 43 0 3
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack6 place1 place6
+1
+4 0
+2
+0 37 0 5
+0 43 0 5
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack6 place1 place8
+1
+4 0
+2
+0 37 0 7
+0 43 0 7
+1
+0 83 + 12
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack6 place2 place5
+1
+4 0
+2
+0 37 1 4
+0 43 1 4
+1
+0 83 + 7
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack6 place3 place1
+1
+4 0
+2
+0 37 2 0
+0 43 2 0
+1
+0 83 + 3
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack6 place3 place7
+1
+4 0
+2
+0 37 2 6
+0 43 2 6
+1
+0 83 + 2
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack6 place4 place1
+1
+4 0
+2
+0 37 3 0
+0 43 3 0
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack6 place4 place6
+1
+4 0
+2
+0 37 3 5
+0 43 3 5
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack6 place5 place2
+1
+4 0
+2
+0 37 4 1
+0 43 4 1
+1
+0 83 + 7
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack6 place5 place6
+1
+4 0
+2
+0 37 4 5
+0 43 4 5
+1
+0 83 + 22
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack6 place6 place1
+1
+4 0
+2
+0 37 5 0
+0 43 5 0
+1
+0 83 + 32
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack6 place6 place4
+1
+4 0
+2
+0 37 5 3
+0 43 5 3
+1
+0 83 + 29
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack6 place6 place5
+1
+4 0
+2
+0 37 5 4
+0 43 5 4
+1
+0 83 + 22
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack6 place6 place8
+1
+4 0
+2
+0 37 5 7
+0 43 5 7
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack6 place7 place3
+1
+4 0
+2
+0 37 6 2
+0 43 6 2
+1
+0 83 + 2
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack6 place7 place8
+1
+4 0
+2
+0 37 6 7
+0 43 6 7
+1
+0 83 + 15
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack6 place8 place1
+1
+4 0
+2
+0 37 7 0
+0 43 7 0
+1
+0 83 + 12
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack6 place8 place6
+1
+4 0
+2
+0 37 7 5
+0 43 7 5
+1
+0 83 + 35
+1
+end_operator
+begin_operator
+walk-with-package driver2 pack6 place8 place7
+1
+4 0
+2
+0 37 7 6
+0 43 7 6
+1
+0 83 + 15
+1
+end_operator
+1
+begin_rule
+0
+6 1 0
+end_rule
+33
+begin_comparison_axioms
+22 >= 66 18
+13 <= 52 18
+10 <= 46 18
+8 <= 42 18
+15 <= 56 18
+9 <= 44 18
+16 <= 58 18
+11 <= 48 18
+17 <= 60 18
+7 <= 40 18
+25 >= 69 18
+29 >= 73 18
+27 >= 71 18
+24 >= 68 18
+31 >= 75 18
+18 <= 62 18
+12 <= 50 18
+5 <= 33 18
+14 <= 54 18
+0 <= 29 18
+1 <= 19 18
+2 <= 35 18
+28 >= 72 18
+33 >= 77 18
+26 >= 70 18
+32 >= 76 18
+20 >= 64 18
+21 >= 65 18
+30 < 74 18
+19 >= 63 18
+23 < 67 18
+3 <= 14 18
+4 <= 34 18
+end_comparison_axioms
+39
+begin_numeric_axioms
+63 - 78 30
+76 - 78 17
+77 - 78 20
+66 - 79 30
+69 - 79 14
+65 - 79 27
+68 - 79 9
+64 - 79 38
+71 - 80 14
+73 - 80 38
+75 - 80 9
+72 - 80 27
+70 - 80 30
+67 - 79 28
+74 - 80 28
+55 + 36 81
+41 + 36 82
+57 + 37 81
+43 + 37 82
+61 + 0 81
+51 + 0 82
+59 + 4 81
+47 + 4 82
+53 + 10 81
+45 + 10 82
+39 + 5 81
+49 + 5 82
+56 - 55 24
+42 - 41 31
+58 - 57 24
+44 - 43 31
+62 - 61 24
+52 - 51 31
+60 - 59 24
+48 - 47 31
+54 - 53 24
+46 - 45 31
+40 - 39 24
+50 - 49 31
+end_numeric_axioms
+begin_global_constraint
+6 0
+end_global_constraint
+begin_SG

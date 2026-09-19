@@ -1,0 +1,5 @@
+budget,domain_group,factor_a,factor_b,fuel_capacity,path,source,variant
+69,logistics,loose,loose,132,/home/changmin/PyProject/53_KIST_Research/results/controlled-resource/matched-2x2-p004-20260919-191158-193347/inputs/logistics__fuel-loose__budget-loose.pddl,changmin_benchmark/02_logistics/instances/p004.pddl,logistics__fuel-loose__budget-loose
+23,logistics,loose,tight,132,/home/changmin/PyProject/53_KIST_Research/results/controlled-resource/matched-2x2-p004-20260919-191158-193347/inputs/logistics__fuel-loose__budget-tight.pddl,changmin_benchmark/02_logistics/instances/p004.pddl,logistics__fuel-loose__budget-tight
+69,logistics,tight,loose,44,/home/changmin/PyProject/53_KIST_Research/results/controlled-resource/matched-2x2-p004-20260919-191158-193347/inputs/logistics__fuel-tight__budget-loose.pddl,changmin_benchmark/02_logistics/instances/p004.pddl,logistics__fuel-tight__budget-loose
+23,logistics,tight,tight,44,/home/changmin/PyProject/53_KIST_Research/results/controlled-resource/matched-2x2-p004-20260919-191158-193347/inputs/logistics__fuel-tight__budget-tight.pddl,changmin_benchmark/02_logistics/instances/p004.pddl,logistics__fuel-tight__budget-tight
