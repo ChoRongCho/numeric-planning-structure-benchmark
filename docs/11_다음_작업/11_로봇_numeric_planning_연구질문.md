@@ -80,28 +80,27 @@ package를 각각 배송하는 구조와 하위 목표의 비용을 더하는 `i
 
 구체적인 문제 정의는 다음과 같다.
 
-> 빠른 numeric relaxed-plan 휴리스틱이 누적 자원, 보충 순서와
-> numeric–symbolic 상관관계를 제거하면서 발생시키는 false feasibility가 깊은
-> action prefix까지 지속되어, forward search가 미래 dead end를 반복 확장하고 첫
-> valid plan 발견이 늦어지는 문제.
+> Sequential numeric planning에서 자원 제약의 강도와 개수만으로는 기존
+> 휴리스틱의 탐색 난도와 first-plan quality를 설명할 수 없다. 같은 제약도 어떤
+> problem에서는 탐색량을 줄이고 다른 problem에서는 탐색량이나 plan cost를
+> 증가시키지만, 이 방향 차이를 상태·action 수준에서 측정하고 예측하는 설명 변수가
+> 없다.
 
 이 문제에서 다음 연구 질문이 나온다.
 
-> **누적 자원 제약이 여러 action 뒤에 드러나는 deterministic sequential numeric
-> planning에서, Metric-FF의 relaxed planning graph가 제공하는 빠른 first-plan 탐색을
-> 유지하면서 미래에 infeasible해질 상태와 선택을 더 일찍 식별하여 탐색량과
-> first-plan time을 줄일 수 있는가?**
+> **Resource slack, replenishment 구조와 horizon을 통제했을 때, failure revelation
+> depth와 persistent branching이 기존 numeric heuristic의 값 오류, 상태 확장,
+> first-plan time과 objective 변화를 설명할 수 있는가?**
 
 영문 연구 질문은 다음과 같이 표현할 수 있다.
 
-> **Can heuristic search identify states and choices that will become infeasible because of
-> delayed cumulative resource constraints, while retaining the fast first-plan performance
-> of Metric-FF's relaxed planning graph?**
+> **To what extent do failure-revelation depth and persistent branching explain heuristic
+> error, search effort, first-plan latency, and plan quality when resource slack,
+> replenishment structure, and horizon are controlled?**
 
-이 정의는 휴리스틱 선택이나 전환을 미리 답으로 넣지 않는다. 핵심 대상은 의미상
-이미 dead end이거나 실패 선택이지만, 그 수치 모순의 witness가 긴 action sequence
-뒤에 나타나는 **delayed numeric conflict**다. 휴리스틱 선택·전환, RPG 보강, LP,
-abstraction과 LLM은 이를 해결할 수 있는 후보일 뿐이다.
+Delayed numeric conflict는 이 성능 변화를 설명하는 작업 가설이다. 상태 수준
+계측에서 가설이 확인된 뒤에만 휴리스틱 선택·전환, RPG 보강, LP, abstraction 또는
+LLM을 해결 방법 후보로 비교한다.
 
 ## 4. 세부 연구 질문
 
