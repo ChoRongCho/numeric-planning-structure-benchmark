@@ -1,0 +1,7 @@
+[
+  "/home/changmin/PyProject/53_KIST_Research/planners/plannerctl",
+  "run",
+  "count-downward-agile",
+  "/home/changmin/PyProject/53_KIST_Research/results/controlled-barman/horizon-stock-p001-20260919-201410-818738/cases/count-downward-agile/h-irhff__s-alias/controlled_barman/barman__p001__stock-one-short/work/domain.pddl",
+  "/home/changmin/PyProject/53_KIST_Research/results/controlled-barman/horizon-stock-p001-20260919-201410-818738/cases/count-downward-agile/h-irhff__s-alias/controlled_barman/barman__p001__stock-one-short/work/problem.pddl"
+]

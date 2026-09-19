@@ -1,0 +1,22 @@
+{
+  "planner": "enhsp",
+  "configuration": "h-hradd__s-wastar",
+  "heuristic": "hradd",
+  "search": "WAStar",
+  "benchmark": "controlled_barman",
+  "instance": "barman__p002__stock-blocked-zero.pddl",
+  "compatible": "true",
+  "return_code": "0",
+  "wall_seconds": "0.602683",
+  "max_rss_kb": "162304",
+  "peak_group_rss_kb": "162304",
+  "limit_reason": "",
+  "plan_length": "",
+  "expanded_nodes": "",
+  "metric_value": "",
+  "objective_value": "",
+  "validation": "not-run",
+  "plan_path": "",
+  "case_directory": "results/controlled-barman/horizon-stock-p002-p004-20260919-194518-753176/cases/enhsp/h-hradd__s-wastar/controlled_barman/barman__p002__stock-blocked-zero",
+  "status": "unsolved"
+}

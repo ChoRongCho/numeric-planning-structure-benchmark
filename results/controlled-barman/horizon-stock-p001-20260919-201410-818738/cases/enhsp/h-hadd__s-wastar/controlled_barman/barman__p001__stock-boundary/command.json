@@ -1,0 +1,15 @@
+[
+  "/home/changmin/PyProject/53_KIST_Research/planners/plannerctl",
+  "run",
+  "enhsp",
+  "-o",
+  "/home/changmin/PyProject/53_KIST_Research/results/controlled-barman/horizon-stock-p001-20260919-201410-818738/cases/enhsp/h-hadd__s-wastar/controlled_barman/barman__p001__stock-boundary/work/domain.pddl",
+  "-f",
+  "/home/changmin/PyProject/53_KIST_Research/results/controlled-barman/horizon-stock-p001-20260919-201410-818738/cases/enhsp/h-hadd__s-wastar/controlled_barman/barman__p001__stock-boundary/work/problem.pddl",
+  "-h",
+  "hadd",
+  "-s",
+  "WAStar",
+  "-ties",
+  "arbitrary"
+]

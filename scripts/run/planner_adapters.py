@@ -88,7 +88,13 @@ def classify(returncode: int | None, timed_out: bool, output: str) -> str:
         or re.search(r"^Plan \(\d+ actions?\):", output, re.M)
     ):
         return "solved"
-    if any(token in lower for token in ("unsolvable problem", "no plan found", "unsolvable")):
+    if any(token in lower for token in (
+        "unsolvable problem",
+        "no plan found",
+        "unsolvable",
+        "completely explored state space -- no solution",
+        "search stopped without finding a solution",
+    )):
         return "unsolved"
     if returncode not in (0, None):
         return "crash"

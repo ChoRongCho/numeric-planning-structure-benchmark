@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-09-19T11:13:26.625246+00:00",
+  "source_instances": [
+    "p002",
+    "p004"
+  ],
+  "timeout_seconds": 60.0,
+  "memory_limit_mb": 12288,
+  "case_count": 40,
+  "runner_wall_seconds": 1687.838773,
+  "stock_regimes": {
+    "abundant": "three times the minimum required stock",
+    "boundary": "exact minimum required stock",
+    "one-short": "one dose below minimum for the busiest ingredient",
+    "blocked-zero": "zero stock for the busiest required ingredient"
+  }
+}

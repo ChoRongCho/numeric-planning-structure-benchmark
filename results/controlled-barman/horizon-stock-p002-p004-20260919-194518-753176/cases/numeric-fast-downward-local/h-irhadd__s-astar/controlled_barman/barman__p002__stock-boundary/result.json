@@ -1,0 +1,22 @@
+{
+  "planner": "numeric-fast-downward-local",
+  "configuration": "h-irhadd__s-astar",
+  "heuristic": "irhadd",
+  "search": "astar",
+  "benchmark": "controlled_barman",
+  "instance": "barman__p002__stock-boundary.pddl",
+  "compatible": "true",
+  "return_code": "timeout",
+  "wall_seconds": "60.036361",
+  "max_rss_kb": "237320",
+  "peak_group_rss_kb": "237320",
+  "limit_reason": "timeout",
+  "plan_length": "",
+  "expanded_nodes": "531",
+  "metric_value": "",
+  "objective_value": "",
+  "validation": "not-run",
+  "plan_path": "",
+  "case_directory": "results/controlled-barman/horizon-stock-p002-p004-20260919-194518-753176/cases/numeric-fast-downward-local/h-irhadd__s-astar/controlled_barman/barman__p002__stock-boundary",
+  "status": "timeout"
+}

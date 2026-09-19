@@ -1,0 +1,22 @@
+{
+  "planner": "metric-ff-cross-v1",
+  "configuration": "h-numeric-hff__s-default",
+  "heuristic": "numeric-hff",
+  "search": "default",
+  "benchmark": "controlled_barman",
+  "instance": "barman__p002__stock-blocked-zero.pddl",
+  "compatible": "true",
+  "return_code": "0",
+  "wall_seconds": "0.201136",
+  "max_rss_kb": "8832",
+  "peak_group_rss_kb": "612",
+  "limit_reason": "",
+  "plan_length": "",
+  "expanded_nodes": "",
+  "metric_value": "",
+  "objective_value": "",
+  "validation": "not-run",
+  "plan_path": "",
+  "case_directory": "results/controlled-barman/horizon-stock-p002-p004-20260919-194518-753176/cases/metric-ff-cross-v1/h-numeric-hff__s-default/controlled_barman/barman__p002__stock-blocked-zero",
+  "status": "unsolved"
+}

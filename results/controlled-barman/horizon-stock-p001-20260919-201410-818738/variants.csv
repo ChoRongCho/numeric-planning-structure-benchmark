@@ -1,0 +1,5 @@
+variant,source_instance,horizon,stock_regime,critical_ingredient,critical_required_doses,critical_stock,path
+barman__p001__stock-abundant,p001,very-short,abundant,ingredient3,2,300,/home/changmin/PyProject/53_KIST_Research/results/controlled-barman/horizon-stock-p001-20260919-201410-818738/inputs/barman__p001__stock-abundant.pddl
+barman__p001__stock-boundary,p001,very-short,boundary,ingredient3,2,100,/home/changmin/PyProject/53_KIST_Research/results/controlled-barman/horizon-stock-p001-20260919-201410-818738/inputs/barman__p001__stock-boundary.pddl
+barman__p001__stock-one-short,p001,very-short,one-short,ingredient3,2,50,/home/changmin/PyProject/53_KIST_Research/results/controlled-barman/horizon-stock-p001-20260919-201410-818738/inputs/barman__p001__stock-one-short.pddl
+barman__p001__stock-blocked-zero,p001,very-short,blocked-zero,ingredient3,2,0,/home/changmin/PyProject/53_KIST_Research/results/controlled-barman/horizon-stock-p001-20260919-201410-818738/inputs/barman__p001__stock-blocked-zero.pddl

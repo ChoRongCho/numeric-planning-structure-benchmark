@@ -420,3 +420,9 @@ coverage 저하를 만드는지 먼저 분리하는 것이 적합하다.
 [Watering·Logistics 수치 자원 2×2 통제 실험](./13_수치자원_2x2_통제실험_결과.md)으로
 수행했다. 그 결과 Watering에서는 물과 배터리의 동시 tightness보다 반복 refill을
 요구하는 물 용량이 numeric-aware 탐색량을 가장 크게 늘린 요인으로 나타났다.
+
+Barman의 symbolic 규모와 stock feasibility를 분리한 후속 결과는
+[Domain–problem 상호작용과 Barman 통제실험](./14_domain_problem_상호작용과_Barman_통제실험.md)에
+정리했다. 이 실험에서는 제약의 강도 자체보다 가능한 action이 오래 남아 모순이 늦게
+드러나는 `one-short` 조건과, 선택지를 많이 남기는 abundant 조건이 더 어려울 수 있음을
+확인했다.

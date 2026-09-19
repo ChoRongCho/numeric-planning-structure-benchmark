@@ -1,0 +1,22 @@
+{
+  "planner": "count-downward-agile",
+  "configuration": "h-irhff__s-alias",
+  "heuristic": "irhff",
+  "search": "alias",
+  "benchmark": "controlled_barman",
+  "instance": "barman__p001__stock-abundant.pddl",
+  "compatible": "true",
+  "return_code": "timeout",
+  "wall_seconds": "60.025100",
+  "max_rss_kb": "417528",
+  "peak_group_rss_kb": "417528",
+  "limit_reason": "timeout",
+  "plan_length": "",
+  "expanded_nodes": "71",
+  "metric_value": "",
+  "objective_value": "",
+  "validation": "not-run",
+  "plan_path": "",
+  "case_directory": "results/controlled-barman/horizon-stock-p001-20260919-201410-818738/cases/count-downward-agile/h-irhff__s-alias/controlled_barman/barman__p001__stock-abundant",
+  "status": "timeout"
+}
