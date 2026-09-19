@@ -49,3 +49,8 @@ results/gui/<timestamp>-<planner-id>/
 
 기본값은 timeout 60초, CPU core 2개, nice level 10이다. `중지`는 planner의 전체
 process group에 종료 신호를 보내므로 child solver도 함께 중지된다.
+
+Numeric Cartesian CEGAR 논문 구현은 `nfd-cegar`으로 선택한다.
+내부 실행 ID는 `numeric-cegar`로 유지한다.
+`numeric-cegar-paper` collection은 `benchmarks-oo/`의 원본 문제를 제공한다.
+[설치·실험 안내](../../docs/10_플래너_자료/11_Numeric_Cartesian_CEGAR_실행.md)

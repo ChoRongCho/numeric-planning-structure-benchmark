@@ -22,6 +22,9 @@ def command(root: Path, planner: str, domain: Path, problem: Path) -> list[str]:
         return [ctl, "run", planner, d, p]
     if planner == "tempest-numeric-ipc2026":
         return [ctl, "run", planner, d, p]
+    if planner == "numeric-cegar":
+        return [ctl, "run", planner, d, p, "--search",
+                "astar(cegar(subtasks=[original()],pick=MIN_UNWANTED,max_time=900))"]
     if planner in {"numeric-fast-downward", "numeric-fast-downward-local"}:
         return [ctl, "run", planner, d, p, "--search", "astar(lmcutnumeric)"]
     if planner.startswith("lnm-plan-") and planner != "lnm-plan-ipc2023":

@@ -1,0 +1,2816 @@
+{
+  "artifact": "https://zenodo.org/records/18999077",
+  "arguments": {
+    "configs": [
+      "cegar-min"
+    ],
+    "domains": [
+      "counters"
+    ],
+    "suite": true,
+    "problems": "*.pddl",
+    "timeout": 1800,
+    "memory_mb": 3947,
+    "dry_run": true
+  },
+  "configurations": {
+    "cegar-min": [
+      "--search",
+      "astar(cegar(subtasks=[original()],pick=MIN_UNWANTED,max_time=900))"
+    ]
+  },
+  "experiment_sha256": "378df4768607df61df68b0be14388cdfbae76c538f1c04821455e938ccc85689",
+  "tasks": [
+    {
+      "domain": "benchmarks-oo/counters/domain.pddl",
+      "problem": "benchmarks-oo/counters/pfile1.pddl",
+      "domain_sha256": "90673eaf70db1090920b7b7e286e291755119d759a1c32ada17de2b586674a89",
+      "problem_sha256": "ff23f167bc2013f8f54f19ebe08755239b4c6c49871f278efaba693ba2845a20"
+    },
+    {
+      "domain": "benchmarks-oo/counters/domain.pddl",
+      "problem": "benchmarks-oo/counters/pfile10.pddl",
+      "domain_sha256": "90673eaf70db1090920b7b7e286e291755119d759a1c32ada17de2b586674a89",
+      "problem_sha256": "73e99ee3406ee7f26f6a4631ac58f555d653e6413c6b65b58eacfc3e9410a8f3"
+    },
+    {
+      "domain": "benchmarks-oo/counters/domain.pddl",
+      "problem": "benchmarks-oo/counters/pfile11.pddl",
+      "domain_sha256": "90673eaf70db1090920b7b7e286e291755119d759a1c32ada17de2b586674a89",
+      "problem_sha256": "48648070b3cef63d8c45b621a6183662de4769a86edc8dcc85ff4ff20f3ea72d"
+    },
+    {
+      "domain": "benchmarks-oo/counters/domain.pddl",
+      "problem": "benchmarks-oo/counters/pfile12.pddl",
+      "domain_sha256": "90673eaf70db1090920b7b7e286e291755119d759a1c32ada17de2b586674a89",
+      "problem_sha256": "c49f21d4922e1874033a7483694ecda55eee827a505452f4c5f50cfa60641411"
+    },
+    {
+      "domain": "benchmarks-oo/counters/domain.pddl",
+      "problem": "benchmarks-oo/counters/pfile13.pddl",
+      "domain_sha256": "90673eaf70db1090920b7b7e286e291755119d759a1c32ada17de2b586674a89",
+      "problem_sha256": "547be6717d2c4ba860439a52372f7f800b7afe1f570345c082875094d0bffd4c"
+    },
+    {
+      "domain": "benchmarks-oo/counters/domain.pddl",
+      "problem": "benchmarks-oo/counters/pfile14.pddl",
+      "domain_sha256": "90673eaf70db1090920b7b7e286e291755119d759a1c32ada17de2b586674a89",
+      "problem_sha256": "d5ca18ba8a4651c9db7c8a83ce0a618a35f71f4affc0c360748b1020a01a69e7"
+    },
+    {
+      "domain": "benchmarks-oo/counters/domain.pddl",
+      "problem": "benchmarks-oo/counters/pfile15.pddl",
+      "domain_sha256": "90673eaf70db1090920b7b7e286e291755119d759a1c32ada17de2b586674a89",
+      "problem_sha256": "c371c84df68e30c36e8125a4a42acc08900ae977b3b1bd418ed98db4e0990912"
+    },
+    {
+      "domain": "benchmarks-oo/counters/domain.pddl",
+      "problem": "benchmarks-oo/counters/pfile16.pddl",
+      "domain_sha256": "90673eaf70db1090920b7b7e286e291755119d759a1c32ada17de2b586674a89",
+      "problem_sha256": "d2c6622cbb6c65aa24c57e1447fd1d6ea88d682c9e5b2f78dfaadbe80c90d905"
+    },
+    {
+      "domain": "benchmarks-oo/counters/domain.pddl",
+      "problem": "benchmarks-oo/counters/pfile17.pddl",
+      "domain_sha256": "90673eaf70db1090920b7b7e286e291755119d759a1c32ada17de2b586674a89",
+      "problem_sha256": "3e59e069b62cd42f13c0c9cd6845fe07d8e93ca0efd428733139701541d85c15"
+    },
+    {
+      "domain": "benchmarks-oo/counters/domain.pddl",
+      "problem": "benchmarks-oo/counters/pfile18.pddl",
+      "domain_sha256": "90673eaf70db1090920b7b7e286e291755119d759a1c32ada17de2b586674a89",
+      "problem_sha256": "884ec0a5a06952d0c2f9f85ff39d83bbf6f5bf307b7d70c51453ea89f5a34e3e"
+    },
+    {
+      "domain": "benchmarks-oo/counters/domain.pddl",
+      "problem": "benchmarks-oo/counters/pfile19.pddl",
+      "domain_sha256": "90673eaf70db1090920b7b7e286e291755119d759a1c32ada17de2b586674a89",
+      "problem_sha256": "ae66f06c83a69e4feb842e8cafd009477d98dba0992bca58951922a9abfcf280"
+    },
+    {
+      "domain": "benchmarks-oo/counters/domain.pddl",
+      "problem": "benchmarks-oo/counters/pfile2.pddl",
+      "domain_sha256": "90673eaf70db1090920b7b7e286e291755119d759a1c32ada17de2b586674a89",
+      "problem_sha256": "91d9c9e5130102468a820407b67dc89be763e72e759b740e427ca0b968184644"
+    },
+    {
+      "domain": "benchmarks-oo/counters/domain.pddl",
+      "problem": "benchmarks-oo/counters/pfile20.pddl",
+      "domain_sha256": "90673eaf70db1090920b7b7e286e291755119d759a1c32ada17de2b586674a89",
+      "problem_sha256": "d517c9e806211f99341110f7160bff1fbf51b2e45a858cea80376aac9be96310"
+    },
+    {
+      "domain": "benchmarks-oo/counters/domain.pddl",
+      "problem": "benchmarks-oo/counters/pfile3.pddl",
+      "domain_sha256": "90673eaf70db1090920b7b7e286e291755119d759a1c32ada17de2b586674a89",
+      "problem_sha256": "9cecaa12460bbb0aee57d2656d777a1ecbffec783197816556a44a98708bf402"
+    },
+    {
+      "domain": "benchmarks-oo/counters/domain.pddl",
+      "problem": "benchmarks-oo/counters/pfile4.pddl",
+      "domain_sha256": "90673eaf70db1090920b7b7e286e291755119d759a1c32ada17de2b586674a89",
+      "problem_sha256": "bb96f236e38a7f8814d638fbbe781ced5163657bb3b1542801d8f75ac4b2edf6"
+    },
+    {
+      "domain": "benchmarks-oo/counters/domain.pddl",
+      "problem": "benchmarks-oo/counters/pfile5.pddl",
+      "domain_sha256": "90673eaf70db1090920b7b7e286e291755119d759a1c32ada17de2b586674a89",
+      "problem_sha256": "630f12c8e2942f340ab878d717704237524e0058e071d6f2114c063f1bced825"
+    },
+    {
+      "domain": "benchmarks-oo/counters/domain.pddl",
+      "problem": "benchmarks-oo/counters/pfile6.pddl",
+      "domain_sha256": "90673eaf70db1090920b7b7e286e291755119d759a1c32ada17de2b586674a89",
+      "problem_sha256": "e31311e000fd9a5a0b6836f75df738b50752b205ab3d80d0558364093f9a964d"
+    },
+    {
+      "domain": "benchmarks-oo/counters/domain.pddl",
+      "problem": "benchmarks-oo/counters/pfile7.pddl",
+      "domain_sha256": "90673eaf70db1090920b7b7e286e291755119d759a1c32ada17de2b586674a89",
+      "problem_sha256": "a84632e1dda416681d52bd3f5d435cfe3b216c83ef2fe961690571b74f5f71a2"
+    },
+    {
+      "domain": "benchmarks-oo/counters/domain.pddl",
+      "problem": "benchmarks-oo/counters/pfile8.pddl",
+      "domain_sha256": "90673eaf70db1090920b7b7e286e291755119d759a1c32ada17de2b586674a89",
+      "problem_sha256": "80c929eae4b53c0c10b16f3429fd6511276d2fb8c9c2b7d8d342354e34bd0d9e"
+    },
+    {
+      "domain": "benchmarks-oo/counters/domain.pddl",
+      "problem": "benchmarks-oo/counters/pfile9.pddl",
+      "domain_sha256": "90673eaf70db1090920b7b7e286e291755119d759a1c32ada17de2b586674a89",
+      "problem_sha256": "07033efab0a0ff64a3ddcc0eca18ec05e0ef414da535b719917b424140ad5081"
+    },
+    {
+      "domain": "benchmarks-oo/drone/domain.pddl",
+      "problem": "benchmarks-oo/drone/pfile1.pddl",
+      "domain_sha256": "a1745e51d576dc89aa3c1cbc706292ba8ddd8b095ef998c1475b59f0dc60ce23",
+      "problem_sha256": "adbe31c36c9ccf4332d6baaae8cbddb78b21276a3622f06cbc52115d4bf9ad46"
+    },
+    {
+      "domain": "benchmarks-oo/drone/domain.pddl",
+      "problem": "benchmarks-oo/drone/pfile10.pddl",
+      "domain_sha256": "a1745e51d576dc89aa3c1cbc706292ba8ddd8b095ef998c1475b59f0dc60ce23",
+      "problem_sha256": "51a1482e4e1d11e509791e14bdd5669f23a60016c9aecb954a6440cf0b666c35"
+    },
+    {
+      "domain": "benchmarks-oo/drone/domain.pddl",
+      "problem": "benchmarks-oo/drone/pfile11.pddl",
+      "domain_sha256": "a1745e51d576dc89aa3c1cbc706292ba8ddd8b095ef998c1475b59f0dc60ce23",
+      "problem_sha256": "b3aa0409d3bb1c9ce4bee8730fadb7041dfad649a342a7a555a84dd48bfe5e10"
+    },
+    {
+      "domain": "benchmarks-oo/drone/domain.pddl",
+      "problem": "benchmarks-oo/drone/pfile12.pddl",
+      "domain_sha256": "a1745e51d576dc89aa3c1cbc706292ba8ddd8b095ef998c1475b59f0dc60ce23",
+      "problem_sha256": "a195d7bea3481c1b26cf2280cf0e02d12ab244534c18c23ca575af3f209a955d"
+    },
+    {
+      "domain": "benchmarks-oo/drone/domain.pddl",
+      "problem": "benchmarks-oo/drone/pfile13.pddl",
+      "domain_sha256": "a1745e51d576dc89aa3c1cbc706292ba8ddd8b095ef998c1475b59f0dc60ce23",
+      "problem_sha256": "85094a0d2e3e2fdcfe73fbc6a73a9eadce3fe8ca5b373bb0eb02b49eff2f98a2"
+    },
+    {
+      "domain": "benchmarks-oo/drone/domain.pddl",
+      "problem": "benchmarks-oo/drone/pfile14.pddl",
+      "domain_sha256": "a1745e51d576dc89aa3c1cbc706292ba8ddd8b095ef998c1475b59f0dc60ce23",
+      "problem_sha256": "bedda96c7135a9b47840c853bb38e5b945b604481fda4fc08552a743eda6ff22"
+    },
+    {
+      "domain": "benchmarks-oo/drone/domain.pddl",
+      "problem": "benchmarks-oo/drone/pfile15.pddl",
+      "domain_sha256": "a1745e51d576dc89aa3c1cbc706292ba8ddd8b095ef998c1475b59f0dc60ce23",
+      "problem_sha256": "b503040f9d0264bdbe0194bfa456973bdfd597120e8a9c588a2d50a36e0f7cef"
+    },
+    {
+      "domain": "benchmarks-oo/drone/domain.pddl",
+      "problem": "benchmarks-oo/drone/pfile16.pddl",
+      "domain_sha256": "a1745e51d576dc89aa3c1cbc706292ba8ddd8b095ef998c1475b59f0dc60ce23",
+      "problem_sha256": "69329c1a5d8eca5d40430e83be56deab69188b24f27f0f114de4fc4e30ac485b"
+    },
+    {
+      "domain": "benchmarks-oo/drone/domain.pddl",
+      "problem": "benchmarks-oo/drone/pfile17.pddl",
+      "domain_sha256": "a1745e51d576dc89aa3c1cbc706292ba8ddd8b095ef998c1475b59f0dc60ce23",
+      "problem_sha256": "d4c6f3824c7baa9a67d7dd53f4cd778670e68c44335802e84ec6a6d3c24fcb71"
+    },
+    {
+      "domain": "benchmarks-oo/drone/domain.pddl",
+      "problem": "benchmarks-oo/drone/pfile18.pddl",
+      "domain_sha256": "a1745e51d576dc89aa3c1cbc706292ba8ddd8b095ef998c1475b59f0dc60ce23",
+      "problem_sha256": "65782fb30ee34d13be949a8f94093e7f5958a8180fb80d2b8c5177d512481c49"
+    },
+    {
+      "domain": "benchmarks-oo/drone/domain.pddl",
+      "problem": "benchmarks-oo/drone/pfile19.pddl",
+      "domain_sha256": "a1745e51d576dc89aa3c1cbc706292ba8ddd8b095ef998c1475b59f0dc60ce23",
+      "problem_sha256": "6e2f54b258104679ca506d1c697044ba90ef576761e51b7237eda3f2e92a6028"
+    },
+    {
+      "domain": "benchmarks-oo/drone/domain.pddl",
+      "problem": "benchmarks-oo/drone/pfile2.pddl",
+      "domain_sha256": "a1745e51d576dc89aa3c1cbc706292ba8ddd8b095ef998c1475b59f0dc60ce23",
+      "problem_sha256": "da3d6bbe39a8a11e339d4d8bd6a814cf27881c162871ffcb3c84d49fcce23c21"
+    },
+    {
+      "domain": "benchmarks-oo/drone/domain.pddl",
+      "problem": "benchmarks-oo/drone/pfile20.pddl",
+      "domain_sha256": "a1745e51d576dc89aa3c1cbc706292ba8ddd8b095ef998c1475b59f0dc60ce23",
+      "problem_sha256": "3f550aef52361e0c8a3ec7493a9661c28b88397c0b75d6c0f85f2c7ca39b037c"
+    },
+    {
+      "domain": "benchmarks-oo/drone/domain.pddl",
+      "problem": "benchmarks-oo/drone/pfile3.pddl",
+      "domain_sha256": "a1745e51d576dc89aa3c1cbc706292ba8ddd8b095ef998c1475b59f0dc60ce23",
+      "problem_sha256": "51ae010b00f83448451b7bc329004fd382f70761a6e611c1f91fff272f4aee19"
+    },
+    {
+      "domain": "benchmarks-oo/drone/domain.pddl",
+      "problem": "benchmarks-oo/drone/pfile4.pddl",
+      "domain_sha256": "a1745e51d576dc89aa3c1cbc706292ba8ddd8b095ef998c1475b59f0dc60ce23",
+      "problem_sha256": "b544e93b36845136ce25e074e71a1972e50fb005670ea3422aabadc2dd3e98d2"
+    },
+    {
+      "domain": "benchmarks-oo/drone/domain.pddl",
+      "problem": "benchmarks-oo/drone/pfile5.pddl",
+      "domain_sha256": "a1745e51d576dc89aa3c1cbc706292ba8ddd8b095ef998c1475b59f0dc60ce23",
+      "problem_sha256": "b9c15bc2a786bad6a9157d3b3d1fe75ad49898bc3a8e94a2607896a78d7b52be"
+    },
+    {
+      "domain": "benchmarks-oo/drone/domain.pddl",
+      "problem": "benchmarks-oo/drone/pfile6.pddl",
+      "domain_sha256": "a1745e51d576dc89aa3c1cbc706292ba8ddd8b095ef998c1475b59f0dc60ce23",
+      "problem_sha256": "ee36971aafe4ae0ee18c7284d7189f3906147dc47481b9921e0e971a2ca4a852"
+    },
+    {
+      "domain": "benchmarks-oo/drone/domain.pddl",
+      "problem": "benchmarks-oo/drone/pfile7.pddl",
+      "domain_sha256": "a1745e51d576dc89aa3c1cbc706292ba8ddd8b095ef998c1475b59f0dc60ce23",
+      "problem_sha256": "1f651f95bb002f6aa7f58dd7915efaae1082205505fffd0df56589d41d9a159c"
+    },
+    {
+      "domain": "benchmarks-oo/drone/domain.pddl",
+      "problem": "benchmarks-oo/drone/pfile8.pddl",
+      "domain_sha256": "a1745e51d576dc89aa3c1cbc706292ba8ddd8b095ef998c1475b59f0dc60ce23",
+      "problem_sha256": "857009e0e7978c916a25a431c125b94b67bf393cf83b4cb97dc775e4abe1df40"
+    },
+    {
+      "domain": "benchmarks-oo/drone/domain.pddl",
+      "problem": "benchmarks-oo/drone/pfile9.pddl",
+      "domain_sha256": "a1745e51d576dc89aa3c1cbc706292ba8ddd8b095ef998c1475b59f0dc60ce23",
+      "problem_sha256": "6dfbca076a5bcb120e855ff3b756b23e13b57277f410e6973bf50614577400f6"
+    },
+    {
+      "domain": "benchmarks-oo/fn-counters-small_instances/domain.pddl",
+      "problem": "benchmarks-oo/fn-counters-small_instances/problem_2.pddl",
+      "domain_sha256": "cce9876869b19b47feba4ae972512682300da9f741cca3d5482f82cadcae05e2",
+      "problem_sha256": "2838f451cbed28cb1d19e14097b838e6a55fec3d8f1aae851b2af49b8952db42"
+    },
+    {
+      "domain": "benchmarks-oo/fn-counters-small_instances/domain.pddl",
+      "problem": "benchmarks-oo/fn-counters-small_instances/problem_3.pddl",
+      "domain_sha256": "cce9876869b19b47feba4ae972512682300da9f741cca3d5482f82cadcae05e2",
+      "problem_sha256": "8f2119107e9c1e3f13b47b70a5a76a883cdcd4106b0ff9392d5872c1a37e445a"
+    },
+    {
+      "domain": "benchmarks-oo/fn-counters-small_instances/domain.pddl",
+      "problem": "benchmarks-oo/fn-counters-small_instances/problem_4.pddl",
+      "domain_sha256": "cce9876869b19b47feba4ae972512682300da9f741cca3d5482f82cadcae05e2",
+      "problem_sha256": "9cecaa12460bbb0aee57d2656d777a1ecbffec783197816556a44a98708bf402"
+    },
+    {
+      "domain": "benchmarks-oo/fn-counters-small_instances/domain.pddl",
+      "problem": "benchmarks-oo/fn-counters-small_instances/problem_5.pddl",
+      "domain_sha256": "cce9876869b19b47feba4ae972512682300da9f741cca3d5482f82cadcae05e2",
+      "problem_sha256": "9fa13c788a770a9825fe040e7ea51cf53a052eba934d3c669aac9b5eb2dbbdd9"
+    },
+    {
+      "domain": "benchmarks-oo/fn-counters-small_instances/domain.pddl",
+      "problem": "benchmarks-oo/fn-counters-small_instances/problem_6.pddl",
+      "domain_sha256": "cce9876869b19b47feba4ae972512682300da9f741cca3d5482f82cadcae05e2",
+      "problem_sha256": "d1ab26efada7d541a87f75b99301e8e88c0a06ed1fb82185ae6c83dd7155e24f"
+    },
+    {
+      "domain": "benchmarks-oo/fn-counters-small_instances/domain.pddl",
+      "problem": "benchmarks-oo/fn-counters-small_instances/problem_7.pddl",
+      "domain_sha256": "cce9876869b19b47feba4ae972512682300da9f741cca3d5482f82cadcae05e2",
+      "problem_sha256": "4c3d5ef19dbed2817f044cec997f4bb0aedffa2df3fa7bc9316acdaef7a78e9f"
+    },
+    {
+      "domain": "benchmarks-oo/fn-counters-small_instances/domain.pddl",
+      "problem": "benchmarks-oo/fn-counters-small_instances/problem_8.pddl",
+      "domain_sha256": "cce9876869b19b47feba4ae972512682300da9f741cca3d5482f82cadcae05e2",
+      "problem_sha256": "8a9662d5a6714e3b960a8af68c84166a96c4d97f85e694ccdf504d699cac266e"
+    },
+    {
+      "domain": "benchmarks-oo/fn-counters-small_instances/domain.pddl",
+      "problem": "benchmarks-oo/fn-counters-small_instances/problem_9.pddl",
+      "domain_sha256": "cce9876869b19b47feba4ae972512682300da9f741cca3d5482f82cadcae05e2",
+      "problem_sha256": "a76c549094b82d86b29846d8fde9ab24858fb31da2b2efc5fc35804ee8b91981"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-sword-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-sword-advanced/prob_15x15_1.pddl",
+      "domain_sha256": "4388acbe71eb354037f857cb32e06545dd8368318865e6d03237952c4c11e1c2",
+      "problem_sha256": "1d6c355758082b402f0156a10baea04a52c4cab6b897a842fc9c34daf10ccb0a"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-sword-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-sword-advanced/prob_15x15_2.pddl",
+      "domain_sha256": "4388acbe71eb354037f857cb32e06545dd8368318865e6d03237952c4c11e1c2",
+      "problem_sha256": "f38d5c31348c0a7a2a183ae0c4e913ce1e7ad956f040bb919954ac0393d59866"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-sword-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-sword-advanced/prob_15x15_3.pddl",
+      "domain_sha256": "4388acbe71eb354037f857cb32e06545dd8368318865e6d03237952c4c11e1c2",
+      "problem_sha256": "bce6d053b0ac1cf6267be9a1b92398cfc90670bc3569b3773facf060e7dc45a7"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-sword-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-sword-advanced/prob_15x15_4.pddl",
+      "domain_sha256": "4388acbe71eb354037f857cb32e06545dd8368318865e6d03237952c4c11e1c2",
+      "problem_sha256": "27cfd23e3216fc781513ea3fd6343d41de349d93617240e9ff111c8b79b4abbf"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-sword-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-sword-advanced/prob_15x15_5.pddl",
+      "domain_sha256": "4388acbe71eb354037f857cb32e06545dd8368318865e6d03237952c4c11e1c2",
+      "problem_sha256": "7182c4787b7d357e70449ee38f5832b9f1157029d13fb331ce17f2fcee0ecbaa"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-sword-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-sword-advanced/prob_20x20_1.pddl",
+      "domain_sha256": "4388acbe71eb354037f857cb32e06545dd8368318865e6d03237952c4c11e1c2",
+      "problem_sha256": "4a5d820f0ee7f19501906af94e4a1ea53008f76f0a13614bcad49f70ffb22d21"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-sword-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-sword-advanced/prob_20x20_2.pddl",
+      "domain_sha256": "4388acbe71eb354037f857cb32e06545dd8368318865e6d03237952c4c11e1c2",
+      "problem_sha256": "17cc6e7871d8d9935900c9dc5f855f224c50b7c683081219767773a8284f8d5b"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-sword-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-sword-advanced/prob_20x20_3.pddl",
+      "domain_sha256": "4388acbe71eb354037f857cb32e06545dd8368318865e6d03237952c4c11e1c2",
+      "problem_sha256": "21cc220f64ddc2559cbe62b41f57206d496339960b222da96859ab4d0d4c71b8"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-sword-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-sword-advanced/prob_20x20_4.pddl",
+      "domain_sha256": "4388acbe71eb354037f857cb32e06545dd8368318865e6d03237952c4c11e1c2",
+      "problem_sha256": "b8ce8fed3c714f01f6fa850eb43f320329e8bfbc6e1df4961419718331a40e33"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-sword-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-sword-advanced/prob_20x20_5.pddl",
+      "domain_sha256": "4388acbe71eb354037f857cb32e06545dd8368318865e6d03237952c4c11e1c2",
+      "problem_sha256": "bf75000a849581373e0d42c26151123265324e2de1a0d62980175b1e50b4f6e4"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-sword-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-sword-advanced/prob_25x25_1.pddl",
+      "domain_sha256": "4388acbe71eb354037f857cb32e06545dd8368318865e6d03237952c4c11e1c2",
+      "problem_sha256": "3458fe825119df73cc44d09ca12a3dd45f40aabe6b0223320ecd316fa04751dc"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-sword-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-sword-advanced/prob_25x25_2.pddl",
+      "domain_sha256": "4388acbe71eb354037f857cb32e06545dd8368318865e6d03237952c4c11e1c2",
+      "problem_sha256": "2eb523cb8ba50cf97e9f4de5bc4b2c4d0ae6d07cd238b35c34a8acafe56f6887"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-sword-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-sword-advanced/prob_25x25_3.pddl",
+      "domain_sha256": "4388acbe71eb354037f857cb32e06545dd8368318865e6d03237952c4c11e1c2",
+      "problem_sha256": "069e619012be4ff278f3451472ab2a5d61c2a19a4fa87c8b1ca121c1e5362077"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-sword-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-sword-advanced/prob_25x25_4.pddl",
+      "domain_sha256": "4388acbe71eb354037f857cb32e06545dd8368318865e6d03237952c4c11e1c2",
+      "problem_sha256": "1bac1e61b2529c9d57642f1a17d353d9b60fa1c169d3e05e8e6a11717acf6a91"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-sword-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-sword-advanced/prob_25x25_5.pddl",
+      "domain_sha256": "4388acbe71eb354037f857cb32e06545dd8368318865e6d03237952c4c11e1c2",
+      "problem_sha256": "87241a5fefbdc4c94e109ddb331bbd01b5157136a3c20def819eaf64590ac994"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-sword-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-sword-advanced/prob_30x30_1.pddl",
+      "domain_sha256": "4388acbe71eb354037f857cb32e06545dd8368318865e6d03237952c4c11e1c2",
+      "problem_sha256": "cf2ff1da34a7811fd4f9d26854549d04498e5abbfb91bfd9e6336f624e2b3a58"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-sword-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-sword-advanced/prob_30x30_2.pddl",
+      "domain_sha256": "4388acbe71eb354037f857cb32e06545dd8368318865e6d03237952c4c11e1c2",
+      "problem_sha256": "0c3f1b5f7fbadedf6dac099b2d413d5b22d17aaf35f9980c34813318c67b8db0"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-sword-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-sword-advanced/prob_30x30_3.pddl",
+      "domain_sha256": "4388acbe71eb354037f857cb32e06545dd8368318865e6d03237952c4c11e1c2",
+      "problem_sha256": "a7d8b46c36d8f69ce6c065ea1a5d4ed0779d8e287657719d0c5c639dcde11759"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-sword-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-sword-advanced/prob_30x30_4.pddl",
+      "domain_sha256": "4388acbe71eb354037f857cb32e06545dd8368318865e6d03237952c4c11e1c2",
+      "problem_sha256": "a053236e47fcc212322b7d66db526e74ef7a5ca8156cf75c38fd52026976efbc"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-sword-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-sword-advanced/prob_30x30_5.pddl",
+      "domain_sha256": "4388acbe71eb354037f857cb32e06545dd8368318865e6d03237952c4c11e1c2",
+      "problem_sha256": "2066b0c8bc48e548535679e6cbf84a041d4d05b7e4b3b81e98c657e83a6038b4"
+    },
+    {
+      "domain": "benchmarks-oo/rover-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/rover-ipc23/pfile1.pddl",
+      "domain_sha256": "5e3243d051df9340bd4bbc970981d7a636768c046481a6967368e43e84cd4f8c",
+      "problem_sha256": "313417c6001b61b8fc7010563e63b46643cbec88144a7d7a6d8d523194e6895d"
+    },
+    {
+      "domain": "benchmarks-oo/rover-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/rover-ipc23/pfile10.pddl",
+      "domain_sha256": "5e3243d051df9340bd4bbc970981d7a636768c046481a6967368e43e84cd4f8c",
+      "problem_sha256": "69576c43dba1dc7841700d199f5db0296778cd5c8b2bf27338a2d0e66d3bf43b"
+    },
+    {
+      "domain": "benchmarks-oo/rover-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/rover-ipc23/pfile11.pddl",
+      "domain_sha256": "5e3243d051df9340bd4bbc970981d7a636768c046481a6967368e43e84cd4f8c",
+      "problem_sha256": "5b03bcd45d1adbd9dd635bef3d87c5c23315f8d338f92a685f63788eb3a6dd00"
+    },
+    {
+      "domain": "benchmarks-oo/rover-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/rover-ipc23/pfile12.pddl",
+      "domain_sha256": "5e3243d051df9340bd4bbc970981d7a636768c046481a6967368e43e84cd4f8c",
+      "problem_sha256": "7e926a7ad2aa0cc5d08f7399c2a48d88640b1a59fbf4d0e151f7a683e2845c95"
+    },
+    {
+      "domain": "benchmarks-oo/rover-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/rover-ipc23/pfile13.pddl",
+      "domain_sha256": "5e3243d051df9340bd4bbc970981d7a636768c046481a6967368e43e84cd4f8c",
+      "problem_sha256": "5a806c31c04eb351fcda4d9a0519c92824efc2a63b02d703b4e849481e23c6e5"
+    },
+    {
+      "domain": "benchmarks-oo/rover-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/rover-ipc23/pfile14.pddl",
+      "domain_sha256": "5e3243d051df9340bd4bbc970981d7a636768c046481a6967368e43e84cd4f8c",
+      "problem_sha256": "f85252ab34109a3d8ad4d2895f6a41619540ba05dfc6c2d1fd59cc4cd6bd0991"
+    },
+    {
+      "domain": "benchmarks-oo/rover-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/rover-ipc23/pfile15.pddl",
+      "domain_sha256": "5e3243d051df9340bd4bbc970981d7a636768c046481a6967368e43e84cd4f8c",
+      "problem_sha256": "99e81f36affa1595a59cd5820b2e63abd95e91abd54d2b49d6acf20081124253"
+    },
+    {
+      "domain": "benchmarks-oo/rover-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/rover-ipc23/pfile16.pddl",
+      "domain_sha256": "5e3243d051df9340bd4bbc970981d7a636768c046481a6967368e43e84cd4f8c",
+      "problem_sha256": "286613ab9eeb5545bcefdf314a079c5ed127ab953d58f5c0aaf68f7343988b57"
+    },
+    {
+      "domain": "benchmarks-oo/rover-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/rover-ipc23/pfile17.pddl",
+      "domain_sha256": "5e3243d051df9340bd4bbc970981d7a636768c046481a6967368e43e84cd4f8c",
+      "problem_sha256": "70ddadfca3e176c856898e9e78d114b8d6d70020c12ec8e08698dd79d880d184"
+    },
+    {
+      "domain": "benchmarks-oo/rover-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/rover-ipc23/pfile18.pddl",
+      "domain_sha256": "5e3243d051df9340bd4bbc970981d7a636768c046481a6967368e43e84cd4f8c",
+      "problem_sha256": "fa99bdfa3a3390e200c3c029c47b77e1732510cc5d9c5ce589608a6be423ac53"
+    },
+    {
+      "domain": "benchmarks-oo/rover-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/rover-ipc23/pfile19.pddl",
+      "domain_sha256": "5e3243d051df9340bd4bbc970981d7a636768c046481a6967368e43e84cd4f8c",
+      "problem_sha256": "dca6833a3569959527c1f176351ffe8a6b50630c3150d3383097902846cba25e"
+    },
+    {
+      "domain": "benchmarks-oo/rover-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/rover-ipc23/pfile2.pddl",
+      "domain_sha256": "5e3243d051df9340bd4bbc970981d7a636768c046481a6967368e43e84cd4f8c",
+      "problem_sha256": "217b776fd9f7567e2164c1be0bc97162246953956bc714d8bc552afda4b13d21"
+    },
+    {
+      "domain": "benchmarks-oo/rover-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/rover-ipc23/pfile20.pddl",
+      "domain_sha256": "5e3243d051df9340bd4bbc970981d7a636768c046481a6967368e43e84cd4f8c",
+      "problem_sha256": "6d38362fbd31221334e3bc2d39b48d9ec9758a4c94b8420dcc58e5c4c5249edc"
+    },
+    {
+      "domain": "benchmarks-oo/rover-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/rover-ipc23/pfile3.pddl",
+      "domain_sha256": "5e3243d051df9340bd4bbc970981d7a636768c046481a6967368e43e84cd4f8c",
+      "problem_sha256": "b38f07327141418243dee1ee67346730cc402539eff11e7929245f73e37755eb"
+    },
+    {
+      "domain": "benchmarks-oo/rover-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/rover-ipc23/pfile4.pddl",
+      "domain_sha256": "5e3243d051df9340bd4bbc970981d7a636768c046481a6967368e43e84cd4f8c",
+      "problem_sha256": "252bda8de6252b58d89bace588c43466a7af3b9cea26dd0b9a903a49e20bd4f9"
+    },
+    {
+      "domain": "benchmarks-oo/rover-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/rover-ipc23/pfile5.pddl",
+      "domain_sha256": "5e3243d051df9340bd4bbc970981d7a636768c046481a6967368e43e84cd4f8c",
+      "problem_sha256": "c59d87bfb06a955b20154025e578ba5efb201f8bb3197e6a9900fb1945d3e683"
+    },
+    {
+      "domain": "benchmarks-oo/rover-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/rover-ipc23/pfile6.pddl",
+      "domain_sha256": "5e3243d051df9340bd4bbc970981d7a636768c046481a6967368e43e84cd4f8c",
+      "problem_sha256": "f44a2294abcd6ece231f10861ebe21c91f60835bbbb16b02d01bcc6cca077bc2"
+    },
+    {
+      "domain": "benchmarks-oo/rover-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/rover-ipc23/pfile7.pddl",
+      "domain_sha256": "5e3243d051df9340bd4bbc970981d7a636768c046481a6967368e43e84cd4f8c",
+      "problem_sha256": "6f6f935220545b7e444fbc0c22cc878b9734e91ab2dab7dc3133ecb96e44a074"
+    },
+    {
+      "domain": "benchmarks-oo/rover-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/rover-ipc23/pfile8.pddl",
+      "domain_sha256": "5e3243d051df9340bd4bbc970981d7a636768c046481a6967368e43e84cd4f8c",
+      "problem_sha256": "fce06037269e2b5f5cd4d32a452edd0aab51ee777a959d6b879c7727a7a4539e"
+    },
+    {
+      "domain": "benchmarks-oo/rover-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/rover-ipc23/pfile9.pddl",
+      "domain_sha256": "5e3243d051df9340bd4bbc970981d7a636768c046481a6967368e43e84cd4f8c",
+      "problem_sha256": "f13d1122cb436c0acb84c533eb47b902ff669fadca32fb2d609cee533c449d36"
+    },
+    {
+      "domain": "benchmarks-oo/settlersnumeric/domain.pddl",
+      "problem": "benchmarks-oo/settlersnumeric/pfile1.pddl",
+      "domain_sha256": "9a3811f6c16c3355812c1c1ca8d6c91ce942775973aaf8fd1cfc1f76c388345a",
+      "problem_sha256": "2540c4cc3ed9c9d44ac18f8b9b37d14d71da17da3608cb710ad5dca5fb762723"
+    },
+    {
+      "domain": "benchmarks-oo/settlersnumeric/domain.pddl",
+      "problem": "benchmarks-oo/settlersnumeric/pfile10.pddl",
+      "domain_sha256": "9a3811f6c16c3355812c1c1ca8d6c91ce942775973aaf8fd1cfc1f76c388345a",
+      "problem_sha256": "e517940343f79143bc417fb40ecc556692f3752c01d4d7b02a50f74a69fd9ffd"
+    },
+    {
+      "domain": "benchmarks-oo/settlersnumeric/domain.pddl",
+      "problem": "benchmarks-oo/settlersnumeric/pfile11.pddl",
+      "domain_sha256": "9a3811f6c16c3355812c1c1ca8d6c91ce942775973aaf8fd1cfc1f76c388345a",
+      "problem_sha256": "d0cc717b61dea59b4d6e07cf09e68825fa7bf8f990b83f463f8110eb2cdccf59"
+    },
+    {
+      "domain": "benchmarks-oo/settlersnumeric/domain.pddl",
+      "problem": "benchmarks-oo/settlersnumeric/pfile12.pddl",
+      "domain_sha256": "9a3811f6c16c3355812c1c1ca8d6c91ce942775973aaf8fd1cfc1f76c388345a",
+      "problem_sha256": "b28b6107d3f32c3d6033e6697a73602e85a9845426876d8e54fc3b9cc5162469"
+    },
+    {
+      "domain": "benchmarks-oo/settlersnumeric/domain.pddl",
+      "problem": "benchmarks-oo/settlersnumeric/pfile13.pddl",
+      "domain_sha256": "9a3811f6c16c3355812c1c1ca8d6c91ce942775973aaf8fd1cfc1f76c388345a",
+      "problem_sha256": "348343aff82bf3dfc8046c9936db79c2c066f9d9b9aa7b60269d1a478a13843d"
+    },
+    {
+      "domain": "benchmarks-oo/settlersnumeric/domain.pddl",
+      "problem": "benchmarks-oo/settlersnumeric/pfile14.pddl",
+      "domain_sha256": "9a3811f6c16c3355812c1c1ca8d6c91ce942775973aaf8fd1cfc1f76c388345a",
+      "problem_sha256": "f07309a20c437a3038b3d40334307b5e3af317dcf8ec46168ffc59007c8d663a"
+    },
+    {
+      "domain": "benchmarks-oo/settlersnumeric/domain.pddl",
+      "problem": "benchmarks-oo/settlersnumeric/pfile15.pddl",
+      "domain_sha256": "9a3811f6c16c3355812c1c1ca8d6c91ce942775973aaf8fd1cfc1f76c388345a",
+      "problem_sha256": "301d910190f0ba6a2024bb0a66c9fa5e3abc86525ff22140f985402caa7ea5dd"
+    },
+    {
+      "domain": "benchmarks-oo/settlersnumeric/domain.pddl",
+      "problem": "benchmarks-oo/settlersnumeric/pfile16.pddl",
+      "domain_sha256": "9a3811f6c16c3355812c1c1ca8d6c91ce942775973aaf8fd1cfc1f76c388345a",
+      "problem_sha256": "bb3096a625100f6f44ce9c5798c127c591d7f495e08c19ea2e7df6c10b24b8b0"
+    },
+    {
+      "domain": "benchmarks-oo/settlersnumeric/domain.pddl",
+      "problem": "benchmarks-oo/settlersnumeric/pfile17.pddl",
+      "domain_sha256": "9a3811f6c16c3355812c1c1ca8d6c91ce942775973aaf8fd1cfc1f76c388345a",
+      "problem_sha256": "b74687845d6fc5719f59c22ca4acb7cc18ba84c46b801b4e553294f63c1179aa"
+    },
+    {
+      "domain": "benchmarks-oo/settlersnumeric/domain.pddl",
+      "problem": "benchmarks-oo/settlersnumeric/pfile18.pddl",
+      "domain_sha256": "9a3811f6c16c3355812c1c1ca8d6c91ce942775973aaf8fd1cfc1f76c388345a",
+      "problem_sha256": "9bf73f58ba85e9147b6808905b0165cc024765ed623e08d6b6daba106698e36b"
+    },
+    {
+      "domain": "benchmarks-oo/settlersnumeric/domain.pddl",
+      "problem": "benchmarks-oo/settlersnumeric/pfile19.pddl",
+      "domain_sha256": "9a3811f6c16c3355812c1c1ca8d6c91ce942775973aaf8fd1cfc1f76c388345a",
+      "problem_sha256": "b711ae5991a52e42bdca6816bb477f76eeb17395cffdcb24e3eb948733559300"
+    },
+    {
+      "domain": "benchmarks-oo/settlersnumeric/domain.pddl",
+      "problem": "benchmarks-oo/settlersnumeric/pfile2.pddl",
+      "domain_sha256": "9a3811f6c16c3355812c1c1ca8d6c91ce942775973aaf8fd1cfc1f76c388345a",
+      "problem_sha256": "394bf372d69a5832a802b89011b0bf0ebc471f54bfcc96d15dbe160c05aabf78"
+    },
+    {
+      "domain": "benchmarks-oo/settlersnumeric/domain.pddl",
+      "problem": "benchmarks-oo/settlersnumeric/pfile20.pddl",
+      "domain_sha256": "9a3811f6c16c3355812c1c1ca8d6c91ce942775973aaf8fd1cfc1f76c388345a",
+      "problem_sha256": "7284e6590bca28c17371d3d296e05894575f848380de715a788e2aae674a4eed"
+    },
+    {
+      "domain": "benchmarks-oo/settlersnumeric/domain.pddl",
+      "problem": "benchmarks-oo/settlersnumeric/pfile3.pddl",
+      "domain_sha256": "9a3811f6c16c3355812c1c1ca8d6c91ce942775973aaf8fd1cfc1f76c388345a",
+      "problem_sha256": "d4d6aad5a4f5f636a201d6d7ddae7625a8ffc7038358c1f839aa38ff89f8f591"
+    },
+    {
+      "domain": "benchmarks-oo/settlersnumeric/domain.pddl",
+      "problem": "benchmarks-oo/settlersnumeric/pfile4.pddl",
+      "domain_sha256": "9a3811f6c16c3355812c1c1ca8d6c91ce942775973aaf8fd1cfc1f76c388345a",
+      "problem_sha256": "321f2717dc8f6d9adf0ea4c704c49e10c4b3c0740408fdd83304e0b3af26da21"
+    },
+    {
+      "domain": "benchmarks-oo/settlersnumeric/domain.pddl",
+      "problem": "benchmarks-oo/settlersnumeric/pfile5.pddl",
+      "domain_sha256": "9a3811f6c16c3355812c1c1ca8d6c91ce942775973aaf8fd1cfc1f76c388345a",
+      "problem_sha256": "3d34bccde380abe6c9f8d9a3ad61ec34bdef15e459a4e796acb0984dca299d6b"
+    },
+    {
+      "domain": "benchmarks-oo/settlersnumeric/domain.pddl",
+      "problem": "benchmarks-oo/settlersnumeric/pfile6.pddl",
+      "domain_sha256": "9a3811f6c16c3355812c1c1ca8d6c91ce942775973aaf8fd1cfc1f76c388345a",
+      "problem_sha256": "56956b93ec2f89937766d5960a460fbbbf5b2dbd93a689e4854c387596a60b85"
+    },
+    {
+      "domain": "benchmarks-oo/settlersnumeric/domain.pddl",
+      "problem": "benchmarks-oo/settlersnumeric/pfile7.pddl",
+      "domain_sha256": "9a3811f6c16c3355812c1c1ca8d6c91ce942775973aaf8fd1cfc1f76c388345a",
+      "problem_sha256": "3bc83419888a098021fc1062a9d4fa9d08eecda9285af7db6fc393a24efbce06"
+    },
+    {
+      "domain": "benchmarks-oo/settlersnumeric/domain.pddl",
+      "problem": "benchmarks-oo/settlersnumeric/pfile8.pddl",
+      "domain_sha256": "9a3811f6c16c3355812c1c1ca8d6c91ce942775973aaf8fd1cfc1f76c388345a",
+      "problem_sha256": "ec8637007406abcf2848ad26646ca5a97fe99c3196194af47469aa655144124d"
+    },
+    {
+      "domain": "benchmarks-oo/settlersnumeric/domain.pddl",
+      "problem": "benchmarks-oo/settlersnumeric/pfile9.pddl",
+      "domain_sha256": "9a3811f6c16c3355812c1c1ca8d6c91ce942775973aaf8fd1cfc1f76c388345a",
+      "problem_sha256": "ff293814071fd7d936e774e5ed47d221f32237e26c17dfcbd09f270384fedae3"
+    },
+    {
+      "domain": "benchmarks-oo/counters-sym/domain.pddl",
+      "problem": "benchmarks-oo/counters-sym/problem_12.pddl",
+      "domain_sha256": "460fdc7d2bcd074ebb52b7b7ee704d3acda18e570a200934c1aae735651aa790",
+      "problem_sha256": "c69502fe3ed5ca9b90bffdd2a52fafb38749ab3b8fa53dfe6df4bf23b9ae1830"
+    },
+    {
+      "domain": "benchmarks-oo/counters-sym/domain.pddl",
+      "problem": "benchmarks-oo/counters-sym/problem_16.pddl",
+      "domain_sha256": "460fdc7d2bcd074ebb52b7b7ee704d3acda18e570a200934c1aae735651aa790",
+      "problem_sha256": "669ea5424d86117e9b9910fb5bbbbf480a39e2f9afb91469abe731042d5b4463"
+    },
+    {
+      "domain": "benchmarks-oo/counters-sym/domain.pddl",
+      "problem": "benchmarks-oo/counters-sym/problem_2.pddl",
+      "domain_sha256": "460fdc7d2bcd074ebb52b7b7ee704d3acda18e570a200934c1aae735651aa790",
+      "problem_sha256": "1df757afac139b62f20dcfc1cc1feba38559bf9f8ea18584d93ecfd8855a33cb"
+    },
+    {
+      "domain": "benchmarks-oo/counters-sym/domain.pddl",
+      "problem": "benchmarks-oo/counters-sym/problem_20.pddl",
+      "domain_sha256": "460fdc7d2bcd074ebb52b7b7ee704d3acda18e570a200934c1aae735651aa790",
+      "problem_sha256": "90f06a1cef52a5e171500c1b0978a29815a29c15e579bb16a74c791d82d53804"
+    },
+    {
+      "domain": "benchmarks-oo/counters-sym/domain.pddl",
+      "problem": "benchmarks-oo/counters-sym/problem_24.pddl",
+      "domain_sha256": "460fdc7d2bcd074ebb52b7b7ee704d3acda18e570a200934c1aae735651aa790",
+      "problem_sha256": "3d78085d8b1f03385f2e3daebc6657c093d8cbe4c85864d0d4b1ee941d187f96"
+    },
+    {
+      "domain": "benchmarks-oo/counters-sym/domain.pddl",
+      "problem": "benchmarks-oo/counters-sym/problem_28.pddl",
+      "domain_sha256": "460fdc7d2bcd074ebb52b7b7ee704d3acda18e570a200934c1aae735651aa790",
+      "problem_sha256": "79ecb6b4b42f3cd00025415fab84bfd84841ca3077a4685ee492d7711ec73af4"
+    },
+    {
+      "domain": "benchmarks-oo/counters-sym/domain.pddl",
+      "problem": "benchmarks-oo/counters-sym/problem_32.pddl",
+      "domain_sha256": "460fdc7d2bcd074ebb52b7b7ee704d3acda18e570a200934c1aae735651aa790",
+      "problem_sha256": "e4bebe4923df072d62c6024fbebf1da87de250e62f4d99594ecd0c10a8d5b531"
+    },
+    {
+      "domain": "benchmarks-oo/counters-sym/domain.pddl",
+      "problem": "benchmarks-oo/counters-sym/problem_36.pddl",
+      "domain_sha256": "460fdc7d2bcd074ebb52b7b7ee704d3acda18e570a200934c1aae735651aa790",
+      "problem_sha256": "d7500ee409de7bd2dd691a1989f1b6354c7b658b18f334db35b91a15b3204371"
+    },
+    {
+      "domain": "benchmarks-oo/counters-sym/domain.pddl",
+      "problem": "benchmarks-oo/counters-sym/problem_4.pddl",
+      "domain_sha256": "460fdc7d2bcd074ebb52b7b7ee704d3acda18e570a200934c1aae735651aa790",
+      "problem_sha256": "955b7f7e5ce8a90ef910f5f121b93bb092cdd6201dd64d182ea54de531b38ae1"
+    },
+    {
+      "domain": "benchmarks-oo/counters-sym/domain.pddl",
+      "problem": "benchmarks-oo/counters-sym/problem_40.pddl",
+      "domain_sha256": "460fdc7d2bcd074ebb52b7b7ee704d3acda18e570a200934c1aae735651aa790",
+      "problem_sha256": "2557f0d6791577aeb951fae6e1ee3542d46dbbd13ccfcb9fbb3c17942247a84d"
+    },
+    {
+      "domain": "benchmarks-oo/counters-sym/domain.pddl",
+      "problem": "benchmarks-oo/counters-sym/problem_8.pddl",
+      "domain_sha256": "460fdc7d2bcd074ebb52b7b7ee704d3acda18e570a200934c1aae735651aa790",
+      "problem_sha256": "97ca7410dcfe42034f85e27d4a5646e2a121ea33557b4154bffb2d2116e5f8dd"
+    },
+    {
+      "domain": "benchmarks-oo/expedition/domain.pddl",
+      "problem": "benchmarks-oo/expedition/pfile1.pddl",
+      "domain_sha256": "1187a32d02696eff194b90de8d6503475aea16d8bc6bd4aab0075219673bbb80",
+      "problem_sha256": "7844086fd62c5b0922e4649ca719c8e25e1892eac40c0ac7fc89af7a2300bbd1"
+    },
+    {
+      "domain": "benchmarks-oo/expedition/domain.pddl",
+      "problem": "benchmarks-oo/expedition/pfile10.pddl",
+      "domain_sha256": "1187a32d02696eff194b90de8d6503475aea16d8bc6bd4aab0075219673bbb80",
+      "problem_sha256": "57963cc28aee4d4974721b745df80f2a685fa63dd4247e5e8575ce81beea3350"
+    },
+    {
+      "domain": "benchmarks-oo/expedition/domain.pddl",
+      "problem": "benchmarks-oo/expedition/pfile11.pddl",
+      "domain_sha256": "1187a32d02696eff194b90de8d6503475aea16d8bc6bd4aab0075219673bbb80",
+      "problem_sha256": "9b5453d92bf0c8ccb7735a61f3b8bd863ed7f0a2ef527cae526b27bdfbaf1070"
+    },
+    {
+      "domain": "benchmarks-oo/expedition/domain.pddl",
+      "problem": "benchmarks-oo/expedition/pfile12.pddl",
+      "domain_sha256": "1187a32d02696eff194b90de8d6503475aea16d8bc6bd4aab0075219673bbb80",
+      "problem_sha256": "5873fcc1535a4cdcfe7fcdfc5f88bb67f4afa6226da0c8fbaba5926b2d92d5f8"
+    },
+    {
+      "domain": "benchmarks-oo/expedition/domain.pddl",
+      "problem": "benchmarks-oo/expedition/pfile13.pddl",
+      "domain_sha256": "1187a32d02696eff194b90de8d6503475aea16d8bc6bd4aab0075219673bbb80",
+      "problem_sha256": "ca4eeea24f07072a8cc5102e7d1d7f0d7d40717fc71a97fb9ff09d48a730bd40"
+    },
+    {
+      "domain": "benchmarks-oo/expedition/domain.pddl",
+      "problem": "benchmarks-oo/expedition/pfile14.pddl",
+      "domain_sha256": "1187a32d02696eff194b90de8d6503475aea16d8bc6bd4aab0075219673bbb80",
+      "problem_sha256": "e949d06334a1daf888858febe81ff6afe85a859860582331c761ff4c4d0f92cf"
+    },
+    {
+      "domain": "benchmarks-oo/expedition/domain.pddl",
+      "problem": "benchmarks-oo/expedition/pfile15.pddl",
+      "domain_sha256": "1187a32d02696eff194b90de8d6503475aea16d8bc6bd4aab0075219673bbb80",
+      "problem_sha256": "4da406de26a9678d547de4fee9a05431a7ad2d9945f1f26a5244912e7bf1abfd"
+    },
+    {
+      "domain": "benchmarks-oo/expedition/domain.pddl",
+      "problem": "benchmarks-oo/expedition/pfile16.pddl",
+      "domain_sha256": "1187a32d02696eff194b90de8d6503475aea16d8bc6bd4aab0075219673bbb80",
+      "problem_sha256": "9e1157e14a59b9934f4e216e58643bbe42e7064cbf8426a0ec505325984e356e"
+    },
+    {
+      "domain": "benchmarks-oo/expedition/domain.pddl",
+      "problem": "benchmarks-oo/expedition/pfile17.pddl",
+      "domain_sha256": "1187a32d02696eff194b90de8d6503475aea16d8bc6bd4aab0075219673bbb80",
+      "problem_sha256": "2ef231ca756898bd00499464cadb4222261b7fc63a1b7d40c55d71e1d7d96e79"
+    },
+    {
+      "domain": "benchmarks-oo/expedition/domain.pddl",
+      "problem": "benchmarks-oo/expedition/pfile18.pddl",
+      "domain_sha256": "1187a32d02696eff194b90de8d6503475aea16d8bc6bd4aab0075219673bbb80",
+      "problem_sha256": "28d53f5931e93c89939932f8652ad6736e1e1e240e5b0d949cf4510492e42704"
+    },
+    {
+      "domain": "benchmarks-oo/expedition/domain.pddl",
+      "problem": "benchmarks-oo/expedition/pfile19.pddl",
+      "domain_sha256": "1187a32d02696eff194b90de8d6503475aea16d8bc6bd4aab0075219673bbb80",
+      "problem_sha256": "bd4e77a641eb723e04ea46d9ff7b612c7f78d81cdb19cf0438e297497e029e9c"
+    },
+    {
+      "domain": "benchmarks-oo/expedition/domain.pddl",
+      "problem": "benchmarks-oo/expedition/pfile2.pddl",
+      "domain_sha256": "1187a32d02696eff194b90de8d6503475aea16d8bc6bd4aab0075219673bbb80",
+      "problem_sha256": "fd3a2579a977cc790634a9fd1ac040dcd485001fd7a25b2bc1ea61db6c1f4210"
+    },
+    {
+      "domain": "benchmarks-oo/expedition/domain.pddl",
+      "problem": "benchmarks-oo/expedition/pfile20.pddl",
+      "domain_sha256": "1187a32d02696eff194b90de8d6503475aea16d8bc6bd4aab0075219673bbb80",
+      "problem_sha256": "3eccef380cbaeccefdd5ce1ff90e019cb854098a4d7767239e0f1b20dadb5bd3"
+    },
+    {
+      "domain": "benchmarks-oo/expedition/domain.pddl",
+      "problem": "benchmarks-oo/expedition/pfile3.pddl",
+      "domain_sha256": "1187a32d02696eff194b90de8d6503475aea16d8bc6bd4aab0075219673bbb80",
+      "problem_sha256": "023a56212cd003c41a1cfcc753c2e1ceddca7c9c05e6bdd88465e90ff2f1a044"
+    },
+    {
+      "domain": "benchmarks-oo/expedition/domain.pddl",
+      "problem": "benchmarks-oo/expedition/pfile4.pddl",
+      "domain_sha256": "1187a32d02696eff194b90de8d6503475aea16d8bc6bd4aab0075219673bbb80",
+      "problem_sha256": "4d0614c51e7777d771d15cc82e104240202245559fbe7eda37eafe0682ae7416"
+    },
+    {
+      "domain": "benchmarks-oo/expedition/domain.pddl",
+      "problem": "benchmarks-oo/expedition/pfile5.pddl",
+      "domain_sha256": "1187a32d02696eff194b90de8d6503475aea16d8bc6bd4aab0075219673bbb80",
+      "problem_sha256": "93032852424fd1f711da4175dc8692e9ac75be162ce5e47e1b6bf1d60e965d16"
+    },
+    {
+      "domain": "benchmarks-oo/expedition/domain.pddl",
+      "problem": "benchmarks-oo/expedition/pfile6.pddl",
+      "domain_sha256": "1187a32d02696eff194b90de8d6503475aea16d8bc6bd4aab0075219673bbb80",
+      "problem_sha256": "d3228d87ad962f3e2312ddf8f004818e12e4fda7475b9741fa95004fee0f573e"
+    },
+    {
+      "domain": "benchmarks-oo/expedition/domain.pddl",
+      "problem": "benchmarks-oo/expedition/pfile7.pddl",
+      "domain_sha256": "1187a32d02696eff194b90de8d6503475aea16d8bc6bd4aab0075219673bbb80",
+      "problem_sha256": "4e7b7038b8df0917c1a726b9a5665c2f2f818e6df30d61d5029eb49e47cf9685"
+    },
+    {
+      "domain": "benchmarks-oo/expedition/domain.pddl",
+      "problem": "benchmarks-oo/expedition/pfile8.pddl",
+      "domain_sha256": "1187a32d02696eff194b90de8d6503475aea16d8bc6bd4aab0075219673bbb80",
+      "problem_sha256": "af2c85b38282c9b453417a4b2c65d24f0caebaf019bd5dd24d075b7a765e7b87"
+    },
+    {
+      "domain": "benchmarks-oo/expedition/domain.pddl",
+      "problem": "benchmarks-oo/expedition/pfile9.pddl",
+      "domain_sha256": "1187a32d02696eff194b90de8d6503475aea16d8bc6bd4aab0075219673bbb80",
+      "problem_sha256": "1ae42b1584ad7386b5094bb02f76a80cc31a653aeee42576a96cce226be207ff"
+    },
+    {
+      "domain": "benchmarks-oo/forestfire/domain.pddl",
+      "problem": "benchmarks-oo/forestfire/prob01.pddl",
+      "domain_sha256": "ef411bc06430c4a5660a4347c38664bb5ba71fba62c604adf5a308900cea3622",
+      "problem_sha256": "64b6bf451ac7acd0cfe6a75285be3ae237c72d988c7118a13c228fc8a217ea70"
+    },
+    {
+      "domain": "benchmarks-oo/forestfire/domain.pddl",
+      "problem": "benchmarks-oo/forestfire/prob02.pddl",
+      "domain_sha256": "ef411bc06430c4a5660a4347c38664bb5ba71fba62c604adf5a308900cea3622",
+      "problem_sha256": "874f0518ec535e5bbb1124d2db59bb6cd367df04eddfed532cf5d808921e65ee"
+    },
+    {
+      "domain": "benchmarks-oo/forestfire/domain.pddl",
+      "problem": "benchmarks-oo/forestfire/prob03.pddl",
+      "domain_sha256": "ef411bc06430c4a5660a4347c38664bb5ba71fba62c604adf5a308900cea3622",
+      "problem_sha256": "2d1fa6f302d474fba69878a15d5ff936c0c3d4a9a9f15fa561055b3440ef782e"
+    },
+    {
+      "domain": "benchmarks-oo/forestfire/domain.pddl",
+      "problem": "benchmarks-oo/forestfire/prob04.pddl",
+      "domain_sha256": "ef411bc06430c4a5660a4347c38664bb5ba71fba62c604adf5a308900cea3622",
+      "problem_sha256": "10ab000aa75c39c0ffbe97e4405794fafd2a1ed554100fee83962db68a2802f4"
+    },
+    {
+      "domain": "benchmarks-oo/forestfire/domain.pddl",
+      "problem": "benchmarks-oo/forestfire/prob05.pddl",
+      "domain_sha256": "ef411bc06430c4a5660a4347c38664bb5ba71fba62c604adf5a308900cea3622",
+      "problem_sha256": "0042409e58fa405f3863c5e87ecdf2914074a152578f7bda2b3670793e381507"
+    },
+    {
+      "domain": "benchmarks-oo/forestfire/domain.pddl",
+      "problem": "benchmarks-oo/forestfire/prob06.pddl",
+      "domain_sha256": "ef411bc06430c4a5660a4347c38664bb5ba71fba62c604adf5a308900cea3622",
+      "problem_sha256": "635ab11816a46de061591a8c1695c4fb610301cb74e9918a326caf521dfc9978"
+    },
+    {
+      "domain": "benchmarks-oo/forestfire/domain.pddl",
+      "problem": "benchmarks-oo/forestfire/prob07.pddl",
+      "domain_sha256": "ef411bc06430c4a5660a4347c38664bb5ba71fba62c604adf5a308900cea3622",
+      "problem_sha256": "ced40ef3fc9baec431d6bee8e79f6fdfd738b5754a76c5c9ce52be14510203fb"
+    },
+    {
+      "domain": "benchmarks-oo/forestfire/domain.pddl",
+      "problem": "benchmarks-oo/forestfire/prob08.pddl",
+      "domain_sha256": "ef411bc06430c4a5660a4347c38664bb5ba71fba62c604adf5a308900cea3622",
+      "problem_sha256": "b6f016284a80a7c6bb4466b77622e656e9f34d9ca0da3bb04547ed6289b080c7"
+    },
+    {
+      "domain": "benchmarks-oo/forestfire/domain.pddl",
+      "problem": "benchmarks-oo/forestfire/prob09.pddl",
+      "domain_sha256": "ef411bc06430c4a5660a4347c38664bb5ba71fba62c604adf5a308900cea3622",
+      "problem_sha256": "985889e7a270df8fedab3e25b4b23c896425f29844189c3728243c8d388a38fd"
+    },
+    {
+      "domain": "benchmarks-oo/forestfire/domain.pddl",
+      "problem": "benchmarks-oo/forestfire/prob10.pddl",
+      "domain_sha256": "ef411bc06430c4a5660a4347c38664bb5ba71fba62c604adf5a308900cea3622",
+      "problem_sha256": "182fec0ede50ae9dcaf377f9a9344774e2da63d2b3c4d6cd5b7aae3f31b363ac"
+    },
+    {
+      "domain": "benchmarks-oo/forestfire/domain.pddl",
+      "problem": "benchmarks-oo/forestfire/prob11.pddl",
+      "domain_sha256": "ef411bc06430c4a5660a4347c38664bb5ba71fba62c604adf5a308900cea3622",
+      "problem_sha256": "5dc04716c4c1738c3e5ce45d805b6c4649ee5cde4f44e3c021e0c9960f0dbc5f"
+    },
+    {
+      "domain": "benchmarks-oo/forestfire/domain.pddl",
+      "problem": "benchmarks-oo/forestfire/prob12.pddl",
+      "domain_sha256": "ef411bc06430c4a5660a4347c38664bb5ba71fba62c604adf5a308900cea3622",
+      "problem_sha256": "1b520162b1612bf790be221f278cac0d2e04292f082924179842b0e04548538e"
+    },
+    {
+      "domain": "benchmarks-oo/forestfire/domain.pddl",
+      "problem": "benchmarks-oo/forestfire/prob13.pddl",
+      "domain_sha256": "ef411bc06430c4a5660a4347c38664bb5ba71fba62c604adf5a308900cea3622",
+      "problem_sha256": "6bbc00d5665abae78f2ea46284f671c16b840d887e772258ba493757185fd107"
+    },
+    {
+      "domain": "benchmarks-oo/forestfire/domain.pddl",
+      "problem": "benchmarks-oo/forestfire/prob14.pddl",
+      "domain_sha256": "ef411bc06430c4a5660a4347c38664bb5ba71fba62c604adf5a308900cea3622",
+      "problem_sha256": "f430a2cc3f6d31b6ffee3b5f4f86015e07a4698fb7976996c64d78799db0410d"
+    },
+    {
+      "domain": "benchmarks-oo/forestfire/domain.pddl",
+      "problem": "benchmarks-oo/forestfire/prob15.pddl",
+      "domain_sha256": "ef411bc06430c4a5660a4347c38664bb5ba71fba62c604adf5a308900cea3622",
+      "problem_sha256": "02e79cff44e15a9beaf81061e8d50f6f0ef0cf46fa93f15cf1433cc6be6e25c1"
+    },
+    {
+      "domain": "benchmarks-oo/forestfire/domain.pddl",
+      "problem": "benchmarks-oo/forestfire/prob16.pddl",
+      "domain_sha256": "ef411bc06430c4a5660a4347c38664bb5ba71fba62c604adf5a308900cea3622",
+      "problem_sha256": "00640d55d353ef0aa44d7e450a470b5000df40899dfa31a1e89aa98bf708bc6c"
+    },
+    {
+      "domain": "benchmarks-oo/forestfire/domain.pddl",
+      "problem": "benchmarks-oo/forestfire/prob17.pddl",
+      "domain_sha256": "ef411bc06430c4a5660a4347c38664bb5ba71fba62c604adf5a308900cea3622",
+      "problem_sha256": "9f5473fe0df7ee11a60e0365c8281c25fc0c7f7fde5dc247a1519b3ffcf90352"
+    },
+    {
+      "domain": "benchmarks-oo/forestfire/domain.pddl",
+      "problem": "benchmarks-oo/forestfire/prob18.pddl",
+      "domain_sha256": "ef411bc06430c4a5660a4347c38664bb5ba71fba62c604adf5a308900cea3622",
+      "problem_sha256": "794d5d237088bf0fa8a72bfbdf757eb672d4440ba486818805b75a50d0336b59"
+    },
+    {
+      "domain": "benchmarks-oo/forestfire/domain.pddl",
+      "problem": "benchmarks-oo/forestfire/prob19.pddl",
+      "domain_sha256": "ef411bc06430c4a5660a4347c38664bb5ba71fba62c604adf5a308900cea3622",
+      "problem_sha256": "3b5e1ad40d6826bd87ece952c1a574d565272a0d00530961887b83b97205590a"
+    },
+    {
+      "domain": "benchmarks-oo/forestfire/domain.pddl",
+      "problem": "benchmarks-oo/forestfire/prob20.pddl",
+      "domain_sha256": "ef411bc06430c4a5660a4347c38664bb5ba71fba62c604adf5a308900cea3622",
+      "problem_sha256": "ed9821b48cceaa9273b02e22af1a970a4284afc72509f0fec15ca21c49dc6d10"
+    },
+    {
+      "domain": "benchmarks-oo/mprime/domain.pddl",
+      "problem": "benchmarks-oo/mprime/pfile1.pddl",
+      "domain_sha256": "8cf3fb645c2aa0f2d10a596bf51d12c5b042e2acc2eefdab8a9e05b0a1611550",
+      "problem_sha256": "195c2d93396c41752601ed26896ce760247ae7d552be61f957eec8b2937dd77c"
+    },
+    {
+      "domain": "benchmarks-oo/mprime/domain.pddl",
+      "problem": "benchmarks-oo/mprime/pfile10.pddl",
+      "domain_sha256": "8cf3fb645c2aa0f2d10a596bf51d12c5b042e2acc2eefdab8a9e05b0a1611550",
+      "problem_sha256": "c1bb93ef5f26f5d36323606610f509620546fa3cd2074381d19b66729a85c3b7"
+    },
+    {
+      "domain": "benchmarks-oo/mprime/domain.pddl",
+      "problem": "benchmarks-oo/mprime/pfile11.pddl",
+      "domain_sha256": "8cf3fb645c2aa0f2d10a596bf51d12c5b042e2acc2eefdab8a9e05b0a1611550",
+      "problem_sha256": "e9558ec897f9d1f207f51f930d46fc2585d745ddc6b95daab529e2e4bc97ef92"
+    },
+    {
+      "domain": "benchmarks-oo/mprime/domain.pddl",
+      "problem": "benchmarks-oo/mprime/pfile12.pddl",
+      "domain_sha256": "8cf3fb645c2aa0f2d10a596bf51d12c5b042e2acc2eefdab8a9e05b0a1611550",
+      "problem_sha256": "4f72b2e99c9960cc59e8467adee2b6532f60a77e81b34bfd691e114755e5e238"
+    },
+    {
+      "domain": "benchmarks-oo/mprime/domain.pddl",
+      "problem": "benchmarks-oo/mprime/pfile13.pddl",
+      "domain_sha256": "8cf3fb645c2aa0f2d10a596bf51d12c5b042e2acc2eefdab8a9e05b0a1611550",
+      "problem_sha256": "5477eb48cbbec6d583f8038054e1d1703511786bee487cdd1ed73d256b5d99af"
+    },
+    {
+      "domain": "benchmarks-oo/mprime/domain.pddl",
+      "problem": "benchmarks-oo/mprime/pfile14.pddl",
+      "domain_sha256": "8cf3fb645c2aa0f2d10a596bf51d12c5b042e2acc2eefdab8a9e05b0a1611550",
+      "problem_sha256": "9dc35744665357af7ca32695666eb8e3d144e0ea912cfb6437552f6cdd6373f2"
+    },
+    {
+      "domain": "benchmarks-oo/mprime/domain.pddl",
+      "problem": "benchmarks-oo/mprime/pfile15.pddl",
+      "domain_sha256": "8cf3fb645c2aa0f2d10a596bf51d12c5b042e2acc2eefdab8a9e05b0a1611550",
+      "problem_sha256": "426acb5713fdd6ab8b0a83fcf6fbe05254026a0b1eac4bd942524425a51a7b67"
+    },
+    {
+      "domain": "benchmarks-oo/mprime/domain.pddl",
+      "problem": "benchmarks-oo/mprime/pfile16.pddl",
+      "domain_sha256": "8cf3fb645c2aa0f2d10a596bf51d12c5b042e2acc2eefdab8a9e05b0a1611550",
+      "problem_sha256": "2b70591baba0267e18dcadb48a8bbd6a4b49714fc8bd97120de13d82a1d8f28b"
+    },
+    {
+      "domain": "benchmarks-oo/mprime/domain.pddl",
+      "problem": "benchmarks-oo/mprime/pfile17.pddl",
+      "domain_sha256": "8cf3fb645c2aa0f2d10a596bf51d12c5b042e2acc2eefdab8a9e05b0a1611550",
+      "problem_sha256": "720ac725b0dab6b183e987f0c7fb8a006126b5268051ea640c0c30efd94a7a7e"
+    },
+    {
+      "domain": "benchmarks-oo/mprime/domain.pddl",
+      "problem": "benchmarks-oo/mprime/pfile18.pddl",
+      "domain_sha256": "8cf3fb645c2aa0f2d10a596bf51d12c5b042e2acc2eefdab8a9e05b0a1611550",
+      "problem_sha256": "87c387a971b47b2cf435badd5d359134b751413d26b7e9a2c594ac2541f1a70d"
+    },
+    {
+      "domain": "benchmarks-oo/mprime/domain.pddl",
+      "problem": "benchmarks-oo/mprime/pfile19.pddl",
+      "domain_sha256": "8cf3fb645c2aa0f2d10a596bf51d12c5b042e2acc2eefdab8a9e05b0a1611550",
+      "problem_sha256": "c102e3c853f8dbb9c605ad5a33db547857cab684d0fcac1090e93146f31afa6a"
+    },
+    {
+      "domain": "benchmarks-oo/mprime/domain.pddl",
+      "problem": "benchmarks-oo/mprime/pfile2.pddl",
+      "domain_sha256": "8cf3fb645c2aa0f2d10a596bf51d12c5b042e2acc2eefdab8a9e05b0a1611550",
+      "problem_sha256": "f8996434794e5a392d99ffc3421c915d2388eb463aacdbcee6ddca8dbd445203"
+    },
+    {
+      "domain": "benchmarks-oo/mprime/domain.pddl",
+      "problem": "benchmarks-oo/mprime/pfile20.pddl",
+      "domain_sha256": "8cf3fb645c2aa0f2d10a596bf51d12c5b042e2acc2eefdab8a9e05b0a1611550",
+      "problem_sha256": "c6f40ddc8fee57b7e6a99c60825d140d255d576b6cae47f958c1b38f81a29ec8"
+    },
+    {
+      "domain": "benchmarks-oo/mprime/domain.pddl",
+      "problem": "benchmarks-oo/mprime/pfile3.pddl",
+      "domain_sha256": "8cf3fb645c2aa0f2d10a596bf51d12c5b042e2acc2eefdab8a9e05b0a1611550",
+      "problem_sha256": "082267e6486fd7ed82d6d21d37967c1a9a0e7370cd11741595ecfe11e34e30ae"
+    },
+    {
+      "domain": "benchmarks-oo/mprime/domain.pddl",
+      "problem": "benchmarks-oo/mprime/pfile4.pddl",
+      "domain_sha256": "8cf3fb645c2aa0f2d10a596bf51d12c5b042e2acc2eefdab8a9e05b0a1611550",
+      "problem_sha256": "63a3d9fbeb976f0b2349ae5d53d5499478eb4bad7532fffc401b5a26d9c0dc32"
+    },
+    {
+      "domain": "benchmarks-oo/mprime/domain.pddl",
+      "problem": "benchmarks-oo/mprime/pfile5.pddl",
+      "domain_sha256": "8cf3fb645c2aa0f2d10a596bf51d12c5b042e2acc2eefdab8a9e05b0a1611550",
+      "problem_sha256": "e86fd9ff858a64c750186429f24f07fff03b6a3105c025248422043497b9b272"
+    },
+    {
+      "domain": "benchmarks-oo/mprime/domain.pddl",
+      "problem": "benchmarks-oo/mprime/pfile6.pddl",
+      "domain_sha256": "8cf3fb645c2aa0f2d10a596bf51d12c5b042e2acc2eefdab8a9e05b0a1611550",
+      "problem_sha256": "6613c83313eed23cc060cd10769aa709eb97bfaca8adc9458a8b5f73371e9ad6"
+    },
+    {
+      "domain": "benchmarks-oo/mprime/domain.pddl",
+      "problem": "benchmarks-oo/mprime/pfile7.pddl",
+      "domain_sha256": "8cf3fb645c2aa0f2d10a596bf51d12c5b042e2acc2eefdab8a9e05b0a1611550",
+      "problem_sha256": "b66f50562edef0aad4d98fe33498cf8946cfc6093e2ab1231b08f1a73111a9c4"
+    },
+    {
+      "domain": "benchmarks-oo/mprime/domain.pddl",
+      "problem": "benchmarks-oo/mprime/pfile8.pddl",
+      "domain_sha256": "8cf3fb645c2aa0f2d10a596bf51d12c5b042e2acc2eefdab8a9e05b0a1611550",
+      "problem_sha256": "4b3bddc4897c21a8e2b71c1f6e4338054233aee13cf2d742df6491aa06a87aca"
+    },
+    {
+      "domain": "benchmarks-oo/mprime/domain.pddl",
+      "problem": "benchmarks-oo/mprime/pfile9.pddl",
+      "domain_sha256": "8cf3fb645c2aa0f2d10a596bf51d12c5b042e2acc2eefdab8a9e05b0a1611550",
+      "problem_sha256": "83d555b0fd4b3c4f7ce48ecf2e39126f4136c545bb4e319f58d32a81975742e4"
+    },
+    {
+      "domain": "benchmarks-oo/rover-unit/domain.pddl",
+      "problem": "benchmarks-oo/rover-unit/pfile1.pddl",
+      "domain_sha256": "cdae3c5a9fc83d83f01c7cd674f2dbc8603dff310d3d61a73200bf50691a3ca9",
+      "problem_sha256": "e514639343fd0dd8988a3b405a15292df502bf8e705defc631f8500c22997497"
+    },
+    {
+      "domain": "benchmarks-oo/rover-unit/domain.pddl",
+      "problem": "benchmarks-oo/rover-unit/pfile10.pddl",
+      "domain_sha256": "cdae3c5a9fc83d83f01c7cd674f2dbc8603dff310d3d61a73200bf50691a3ca9",
+      "problem_sha256": "b25b88f0a7b23c104cc423ad6d628470276d8b39bf2a73f139adaa3fa33a6eb5"
+    },
+    {
+      "domain": "benchmarks-oo/rover-unit/domain.pddl",
+      "problem": "benchmarks-oo/rover-unit/pfile11.pddl",
+      "domain_sha256": "cdae3c5a9fc83d83f01c7cd674f2dbc8603dff310d3d61a73200bf50691a3ca9",
+      "problem_sha256": "66ad58bad0bd5af9d1c4d7b7d19ff39cc715eebcfeca2bde4d242ee497a3b55d"
+    },
+    {
+      "domain": "benchmarks-oo/rover-unit/domain.pddl",
+      "problem": "benchmarks-oo/rover-unit/pfile12.pddl",
+      "domain_sha256": "cdae3c5a9fc83d83f01c7cd674f2dbc8603dff310d3d61a73200bf50691a3ca9",
+      "problem_sha256": "c48333d985311f083d94616026011179cdd91d0010a30b1cf60c2c8c2d8f1371"
+    },
+    {
+      "domain": "benchmarks-oo/rover-unit/domain.pddl",
+      "problem": "benchmarks-oo/rover-unit/pfile13.pddl",
+      "domain_sha256": "cdae3c5a9fc83d83f01c7cd674f2dbc8603dff310d3d61a73200bf50691a3ca9",
+      "problem_sha256": "f9f26ec9fcd21b4a456f97a3916619f0cc02f0e2f936eb91b055d8b6294d6b8c"
+    },
+    {
+      "domain": "benchmarks-oo/rover-unit/domain.pddl",
+      "problem": "benchmarks-oo/rover-unit/pfile14.pddl",
+      "domain_sha256": "cdae3c5a9fc83d83f01c7cd674f2dbc8603dff310d3d61a73200bf50691a3ca9",
+      "problem_sha256": "10b55e5b0c8af67e547ad34c1490fc45951843205caa6682b7d20a4829fbb3ae"
+    },
+    {
+      "domain": "benchmarks-oo/rover-unit/domain.pddl",
+      "problem": "benchmarks-oo/rover-unit/pfile15.pddl",
+      "domain_sha256": "cdae3c5a9fc83d83f01c7cd674f2dbc8603dff310d3d61a73200bf50691a3ca9",
+      "problem_sha256": "16965f6e78e86b72c348e97a6f7724ff848f9bc9391337465e9db7fc8e0c3fcf"
+    },
+    {
+      "domain": "benchmarks-oo/rover-unit/domain.pddl",
+      "problem": "benchmarks-oo/rover-unit/pfile16.pddl",
+      "domain_sha256": "cdae3c5a9fc83d83f01c7cd674f2dbc8603dff310d3d61a73200bf50691a3ca9",
+      "problem_sha256": "cc3f7ee54231a4dce56fd38625c315f0b05cd8091dcad6293844c7ec6722c032"
+    },
+    {
+      "domain": "benchmarks-oo/rover-unit/domain.pddl",
+      "problem": "benchmarks-oo/rover-unit/pfile17.pddl",
+      "domain_sha256": "cdae3c5a9fc83d83f01c7cd674f2dbc8603dff310d3d61a73200bf50691a3ca9",
+      "problem_sha256": "3247f3028236a69a7fde802a6e83e7983a19a017cbb42baa0dea6af61511fd30"
+    },
+    {
+      "domain": "benchmarks-oo/rover-unit/domain.pddl",
+      "problem": "benchmarks-oo/rover-unit/pfile18.pddl",
+      "domain_sha256": "cdae3c5a9fc83d83f01c7cd674f2dbc8603dff310d3d61a73200bf50691a3ca9",
+      "problem_sha256": "83fb7d37357063beae4c527bae5ee65065954a7c15effd86d41fa7032e557d0c"
+    },
+    {
+      "domain": "benchmarks-oo/rover-unit/domain.pddl",
+      "problem": "benchmarks-oo/rover-unit/pfile19.pddl",
+      "domain_sha256": "cdae3c5a9fc83d83f01c7cd674f2dbc8603dff310d3d61a73200bf50691a3ca9",
+      "problem_sha256": "c6307e4791db2a57619e8eda9476785140bda4ebcae5c6e9a9b45e150ea3752e"
+    },
+    {
+      "domain": "benchmarks-oo/rover-unit/domain.pddl",
+      "problem": "benchmarks-oo/rover-unit/pfile2.pddl",
+      "domain_sha256": "cdae3c5a9fc83d83f01c7cd674f2dbc8603dff310d3d61a73200bf50691a3ca9",
+      "problem_sha256": "cbf89f33db2277e8ab7b27a119d7fc9c0090a54c625120eda248f5002c79d5e3"
+    },
+    {
+      "domain": "benchmarks-oo/rover-unit/domain.pddl",
+      "problem": "benchmarks-oo/rover-unit/pfile20.pddl",
+      "domain_sha256": "cdae3c5a9fc83d83f01c7cd674f2dbc8603dff310d3d61a73200bf50691a3ca9",
+      "problem_sha256": "0258af8a014a7c7d8890073cd8bde52bb7d039f16a88743ec8e74d278823926c"
+    },
+    {
+      "domain": "benchmarks-oo/rover-unit/domain.pddl",
+      "problem": "benchmarks-oo/rover-unit/pfile3.pddl",
+      "domain_sha256": "cdae3c5a9fc83d83f01c7cd674f2dbc8603dff310d3d61a73200bf50691a3ca9",
+      "problem_sha256": "f9749fe707f94932f816947ce8707acfb593c660c0bd62626bd83ebd6ba8030f"
+    },
+    {
+      "domain": "benchmarks-oo/rover-unit/domain.pddl",
+      "problem": "benchmarks-oo/rover-unit/pfile4.pddl",
+      "domain_sha256": "cdae3c5a9fc83d83f01c7cd674f2dbc8603dff310d3d61a73200bf50691a3ca9",
+      "problem_sha256": "e616be4430bc223787b7cabfbd757ff4a6c0d5777bea4bc83ceb203c7006dfb7"
+    },
+    {
+      "domain": "benchmarks-oo/rover-unit/domain.pddl",
+      "problem": "benchmarks-oo/rover-unit/pfile5.pddl",
+      "domain_sha256": "cdae3c5a9fc83d83f01c7cd674f2dbc8603dff310d3d61a73200bf50691a3ca9",
+      "problem_sha256": "222018477c72f8031b0130b157d69da8b0fe5d42759bc6f6124adc5c969ba33a"
+    },
+    {
+      "domain": "benchmarks-oo/rover-unit/domain.pddl",
+      "problem": "benchmarks-oo/rover-unit/pfile6.pddl",
+      "domain_sha256": "cdae3c5a9fc83d83f01c7cd674f2dbc8603dff310d3d61a73200bf50691a3ca9",
+      "problem_sha256": "31155dbe5cba5321ad0f1ff0672217f9073dbc5a4f7175aab5c865c211c7d10f"
+    },
+    {
+      "domain": "benchmarks-oo/rover-unit/domain.pddl",
+      "problem": "benchmarks-oo/rover-unit/pfile7.pddl",
+      "domain_sha256": "cdae3c5a9fc83d83f01c7cd674f2dbc8603dff310d3d61a73200bf50691a3ca9",
+      "problem_sha256": "74365933003d9c1e2b0fb527cc47807b1e034d5273257e572d9e893d2fc51e78"
+    },
+    {
+      "domain": "benchmarks-oo/rover-unit/domain.pddl",
+      "problem": "benchmarks-oo/rover-unit/pfile8.pddl",
+      "domain_sha256": "cdae3c5a9fc83d83f01c7cd674f2dbc8603dff310d3d61a73200bf50691a3ca9",
+      "problem_sha256": "e48fb957deda4fe42f41d611c2249521653e3329d331146bf83e4db1778e4248"
+    },
+    {
+      "domain": "benchmarks-oo/rover-unit/domain.pddl",
+      "problem": "benchmarks-oo/rover-unit/pfile9.pddl",
+      "domain_sha256": "cdae3c5a9fc83d83f01c7cd674f2dbc8603dff310d3d61a73200bf50691a3ca9",
+      "problem_sha256": "af2bc5ee0414480abc24fee52597e37b6169a684bd68f2515704e3245dc9837b"
+    },
+    {
+      "domain": "benchmarks-oo/sugar/domain.pddl",
+      "problem": "benchmarks-oo/sugar/pfile1.pddl",
+      "domain_sha256": "d6992019b6b29aa07786cfa05487b60e146f493cb3cd34ba0ca7c42dcb12077c",
+      "problem_sha256": "835ce14cf4b07f2838786b89a8c2c99ed88f1ffa6aee6ede810db54f2db0bef7"
+    },
+    {
+      "domain": "benchmarks-oo/sugar/domain.pddl",
+      "problem": "benchmarks-oo/sugar/pfile10.pddl",
+      "domain_sha256": "d6992019b6b29aa07786cfa05487b60e146f493cb3cd34ba0ca7c42dcb12077c",
+      "problem_sha256": "96c2ec0ad4c380a5b057918ea5f76b4798f88f11b554a652202eca098632de93"
+    },
+    {
+      "domain": "benchmarks-oo/sugar/domain.pddl",
+      "problem": "benchmarks-oo/sugar/pfile11.pddl",
+      "domain_sha256": "d6992019b6b29aa07786cfa05487b60e146f493cb3cd34ba0ca7c42dcb12077c",
+      "problem_sha256": "656dfe4df9da14416a65ac4ece49211ed7a879c9ad6c1067256a0a88a46db132"
+    },
+    {
+      "domain": "benchmarks-oo/sugar/domain.pddl",
+      "problem": "benchmarks-oo/sugar/pfile12.pddl",
+      "domain_sha256": "d6992019b6b29aa07786cfa05487b60e146f493cb3cd34ba0ca7c42dcb12077c",
+      "problem_sha256": "04cf492ed249750e36be3fe4b5bb98df81168b56f9a18ce70c33a94e92749972"
+    },
+    {
+      "domain": "benchmarks-oo/sugar/domain.pddl",
+      "problem": "benchmarks-oo/sugar/pfile13.pddl",
+      "domain_sha256": "d6992019b6b29aa07786cfa05487b60e146f493cb3cd34ba0ca7c42dcb12077c",
+      "problem_sha256": "21a704915a1cd58dbf2cf1d6ee3be134bb8de2c1b6c54cc6946e0c2db5b69a3a"
+    },
+    {
+      "domain": "benchmarks-oo/sugar/domain.pddl",
+      "problem": "benchmarks-oo/sugar/pfile14.pddl",
+      "domain_sha256": "d6992019b6b29aa07786cfa05487b60e146f493cb3cd34ba0ca7c42dcb12077c",
+      "problem_sha256": "b031178dbc864b44903022662fbfae6cc52093ae440868cd5afcd2e2b6971d2a"
+    },
+    {
+      "domain": "benchmarks-oo/sugar/domain.pddl",
+      "problem": "benchmarks-oo/sugar/pfile15.pddl",
+      "domain_sha256": "d6992019b6b29aa07786cfa05487b60e146f493cb3cd34ba0ca7c42dcb12077c",
+      "problem_sha256": "917a9cea5f9112a2bd8c40d1dc2280df569730f1149b953bbf03852b2c4ec3a4"
+    },
+    {
+      "domain": "benchmarks-oo/sugar/domain.pddl",
+      "problem": "benchmarks-oo/sugar/pfile16.pddl",
+      "domain_sha256": "d6992019b6b29aa07786cfa05487b60e146f493cb3cd34ba0ca7c42dcb12077c",
+      "problem_sha256": "5e3ee2e023ece46dc8620d21941c3bc15d097de7dc4cf2d64f575b7c3308a0ea"
+    },
+    {
+      "domain": "benchmarks-oo/sugar/domain.pddl",
+      "problem": "benchmarks-oo/sugar/pfile17.pddl",
+      "domain_sha256": "d6992019b6b29aa07786cfa05487b60e146f493cb3cd34ba0ca7c42dcb12077c",
+      "problem_sha256": "50cfbc4d0a8fbdadaaa9908938ef88b27857c1cc1a39e964cde3ecfff77029b6"
+    },
+    {
+      "domain": "benchmarks-oo/sugar/domain.pddl",
+      "problem": "benchmarks-oo/sugar/pfile18.pddl",
+      "domain_sha256": "d6992019b6b29aa07786cfa05487b60e146f493cb3cd34ba0ca7c42dcb12077c",
+      "problem_sha256": "7c8dad005ae48706de097282d420d6e9c52f008042edc92b6e9254db1f59b164"
+    },
+    {
+      "domain": "benchmarks-oo/sugar/domain.pddl",
+      "problem": "benchmarks-oo/sugar/pfile19.pddl",
+      "domain_sha256": "d6992019b6b29aa07786cfa05487b60e146f493cb3cd34ba0ca7c42dcb12077c",
+      "problem_sha256": "59f5d1affbcd3e9f52ec1ace838287e2fb71c26ca784294375ce89d8e6e2d40d"
+    },
+    {
+      "domain": "benchmarks-oo/sugar/domain.pddl",
+      "problem": "benchmarks-oo/sugar/pfile2.pddl",
+      "domain_sha256": "d6992019b6b29aa07786cfa05487b60e146f493cb3cd34ba0ca7c42dcb12077c",
+      "problem_sha256": "c47ed80a324cf561dc345f22f34f8eaa61eda1cc5362b1a35d35e63056cfc175"
+    },
+    {
+      "domain": "benchmarks-oo/sugar/domain.pddl",
+      "problem": "benchmarks-oo/sugar/pfile20.pddl",
+      "domain_sha256": "d6992019b6b29aa07786cfa05487b60e146f493cb3cd34ba0ca7c42dcb12077c",
+      "problem_sha256": "b986219b6233d4f98f5e46d9b3833b0519d3f279fffa51975dd62b3ea5270dd0"
+    },
+    {
+      "domain": "benchmarks-oo/sugar/domain.pddl",
+      "problem": "benchmarks-oo/sugar/pfile3.pddl",
+      "domain_sha256": "d6992019b6b29aa07786cfa05487b60e146f493cb3cd34ba0ca7c42dcb12077c",
+      "problem_sha256": "03e1c1894459210724c4c33733587c6bc2303e0db06906201e1211eae154a350"
+    },
+    {
+      "domain": "benchmarks-oo/sugar/domain.pddl",
+      "problem": "benchmarks-oo/sugar/pfile4.pddl",
+      "domain_sha256": "d6992019b6b29aa07786cfa05487b60e146f493cb3cd34ba0ca7c42dcb12077c",
+      "problem_sha256": "14c44e85daa99be15e4e39d028654d8efe400c88f0c5f8e34140557ffeca68c2"
+    },
+    {
+      "domain": "benchmarks-oo/sugar/domain.pddl",
+      "problem": "benchmarks-oo/sugar/pfile5.pddl",
+      "domain_sha256": "d6992019b6b29aa07786cfa05487b60e146f493cb3cd34ba0ca7c42dcb12077c",
+      "problem_sha256": "3a9fce9a2f681b5733cf5b4f93f6d978edd79f9e6076d33f3e2d8076b92df142"
+    },
+    {
+      "domain": "benchmarks-oo/sugar/domain.pddl",
+      "problem": "benchmarks-oo/sugar/pfile6.pddl",
+      "domain_sha256": "d6992019b6b29aa07786cfa05487b60e146f493cb3cd34ba0ca7c42dcb12077c",
+      "problem_sha256": "c78a8e73ee096afe64b7896c66a88ffd14383293fa1f211d3361b641b123c030"
+    },
+    {
+      "domain": "benchmarks-oo/sugar/domain.pddl",
+      "problem": "benchmarks-oo/sugar/pfile7.pddl",
+      "domain_sha256": "d6992019b6b29aa07786cfa05487b60e146f493cb3cd34ba0ca7c42dcb12077c",
+      "problem_sha256": "c57d544e533fb474166f7536f21ca4d09b9ff45869aaedbd093e5fcbcba49a76"
+    },
+    {
+      "domain": "benchmarks-oo/sugar/domain.pddl",
+      "problem": "benchmarks-oo/sugar/pfile8.pddl",
+      "domain_sha256": "d6992019b6b29aa07786cfa05487b60e146f493cb3cd34ba0ca7c42dcb12077c",
+      "problem_sha256": "42664f1164e08d2598678d6a67c36698ae552a9be8e99e36d5198ff80fc9b0c3"
+    },
+    {
+      "domain": "benchmarks-oo/sugar/domain.pddl",
+      "problem": "benchmarks-oo/sugar/pfile9.pddl",
+      "domain_sha256": "d6992019b6b29aa07786cfa05487b60e146f493cb3cd34ba0ca7c42dcb12077c",
+      "problem_sha256": "502cf161c093ddb80fde460f7d215f9673a4094f726d84c26e00867ccbd4131e"
+    },
+    {
+      "domain": "benchmarks-oo/delivery/domain.pddl",
+      "problem": "benchmarks-oo/delivery/pfile1.pddl",
+      "domain_sha256": "898542cc8c9818c2649b3421376b36ee0b37aa321a3b4e383287584265e400fe",
+      "problem_sha256": "e8fa0130f01cc793f50ea445ef6f1ed6dfeffc2a713d709e972e90df9cdd2934"
+    },
+    {
+      "domain": "benchmarks-oo/delivery/domain.pddl",
+      "problem": "benchmarks-oo/delivery/pfile10.pddl",
+      "domain_sha256": "898542cc8c9818c2649b3421376b36ee0b37aa321a3b4e383287584265e400fe",
+      "problem_sha256": "c63847be0e9978a8e6f731552096f748ad98302b37c23cc26adcb89c2a087735"
+    },
+    {
+      "domain": "benchmarks-oo/delivery/domain.pddl",
+      "problem": "benchmarks-oo/delivery/pfile11.pddl",
+      "domain_sha256": "898542cc8c9818c2649b3421376b36ee0b37aa321a3b4e383287584265e400fe",
+      "problem_sha256": "b69ed7544a3ee1c9db51f3f4ff92335e911e9629c9a22eb2ba3c202ddee37ce2"
+    },
+    {
+      "domain": "benchmarks-oo/delivery/domain.pddl",
+      "problem": "benchmarks-oo/delivery/pfile12.pddl",
+      "domain_sha256": "898542cc8c9818c2649b3421376b36ee0b37aa321a3b4e383287584265e400fe",
+      "problem_sha256": "0242d8df83c5a6f116947d0540f2f55cffed3a214dc9b19e1fb44795d91edd61"
+    },
+    {
+      "domain": "benchmarks-oo/delivery/domain.pddl",
+      "problem": "benchmarks-oo/delivery/pfile13.pddl",
+      "domain_sha256": "898542cc8c9818c2649b3421376b36ee0b37aa321a3b4e383287584265e400fe",
+      "problem_sha256": "1462aeca28346f170f4c698c5c30b2eb2cd059bfd186bdda1576d1d0fe35b534"
+    },
+    {
+      "domain": "benchmarks-oo/delivery/domain.pddl",
+      "problem": "benchmarks-oo/delivery/pfile14.pddl",
+      "domain_sha256": "898542cc8c9818c2649b3421376b36ee0b37aa321a3b4e383287584265e400fe",
+      "problem_sha256": "66f560b9104dc43db47c06628ecae21bae27a3d2010a9b9d77f8df2f49246ae3"
+    },
+    {
+      "domain": "benchmarks-oo/delivery/domain.pddl",
+      "problem": "benchmarks-oo/delivery/pfile15.pddl",
+      "domain_sha256": "898542cc8c9818c2649b3421376b36ee0b37aa321a3b4e383287584265e400fe",
+      "problem_sha256": "a60dfa340c82a6b4760073be67571a20f70f7d08f5279b8c6bbe4e99f29d65e3"
+    },
+    {
+      "domain": "benchmarks-oo/delivery/domain.pddl",
+      "problem": "benchmarks-oo/delivery/pfile16.pddl",
+      "domain_sha256": "898542cc8c9818c2649b3421376b36ee0b37aa321a3b4e383287584265e400fe",
+      "problem_sha256": "8c00cf937fc3b103bb83578353265201f026bc471cf7dc1ada64eb2d2ae64273"
+    },
+    {
+      "domain": "benchmarks-oo/delivery/domain.pddl",
+      "problem": "benchmarks-oo/delivery/pfile17.pddl",
+      "domain_sha256": "898542cc8c9818c2649b3421376b36ee0b37aa321a3b4e383287584265e400fe",
+      "problem_sha256": "47720ef44deafe1cbbac4626baf50d0e64a2cb4a00ab545da32b0c7095a63379"
+    },
+    {
+      "domain": "benchmarks-oo/delivery/domain.pddl",
+      "problem": "benchmarks-oo/delivery/pfile18.pddl",
+      "domain_sha256": "898542cc8c9818c2649b3421376b36ee0b37aa321a3b4e383287584265e400fe",
+      "problem_sha256": "d0aa96cb45ded0d61eaa73ef5b45085137fdf061acd98b340ecbfd5841c5901f"
+    },
+    {
+      "domain": "benchmarks-oo/delivery/domain.pddl",
+      "problem": "benchmarks-oo/delivery/pfile19.pddl",
+      "domain_sha256": "898542cc8c9818c2649b3421376b36ee0b37aa321a3b4e383287584265e400fe",
+      "problem_sha256": "9fc4fccb7cff5736a5cfa556f1a3f621ef0cd43656123e9bbd3ea6104307eff6"
+    },
+    {
+      "domain": "benchmarks-oo/delivery/domain.pddl",
+      "problem": "benchmarks-oo/delivery/pfile2.pddl",
+      "domain_sha256": "898542cc8c9818c2649b3421376b36ee0b37aa321a3b4e383287584265e400fe",
+      "problem_sha256": "a56f0b1e5487f753fa02e9530e3e26452727a5b0a7e7cfd8bbab90c0c52f925d"
+    },
+    {
+      "domain": "benchmarks-oo/delivery/domain.pddl",
+      "problem": "benchmarks-oo/delivery/pfile20.pddl",
+      "domain_sha256": "898542cc8c9818c2649b3421376b36ee0b37aa321a3b4e383287584265e400fe",
+      "problem_sha256": "5f38f561ac92f0dedd6b068f3960be3e809c5c69c1c81b0a677806846423c4d6"
+    },
+    {
+      "domain": "benchmarks-oo/delivery/domain.pddl",
+      "problem": "benchmarks-oo/delivery/pfile3.pddl",
+      "domain_sha256": "898542cc8c9818c2649b3421376b36ee0b37aa321a3b4e383287584265e400fe",
+      "problem_sha256": "d56603bc3efa7569962fa556c6f887c5ae5fdaa13b150b07a2d6e59bc0b5aae4"
+    },
+    {
+      "domain": "benchmarks-oo/delivery/domain.pddl",
+      "problem": "benchmarks-oo/delivery/pfile4.pddl",
+      "domain_sha256": "898542cc8c9818c2649b3421376b36ee0b37aa321a3b4e383287584265e400fe",
+      "problem_sha256": "af42e59d0a0d506ea1a95b1d38ae766ab8312eb3392f851200fe60b4bdf8df9a"
+    },
+    {
+      "domain": "benchmarks-oo/delivery/domain.pddl",
+      "problem": "benchmarks-oo/delivery/pfile5.pddl",
+      "domain_sha256": "898542cc8c9818c2649b3421376b36ee0b37aa321a3b4e383287584265e400fe",
+      "problem_sha256": "7c2667899ae11383d9afa5fdd69408f678a3450037629ecdac56051cd19e6844"
+    },
+    {
+      "domain": "benchmarks-oo/delivery/domain.pddl",
+      "problem": "benchmarks-oo/delivery/pfile6.pddl",
+      "domain_sha256": "898542cc8c9818c2649b3421376b36ee0b37aa321a3b4e383287584265e400fe",
+      "problem_sha256": "2f099b9b7f826ef55abb0ba1f39c01a4fcff09c87ef7b9f8f0ae64634ac71bbe"
+    },
+    {
+      "domain": "benchmarks-oo/delivery/domain.pddl",
+      "problem": "benchmarks-oo/delivery/pfile7.pddl",
+      "domain_sha256": "898542cc8c9818c2649b3421376b36ee0b37aa321a3b4e383287584265e400fe",
+      "problem_sha256": "b26e9fc3a3f525c38a016ae9d7e839870f4728781faf3b521adb48f59a587c8e"
+    },
+    {
+      "domain": "benchmarks-oo/delivery/domain.pddl",
+      "problem": "benchmarks-oo/delivery/pfile8.pddl",
+      "domain_sha256": "898542cc8c9818c2649b3421376b36ee0b37aa321a3b4e383287584265e400fe",
+      "problem_sha256": "5ea879a62a7ddf66384ef571f3ad31d500f0d0b06bae1f6f03b1a11e21cc8906"
+    },
+    {
+      "domain": "benchmarks-oo/delivery/domain.pddl",
+      "problem": "benchmarks-oo/delivery/pfile9.pddl",
+      "domain_sha256": "898542cc8c9818c2649b3421376b36ee0b37aa321a3b4e383287584265e400fe",
+      "problem_sha256": "e1d661990a78ca6e177aada8f8ddd2a6d59a848cf4c699aa3dbe8122aba9efe6"
+    },
+    {
+      "domain": "benchmarks-oo/ext-plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/ext-plant-watering/pfile1.pddl",
+      "domain_sha256": "6f4a6d6c2ac96d366405d5fac653d95924762873307b0f0c8cc8d85e77951b08",
+      "problem_sha256": "545d58ec419be510543904706d2d5d3b5df095a1e4cffcf7c18ce6c3e70b76d2"
+    },
+    {
+      "domain": "benchmarks-oo/ext-plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/ext-plant-watering/pfile10.pddl",
+      "domain_sha256": "6f4a6d6c2ac96d366405d5fac653d95924762873307b0f0c8cc8d85e77951b08",
+      "problem_sha256": "4d9346661f8e2f3647bd74d9b513da774c385e740b64509b0975aa063705ec08"
+    },
+    {
+      "domain": "benchmarks-oo/ext-plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/ext-plant-watering/pfile11.pddl",
+      "domain_sha256": "6f4a6d6c2ac96d366405d5fac653d95924762873307b0f0c8cc8d85e77951b08",
+      "problem_sha256": "ec0712def0a660c7fac5222c2acd4c5dce9c076e6ac28d19388ad2cf7bb4b037"
+    },
+    {
+      "domain": "benchmarks-oo/ext-plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/ext-plant-watering/pfile12.pddl",
+      "domain_sha256": "6f4a6d6c2ac96d366405d5fac653d95924762873307b0f0c8cc8d85e77951b08",
+      "problem_sha256": "83208fbd5f0dfdd3340cd2e6a2bdce4fc9284bbcd7aabb2efe1f6793b7a4a983"
+    },
+    {
+      "domain": "benchmarks-oo/ext-plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/ext-plant-watering/pfile13.pddl",
+      "domain_sha256": "6f4a6d6c2ac96d366405d5fac653d95924762873307b0f0c8cc8d85e77951b08",
+      "problem_sha256": "7d9293201b4a1858866f9e72bbba96ff4542b203d9c7e839c06c9b54daf30721"
+    },
+    {
+      "domain": "benchmarks-oo/ext-plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/ext-plant-watering/pfile14.pddl",
+      "domain_sha256": "6f4a6d6c2ac96d366405d5fac653d95924762873307b0f0c8cc8d85e77951b08",
+      "problem_sha256": "cdbfb8befad87948464c92088e083cb3e5632f66f742fae1d5f6c5f4369a4d14"
+    },
+    {
+      "domain": "benchmarks-oo/ext-plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/ext-plant-watering/pfile15.pddl",
+      "domain_sha256": "6f4a6d6c2ac96d366405d5fac653d95924762873307b0f0c8cc8d85e77951b08",
+      "problem_sha256": "79858a62272dc3ca1bbd31e68bdd958e637047c73668af527d913c8a399ecf0f"
+    },
+    {
+      "domain": "benchmarks-oo/ext-plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/ext-plant-watering/pfile16.pddl",
+      "domain_sha256": "6f4a6d6c2ac96d366405d5fac653d95924762873307b0f0c8cc8d85e77951b08",
+      "problem_sha256": "cfcc87f575d2355906dbd32257c31bf067afcdcd53b2d4ec45337a80c2cd84da"
+    },
+    {
+      "domain": "benchmarks-oo/ext-plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/ext-plant-watering/pfile17.pddl",
+      "domain_sha256": "6f4a6d6c2ac96d366405d5fac653d95924762873307b0f0c8cc8d85e77951b08",
+      "problem_sha256": "3c0421b65739e744960eef0a67d1798d93a5a6f60039684b8fd69de4edd194af"
+    },
+    {
+      "domain": "benchmarks-oo/ext-plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/ext-plant-watering/pfile18.pddl",
+      "domain_sha256": "6f4a6d6c2ac96d366405d5fac653d95924762873307b0f0c8cc8d85e77951b08",
+      "problem_sha256": "f271cd4f52efa1e1b436d339916e0813bc8130bd6824754dc7528a1f762e72be"
+    },
+    {
+      "domain": "benchmarks-oo/ext-plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/ext-plant-watering/pfile19.pddl",
+      "domain_sha256": "6f4a6d6c2ac96d366405d5fac653d95924762873307b0f0c8cc8d85e77951b08",
+      "problem_sha256": "f4bfec100392322b83f055ade48a76beecb7dae1fc9647003eebc05b578f8cd0"
+    },
+    {
+      "domain": "benchmarks-oo/ext-plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/ext-plant-watering/pfile2.pddl",
+      "domain_sha256": "6f4a6d6c2ac96d366405d5fac653d95924762873307b0f0c8cc8d85e77951b08",
+      "problem_sha256": "77a8f27d24aced9bef5c50911796053b64cc4cf5d1feee810cdef594debff195"
+    },
+    {
+      "domain": "benchmarks-oo/ext-plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/ext-plant-watering/pfile20.pddl",
+      "domain_sha256": "6f4a6d6c2ac96d366405d5fac653d95924762873307b0f0c8cc8d85e77951b08",
+      "problem_sha256": "217e12678b7e40fbac8d7f46cefa28ac65525611938c0bdc5f2949bf86ab1739"
+    },
+    {
+      "domain": "benchmarks-oo/ext-plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/ext-plant-watering/pfile3.pddl",
+      "domain_sha256": "6f4a6d6c2ac96d366405d5fac653d95924762873307b0f0c8cc8d85e77951b08",
+      "problem_sha256": "77a1a43e7eb1f93d386ddfa79c3f53205e7a542b025c1203a528ec7847c8b47b"
+    },
+    {
+      "domain": "benchmarks-oo/ext-plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/ext-plant-watering/pfile4.pddl",
+      "domain_sha256": "6f4a6d6c2ac96d366405d5fac653d95924762873307b0f0c8cc8d85e77951b08",
+      "problem_sha256": "ab0e8716fd9bc1515013d5aca5e5a414cc67112fcd754cca78ef033cfa4083aa"
+    },
+    {
+      "domain": "benchmarks-oo/ext-plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/ext-plant-watering/pfile5.pddl",
+      "domain_sha256": "6f4a6d6c2ac96d366405d5fac653d95924762873307b0f0c8cc8d85e77951b08",
+      "problem_sha256": "a80af38900c07498bbb2558ae94b797429850a7a7823b145e99c78dbe03cbc11"
+    },
+    {
+      "domain": "benchmarks-oo/ext-plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/ext-plant-watering/pfile6.pddl",
+      "domain_sha256": "6f4a6d6c2ac96d366405d5fac653d95924762873307b0f0c8cc8d85e77951b08",
+      "problem_sha256": "23ec9cf005d086ed1f4b8ad62c2397d23ad28d2847632c3834e26e4310b65c9a"
+    },
+    {
+      "domain": "benchmarks-oo/ext-plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/ext-plant-watering/pfile7.pddl",
+      "domain_sha256": "6f4a6d6c2ac96d366405d5fac653d95924762873307b0f0c8cc8d85e77951b08",
+      "problem_sha256": "25ab3edbf896995b511712104ecb6dc91c692a59437ba3111edf7a7eabbceefd"
+    },
+    {
+      "domain": "benchmarks-oo/ext-plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/ext-plant-watering/pfile8.pddl",
+      "domain_sha256": "6f4a6d6c2ac96d366405d5fac653d95924762873307b0f0c8cc8d85e77951b08",
+      "problem_sha256": "a6f17dde8affe1756e3087252ff392b75a1c550796d7960cff2ab1372f9d8ef5"
+    },
+    {
+      "domain": "benchmarks-oo/ext-plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/ext-plant-watering/pfile9.pddl",
+      "domain_sha256": "6f4a6d6c2ac96d366405d5fac653d95924762873307b0f0c8cc8d85e77951b08",
+      "problem_sha256": "3f2f922b69761fbabca0c1262d06b7ba2ceb5378e34f91326f0354b3326552ec"
+    },
+    {
+      "domain": "benchmarks-oo/pathwaysmetric/domain.pddl",
+      "problem": "benchmarks-oo/pathwaysmetric/pfile1.pddl",
+      "domain_sha256": "ece5b9a7bc28615fa2282332aad30fe25dd82fc46bbe7c8184b182d3d65b677e",
+      "problem_sha256": "4fa87fb9336c7e84a22011f21ed19f43d1f95d25742537af0eb2450a4d2f505d"
+    },
+    {
+      "domain": "benchmarks-oo/pathwaysmetric/domain.pddl",
+      "problem": "benchmarks-oo/pathwaysmetric/pfile10.pddl",
+      "domain_sha256": "ece5b9a7bc28615fa2282332aad30fe25dd82fc46bbe7c8184b182d3d65b677e",
+      "problem_sha256": "19cefa56bb0459c38266f3a4d46edec76d62a141baeef8678dce798766a022cb"
+    },
+    {
+      "domain": "benchmarks-oo/pathwaysmetric/domain.pddl",
+      "problem": "benchmarks-oo/pathwaysmetric/pfile11.pddl",
+      "domain_sha256": "ece5b9a7bc28615fa2282332aad30fe25dd82fc46bbe7c8184b182d3d65b677e",
+      "problem_sha256": "f4ed6a2a9e80bc938b7c1e300cdfe9cbdf765afff3aa133ac28f3f374c566b85"
+    },
+    {
+      "domain": "benchmarks-oo/pathwaysmetric/domain.pddl",
+      "problem": "benchmarks-oo/pathwaysmetric/pfile12.pddl",
+      "domain_sha256": "ece5b9a7bc28615fa2282332aad30fe25dd82fc46bbe7c8184b182d3d65b677e",
+      "problem_sha256": "2cad7fc9d9d8e2faddc6d8f671e733bab3342fee48020c6dc446233320d13f94"
+    },
+    {
+      "domain": "benchmarks-oo/pathwaysmetric/domain.pddl",
+      "problem": "benchmarks-oo/pathwaysmetric/pfile13.pddl",
+      "domain_sha256": "ece5b9a7bc28615fa2282332aad30fe25dd82fc46bbe7c8184b182d3d65b677e",
+      "problem_sha256": "a1d1ff4d680b9bdb314dca6f57642f092249ca96224fc7b89ed69b6094605489"
+    },
+    {
+      "domain": "benchmarks-oo/pathwaysmetric/domain.pddl",
+      "problem": "benchmarks-oo/pathwaysmetric/pfile14.pddl",
+      "domain_sha256": "ece5b9a7bc28615fa2282332aad30fe25dd82fc46bbe7c8184b182d3d65b677e",
+      "problem_sha256": "f3a5bfc00576535ceee5c72888542c99b17b3b5a3e35becafee74bff772765d6"
+    },
+    {
+      "domain": "benchmarks-oo/pathwaysmetric/domain.pddl",
+      "problem": "benchmarks-oo/pathwaysmetric/pfile15.pddl",
+      "domain_sha256": "ece5b9a7bc28615fa2282332aad30fe25dd82fc46bbe7c8184b182d3d65b677e",
+      "problem_sha256": "d7dafd4f3c7c93f24283813e50e3c6f1884c19670e32afaf31df5771a282a31a"
+    },
+    {
+      "domain": "benchmarks-oo/pathwaysmetric/domain.pddl",
+      "problem": "benchmarks-oo/pathwaysmetric/pfile16.pddl",
+      "domain_sha256": "ece5b9a7bc28615fa2282332aad30fe25dd82fc46bbe7c8184b182d3d65b677e",
+      "problem_sha256": "227cfe92249b828db54889c0ef6afa541e4ee8027f5371bfb49fdf636e4c2a9c"
+    },
+    {
+      "domain": "benchmarks-oo/pathwaysmetric/domain.pddl",
+      "problem": "benchmarks-oo/pathwaysmetric/pfile17.pddl",
+      "domain_sha256": "ece5b9a7bc28615fa2282332aad30fe25dd82fc46bbe7c8184b182d3d65b677e",
+      "problem_sha256": "6441f6755e82397a3adc8d92ff832e39ed91033631a982a6741c6765ba446ba9"
+    },
+    {
+      "domain": "benchmarks-oo/pathwaysmetric/domain.pddl",
+      "problem": "benchmarks-oo/pathwaysmetric/pfile18.pddl",
+      "domain_sha256": "ece5b9a7bc28615fa2282332aad30fe25dd82fc46bbe7c8184b182d3d65b677e",
+      "problem_sha256": "1084f13887a5700bfe8e35fc57bc7a37d5b4ba0a19588a6e618c9a016c014488"
+    },
+    {
+      "domain": "benchmarks-oo/pathwaysmetric/domain.pddl",
+      "problem": "benchmarks-oo/pathwaysmetric/pfile19.pddl",
+      "domain_sha256": "ece5b9a7bc28615fa2282332aad30fe25dd82fc46bbe7c8184b182d3d65b677e",
+      "problem_sha256": "42a269faf3df4ba3d83e5ed2467c54a39c08500a59c74dd4c1ba9e12684126a2"
+    },
+    {
+      "domain": "benchmarks-oo/pathwaysmetric/domain.pddl",
+      "problem": "benchmarks-oo/pathwaysmetric/pfile2.pddl",
+      "domain_sha256": "ece5b9a7bc28615fa2282332aad30fe25dd82fc46bbe7c8184b182d3d65b677e",
+      "problem_sha256": "011d46b203bd915ed8b54d78dfde6f132197b4b8c3bcc95a8f2beb52d52b8ecc"
+    },
+    {
+      "domain": "benchmarks-oo/pathwaysmetric/domain.pddl",
+      "problem": "benchmarks-oo/pathwaysmetric/pfile20.pddl",
+      "domain_sha256": "ece5b9a7bc28615fa2282332aad30fe25dd82fc46bbe7c8184b182d3d65b677e",
+      "problem_sha256": "bf124cb5a513bf94ae88d1707d6d77171505e008f79938d7453a570b5af65301"
+    },
+    {
+      "domain": "benchmarks-oo/pathwaysmetric/domain.pddl",
+      "problem": "benchmarks-oo/pathwaysmetric/pfile3.pddl",
+      "domain_sha256": "ece5b9a7bc28615fa2282332aad30fe25dd82fc46bbe7c8184b182d3d65b677e",
+      "problem_sha256": "106fce9a3a19e0ee740e8b580557cf3a2384dfcf4f7e5121ab757fceb96f5d74"
+    },
+    {
+      "domain": "benchmarks-oo/pathwaysmetric/domain.pddl",
+      "problem": "benchmarks-oo/pathwaysmetric/pfile4.pddl",
+      "domain_sha256": "ece5b9a7bc28615fa2282332aad30fe25dd82fc46bbe7c8184b182d3d65b677e",
+      "problem_sha256": "c33f64b8472737e2133ec8b8515078707e9820449379e11ffade636492aaec0e"
+    },
+    {
+      "domain": "benchmarks-oo/pathwaysmetric/domain.pddl",
+      "problem": "benchmarks-oo/pathwaysmetric/pfile5.pddl",
+      "domain_sha256": "ece5b9a7bc28615fa2282332aad30fe25dd82fc46bbe7c8184b182d3d65b677e",
+      "problem_sha256": "6202275351983eecfaabd2f45164dba88edaf35257527dfbb59c56db0e41aea8"
+    },
+    {
+      "domain": "benchmarks-oo/pathwaysmetric/domain.pddl",
+      "problem": "benchmarks-oo/pathwaysmetric/pfile6.pddl",
+      "domain_sha256": "ece5b9a7bc28615fa2282332aad30fe25dd82fc46bbe7c8184b182d3d65b677e",
+      "problem_sha256": "ad9528e4dc64009bb068b314a8957f49da279abfacf10f20693a0f017464bfc6"
+    },
+    {
+      "domain": "benchmarks-oo/pathwaysmetric/domain.pddl",
+      "problem": "benchmarks-oo/pathwaysmetric/pfile7.pddl",
+      "domain_sha256": "ece5b9a7bc28615fa2282332aad30fe25dd82fc46bbe7c8184b182d3d65b677e",
+      "problem_sha256": "cc5bcbfaff7c240cd93b7e9d75bfe52337ca8f672fa756631673ab263bedb9ee"
+    },
+    {
+      "domain": "benchmarks-oo/pathwaysmetric/domain.pddl",
+      "problem": "benchmarks-oo/pathwaysmetric/pfile8.pddl",
+      "domain_sha256": "ece5b9a7bc28615fa2282332aad30fe25dd82fc46bbe7c8184b182d3d65b677e",
+      "problem_sha256": "2fc6dcac66dfde1d68df036c8f09ec047c46e6e3dbf229b373c33e0a105a5882"
+    },
+    {
+      "domain": "benchmarks-oo/pathwaysmetric/domain.pddl",
+      "problem": "benchmarks-oo/pathwaysmetric/pfile9.pddl",
+      "domain_sha256": "ece5b9a7bc28615fa2282332aad30fe25dd82fc46bbe7c8184b182d3d65b677e",
+      "problem_sha256": "307006c2588878d1d2389b9b03001144614e71aafaeec31adf7517ee744db931"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel/pfile1.pddl",
+      "domain_sha256": "d2dc3a2214137224cf015b6f991165dbbdf6856c9e523a247eef70d47f92396c",
+      "problem_sha256": "32ef9161427781c4bee8766d5458b8a692b8273559b229c9dd7344ca207ce5e5"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel/pfile10.pddl",
+      "domain_sha256": "d2dc3a2214137224cf015b6f991165dbbdf6856c9e523a247eef70d47f92396c",
+      "problem_sha256": "4b4a79cd037a3d8d227657d2baa028165026abd13a76f2c01afed4cc38a70c9b"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel/pfile11.pddl",
+      "domain_sha256": "d2dc3a2214137224cf015b6f991165dbbdf6856c9e523a247eef70d47f92396c",
+      "problem_sha256": "567f1542bd56b5c777d7b97470ac0561bda2f71e6183e8b94d4394c662a12d1c"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel/pfile12.pddl",
+      "domain_sha256": "d2dc3a2214137224cf015b6f991165dbbdf6856c9e523a247eef70d47f92396c",
+      "problem_sha256": "94800fb656b7dc9483b5aeab03c8f4d3eaee6ae4e42228490f14fd9611786049"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel/pfile13.pddl",
+      "domain_sha256": "d2dc3a2214137224cf015b6f991165dbbdf6856c9e523a247eef70d47f92396c",
+      "problem_sha256": "eb617c2c1f4c76de18ff108dd7fa54afee7219a8b7db2331d5cf72d10fbdaefc"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel/pfile14.pddl",
+      "domain_sha256": "d2dc3a2214137224cf015b6f991165dbbdf6856c9e523a247eef70d47f92396c",
+      "problem_sha256": "28d853c94b499f0e59f90aaa08f80a325e96335a9d28034349e4c4eb4d1a3bb8"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel/pfile15.pddl",
+      "domain_sha256": "d2dc3a2214137224cf015b6f991165dbbdf6856c9e523a247eef70d47f92396c",
+      "problem_sha256": "2158628fcb69a338a3e8d89ff801613bfede37100497ffe7fa84dbe7c1df4836"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel/pfile16.pddl",
+      "domain_sha256": "d2dc3a2214137224cf015b6f991165dbbdf6856c9e523a247eef70d47f92396c",
+      "problem_sha256": "b4ece1ebd10f3f722aa8ead9c65fdc8c268f77a3501a7349d6b283f79327c995"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel/pfile17.pddl",
+      "domain_sha256": "d2dc3a2214137224cf015b6f991165dbbdf6856c9e523a247eef70d47f92396c",
+      "problem_sha256": "1eb2af9fd215cf72ae7b205eb5e1c620cdc1456713114804e97eb6683ae5c1fb"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel/pfile18.pddl",
+      "domain_sha256": "d2dc3a2214137224cf015b6f991165dbbdf6856c9e523a247eef70d47f92396c",
+      "problem_sha256": "241ba712beb8ea3213a76b69ba7e195b44b52bf289bebfa08075ce4c0074d56a"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel/pfile19.pddl",
+      "domain_sha256": "d2dc3a2214137224cf015b6f991165dbbdf6856c9e523a247eef70d47f92396c",
+      "problem_sha256": "93da6a77755b00ae08ab046e8b9f14167a8559fdab1a6bdcd8a8622174caf2e0"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel/pfile2.pddl",
+      "domain_sha256": "d2dc3a2214137224cf015b6f991165dbbdf6856c9e523a247eef70d47f92396c",
+      "problem_sha256": "35b9c5acfce48a3546e3c465c9958ce9bdc12920d929423a5c24b0558bf7e97a"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel/pfile20.pddl",
+      "domain_sha256": "d2dc3a2214137224cf015b6f991165dbbdf6856c9e523a247eef70d47f92396c",
+      "problem_sha256": "0919ea137dad7bad3fe6df2722a95f368acb0b591cd201c0c520cdd7f4693f32"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel/pfile21.pddl",
+      "domain_sha256": "d2dc3a2214137224cf015b6f991165dbbdf6856c9e523a247eef70d47f92396c",
+      "problem_sha256": "9e467c8c109dc19f9697f7198e8f0e9d9d96d9d4f957e2b2220c8b2ce3c7ddcb"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel/pfile22.pddl",
+      "domain_sha256": "d2dc3a2214137224cf015b6f991165dbbdf6856c9e523a247eef70d47f92396c",
+      "problem_sha256": "7cb1a2270ce16ac2267da1adb26c5761faea50abcaa0c7c15a6774d13f9774e5"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel/pfile23.pddl",
+      "domain_sha256": "d2dc3a2214137224cf015b6f991165dbbdf6856c9e523a247eef70d47f92396c",
+      "problem_sha256": "08caec24d627df5c267486920518d2c85b4b0b76c9238532ddf9e17d8dfb795f"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel/pfile3.pddl",
+      "domain_sha256": "d2dc3a2214137224cf015b6f991165dbbdf6856c9e523a247eef70d47f92396c",
+      "problem_sha256": "ea10c0788aee597599a4dfb1a5cf9a9e62e44a033cbc89036ed2c1459a904a81"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel/pfile4.pddl",
+      "domain_sha256": "d2dc3a2214137224cf015b6f991165dbbdf6856c9e523a247eef70d47f92396c",
+      "problem_sha256": "fc664b0d7837e49892e589222ded9a78fbf750772526ea894d980570e5758324"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel/pfile5.pddl",
+      "domain_sha256": "d2dc3a2214137224cf015b6f991165dbbdf6856c9e523a247eef70d47f92396c",
+      "problem_sha256": "2ec82bb6e991836a3914eaca90f3c4247cd0bab070a08814712d5c0e5cb19ecf"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel/pfile6.pddl",
+      "domain_sha256": "d2dc3a2214137224cf015b6f991165dbbdf6856c9e523a247eef70d47f92396c",
+      "problem_sha256": "8229ea848e74e99bcb95737407daefa07621de18e925e475ae60669d99679e66"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel/pfile7.pddl",
+      "domain_sha256": "d2dc3a2214137224cf015b6f991165dbbdf6856c9e523a247eef70d47f92396c",
+      "problem_sha256": "7d6634cc11642834e04670d5dd870e635d1dc03fc63030e9e2d72cb36c6d2743"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel/pfile8.pddl",
+      "domain_sha256": "d2dc3a2214137224cf015b6f991165dbbdf6856c9e523a247eef70d47f92396c",
+      "problem_sha256": "6dfaddd283cd1d66177f8de7a958324ad2d7227582d787800b7510eb3001ef6a"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel/pfile9.pddl",
+      "domain_sha256": "d2dc3a2214137224cf015b6f991165dbbdf6856c9e523a247eef70d47f92396c",
+      "problem_sha256": "6c31d6fdb501acb1cc1fee35815196ab215cb9d5b3164426e80ce4ae0ddea7ab"
+    },
+    {
+      "domain": "benchmarks-oo/depots/domain.pddl",
+      "problem": "benchmarks-oo/depots/pfile1.pddl",
+      "domain_sha256": "e4806a9ecf9d3687479343a5835d4bed676d68e3999aa30f8a6592391a5be08a",
+      "problem_sha256": "3737390cb4f90f810c91568f0e3e76ad59ee97e83a8c5fc7b7a0a49700fdcdad"
+    },
+    {
+      "domain": "benchmarks-oo/depots/domain.pddl",
+      "problem": "benchmarks-oo/depots/pfile10.pddl",
+      "domain_sha256": "e4806a9ecf9d3687479343a5835d4bed676d68e3999aa30f8a6592391a5be08a",
+      "problem_sha256": "921bead0ec30bf1bd9a160b77ea3b452bcbacf80bec480588d1972073ab5e043"
+    },
+    {
+      "domain": "benchmarks-oo/depots/domain.pddl",
+      "problem": "benchmarks-oo/depots/pfile11.pddl",
+      "domain_sha256": "e4806a9ecf9d3687479343a5835d4bed676d68e3999aa30f8a6592391a5be08a",
+      "problem_sha256": "b134e72d9af2d5e764dc2d372ba114b1be9cb6ad171690f8856b89fc375fc2d2"
+    },
+    {
+      "domain": "benchmarks-oo/depots/domain.pddl",
+      "problem": "benchmarks-oo/depots/pfile12.pddl",
+      "domain_sha256": "e4806a9ecf9d3687479343a5835d4bed676d68e3999aa30f8a6592391a5be08a",
+      "problem_sha256": "12c8d69594852a7387759bea6d28898e231c7ead80e0e61a6af835d7ca951c68"
+    },
+    {
+      "domain": "benchmarks-oo/depots/domain.pddl",
+      "problem": "benchmarks-oo/depots/pfile13.pddl",
+      "domain_sha256": "e4806a9ecf9d3687479343a5835d4bed676d68e3999aa30f8a6592391a5be08a",
+      "problem_sha256": "6dd5c483c5cb9c24b147d471882605d20018d61a812891bc438308b4926f07e7"
+    },
+    {
+      "domain": "benchmarks-oo/depots/domain.pddl",
+      "problem": "benchmarks-oo/depots/pfile14.pddl",
+      "domain_sha256": "e4806a9ecf9d3687479343a5835d4bed676d68e3999aa30f8a6592391a5be08a",
+      "problem_sha256": "b51aee68b1a8ee6cac3177a95309f13cd53fa6e5c5a662304bd0bf018f44c519"
+    },
+    {
+      "domain": "benchmarks-oo/depots/domain.pddl",
+      "problem": "benchmarks-oo/depots/pfile15.pddl",
+      "domain_sha256": "e4806a9ecf9d3687479343a5835d4bed676d68e3999aa30f8a6592391a5be08a",
+      "problem_sha256": "5e760708858c08964cb158449b774e7117a14ef734a61137cd10407f4b945929"
+    },
+    {
+      "domain": "benchmarks-oo/depots/domain.pddl",
+      "problem": "benchmarks-oo/depots/pfile16.pddl",
+      "domain_sha256": "e4806a9ecf9d3687479343a5835d4bed676d68e3999aa30f8a6592391a5be08a",
+      "problem_sha256": "90b65c00f2938d87a17e1882c189d8dcddf1312a34df614f5bec889c56e2bf40"
+    },
+    {
+      "domain": "benchmarks-oo/depots/domain.pddl",
+      "problem": "benchmarks-oo/depots/pfile17.pddl",
+      "domain_sha256": "e4806a9ecf9d3687479343a5835d4bed676d68e3999aa30f8a6592391a5be08a",
+      "problem_sha256": "ac2a94fd484cbd3fd6704d3511966a6b280479cd0fa762171d433595b5979dc3"
+    },
+    {
+      "domain": "benchmarks-oo/depots/domain.pddl",
+      "problem": "benchmarks-oo/depots/pfile18.pddl",
+      "domain_sha256": "e4806a9ecf9d3687479343a5835d4bed676d68e3999aa30f8a6592391a5be08a",
+      "problem_sha256": "b3cc61a74ae006928ca413dcece75c22c2ef55004a59160933b40d90f6541478"
+    },
+    {
+      "domain": "benchmarks-oo/depots/domain.pddl",
+      "problem": "benchmarks-oo/depots/pfile19.pddl",
+      "domain_sha256": "e4806a9ecf9d3687479343a5835d4bed676d68e3999aa30f8a6592391a5be08a",
+      "problem_sha256": "35b9686e8df5c23615ce780ab28c29398fde811ec8fc1b938234ba3254ebc05b"
+    },
+    {
+      "domain": "benchmarks-oo/depots/domain.pddl",
+      "problem": "benchmarks-oo/depots/pfile2.pddl",
+      "domain_sha256": "e4806a9ecf9d3687479343a5835d4bed676d68e3999aa30f8a6592391a5be08a",
+      "problem_sha256": "891f6a17e2263aa0a158c059bf46a5c8e765b6fb62add6691e7d8628480fedc0"
+    },
+    {
+      "domain": "benchmarks-oo/depots/domain.pddl",
+      "problem": "benchmarks-oo/depots/pfile20.pddl",
+      "domain_sha256": "e4806a9ecf9d3687479343a5835d4bed676d68e3999aa30f8a6592391a5be08a",
+      "problem_sha256": "5828abd7f829fd73e10a130f33d45b04ae4003cbf8da824abb889c2cc7e2e89b"
+    },
+    {
+      "domain": "benchmarks-oo/depots/domain.pddl",
+      "problem": "benchmarks-oo/depots/pfile3.pddl",
+      "domain_sha256": "e4806a9ecf9d3687479343a5835d4bed676d68e3999aa30f8a6592391a5be08a",
+      "problem_sha256": "341002f6efbe1702eff4133357a5d69a077a0122eff15a01788106d1e5c2146d"
+    },
+    {
+      "domain": "benchmarks-oo/depots/domain.pddl",
+      "problem": "benchmarks-oo/depots/pfile4.pddl",
+      "domain_sha256": "e4806a9ecf9d3687479343a5835d4bed676d68e3999aa30f8a6592391a5be08a",
+      "problem_sha256": "42f2ebfbaf1cf1b34b3f909a73a4ed034ac09a7ed090707cd07d672a433b48ab"
+    },
+    {
+      "domain": "benchmarks-oo/depots/domain.pddl",
+      "problem": "benchmarks-oo/depots/pfile5.pddl",
+      "domain_sha256": "e4806a9ecf9d3687479343a5835d4bed676d68e3999aa30f8a6592391a5be08a",
+      "problem_sha256": "a51f9e4bd5b5ae55864697f738784d8d9f2be1fca14d638640e73d4281768f92"
+    },
+    {
+      "domain": "benchmarks-oo/depots/domain.pddl",
+      "problem": "benchmarks-oo/depots/pfile6.pddl",
+      "domain_sha256": "e4806a9ecf9d3687479343a5835d4bed676d68e3999aa30f8a6592391a5be08a",
+      "problem_sha256": "3617a7e7ed331dd40b0156535080b800f1efac14841c55fcca27d26575068c36"
+    },
+    {
+      "domain": "benchmarks-oo/depots/domain.pddl",
+      "problem": "benchmarks-oo/depots/pfile7.pddl",
+      "domain_sha256": "e4806a9ecf9d3687479343a5835d4bed676d68e3999aa30f8a6592391a5be08a",
+      "problem_sha256": "337944d009f2f2ab60869f8333ddfe889f61b3bbf0be59fe314a231cbeba0cb8"
+    },
+    {
+      "domain": "benchmarks-oo/depots/domain.pddl",
+      "problem": "benchmarks-oo/depots/pfile8.pddl",
+      "domain_sha256": "e4806a9ecf9d3687479343a5835d4bed676d68e3999aa30f8a6592391a5be08a",
+      "problem_sha256": "1ecfdc0cf62628f41f08d27f1cf23b5a2378f74e4f25f098fe444b69ea6ac0fa"
+    },
+    {
+      "domain": "benchmarks-oo/depots/domain.pddl",
+      "problem": "benchmarks-oo/depots/pfile9.pddl",
+      "domain_sha256": "e4806a9ecf9d3687479343a5835d4bed676d68e3999aa30f8a6592391a5be08a",
+      "problem_sha256": "863bd3c1afb1e919ecdc1a22929bf245122181c2ca97f98eece6937278025605"
+    },
+    {
+      "domain": "benchmarks-oo/petri-net/domain.pddl",
+      "problem": "benchmarks-oo/petri-net/prob06-1.pddl",
+      "domain_sha256": "1d5555c85f2d62ad603377ab6c607e0bca245330fcfc994eded6325a78848267",
+      "problem_sha256": "47542c5b1583ea4bbf739fda1df832e76b6174d181106583206a4a74eb042da4"
+    },
+    {
+      "domain": "benchmarks-oo/petri-net/domain.pddl",
+      "problem": "benchmarks-oo/petri-net/prob06-2.pddl",
+      "domain_sha256": "1d5555c85f2d62ad603377ab6c607e0bca245330fcfc994eded6325a78848267",
+      "problem_sha256": "5167e78e2451d47804b3328a612272112fb9d2e6c951dcd8403e450f592fb078"
+    },
+    {
+      "domain": "benchmarks-oo/petri-net/domain.pddl",
+      "problem": "benchmarks-oo/petri-net/prob06-3.pddl",
+      "domain_sha256": "1d5555c85f2d62ad603377ab6c607e0bca245330fcfc994eded6325a78848267",
+      "problem_sha256": "c1f6d0d66c953c3d13d193a3474bec7f187d295bc6edb4eba32d0f1edfeb649b"
+    },
+    {
+      "domain": "benchmarks-oo/petri-net/domain.pddl",
+      "problem": "benchmarks-oo/petri-net/prob06-4.pddl",
+      "domain_sha256": "1d5555c85f2d62ad603377ab6c607e0bca245330fcfc994eded6325a78848267",
+      "problem_sha256": "1a430898280d3275e8ae65cb4f88195a615f1d6a52f445a6fd1a383a433ce29b"
+    },
+    {
+      "domain": "benchmarks-oo/petri-net/domain.pddl",
+      "problem": "benchmarks-oo/petri-net/prob07-1.pddl",
+      "domain_sha256": "1d5555c85f2d62ad603377ab6c607e0bca245330fcfc994eded6325a78848267",
+      "problem_sha256": "ede4b84f79a7206a7a3eb4b8d912f8d14542905d4dbc10ff45399dd048a16830"
+    },
+    {
+      "domain": "benchmarks-oo/petri-net/domain.pddl",
+      "problem": "benchmarks-oo/petri-net/prob07-2.pddl",
+      "domain_sha256": "1d5555c85f2d62ad603377ab6c607e0bca245330fcfc994eded6325a78848267",
+      "problem_sha256": "d8977082065887473dd782cf451e856cd6fc681cbf0d68d6b37db708d7c116ed"
+    },
+    {
+      "domain": "benchmarks-oo/petri-net/domain.pddl",
+      "problem": "benchmarks-oo/petri-net/prob07-3.pddl",
+      "domain_sha256": "1d5555c85f2d62ad603377ab6c607e0bca245330fcfc994eded6325a78848267",
+      "problem_sha256": "98ea668a01e15321522577ac39b67a2f297c1891ba6850ae88a8f034c6afd54e"
+    },
+    {
+      "domain": "benchmarks-oo/petri-net/domain.pddl",
+      "problem": "benchmarks-oo/petri-net/prob07-4.pddl",
+      "domain_sha256": "1d5555c85f2d62ad603377ab6c607e0bca245330fcfc994eded6325a78848267",
+      "problem_sha256": "c3db54b1fe3827bdec92a7098be5179061db206422d4bcf7a1ef992441c08172"
+    },
+    {
+      "domain": "benchmarks-oo/petri-net/domain.pddl",
+      "problem": "benchmarks-oo/petri-net/prob08-1.pddl",
+      "domain_sha256": "1d5555c85f2d62ad603377ab6c607e0bca245330fcfc994eded6325a78848267",
+      "problem_sha256": "e2a2472bf30dcbc88006e2f7ec06b8deb9132c8337f2bcb44bb924dcbd612c40"
+    },
+    {
+      "domain": "benchmarks-oo/petri-net/domain.pddl",
+      "problem": "benchmarks-oo/petri-net/prob08-2.pddl",
+      "domain_sha256": "1d5555c85f2d62ad603377ab6c607e0bca245330fcfc994eded6325a78848267",
+      "problem_sha256": "fce31aeb2334c04a215d41d1c4786b33d39fd4bf7560dded42b7a167e6581f8c"
+    },
+    {
+      "domain": "benchmarks-oo/petri-net/domain.pddl",
+      "problem": "benchmarks-oo/petri-net/prob08-3.pddl",
+      "domain_sha256": "1d5555c85f2d62ad603377ab6c607e0bca245330fcfc994eded6325a78848267",
+      "problem_sha256": "a205416f0dde5364673613e899f00c199caa6ef6658e7b746e83630646116dc5"
+    },
+    {
+      "domain": "benchmarks-oo/petri-net/domain.pddl",
+      "problem": "benchmarks-oo/petri-net/prob08-4.pddl",
+      "domain_sha256": "1d5555c85f2d62ad603377ab6c607e0bca245330fcfc994eded6325a78848267",
+      "problem_sha256": "b85985c91e6d94f04c4b6f1180d8ccab75b098573c62328357ab4e1dde934f0a"
+    },
+    {
+      "domain": "benchmarks-oo/petri-net/domain.pddl",
+      "problem": "benchmarks-oo/petri-net/prob09-1.pddl",
+      "domain_sha256": "1d5555c85f2d62ad603377ab6c607e0bca245330fcfc994eded6325a78848267",
+      "problem_sha256": "8ac8e500e82d97e5098ab8ee918a191d3ff7e2895edc1ee7c8c1669b7032a0f3"
+    },
+    {
+      "domain": "benchmarks-oo/petri-net/domain.pddl",
+      "problem": "benchmarks-oo/petri-net/prob09-2.pddl",
+      "domain_sha256": "1d5555c85f2d62ad603377ab6c607e0bca245330fcfc994eded6325a78848267",
+      "problem_sha256": "f32e1fa3215e90ca7034798aaa9108a50b5906bdd0e6463e37a55085c59826e7"
+    },
+    {
+      "domain": "benchmarks-oo/petri-net/domain.pddl",
+      "problem": "benchmarks-oo/petri-net/prob09-3.pddl",
+      "domain_sha256": "1d5555c85f2d62ad603377ab6c607e0bca245330fcfc994eded6325a78848267",
+      "problem_sha256": "5c09051302016d744f810b5dd72207534df3ecacbb2acf6b18d3d4dde8e0f0b4"
+    },
+    {
+      "domain": "benchmarks-oo/petri-net/domain.pddl",
+      "problem": "benchmarks-oo/petri-net/prob09-4.pddl",
+      "domain_sha256": "1d5555c85f2d62ad603377ab6c607e0bca245330fcfc994eded6325a78848267",
+      "problem_sha256": "821d6767a7bf5c6f3b98ab13d8f75768efa1a2c72b283fdc23923932af4b4efe"
+    },
+    {
+      "domain": "benchmarks-oo/petri-net/domain.pddl",
+      "problem": "benchmarks-oo/petri-net/prob10-1.pddl",
+      "domain_sha256": "1d5555c85f2d62ad603377ab6c607e0bca245330fcfc994eded6325a78848267",
+      "problem_sha256": "d3a3054dc6e532ac1983034f38edd2cf4d8666cddb1231ab84d2275fa0d64b70"
+    },
+    {
+      "domain": "benchmarks-oo/petri-net/domain.pddl",
+      "problem": "benchmarks-oo/petri-net/prob10-2.pddl",
+      "domain_sha256": "1d5555c85f2d62ad603377ab6c607e0bca245330fcfc994eded6325a78848267",
+      "problem_sha256": "426930c7e72b7934a36f183b642e3491eca4ab6930d1d44372a5ef63fde8ec5c"
+    },
+    {
+      "domain": "benchmarks-oo/petri-net/domain.pddl",
+      "problem": "benchmarks-oo/petri-net/prob10-3.pddl",
+      "domain_sha256": "1d5555c85f2d62ad603377ab6c607e0bca245330fcfc994eded6325a78848267",
+      "problem_sha256": "5800dea22a110745c411daa9919c206c5816f28d139c64e92a448ce6079bd92f"
+    },
+    {
+      "domain": "benchmarks-oo/petri-net/domain.pddl",
+      "problem": "benchmarks-oo/petri-net/prob10-4.pddl",
+      "domain_sha256": "1d5555c85f2d62ad603377ab6c607e0bca245330fcfc994eded6325a78848267",
+      "problem_sha256": "0dadf7e3922c0d73294492c0816e0e25749956a6c7a992e221e4c83475d68e1b"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel-ipc23/pfile1.pddl",
+      "domain_sha256": "643fa689c6dbfdd840167e0021ea6c7ad362c54488f3675b858550bddd25d9fe",
+      "problem_sha256": "daa230fc8ab58675684b7e6599f2f00ebf353158c89abc7449f4f75942a9f9e6"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel-ipc23/pfile10.pddl",
+      "domain_sha256": "643fa689c6dbfdd840167e0021ea6c7ad362c54488f3675b858550bddd25d9fe",
+      "problem_sha256": "f1763222716dd81e1bc147423a98fc0035258a443dbb3766c6108d8639f6795f"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel-ipc23/pfile11.pddl",
+      "domain_sha256": "643fa689c6dbfdd840167e0021ea6c7ad362c54488f3675b858550bddd25d9fe",
+      "problem_sha256": "73cf3ebf735e6b34cb1534670c86317b7e106719f6fe3c26a15b11ad94ec4535"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel-ipc23/pfile12.pddl",
+      "domain_sha256": "643fa689c6dbfdd840167e0021ea6c7ad362c54488f3675b858550bddd25d9fe",
+      "problem_sha256": "1f92767f06dcc9242f03dda143bf824a3e75ca4c03f0952066665c131141ecfc"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel-ipc23/pfile13.pddl",
+      "domain_sha256": "643fa689c6dbfdd840167e0021ea6c7ad362c54488f3675b858550bddd25d9fe",
+      "problem_sha256": "1876d7a4e3b0ea243833a75522f43a6e0ec938e22709ac849f7e006ad72229ed"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel-ipc23/pfile14.pddl",
+      "domain_sha256": "643fa689c6dbfdd840167e0021ea6c7ad362c54488f3675b858550bddd25d9fe",
+      "problem_sha256": "c9e4b2fe0206173764d21c20a5ac99b85a260d7cefee8a1d4138424fbd1cf91d"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel-ipc23/pfile15.pddl",
+      "domain_sha256": "643fa689c6dbfdd840167e0021ea6c7ad362c54488f3675b858550bddd25d9fe",
+      "problem_sha256": "6026b8c44448c1a5ba76efae390f526a34cf61d7ed25fd9b4064b660f314433b"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel-ipc23/pfile16.pddl",
+      "domain_sha256": "643fa689c6dbfdd840167e0021ea6c7ad362c54488f3675b858550bddd25d9fe",
+      "problem_sha256": "96153daa09a7a0605513961633a40ca349f14e73bc7330d576f32fbebda0a950"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel-ipc23/pfile17.pddl",
+      "domain_sha256": "643fa689c6dbfdd840167e0021ea6c7ad362c54488f3675b858550bddd25d9fe",
+      "problem_sha256": "ed29d1f2a44fb8a1e862c3da3a21de169461d260d8c551252bc60ca9ae6c1337"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel-ipc23/pfile18.pddl",
+      "domain_sha256": "643fa689c6dbfdd840167e0021ea6c7ad362c54488f3675b858550bddd25d9fe",
+      "problem_sha256": "ae694f4328aba482dd8c6fb1a9f56f88e674cead2eb7aa61d102df9ce00080a5"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel-ipc23/pfile19.pddl",
+      "domain_sha256": "643fa689c6dbfdd840167e0021ea6c7ad362c54488f3675b858550bddd25d9fe",
+      "problem_sha256": "8dabb0c0dbabf93a11c06e43e96cbdfa8045f1e687a2ee5fd04b20a4fe585a30"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel-ipc23/pfile2.pddl",
+      "domain_sha256": "643fa689c6dbfdd840167e0021ea6c7ad362c54488f3675b858550bddd25d9fe",
+      "problem_sha256": "325015616098a2a29bd173c9ec6a51e055c6f87a0dd2ecc992adc1414dcf49ec"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel-ipc23/pfile20.pddl",
+      "domain_sha256": "643fa689c6dbfdd840167e0021ea6c7ad362c54488f3675b858550bddd25d9fe",
+      "problem_sha256": "5fbf9b93ee08b6e48322999b3a2dca5b7a09d6cf04216d9a55a4796f1eef08e7"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel-ipc23/pfile3.pddl",
+      "domain_sha256": "643fa689c6dbfdd840167e0021ea6c7ad362c54488f3675b858550bddd25d9fe",
+      "problem_sha256": "45155b815bb60d7cb539f5b14746052a83b94be9245250bf6629c44d9f7c1a4f"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel-ipc23/pfile4.pddl",
+      "domain_sha256": "643fa689c6dbfdd840167e0021ea6c7ad362c54488f3675b858550bddd25d9fe",
+      "problem_sha256": "2ae9094d615bdc7032ff75108226f2623bae4d7acde8bb64a47519f2e7fc98ee"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel-ipc23/pfile5.pddl",
+      "domain_sha256": "643fa689c6dbfdd840167e0021ea6c7ad362c54488f3675b858550bddd25d9fe",
+      "problem_sha256": "8b7cb7b0e3ae238006dc8e1bd6fdc9e7b83923e2fd7af577ac40169e7dab12d4"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel-ipc23/pfile6.pddl",
+      "domain_sha256": "643fa689c6dbfdd840167e0021ea6c7ad362c54488f3675b858550bddd25d9fe",
+      "problem_sha256": "16e28b999a81536e74cfdbef38eef68ac4c0bb4b6cabd4fc40b3dc504a544f70"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel-ipc23/pfile7.pddl",
+      "domain_sha256": "643fa689c6dbfdd840167e0021ea6c7ad362c54488f3675b858550bddd25d9fe",
+      "problem_sha256": "7bfe527c864a81206bd712623b839b2ebc49032abd1e67aea9d9506aeaf98ba6"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel-ipc23/pfile8.pddl",
+      "domain_sha256": "643fa689c6dbfdd840167e0021ea6c7ad362c54488f3675b858550bddd25d9fe",
+      "problem_sha256": "7d0b7697dfdbf6137c49ce3ec4201fc3d5d6e218934479331ccc55db748144c7"
+    },
+    {
+      "domain": "benchmarks-oo/zenotravel-ipc23/domain.pddl",
+      "problem": "benchmarks-oo/zenotravel-ipc23/pfile9.pddl",
+      "domain_sha256": "643fa689c6dbfdd840167e0021ea6c7ad362c54488f3675b858550bddd25d9fe",
+      "problem_sha256": "69f1e1638b2b91c465d66c2eaa85f29f057a4da265adc4c20c3322ce6ac6e931"
+    },
+    {
+      "domain": "benchmarks-oo/depots-sym/domain.pddl",
+      "problem": "benchmarks-oo/depots-sym/pfile1.pddl",
+      "domain_sha256": "824614901ec67f56a6df754a6a26bfeececf380253e4f70a9c0b29c1b0c51d2b",
+      "problem_sha256": "94662c13382cb5df7913129d27ac31e0bd06aa18879885c6575369aa1959743d"
+    },
+    {
+      "domain": "benchmarks-oo/depots-sym/domain.pddl",
+      "problem": "benchmarks-oo/depots-sym/pfile10.pddl",
+      "domain_sha256": "824614901ec67f56a6df754a6a26bfeececf380253e4f70a9c0b29c1b0c51d2b",
+      "problem_sha256": "e33d41b55f393b67c67891e9a83258e3d8a6d8dc6b2933e9fe4984f96e47e18f"
+    },
+    {
+      "domain": "benchmarks-oo/depots-sym/domain.pddl",
+      "problem": "benchmarks-oo/depots-sym/pfile11.pddl",
+      "domain_sha256": "824614901ec67f56a6df754a6a26bfeececf380253e4f70a9c0b29c1b0c51d2b",
+      "problem_sha256": "5e64a5b4d102fbe47310bcca078e144430b113d09a71117d5e9bf71bf7e51efe"
+    },
+    {
+      "domain": "benchmarks-oo/depots-sym/domain.pddl",
+      "problem": "benchmarks-oo/depots-sym/pfile12.pddl",
+      "domain_sha256": "824614901ec67f56a6df754a6a26bfeececf380253e4f70a9c0b29c1b0c51d2b",
+      "problem_sha256": "389cb14835ab8c6d4248b2526488ea841c79598da4739bfbc45307b1c4b20b60"
+    },
+    {
+      "domain": "benchmarks-oo/depots-sym/domain.pddl",
+      "problem": "benchmarks-oo/depots-sym/pfile13.pddl",
+      "domain_sha256": "824614901ec67f56a6df754a6a26bfeececf380253e4f70a9c0b29c1b0c51d2b",
+      "problem_sha256": "a516b119c98b938eebbba920083be102e051b40788a9df40af37e51833de3962"
+    },
+    {
+      "domain": "benchmarks-oo/depots-sym/domain.pddl",
+      "problem": "benchmarks-oo/depots-sym/pfile14.pddl",
+      "domain_sha256": "824614901ec67f56a6df754a6a26bfeececf380253e4f70a9c0b29c1b0c51d2b",
+      "problem_sha256": "490f15f2a7f25c5468e9b898c17c82386e40b6b47c2666afecdc914636cca9ad"
+    },
+    {
+      "domain": "benchmarks-oo/depots-sym/domain.pddl",
+      "problem": "benchmarks-oo/depots-sym/pfile15.pddl",
+      "domain_sha256": "824614901ec67f56a6df754a6a26bfeececf380253e4f70a9c0b29c1b0c51d2b",
+      "problem_sha256": "2a85a31cc18c715187b1a11b4cd65115d29b4a5a0d6da7f37243fbdf7daaf5d8"
+    },
+    {
+      "domain": "benchmarks-oo/depots-sym/domain.pddl",
+      "problem": "benchmarks-oo/depots-sym/pfile16.pddl",
+      "domain_sha256": "824614901ec67f56a6df754a6a26bfeececf380253e4f70a9c0b29c1b0c51d2b",
+      "problem_sha256": "529f74341d7e6abdf63d5cdf4799263f157a7697a2611be320d839130f3241bd"
+    },
+    {
+      "domain": "benchmarks-oo/depots-sym/domain.pddl",
+      "problem": "benchmarks-oo/depots-sym/pfile17.pddl",
+      "domain_sha256": "824614901ec67f56a6df754a6a26bfeececf380253e4f70a9c0b29c1b0c51d2b",
+      "problem_sha256": "861462cf64ea98ea5a47301bebeb6c6239e18bf10151be6338091aa6f5ab112b"
+    },
+    {
+      "domain": "benchmarks-oo/depots-sym/domain.pddl",
+      "problem": "benchmarks-oo/depots-sym/pfile18.pddl",
+      "domain_sha256": "824614901ec67f56a6df754a6a26bfeececf380253e4f70a9c0b29c1b0c51d2b",
+      "problem_sha256": "3f43dcd302f709a4cd711de56ae51b75f22c00e1f5691aca213e6e0ca4dc22b0"
+    },
+    {
+      "domain": "benchmarks-oo/depots-sym/domain.pddl",
+      "problem": "benchmarks-oo/depots-sym/pfile19.pddl",
+      "domain_sha256": "824614901ec67f56a6df754a6a26bfeececf380253e4f70a9c0b29c1b0c51d2b",
+      "problem_sha256": "c61203e1dde69c0ce788ad8100c620a4110554adcfe76f538a1f9807b17080fe"
+    },
+    {
+      "domain": "benchmarks-oo/depots-sym/domain.pddl",
+      "problem": "benchmarks-oo/depots-sym/pfile2.pddl",
+      "domain_sha256": "824614901ec67f56a6df754a6a26bfeececf380253e4f70a9c0b29c1b0c51d2b",
+      "problem_sha256": "6ce248b595685d98b588928d525a71214e3793333cc203d15f46badb90bf6fc5"
+    },
+    {
+      "domain": "benchmarks-oo/depots-sym/domain.pddl",
+      "problem": "benchmarks-oo/depots-sym/pfile20.pddl",
+      "domain_sha256": "824614901ec67f56a6df754a6a26bfeececf380253e4f70a9c0b29c1b0c51d2b",
+      "problem_sha256": "8a1d29eda5a542c1868d189490e8560ab6908542ddb2e8cbcf00203cfa5ceea7"
+    },
+    {
+      "domain": "benchmarks-oo/depots-sym/domain.pddl",
+      "problem": "benchmarks-oo/depots-sym/pfile3.pddl",
+      "domain_sha256": "824614901ec67f56a6df754a6a26bfeececf380253e4f70a9c0b29c1b0c51d2b",
+      "problem_sha256": "3034468c1261fbbdfa4c584da2db72033f5ff7b1906af37239200323ae6a42d5"
+    },
+    {
+      "domain": "benchmarks-oo/depots-sym/domain.pddl",
+      "problem": "benchmarks-oo/depots-sym/pfile4.pddl",
+      "domain_sha256": "824614901ec67f56a6df754a6a26bfeececf380253e4f70a9c0b29c1b0c51d2b",
+      "problem_sha256": "8fd10aa46ae82ad617a9bea860cdce8d9bc6d264bdfbd5cf104e43621610087d"
+    },
+    {
+      "domain": "benchmarks-oo/depots-sym/domain.pddl",
+      "problem": "benchmarks-oo/depots-sym/pfile5.pddl",
+      "domain_sha256": "824614901ec67f56a6df754a6a26bfeececf380253e4f70a9c0b29c1b0c51d2b",
+      "problem_sha256": "28893877a7a1df2d4ce2bcbfb5000daad2c0ac4b5b46756f1330e2195c072317"
+    },
+    {
+      "domain": "benchmarks-oo/depots-sym/domain.pddl",
+      "problem": "benchmarks-oo/depots-sym/pfile6.pddl",
+      "domain_sha256": "824614901ec67f56a6df754a6a26bfeececf380253e4f70a9c0b29c1b0c51d2b",
+      "problem_sha256": "c244a12ebbb29e8f3c4ece468947eceb6452da46873c85116138dec01a75fc0f"
+    },
+    {
+      "domain": "benchmarks-oo/depots-sym/domain.pddl",
+      "problem": "benchmarks-oo/depots-sym/pfile7.pddl",
+      "domain_sha256": "824614901ec67f56a6df754a6a26bfeececf380253e4f70a9c0b29c1b0c51d2b",
+      "problem_sha256": "d3733acdfb9433f6c4392027e8e54ce4ee15a759ed375e6428fd4437ed459bae"
+    },
+    {
+      "domain": "benchmarks-oo/depots-sym/domain.pddl",
+      "problem": "benchmarks-oo/depots-sym/pfile8.pddl",
+      "domain_sha256": "824614901ec67f56a6df754a6a26bfeececf380253e4f70a9c0b29c1b0c51d2b",
+      "problem_sha256": "7a2bb00edb672b2ea46e90c65bbfe5c5b9bb73ee6846a75dbf3e63dc6b26e39e"
+    },
+    {
+      "domain": "benchmarks-oo/depots-sym/domain.pddl",
+      "problem": "benchmarks-oo/depots-sym/pfile9.pddl",
+      "domain_sha256": "824614901ec67f56a6df754a6a26bfeececf380253e4f70a9c0b29c1b0c51d2b",
+      "problem_sha256": "62d97cc57e6c15ee028f50dcc491fd1fe58dda8ff2581e0663b5b942d11b2dfd"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-pogo-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-pogo-advanced/prob_15x15_1.pddl",
+      "domain_sha256": "00d50058d8302ce09a528646305b90cd868615129d228b237f5353bc8ca4234b",
+      "problem_sha256": "fb6d35bf03d4655887fbbcbdc86ffe2d3d0c88eb1356d154158a6f4c92111c83"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-pogo-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-pogo-advanced/prob_15x15_2.pddl",
+      "domain_sha256": "00d50058d8302ce09a528646305b90cd868615129d228b237f5353bc8ca4234b",
+      "problem_sha256": "89f0838b3d9531ca78a894a31f02de001405b6bd1f9242eb8bfe673404377b67"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-pogo-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-pogo-advanced/prob_15x15_3.pddl",
+      "domain_sha256": "00d50058d8302ce09a528646305b90cd868615129d228b237f5353bc8ca4234b",
+      "problem_sha256": "9da40b657a026b16a6f16cd509d275ce3313cac327a3f4a5cbd852b3500b0c1a"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-pogo-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-pogo-advanced/prob_15x15_4.pddl",
+      "domain_sha256": "00d50058d8302ce09a528646305b90cd868615129d228b237f5353bc8ca4234b",
+      "problem_sha256": "4882d2b7320b2545b32dab2286ca93f71fd1eeaa09f3765630dacf950482537a"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-pogo-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-pogo-advanced/prob_15x15_5.pddl",
+      "domain_sha256": "00d50058d8302ce09a528646305b90cd868615129d228b237f5353bc8ca4234b",
+      "problem_sha256": "c334f8a5880e356deac8da21fa50b4e14e5d983adfb4e7f8a1a1a0f3d85ccbc1"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-pogo-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-pogo-advanced/prob_20x20_1.pddl",
+      "domain_sha256": "00d50058d8302ce09a528646305b90cd868615129d228b237f5353bc8ca4234b",
+      "problem_sha256": "7d064d09343b1ad0432d5be0a18c7622cab4c21d66e31faf0d172a83e1e79651"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-pogo-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-pogo-advanced/prob_20x20_2.pddl",
+      "domain_sha256": "00d50058d8302ce09a528646305b90cd868615129d228b237f5353bc8ca4234b",
+      "problem_sha256": "bab8f58fffb0e3c40c96e192ab2e6a3375fa176f5201670e8c7cb526581df6d0"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-pogo-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-pogo-advanced/prob_20x20_3.pddl",
+      "domain_sha256": "00d50058d8302ce09a528646305b90cd868615129d228b237f5353bc8ca4234b",
+      "problem_sha256": "8f2e8d8e48d05a765ee0a9a2b5f5345e3997a3ad88e8049dfc61bebec9f4cf50"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-pogo-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-pogo-advanced/prob_20x20_4.pddl",
+      "domain_sha256": "00d50058d8302ce09a528646305b90cd868615129d228b237f5353bc8ca4234b",
+      "problem_sha256": "d947e5d9b89be02e3c5552f239fd31c16e8109052955b302e7d7c4ec9198de24"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-pogo-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-pogo-advanced/prob_20x20_5.pddl",
+      "domain_sha256": "00d50058d8302ce09a528646305b90cd868615129d228b237f5353bc8ca4234b",
+      "problem_sha256": "9fda56888d27a4a48a864744333f5e125b3f648f50ef12cacf3625765882b805"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-pogo-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-pogo-advanced/prob_25x25_1.pddl",
+      "domain_sha256": "00d50058d8302ce09a528646305b90cd868615129d228b237f5353bc8ca4234b",
+      "problem_sha256": "76d51520d859c4e9375361b0c126bd5e06a8b2663429c583a03dc7123b84a805"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-pogo-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-pogo-advanced/prob_25x25_2.pddl",
+      "domain_sha256": "00d50058d8302ce09a528646305b90cd868615129d228b237f5353bc8ca4234b",
+      "problem_sha256": "07dc07abc7e6992ded987737b666c6c26739d8cddbd2c3b2a83fb98271cbbbdf"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-pogo-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-pogo-advanced/prob_25x25_3.pddl",
+      "domain_sha256": "00d50058d8302ce09a528646305b90cd868615129d228b237f5353bc8ca4234b",
+      "problem_sha256": "dcd6110cbc634b52d2dce2d8519ade89ef569fffb401d8d1782499d1efa7038a"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-pogo-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-pogo-advanced/prob_25x25_4.pddl",
+      "domain_sha256": "00d50058d8302ce09a528646305b90cd868615129d228b237f5353bc8ca4234b",
+      "problem_sha256": "c22e2475e50225548d581169960696ceca537b4399b11871347ef8240208f274"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-pogo-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-pogo-advanced/prob_25x25_5.pddl",
+      "domain_sha256": "00d50058d8302ce09a528646305b90cd868615129d228b237f5353bc8ca4234b",
+      "problem_sha256": "f96b85c5364e67c64dfe8834f6aacb8200181582ef2782bc4f72e6dea928c8c1"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-pogo-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-pogo-advanced/prob_30x30_1.pddl",
+      "domain_sha256": "00d50058d8302ce09a528646305b90cd868615129d228b237f5353bc8ca4234b",
+      "problem_sha256": "ec7c66a9aba3abc13bda865ee23aba6cd70c47868cc6955534e672acf1a7c2fe"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-pogo-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-pogo-advanced/prob_30x30_2.pddl",
+      "domain_sha256": "00d50058d8302ce09a528646305b90cd868615129d228b237f5353bc8ca4234b",
+      "problem_sha256": "c8ae6a9b97d0f5ad78ecd86a775b6b5546cb883524bf9986dcb7743d3d4f1105"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-pogo-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-pogo-advanced/prob_30x30_3.pddl",
+      "domain_sha256": "00d50058d8302ce09a528646305b90cd868615129d228b237f5353bc8ca4234b",
+      "problem_sha256": "b061358e81349ab49f465acf2b8f3b52adfb4e43168babb95cb4b59c3655731c"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-pogo-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-pogo-advanced/prob_30x30_4.pddl",
+      "domain_sha256": "00d50058d8302ce09a528646305b90cd868615129d228b237f5353bc8ca4234b",
+      "problem_sha256": "6a3b0331c1cec06a2374de1c902c75bae9920a2339696ab51b75c9622b9ae324"
+    },
+    {
+      "domain": "benchmarks-oo/minecraft-pogo-advanced/domain.pddl",
+      "problem": "benchmarks-oo/minecraft-pogo-advanced/prob_30x30_5.pddl",
+      "domain_sha256": "00d50058d8302ce09a528646305b90cd868615129d228b237f5353bc8ca4234b",
+      "problem_sha256": "be585a37a1f3c386b1c133bd8b09815405b0a425b1690202bf3b7ad6b20a2f28"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_10_1_1.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "1fea575b5eef8c3674fd45f4ca7467996d86ebca496b3ec503ed866f4038b8e7"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_10_1_2.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "1b29742795ff9791125cbddd1510b6dee1b1089a0eb0483ab656f7dd9af0ccb7"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_10_1_3.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "9cf1f99996f376ae80dadaa487f5323cc5f0440495844fbcbbaf841890954008"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_10_2_1.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "097a84c8a654cac959427bf543cf1f20c2f7dfff88e7b1ee80a6d773a6ed8bb3"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_10_2_2.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "8ad114f7694a7bb1c17da2ed6fce16b20fa71917c2a0143f6543f9b1b73e772e"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_10_2_3.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "49b46072cf5e9a8c6b624fcd99a91a52e35cd9dfb8c66e67e9f4d1e4901c2e30"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_10_3_1.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "f88015c7910c49d78430e1751422455660ccb88910d7f2c47417d77a7f0ec3ec"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_10_3_2.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "1d69c3c11d549286c8ce40f46c9c575e6e37ff4cb2d9af70b07cc68db6b5eb6f"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_10_3_3.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "63e1b0546d18e9f7848bca64ff0341d1f0a3d490849f4d362aa6c64c7afdab92"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_4_1_1.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "ad7b194d7921be3579c720286368f329aeae145bf3dff2b5217258fc24cc48cc"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_4_1_2.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "ae0da6a6a4b3d09786d94c660c5e2357b515b8642ec90222414b4f80dd9ee5cf"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_4_1_3.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "9366c71d96b889a058e3a02618532481a4aa80356ee6b97d41506d1a2345e102"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_4_2_1.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "82e2763accc43d664934e1311cab356dc6ce7b881085e737b2ceea7930af238c"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_4_2_2.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "5cb7e597e664e88251a3013a7dfdbc4fcf9051e95c9b2a83549a71d7b4cb4332"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_4_2_3.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "edd8975c772fcac016ac075401f3b48c47b779eff275c5f9b6584ec4668c167a"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_4_3_1.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "b8f0203a1e55e73393597033a14158118ba8c04ba5cbd5e807c07d6962893dd1"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_4_3_2.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "c17ec10bf8907368e54630062e6764634665298045bc13031359ca52b3baa627"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_4_3_3.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "3dfb6649bf35bad980cf7e56ba3f196d381ed390e87bc2634dfd032ffd31106f"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_5_1_1.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "4878dc5ce68a8291188f7af553982af333182afa04919f03dbff9046d9ef58f6"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_5_1_2.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "b6a4b58380d5909ca766019466feda1e6b5fa0233bab41742a82904ed2a95273"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_5_1_3.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "845cd188bfe9e88d449e09b510b32bf93fc608d18782610d0bae392345962b4f"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_5_2_1.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "9a123c6c68fda21bf1d82d7c7cb050ca98d30fb0722e1c614c216899c1651a97"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_5_2_2.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "1a08ebab7fdc0416142322d8aaf39ec25ecfea25e2dcc8ff4e03c0842b7168cc"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_5_2_3.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "31885be71247a3c9c3a0dd10ad217aff5259963209a4f0fa35746ff94c5bd506"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_5_3_1.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "23e402d120a8b0c2dc5a2b8e8fef10ae0e5a844672bfdf6796854d563fdb5132"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_5_3_2.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "7683c3b9a8665b87b27e1c8c391edb5d5c09d727449ed99627f9ecd6818b4b3f"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_5_3_3.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "c538567846bcd80c20a549d12ca0ef1cc193eb3cd7e9cb8e4800e0081dbc13f1"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_6_1_1.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "6eae6c14cb5cc03c35be0f2ab4f9a7c8704db28250ffa844166afd38d1bc4834"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_6_1_2.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "ed38903a38e95ad846e2cfa1e04652385cd05a64a870dbaa6fd7cc24df539dc4"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_6_1_3.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "d2d0bc635cf8a08e31c072073c50a40f9571256ac3a8c4cbd0bd33bfe533a7aa"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_6_2_1.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "5ecde2f00ecc7bf715dbaf2a80fd815d3faa82e5e27da5af077e9994ecbc2dfe"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_6_2_2.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "f467205c5f0649e49b31531e3ba8aa72fd97a39e726a4c5673f4e8b1704c6603"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_6_2_3.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "752eb4c9442f33c99f6df6d1bf90c28f98f1dff65a427407e7c857f7601e601e"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_6_3_1.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "ca0210117fa4e3ba3466f83105464b1e86a912a79c4480b7075396cfa4cc0ba9"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_6_3_2.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "a2fb39ef620f8d5951e1758124dc5cd978a265ec173c9c003f4fb131e1bcec14"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_6_3_3.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "2449e3991a31f2c4b8d3f687dd5d76b281994ccae456e63da6460d3973e12880"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_7_1_1.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "61804d3368de2b0f2da9f5ee8c2f0d458baccb4c30f7eac4ab0ae0e4424689da"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_7_1_2.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "5b6e3cdacdc500c19178c80dc9179dc1b1c4a57ceceb4eb1af964aec3e4eea2f"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_7_1_3.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "e6774b4629a1d639e7efec13d8787ff3eafb0b81030f1fa10939011b031dc171"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_7_2_1.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "3771eb7d37d83322422545809e21235d97cba75f71b0dd4f230b0cf6d0948856"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_7_2_2.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "ad3dc348055daf42d5f0bb2d63582e21d13f55bde82ac0681d9bf63283e886a8"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_7_2_3.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "35548ab65fe0a60a96b4719c3d562eb40d42f0fe872b1e7a8dd246c35ae5487e"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_7_3_1.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "ac8a20368627cd3fcd99c4db669f9a059d55eb68badc49c291b546296363f177"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_7_3_2.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "eac952343cd230b35c0d7d300acb7eb4b075097779c3d28d52699911990a0303"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_7_3_3.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "923d9f21680f1f71953c1bd3334b94587d9705ed967589e4f1d3a8ddb22a77d8"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_8_1_1.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "f1210ce8c3cee5bf4398ba61689a031714fb13756340e18fd3a70541b444dcfe"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_8_1_2.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "360dbc746bf7b6472576e7e53039b8131a11cf37ec1b8116783389ca15ebea3e"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_8_1_3.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "7c7510d077f266e434edcde1d5be25d9bf97bba0d85a07e1801484e7743bd697"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_8_2_1.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "2039780ae167e4584d4b2788b8fb6617ffdd9b4ac8c9cff7d8e237105a9137e9"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_8_2_2.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "36e738318de73e690488ae90a0815770acbc74049444714bf9e98ceb3645dee4"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_8_2_3.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "481b9f879e93d3cb0967537f726a72a23a3d970d858176ea20b7f39353b1850d"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_8_3_1.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "c322193a242054c1221f66e1294376c28ff2cd2702424e0bd986544986f3e21e"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_8_3_2.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "4ec66408a3ef25c2729f8480ae2e72da79023d645ca7c766ae7f9e439abc37b4"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_8_3_3.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "146f96761bd808613cacea54de05aa94794a55983010299bbc55378e516444f6"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_9_1_1.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "3e1d1e125ebe9924d85aa1fa5c49ca37f633ba5945241fa7e25c86a5d17480a8"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_9_1_2.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "6c028c88da5f198d1053013826971ca1c717052b1cd0f2342145f1451dee9e6b"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_9_1_3.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "d8d7404e86610242942a035df586e6b0f06edf7f58ba40e11eafd4be0de09176"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_9_2_1.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "ce0aa3e3186b21afc3e901516f168394337caf178817f3b6b68db8cf6c5984b6"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_9_2_2.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "ffff1773364f9c8592c57be4a1a3fb69e66ddedf8798481216d0c0aca7b92ceb"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_9_2_3.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "481597ad308a32c347e88b764847fe5a70c19dd3a93f86e5359e7d48c691a495"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_9_3_1.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "c8d90bdc4c04e7364d51bca911913d920fbdeb3d1705c682d3cad1c173de75f3"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_9_3_2.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "85d2167743766ec5c673972f26436b83565a3bf97a0d7fa0652298f926f5aacf"
+    },
+    {
+      "domain": "benchmarks-oo/plant-watering/domain.pddl",
+      "problem": "benchmarks-oo/plant-watering/prob_9_3_3.pddl",
+      "domain_sha256": "a6ffe67824de9e24679e74aae8ecf71ca612324ed99e95f0a6702ad8629d0da7",
+      "problem_sha256": "50d1e4e65d269f30cddde970e9257d18033e17980da5f23f75bae94455fc7f31"
+    }
+  ],
+  "note": "Original search settings; local wall timeout and memory monitoring, not Slurm CPU limits"
+}

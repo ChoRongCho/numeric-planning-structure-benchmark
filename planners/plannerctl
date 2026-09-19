@@ -19,7 +19,7 @@ Runnable IDs:
   metric-ff, metric-ff-2.0, sapa, lpg-td, aries, fape, fape-1.0,
   enhsp, tamerlite, nextflap, omtplan, bitblast, patty, springroll,
   popf, optic, optic-cplex, ferroplan, planforge, planforge-ipc2026,
-  tempest-numeric-ipc2026, numeric-fast-downward, numeric-fast-downward-local,
+  tempest-numeric-ipc2026, numeric-fast-downward, numeric-fast-downward-local, numeric-cegar,
   nplanning-lnp-sat-1, nplanning-lnp-sat-2,
   nplanning-lnp-agile-1, nplanning-lnp-agile-2,
   count-downward-sat, count-downward-agile,
@@ -68,6 +68,7 @@ resolve_command() {
         planforge-ipc2026) command_path="$planner_root/external/planforge-ipc2026/target/release/planforge" ; command_kind=native ;;
         tempest-numeric-ipc2026) command_path="$planner_root/external/tempest-numeric-ipc2026/target/release/planner" ; command_kind=native ;;
         numeric-fast-downward) command_path="$planner_root/external/numeric-fast-downward/fast-downward.py" ; command_kind=fast-downward ;;
+        numeric-cegar) command_path="$planner_root/../numeric-fast-downward/fast-downward.py" ; command_kind=fast-downward ;;
         numeric-fast-downward-local) command_path="$planner_root/local/numeric-fast-downward/fast-downward.py" ; command_kind=fast-downward ;;
         nplanning-lnp-sat-1) command_path="$runtime_root/nplanning-ipc2026/bin/nplanning" ; command_kind=nplanning; nplanning_config=sat-1 ;;
         nplanning-lnp-sat-2) command_path="$runtime_root/nplanning-ipc2026/bin/nplanning" ; command_kind=nplanning; nplanning_config=sat-2 ;;
@@ -135,7 +136,7 @@ status_one() {
 action="${1:-}"
 case "$action" in
     list)
-        for planner_id in metric-ff metric-ff-2.0 metric-ff-cross-v1 metric-ff-cross-v2 sapa lpg-td up-lpg-native aries fape fape-1.0 enhsp tamerlite tamerlite-ipc2026-agile-1 tamerlite-ipc2026-agile-2 tamerlite-ipc2026-sat-1 tamerlite-ipc2026-sat-2 nextflap omtplan bitblast patty patty-ipc2026-sat-1 patty-ipc2026-sat-2 patty-ipc2026-agile-1 patty-ipc2026-agile-2 panino-lnp-agile panino-lnp-sat pattint-bitwuzla lnm-plan-ipc2023 lnm-plan-opt-lnp-1 lnm-plan-opt-lnp-2 lnm-plan-sat-lnp-1 lnm-plan-sat-snp-2 springroll popf popf-static-v2 optic optic-cplex ferroplan planforge planforge-ipc2026 tempest-numeric-ipc2026 numeric-fast-downward numeric-fast-downward-local nplanning-lnp-sat-1 nplanning-lnp-sat-2 nplanning-lnp-agile-1 nplanning-lnp-agile-2 count-downward-sat count-downward-agile count-downward-opt-pdbs count-downward-opt-domain-abstractions count-downward-together-opt-1 count-downward-together-opt-2 tempest tempest-opt cpt crikey crikey2 tsgp mips-xxl-seq mips-xxl-netben gamer-netben hspsp-netben sgplan6-seq sgplan6-seq-fixed sgplan6-temporal-fixed tfd-ipc2008; do
+        for planner_id in metric-ff metric-ff-2.0 metric-ff-cross-v1 metric-ff-cross-v2 sapa lpg-td up-lpg-native aries fape fape-1.0 enhsp tamerlite tamerlite-ipc2026-agile-1 tamerlite-ipc2026-agile-2 tamerlite-ipc2026-sat-1 tamerlite-ipc2026-sat-2 nextflap omtplan bitblast patty patty-ipc2026-sat-1 patty-ipc2026-sat-2 patty-ipc2026-agile-1 patty-ipc2026-agile-2 panino-lnp-agile panino-lnp-sat pattint-bitwuzla lnm-plan-ipc2023 lnm-plan-opt-lnp-1 lnm-plan-opt-lnp-2 lnm-plan-sat-lnp-1 lnm-plan-sat-snp-2 springroll popf popf-static-v2 optic optic-cplex ferroplan planforge planforge-ipc2026 tempest-numeric-ipc2026 numeric-fast-downward numeric-fast-downward-local numeric-cegar nplanning-lnp-sat-1 nplanning-lnp-sat-2 nplanning-lnp-agile-1 nplanning-lnp-agile-2 count-downward-sat count-downward-agile count-downward-opt-pdbs count-downward-opt-domain-abstractions count-downward-together-opt-1 count-downward-together-opt-2 tempest tempest-opt cpt crikey crikey2 tsgp mips-xxl-seq mips-xxl-netben gamer-netben hspsp-netben sgplan6-seq sgplan6-seq-fixed sgplan6-temporal-fixed tfd-ipc2008; do
             status_one "$planner_id"
         done
         ;;
@@ -196,8 +197,11 @@ case "$action" in
         elif [ "$command_kind" = fast-downward ]; then
             # Keep the caller's case-specific working directory: Fast Downward
             # writes output.sas, output and sas_plan there.
-            if [ "$planner_id" = numeric-fast-downward ] || [ "$planner_id" = numeric-fast-downward-local ]; then
+            if [ "$planner_id" = numeric-fast-downward ] || [ "$planner_id" = numeric-fast-downward-local ] || [ "$planner_id" = numeric-cegar ]; then
                 export PYTHONHASHSEED=1
+            fi
+            if [ "$planner_id" = numeric-cegar ] && [ "$#" -eq 2 ]; then
+                exec python3 "$command_path" --build=release64 "$@" --search "astar(cegar(subtasks=[original()],pick=MIN_UNWANTED,max_time=900))"
             fi
             exec python3 "$command_path" --build=release64 "$@"
         elif [ "$command_kind" = lnm-plan ]; then

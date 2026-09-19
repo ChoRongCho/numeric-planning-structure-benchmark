@@ -76,6 +76,7 @@ reference plan 보관은 전체 24개 instance 검증 단계에서 함께 수행
 
 | Problem | Blocks | Tables | Initial stacks | Goal stacks |
 |---|---:|---:|---:|---:|
+| `p000` | 1 | 1 | 1 | 0 |
 | `p001` | 3 | 3 | 1 | 1 |
 | `p002` | 5 | 3 | 2 | 2 |
 | `p003` | 7 | 3 | 3 | 2 |

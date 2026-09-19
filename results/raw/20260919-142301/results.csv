@@ -1,0 +1,2 @@
+planner,configuration,heuristic,search,benchmark,instance,status,compatible,return_code,wall_seconds,max_rss_kb,peak_group_rss_kb,limit_reason,plan_length,expanded_nodes,metric_value,objective_value,validation,plan_path,case_directory
+numeric-cegar,,,,changmin_04_watering,p000.pddl,solved,true,0,0.200915,14452,1220,,3,4,3,3,valid,results/raw/20260919-142301/cases/numeric-cegar/changmin_04_watering/p000/plan.val,results/raw/20260919-142301/cases/numeric-cegar/changmin_04_watering/p000

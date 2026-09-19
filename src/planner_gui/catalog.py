@@ -22,6 +22,8 @@ def natural_key(path: Path) -> tuple[object, ...]:
 
 def problems_for(domain: Path) -> tuple[Path, ...]:
     instances = domain.parent / "instances"
+    if not instances.is_dir():
+        instances = domain.parent
     return tuple(sorted(
         (path for path in instances.glob("p*.pddl") if path.is_file()),
         key=natural_key,
@@ -34,6 +36,7 @@ def discover_catalog(root: Path) -> tuple[DomainEntry, ...]:
     collections = (
         ("benchmarks", root / "benchmarks"),
         ("changmin", root / "changmin_benchmark"),
+        ("numeric-cegar-paper", root / "benchmarks-oo"),
     )
     for collection, directory in collections:
         for domain in sorted(directory.glob("*/domain.pddl"), key=lambda path: natural_key(path.parent)):

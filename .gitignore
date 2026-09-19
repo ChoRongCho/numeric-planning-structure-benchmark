@@ -109,3 +109,8 @@ hs_err_pid*
 !/asset/README.md
 !/asset/03_Paper/
 !/asset/03_Paper/*.md
+
+# Downloaded ICAPS 2026 Cartesian CEGAR artifact (kept in place).
+/numeric-fast-downward/
+/benchmarks-oo/
+/experiment-scripts/

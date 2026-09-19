@@ -161,6 +161,7 @@ stock slack이 0인 p004에서 급격히 어려워지는 경계를 의도적으�
 
 | Problem | Ingredients | Cocktails | Orders/shots | Shakers | Dispenser stock |
 |---|---:|---:|---:|---:|---:|
+| `p000` | 1 | 1 | 1 | 1 | 50–50 ml |
 | `p001` | 3 | 2 | 4 | 1 | 100–150 ml |
 | `p002` | 4 | 3 | 6 | 1 | 50–200 ml |
 | `p003` | 5 | 4 | 8 | 2 | 100–250 ml |

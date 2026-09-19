@@ -95,6 +95,7 @@ Cart capacity는 9이고 반납 도서 A110, B100, B110의 총무게는 12라서
 
 | Problem | Books | Shelves | Rooms | Carts | Misordered shelves | High shelves |
 |---|---:|---:|---:|---:|---:|---:|
+| p000 | 1 | 1 | 1 | 1 | 0 | 0 |
 | p001 | 5 | 2 | 3 | 1 | 1 | 1 |
 | p002 | 10 | 3 | 3 | 1 | 2 | 1 |
 | p003 | 15 | 5 | 4 | 1 | 3 | 2 |
@@ -102,6 +103,7 @@ Cart capacity는 9이고 반납 도서 A110, B100, B110의 총무게는 12라서
 
 | Problem | Book weight | Thickness | Cart capacity | Shelf capacity | Initial shelf use | Shelf height | Robot reach |
 |---|---:|---:|---:|---:|---:|---:|---:|
+| p000 | 1 | 1 | 10 | 2 | 0 | 100 | 180 |
 | p001 | 2–5 | 2–3 | 5 | 4–8 | 2–6 | 174–234 | 180 |
 | p002 | 1–5 | 1–4 | 7 | 7–9 | 4–6 | 166–221 | 180 |
 | p003 | 1–5 | 1–4 | 9 | 4–10 | 3–6 | 143–220 | 180 |

@@ -339,7 +339,7 @@ def run_case(
         ]
         if actions:
             status = "solved"
-    if status == "solved" and (planner in {"numeric-fast-downward", "numeric-fast-downward-local"} or planner.startswith("count-downward-") or planner.startswith("lnm-plan-")):
+    if status == "solved" and (planner in {"numeric-fast-downward", "numeric-fast-downward-local", "numeric-cegar"} or planner.startswith("count-downward-") or planner.startswith("lnm-plan-")):
         plan_candidates = list(work.glob("sas_plan*"))
         if plan_candidates:
             # Iterated Fast Downward configurations write sas_plan.1,

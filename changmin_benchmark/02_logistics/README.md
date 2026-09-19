@@ -85,6 +85,7 @@
 
 | Problem | Packages | Trucks | Places | Highways | Local roads | Fuel stations | Budget |
 |---|---:|---:|---:|---:|---:|---:|---:|
+| `p000` | 1 | 1 | 2 | 0 | 1 | 1 | 10 |
 | `p001` | 3 | 1 | 5 | 1 | 6 | 3 | 8 |
 | `p002` | 3 | 2 | 8 | 5 | 10 | 3 | 23 |
 | `p003` | 6 | 2 | 8 | 5 | 10 | 3 | 24 |
@@ -94,6 +95,7 @@
 
 | Problem | Package kg | Manual kg | Truck capacity kg | Initial load kg | Fuel initial | Fuel capacity | Toll | Highway time | Local time |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| `p000` | 50 | 100 | 1000 | 50 | 10 | 10 | - | - | 2 |
 | `p001` | 63–101 | 100 | 863 | 0 | 37 | 37 | 2 | 3 | 11–19 |
 | `p002` | 101–123 | 100 | 862–1042 | 0 | 44 | 44 | 2–5 | 2–6 | 7–20 |
 | `p003` | 51–130 | 100 | 906–1062 | 0 | 37 | 37 | 3–4 | 3–6 | 8–17 |
@@ -101,6 +103,7 @@
 
 ### 배송 설정
 
+- `p000`: pack1:?→place2
 - `p001`: pack1:place2→place1, pack2:place1→place2, pack3:place2→place4
 - `p002`: pack1:place3→place4, pack2:place5→place7, pack3:place1→place6
 - `p003`: pack1:place3→place8, pack2:place8→place6, pack3:place4→place7, pack4:place8→place2, pack5:place5→place1, pack6:place2→place6

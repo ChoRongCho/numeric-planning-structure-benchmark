@@ -40,6 +40,19 @@ def choices(*items: tuple[str, str]) -> tuple[Choice, ...]:
 
 PROFILES: tuple[PlannerProfile, ...] = (
     PlannerProfile(
+        "numeric-cegar", "nfd-cegar", "Numeric Fast Downward",
+        "Numeric Fast Downward 기반 논문 배포본. A* + Numeric Cartesian CEGAR 구성입니다.",
+        choices(("Cartesian CEGAR", "cegar")),
+        choices(("A*", "astar")),
+        (
+            OptionSpec("pick", "Refinement split", choices(
+                ("MIN_UNWANTED", "MIN_UNWANTED"),
+                ("MAX_UNWANTED", "MAX_UNWANTED"), ("RANDOM", "RANDOM"))),
+            OptionSpec("max_time", "Abstraction time (seconds)", choices(
+                ("900", "900"), ("60", "60"), ("infinity", "infinity"))),
+        ),
+    ),
+    PlannerProfile(
         "enhsp", "ENHSP", "Numeric subgoaling",
         "Numeric subgoaling/interval relaxation heuristic을 바꿔가며 실행합니다.",
         choices(
@@ -186,6 +199,7 @@ GUI_NAME_BY_ID = {
     "optic-cplex": "optic-cplex",
     "popf-static-v2": "popf",
     "numeric-fast-downward-local": "nfd",
+    "numeric-cegar": "nfd-cegar",
 }
 GUI_ID_BY_NAME = {
     GUI_NAME_BY_ID.get(profile.planner_id, profile.planner_id): profile.planner_id
@@ -195,8 +209,8 @@ GUI_PLANNER_NAMES = (
     "optic-cplex",
     "popf",
     "nfd",
-    *(profile.planner_id for profile in PROFILES
-      if profile.planner_id not in GUI_NAME_BY_ID),
+    *(GUI_NAME_BY_ID.get(profile.planner_id, profile.planner_id) for profile in PROFILES
+      if profile.planner_id not in {"optic-cplex", "popf-static-v2", "numeric-fast-downward-local"}),
 )
 
 
@@ -269,6 +283,11 @@ def build_command(
         if planner_id == "popf-static-v2" and _flag(options, "optimize", "true"):
             argv.append("-n")
         return argv + [d, p]
+    if planner_id == "numeric-cegar":
+        pick = options.get("pick", "MIN_UNWANTED")
+        max_time = options.get("max_time", "900")
+        return base + [d, p, "--search",
+                       f"astar(cegar(subtasks=[original()],pick={pick},max_time={max_time}))"]
     if planner_id == "numeric-fast-downward-local":
         spec = f"{search}({heuristic}())" if search == "astar" else f"lazy_greedy([{heuristic}()])"
         return base + [d, p, "--search", spec]

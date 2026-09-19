@@ -1,0 +1,49 @@
+{
+  "artifact": "https://zenodo.org/records/18999077",
+  "arguments": {
+    "configs": [
+      "cegar-min",
+      "cegar-max",
+      "cegar-random"
+    ],
+    "domains": [
+      "counters",
+      "mprime"
+    ],
+    "suite": false,
+    "problems": "pfile1.pddl",
+    "timeout": 60.0,
+    "memory_mb": 3947,
+    "dry_run": false
+  },
+  "configurations": {
+    "cegar-min": [
+      "--search",
+      "astar(cegar(subtasks=[original()],pick=MIN_UNWANTED,max_time=900))"
+    ],
+    "cegar-max": [
+      "--search",
+      "astar(cegar(subtasks=[original()],pick=MAX_UNWANTED,max_time=900))"
+    ],
+    "cegar-random": [
+      "--search",
+      "astar(cegar(subtasks=[original()],pick=RANDOM,max_time=900))"
+    ]
+  },
+  "experiment_sha256": "378df4768607df61df68b0be14388cdfbae76c538f1c04821455e938ccc85689",
+  "tasks": [
+    {
+      "domain": "benchmarks-oo/counters/domain.pddl",
+      "problem": "benchmarks-oo/counters/pfile1.pddl",
+      "domain_sha256": "90673eaf70db1090920b7b7e286e291755119d759a1c32ada17de2b586674a89",
+      "problem_sha256": "ff23f167bc2013f8f54f19ebe08755239b4c6c49871f278efaba693ba2845a20"
+    },
+    {
+      "domain": "benchmarks-oo/mprime/domain.pddl",
+      "problem": "benchmarks-oo/mprime/pfile1.pddl",
+      "domain_sha256": "8cf3fb645c2aa0f2d10a596bf51d12c5b042e2acc2eefdab8a9e05b0a1611550",
+      "problem_sha256": "195c2d93396c41752601ed26896ce760247ae7d552be61f957eec8b2937dd77c"
+    }
+  ],
+  "note": "Original search settings; local wall timeout and memory monitoring, not Slurm CPU limits"
+}

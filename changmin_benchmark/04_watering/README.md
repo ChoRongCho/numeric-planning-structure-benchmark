@@ -207,6 +207,7 @@ planning time 약 0.31초였다.
 
 | Problem | Plants | Locations | Taps | Chargers | Total demand | Water capacity | Battery capacity |
 |---|---:|---:|---:|---:|---:|---:|---:|
+| `p000` | 1 | 1 | 1 | 1 | 1 | 2 | 10 |
 | `p001` | 3 | 5 | 1 | 2 | 8 | 5 | 38 |
 | `p002` | 4 | 6 | 1 | 2 | 18 | 9 | 59 |
 | `p003` | 5 | 7 | 1 | 2 | 20 | 8 | 74 |

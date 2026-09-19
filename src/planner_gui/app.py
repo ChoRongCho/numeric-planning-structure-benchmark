@@ -43,7 +43,7 @@ def read_saved_actions(work: Path, planner_id: str) -> list[str]:
         candidates = [work / "pattint.plan"]
     elif planner_id.startswith("tamerlite-ipc2026-"):
         candidates = [work / "tamerlite.plan"]
-    elif planner_id == "numeric-fast-downward-local" or planner_id.startswith("count-downward-"):
+    elif planner_id in {"numeric-fast-downward-local", "numeric-cegar"} or planner_id.startswith("count-downward-"):
         candidates = sorted(work.glob("sas_plan*"), key=lambda path: path.stat().st_mtime_ns, reverse=True)
     for candidate in candidates:
         if candidate.is_file():
@@ -71,6 +71,7 @@ class PlannerGUI(tk.Tk):
         self.worker: threading.Thread | None = None
         self.last_plan: Path | None = None
         self.option_vars: dict[str, tk.StringVar] = {}
+        self.setting_profile = False
         self.domain_entries: dict[str, DomainEntry] = {}
         self.problem_entries: dict[str, Path] = {}
 
@@ -248,24 +249,28 @@ class PlannerGUI(tk.Tk):
         return next((item.value for item in items if item.label == label), "")
 
     def _set_profile(self) -> None:
-        profile = PROFILE_BY_ID[GUI_ID_BY_NAME[self.planner_var.get()]]
-        self.heuristic_combo.configure(values=self._labels(profile.heuristics),
-                                       state="readonly" if len(profile.heuristics) > 1 else "disabled")
-        self.search_combo.configure(values=self._labels(profile.searches),
-                                    state="readonly" if len(profile.searches) > 1 else "disabled")
-        self.heuristic_var.set(profile.heuristics[0].label)
-        self.search_var.set(profile.searches[0].label)
-        self.profile_help_var.set(f"{profile.family} · {profile.description}")
-        for child in self.dynamic.winfo_children():
-            child.destroy()
-        self.option_vars.clear()
-        for row, spec in enumerate(profile.options):
-            variable = tk.StringVar(value=spec.choices[0].label)
-            variable.trace_add("write", lambda *_: self._refresh_command_preview())
-            self.option_vars[spec.key] = variable
-            ttk.Label(self.dynamic, text=spec.label).grid(row=row, column=0, sticky="w", padx=(0, 8), pady=3)
-            ttk.Combobox(self.dynamic, textvariable=variable, state="readonly",
-                         values=self._labels(spec.choices)).grid(row=row, column=1, sticky="ew", pady=3)
+        self.setting_profile = True
+        try:
+            profile = PROFILE_BY_ID[GUI_ID_BY_NAME[self.planner_var.get()]]
+            self.heuristic_combo.configure(values=self._labels(profile.heuristics),
+                                           state="readonly" if len(profile.heuristics) > 1 else "disabled")
+            self.search_combo.configure(values=self._labels(profile.searches),
+                                        state="readonly" if len(profile.searches) > 1 else "disabled")
+            self.heuristic_var.set(profile.heuristics[0].label)
+            self.search_var.set(profile.searches[0].label)
+            self.profile_help_var.set(f"{profile.family} · {profile.description}")
+            for child in self.dynamic.winfo_children():
+                child.destroy()
+            self.option_vars.clear()
+            for row, spec in enumerate(profile.options):
+                variable = tk.StringVar(value=spec.choices[0].label)
+                variable.trace_add("write", lambda *_: self._refresh_command_preview())
+                self.option_vars[spec.key] = variable
+                ttk.Label(self.dynamic, text=spec.label).grid(row=row, column=0, sticky="w", padx=(0, 8), pady=3)
+                ttk.Combobox(self.dynamic, textvariable=variable, state="readonly",
+                             values=self._labels(spec.choices)).grid(row=row, column=1, sticky="ew", pady=3)
+        finally:
+            self.setting_profile = False
         self._refresh_command_preview()
 
     def _selection(self) -> tuple[str, str, str, dict[str, str]]:
@@ -273,7 +278,11 @@ class PlannerGUI(tk.Tk):
         heuristic = self._value(profile.heuristics, self.heuristic_var.get())
         search = self._value(profile.searches, self.search_var.get())
         options = {
-            spec.key: self._value(spec.choices, self.option_vars[spec.key].get())
+            spec.key: self._value(
+                spec.choices,
+                self.option_vars[spec.key].get() if spec.key in self.option_vars
+                else spec.choices[0].label,
+            )
             for spec in profile.options
         }
         return profile.planner_id, heuristic, search, options
@@ -286,6 +295,8 @@ class PlannerGUI(tk.Tk):
         return argv
 
     def _refresh_command_preview(self) -> None:
+        if self.setting_profile:
+            return
         try:
             domain = self._domain_path() or Path("DOMAIN.pddl")
             problem = self._problem_path() or Path("PROBLEM.pddl")

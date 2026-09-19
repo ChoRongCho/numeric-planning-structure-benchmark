@@ -69,3 +69,9 @@ scripts/run/benchmarkctl planners
 대용량 source·binary·runtime은 Git에서 제외한다. 현재 13개 실험 환경을 그대로
 옮기는 방법과 공개 source 재빌드 절차는
 [`docs/10_플래너_자료/10_13개_플래너_다운로드와_설치.md`](../docs/10_플래너_자료/10_13개_플래너_다운로드와_설치.md)에 정리한다.
+
+## Numeric Cartesian CEGAR (ICAPS 2026)
+
+`numeric-cegar`는 논문 배포본의 별도 runtime이다. 기존 13개 비교군 설정은 유지한다.
+GUI, `plannerctl`, batch adapter와 논문 465개 문제용 로컬 runner에 연결돼 있다.
+[빌드·실행 안내](../docs/10_플래너_자료/11_Numeric_Cartesian_CEGAR_실행.md)를 참고한다.

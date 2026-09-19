@@ -1,0 +1,2 @@
+planner,configuration,heuristic,search,benchmark,instance,status,compatible,return_code,wall_seconds,max_rss_kb,peak_group_rss_kb,limit_reason,plan_length,expanded_nodes,metric_value,objective_value,validation,plan_path,case_directory
+numeric-cegar,cegar-min,cegar-min,astar,counters,pfile1.pddl,solved,true,0,0.200971,15816,1080,,12,13,12,12,valid,results/raw/numeric-cegar-20260919-142257-179928/cases/numeric-cegar/cegar-min/counters/pfile1/plan.val,results/raw/numeric-cegar-20260919-142257-179928/cases/numeric-cegar/cegar-min/counters/pfile1
