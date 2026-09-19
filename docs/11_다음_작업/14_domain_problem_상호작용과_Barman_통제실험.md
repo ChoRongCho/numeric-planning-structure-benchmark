@@ -278,7 +278,21 @@ Watering의 crash는 numeric effect 분석 및 LP encoding의 적용 범위와 �
 ## 7. 연구 질문으로 바꿀 때
 
 아직 특정 planner 구조를 연구 주제로 확정할 필요는 없다. 현재 결과에서 바로 도출되는
-연구 질문은 다음과 같다.
+문제는 다음과 같다.
+
+> 빠른 numeric relaxed-plan 휴리스틱이 누적 자원, 보충 순서와
+> numeric–symbolic 상관관계를 제거하면서 발생시키는 false feasibility가 깊은
+> action prefix까지 지속되어, forward search가 미래 dead end를 반복 확장하고 첫
+> valid plan 발견이 늦어지는 문제.
+
+이 문제에서 도출되는 중심 연구 질문은 다음과 같다.
+
+> 누적 자원 제약이 여러 action 뒤에 드러나는 deterministic sequential numeric
+> planning에서, Metric-FF의 relaxed planning graph가 제공하는 빠른 first-plan 탐색을
+> 유지하면서 미래에 infeasible해질 상태와 선택을 더 일찍 식별하여 탐색량과
+> first-plan time을 줄일 수 있는가?
+
+이를 검증하기 위한 첫 분석 질문은 다음과 같다.
 
 > Domain–problem pair에서 numeric action feasibility의 불확실성과 failure revelation
 > depth를 어떻게 측정하며, 이 값이 휴리스틱별 탐색량·coverage·첫 plan 품질을 얼마나

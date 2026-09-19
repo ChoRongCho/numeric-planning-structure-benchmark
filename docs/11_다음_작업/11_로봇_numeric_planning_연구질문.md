@@ -78,21 +78,30 @@ package를 각각 배송하는 구조와 하위 목표의 비용을 더하는 `i
 
 ## 3. 연구 문제 정의
 
-통제실험을 반영해 연구 문제를 다음과 같이 수정한다.
+구체적인 문제 정의는 다음과 같다.
 
-> **일반적인 numeric effect를 포함한 로봇 planning에서, 긴 행동열 뒤에 드러나는
-> 수치적 불가능성과 비용을 현재 상태의 휴리스틱에 낮은 계산비용으로 반영하여,
-> 빠른 첫 valid plan과 효과적인 탐색을 함께 달성할 수 있는가?**
+> 빠른 numeric relaxed-plan 휴리스틱이 누적 자원, 보충 순서와
+> numeric–symbolic 상관관계를 제거하면서 발생시키는 false feasibility가 깊은
+> action prefix까지 지속되어, forward search가 미래 dead end를 반복 확장하고 첫
+> valid plan 발견이 늦어지는 문제.
+
+이 문제에서 다음 연구 질문이 나온다.
+
+> **누적 자원 제약이 여러 action 뒤에 드러나는 deterministic sequential numeric
+> planning에서, Metric-FF의 relaxed planning graph가 제공하는 빠른 first-plan 탐색을
+> 유지하면서 미래에 infeasible해질 상태와 선택을 더 일찍 식별하여 탐색량과
+> first-plan time을 줄일 수 있는가?**
 
 영문 연구 질문은 다음과 같이 표현할 수 있다.
 
-> **How can heuristic search for robotic numeric planning anticipate delayed numeric
-> infeasibility and cost while retaining broad numeric expressiveness and low first-plan
-> latency?**
+> **Can heuristic search identify states and choices that will become infeasible because of
+> delayed cumulative resource constraints, while retaining the fast first-plan performance
+> of Metric-FF's relaxed planning graph?**
 
-이 정의는 휴리스틱 선택이나 전환을 미리 답으로 넣지 않는다. 핵심 대상은 현재에는
-가능해 보이지만 긴 action sequence 뒤에서 실패하는 **delayed numeric conflict**다.
-휴리스틱 선택·전환, RPG 보강, LP, abstraction과 LLM은 이를 해결할 수 있는 후보일 뿐이다.
+이 정의는 휴리스틱 선택이나 전환을 미리 답으로 넣지 않는다. 핵심 대상은 의미상
+이미 dead end이거나 실패 선택이지만, 그 수치 모순의 witness가 긴 action sequence
+뒤에 나타나는 **delayed numeric conflict**다. 휴리스틱 선택·전환, RPG 보강, LP,
+abstraction과 LLM은 이를 해결할 수 있는 후보일 뿐이다.
 
 ## 4. 세부 연구 질문
 

@@ -1,5 +1,97 @@
 # 방법론을 열어 둔 로봇 Numeric Planning 문제 정의
 
+## 0. 구체적 문제 정의
+
+### 0.1 대상 문제군
+
+본 연구는 다음 조건을 만족하는 deterministic sequential numeric planning을 대상으로
+한다.
+
+- 목표를 수행하면서 물, 연료, 배터리, 재고, 예산과 같은 수치 자원을 소비한다.
+- 자원은 고갈되거나 refill·recharge될 수 있으며, `assign`으로 용량까지 다시 설정될
+  수 있다.
+- 자원 사용 가능성은 위치, 방문 순서, 용기 상태, 손 점유와 같은 symbolic 상태와
+  결합된다.
+- 각 action은 현재 상태에서는 적용 가능하더라도, 그 선택의 누적 결과가 여러 action
+  뒤의 goal 달성을 불가능하게 만들 수 있다.
+
+초기 범위는 선형 numeric precondition과 `increase`, `decrease`, `assign`을 포함하는
+PDDL2.1 Level 2 문제다. 연속 변화, 외생 event와 비선형 dynamics는 포함하지 않는다.
+
+### 0.2 기존 휴리스틱에서 발생하는 구체적인 오류
+
+현재 상태를 $s$, 적용 가능한 action을 $a$, 실제 최소 잔여 비용을 $V^*(s)$,
+$a$를 선택한 뒤의 실제 최소 비용을 $Q^*(s,a)$라고 하자. 해가 없으면 각각의 값은
+$\infty$다. Metric-FF와 같은 빠른 relaxed-plan 휴리스틱을 $h_R$이라고 할 때,
+본 연구가 다루는 오류는 다음과 같다.
+
+```text
+상태 수준:
+    V*(s) = infinity인데 h_R(s)는 유한함
+
+선택 수준:
+    Q*(s, a_bad) = infinity이고 Q*(s, a_good)는 유한하지만,
+    h_R(succ(s, a_bad))가 a_good보다 같거나 더 좋아 보임
+```
+
+두 경우 모두 relaxed model에서는 goal이 도달 가능해 보이지만 실제 numeric
+constraint를 모두 적용하면 그렇지 않은 **거짓 실행 가능성(false feasibility)**이다.
+문제 전체가 unsolvable이면 상태 수준에서, solvable 문제 안의 일부 선택만 실패하면
+선택 수준에서 나타난다. 둘은 같은 오류의 두 관찰 형태다.
+
+### 0.3 왜 오류가 늦게 드러나는가
+
+이 오류에서는 현재 action의 numeric precondition이 바로 위반되지 않는다. 다음
+정보를 여러 goal과 action에 걸쳐 함께 계산해야 모순이 나타난다.
+
+- 여러 goal이 공유하는 자원의 누적 총수요
+- 소비 후 refill·recharge 장소까지 도달하는 데 필요한 추가 자원
+- 위치와 방문 순서에 따라 달라지는 미래 소비량
+- 용기, 손 점유, clean 상태와 numeric capacity의 결합
+- `assign`과 보충 action 이후의 실제 사용 가능량
+
+Relaxation이 decrease, ordering 또는 이러한 상관관계를 제거하면, 모순을 일으킨
+선택도 실제 충돌 지점에 도달할 때까지 유망하게 남는다. 이때 의미상 dead end인
+시점과 모순이 표면에 나타나는 시점 사이의 거리를 failure revelation depth라고 한다.
+
+### 0.4 탐색에 발생하는 피해
+
+빠른 forward search가 false-feasible 상태와 선택에 낮은 휴리스틱 값을 주면 다음
+현상이 발생한다.
+
+1. 실패할 action prefix가 open list에서 높은 우선순위를 얻는다.
+2. 같은 미래 자원 충돌을 공유하는 많은 상태가 반복해서 확장된다.
+3. 실제 충돌에 도달한 뒤에야 해당 branch가 제거된다.
+4. 첫 valid plan 시간이 증가하고, 제한시간 안에 plan을 찾지 못할 수 있다.
+
+따라서 문제의 핵심은 단순히 휴리스틱 값이 실제 plan cost와 다르다는 것이 아니다.
+**미래에 실패할 상태와 선택을 현재의 성공 가능한 상태와 구별하지 못해 first-plan
+탐색이 낭비되는 것**이다.
+
+### 0.5 해결해야 하는 문제
+
+본 연구가 해결해야 하는 문제는 다음과 같이 정의한다.
+
+> **빠른 numeric relaxed-plan 휴리스틱이 누적 자원, 보충 순서와
+> numeric–symbolic 상관관계를 제거하면서 발생시키는 false feasibility가 깊은
+> action prefix까지 지속되어, forward search가 미래 dead end를 반복 확장하고 첫
+> valid plan 발견이 늦어지는 문제.**
+
+필요한 기능은 실제 numeric precondition이 위반되기 전에 이러한 미래 불가능성을
+나타내는 guidance를 제공하는 것이다. 이 guidance는 hard pruning일 필요가 없으며,
+실패 선택의 우선순위를 낮추는 값이어도 된다. 다만 계산비용이 커서 Metric-FF보다
+전체 first-plan 시간이 길어진다면 문제를 해결한 것으로 보지 않는다.
+
+### 0.6 이 정의에서 나오는 연구 질문
+
+> **누적 자원 제약이 여러 action 뒤에 드러나는 문제에서, Metric-FF 수준의 빠른
+> first-plan 탐색을 유지하면서 false-feasible 상태와 선택을 더 일찍 식별하여 상태
+> 확장과 first-plan time을 줄일 수 있는가?**
+
+Plan objective 개선은 별도 부문제로 둔다. 첫 연구의 직접 목표는 optimal plan 생성이
+아니라, delayed numeric conflict 때문에 낭비되는 탐색을 줄여 Metric-FF와 first-plan
+성능으로 경쟁하는 것이다.
+
 ## 1. 현재 입장
 
 아직 LLM, anytime portfolio, LP, RPG 보강, abstraction 중 어느 하나를 연구 방법으로
@@ -54,13 +146,85 @@ Domain은 자원의 증감, 보충, assignment와 action 조건을 정의한다.
 
 이 식은 증명된 난도 공식이 아니라, 후속 실험에서 검증할 설명 변수다.
 
-## 3. 문제의 조작적 정의
+### 2.4 지금 확인된 사실과 아직 검증할 설명
 
-### 3.1 Delayed numeric conflict
+현재 실험으로 직접 확인된 사실은 다음과 같다.
+
+- Barman의 blocked-zero와 one-short는 모두 unsolvable이지만 판정시간이 크게 달랐다.
+- Horizon이 길어지면 one-short를 비롯한 여러 조건에서 timeout이 증가했다.
+- Logistics에서는 더 강한 자원 제약이 오히려 탐색량을 줄인 경우가 있었다.
+- Watering에서는 자원 조건 변화에 따라 같은 휴리스틱의 탐색량과 성공 여부가 크게
+  달라졌다.
+- 빠른 relaxed-plan 계열과 강한 numeric-aware 계열 사이에 coverage·시간·objective
+  차이가 있었다.
+
+반면 `failure revelation depth가 증가해서 timeout됐다`, `numeric–symbolic correlation을
+잃어서 plateau가 생겼다`는 설명은 아직 작업 가설이다. 지금까지의 runner는 탐색 중
+각 상태의 실제 solvability, 휴리스틱 값과 첫 conflict witness를 기록하지 않았다.
+따라서 다음 실험은 최종 runtime만 다시 비교하는 것이 아니라 이 중간 값을 직접
+계측해야 한다.
+
+### 2.5 여러 수치 자원의 경쟁 자체는 주된 장벽이 아니었다
+
+처음에는 Watering의 물과 배터리, Logistics의 연료와 예산처럼 여러 수치 자원이
+동시에 tight하면 탐색이 어려워진다고 예상했다. 그러나 2×2 통제실험은 **자원의
+개수나 동시 tightness만으로 난도를 설명할 수 없다**는 결과를 보였다.
+
+| 통제 결과 | 실제 관측 | 의미 |
+|---|---|---|
+| Watering p001~p003: 물만 loose→tight | expanded 중앙값이 Count Downward `irhff` 6.5배, NFD `irhadd` 73.6배, ENHSP `hadd` 160.4배, `hradd` 165.9배 증가 | 배터리 조건을 바꾸지 않아도 반복 refill만으로 큰 탐색 증가가 발생 |
+| Watering p001~p003: 배터리만 loose→tight | numeric-aware 세 configuration은 중앙 1.5~1.6배, Count Downward는 0.3배 | 두 번째 tight 자원이 항상 큰 추가 난도를 만들지 않으며 pruning으로 탐색을 줄이기도 함 |
+| Watering p004 T/L: 물 tight, 배터리 loose | NFD `irhadd`와 ENHSP `hadd`가 60초 timeout | 물×배터리의 동시 경쟁은 timeout의 필요조건이 아님 |
+| Watering p004 T/T: 물·배터리 모두 tight | Metric-FF와 Count Downward가 각각 0.20초에 valid plan, ENHSP `hradd`도 0.80초·5,435 expanded에 해결 | 여러 tight 자원이 있어도 적절한 guidance에서는 first-plan 탐색이 빠를 수 있음 |
+| Logistics 2×2 전체 | 연료·예산 80 case가 모두 60초 안에 valid | 두 자원의 결합 자체가 coverage 장벽이 아니었음 |
+| Logistics p004 Count Downward | L/L은 131,514 expanded·17.87초, T/T는 1,541 expanded·0.60초 | 두 자원을 더 tight하게 만든 조건이 오히려 선택지를 일찍 제거함 |
+| Barman p001의 핵심 stock 하나만 조작 | NFD `irhadd`가 one-short 32.3초, blocked-zero 1.0초; Metric-FF도 1.4초 대 0.2초 | 자원 조건 하나의 모순도 늦게 드러나면 즉시 차단되는 경우보다 훨씬 어려움 |
+
+따라서 현재 증거는 다음 설명을 지지한다.
+
+> 여러 자원이 서로 경쟁한다는 사실은 난도를 키울 수 있지만 충분조건도 필요조건도
+> 아니다. 더 직접적인 병목은 잘못된 선택을 자원 제약이 초기에 제거하는지, 아니면
+> 많은 action을 허용한 뒤에야 모순이 드러나는지다.
+
+Watering에서는 반복 refill의 긴 horizon이 주된 병목이었고, Logistics에서는 tight한
+두 자원이 오히려 search space를 잘랐다. Barman에서는 핵심 stock 조건 하나만
+바꿨는데도 one-short 모순이 늦게 드러나자 판정시간이 증가했다. 그러므로 본 연구의
+문제 정의는 `복수 자원 경쟁 처리`가 아니라 **자원 수와 관계없이 늦게 드러나는
+numeric infeasibility를 조기에 인식하는 것**에 둔다.
+
+이 결론의 원자료와 전체 조건은
+[Watering·Logistics 2×2 통제실험](./13_수치자원_2x2_통제실험_결과.md)과
+[Barman stock 통제실험](./14_domain_problem_상호작용과_Barman_통제실험.md)에 있다.
+
+## 3. 더 정확한 문제의 조작적 정의
+
+### 3.1 관찰 단위는 domain도 problem도 아닌 `상태에서의 선택`이다
+
+Numeric planning task를 $\Pi$, 현재 상태를 $s$, 현재 적용 가능한 action을 $a$라고
+하자. $s$에서 goal까지 도달하는 실제 최소 잔여 비용을 $V^*(s)$라고 하고, $a$를
+선택한 뒤의 실제 비용을 $Q^*(s,a)$라고 둔다. 해가 없는 상태는
+$V^*(s)=\infty$이고, 미래 dead end로 들어가는 선택은 $Q^*(s,a)=\infty$다. 휴리스틱은
+이를 정확히 계산하는 대신 $h(s)$ 또는 action 선호도로 근사한다.
+
+우리가 관찰한 문제는 다음 불일치다.
+
+```text
+실제:       어떤 선택은 결국 불가능하거나 큰 보충 detour가 필요함
+휴리스틱:   현재에는 다른 선택과 비슷하게 가능하고 저렴하다고 평가함
+결과:       실패 또는 고비용 경로의 prefix를 깊게 확장한 뒤에야 평가가 나빠짐
+```
+
+즉 분석 단위는 “Watering은 어렵다”와 같은 domain 수준도, “p004는 어렵다”와 같은
+problem 수준도 아니다. **특정 domain–problem의 특정 상태가 이미 수치적 dead end임을
+왜 인식하지 못하는지**, 그리고 solvable 상태에서는 **어떤 선택의 미래 수치 결과를
+구별하지 못하는지**가 직접 분석할 대상이다.
+
+### 3.2 Delayed numeric conflict
 
 현재 상태에서는 적용 가능한 action이 존재하고 relaxed goal도 도달 가능해 보이지만,
-그 action을 포함한 일부 행동열이 미래의 누적 자원 부족, 보충 위치, 용량, assignment
-또는 여러 자원의 결합 때문에 실패하는 상황을 **delayed numeric conflict**라고 부른다.
+그 선택 이후에는 미래의 누적 자원 부족, 보충 위치, 용량, assignment 또는 여러
+자원의 결합 때문에 goal에 도달할 수 없는 경우를 **delayed numeric conflict**라고
+부른다. 따라서 이 용어는 실제 dead end인 경우에만 사용한다.
 
 예시는 다음과 같다.
 
@@ -68,13 +232,35 @@ Domain은 자원의 증감, 보충, assignment와 action 조건을 정의한다.
 - Watering: 식물 방문은 가능하지만 물과 배터리를 함께 고려하면 tour 후반이 불가능함
 - Logistics: 개별 도로는 통과할 수 있지만 전체 배송 경로의 연료와 예산이 부족함
 
-### 3.2 Failure revelation depth
+### 3.3 Delayed numeric cost
 
-잘못된 선택을 한 시점부터 그 선택이 실제 dead end로 판명되는 시점까지 필요한 최소
-action 수 또는 relaxed-plan layer 수를 **failure revelation depth**로 둔다. 이 값이
-클수록 forward search는 실패하는 경로를 더 오래 유지할 가능성이 있다.
+Goal에는 도달할 수 있지만 현재 선택 때문에 추가 refill, recharge, 우회 이동 또는
+반복 작업이 불가피해지는 경우는 **delayed numeric cost**로 구분한다. 이는 dead end가
+아니며 pruning 대상도 아니다. 휴리스틱이 낮은 우선순위를 주거나 실제 objective에
+가까운 비용을 부여해야 할 대상이다.
 
-### 3.3 Feasibility ambiguity
+이 구분을 통해 두 문제를 섞지 않는다.
+
+1. **Feasibility guidance:** 미래 dead end를 일찍 식별하는 문제
+2. **Cost guidance:** feasible 선택 사이의 불가피한 추가비용을 구별하는 문제
+
+첫 연구의 주대상은 feasibility guidance다. Cost guidance와 plan objective 개선은
+그다음 평가 축으로 둔다.
+
+### 3.4 Failure revelation depth
+
+Dead end 상태 또는 잘못된 선택에서 출발해, 자원 위반이 action precondition 실패나
+명백한 총수요 부족으로 표면에 나타날 때까지의 최소 action 수를 **failure revelation
+depth** $d$로 둔다. 의미상으로는 처음부터 dead end일 수 있지만, 그 사실을 보여주는
+수치 모순이 깊은 곳에서 나타나는 것이다. Barman one-short는 초기 상태부터 해가
+없지만 마지막 dose 부족이라는 모순의 witness가 깊고, blocked-zero는 같은 종류의
+모순이 첫 fill에서 드러난다.
+
+실험에서는 통제된 작은 문제의 완전 탐색 또는 검증된 continuation으로 실제 dead end를
+확인하고, 자원 위반이 표면화되는 깊이와 각 휴리스틱이 처음 $\infty$를 반환하는 깊이를
+별도로 기록한다. **문제 자체의 모순 깊이**와 **휴리스틱 감지 깊이**를 섞지 않는다.
+
+### 3.5 Feasibility ambiguity
 
 현재의 symbolic·numeric 정보만으로 성공 경로와 실패 경로가 얼마나 비슷하게
 보이는지를 **feasibility ambiguity**라고 둔다. 다음 경우 ambiguity가 높을 수 있다.
@@ -87,6 +273,21 @@ action 수 또는 relaxed-plan layer 수를 **failure revelation depth**로 둔�
 
 정확한 지표는 아직 확정하지 않는다. 적용 가능한 action 수, 첫 충돌 layer, 자원
 slack, 공유 목표 수와 relaxed plan의 실제 실행 가능 비율 등을 후보로 둔다.
+
+### 3.6 우리가 개선하려는 하나의 오류
+
+중심 오류는 **미래의 수치적 불가능성을 현재 휴리스틱이 유한하고 유망한 것으로
+평가하는 것**이다. 이것은 상황에 따라 두 형태로 관찰된다.
+
+- 문제 전체가 unsolvable이면 $V^*(s)=\infty$인 상태를 놓친다.
+- 문제는 solvable이지만 일부 선택만 실패하면 $Q^*(s,a)=\infty$인 선택을 성공
+  선택과 구별하지 못한다.
+
+둘은 별도 연구 문제가 아니다. 같은 delayed-infeasibility 인식 실패가 state 수준과
+action 수준에서 나타난 것이다. 새 방법은 정확한 $V^*$나 $Q^*$ 전체를 계산할 필요가
+없다. Metric-FF보다 dead end를 일찍 알아내거나 실패 선택을 뒤로 보내면서 그 추가
+계산비용보다 큰 탐색 절감을 만들면 된다. Hard pruning을 사용한다면 feasible 상태나
+선택을 제거하지 않는 soundness가 추가로 필요하다.
 
 ## 4. 기존 휴리스틱이 놓치는 부분
 
@@ -116,24 +317,30 @@ slack, 공유 목표 수와 relaxed plan의 실제 실행 가능 비율 등을 �
 Plan quality 문제도 별도로 남는다. 빠른 휴리스틱의 평가값이 실제 PDDL objective와
 정렬되지 않으면 valid plan을 빨리 찾아도 이동·시간·자원 비용이 클 수 있다.
 
-## 5. 연구 문제
+## 5. 문제 범위와 연구 질문
 
 첫 연구 범위는 deterministic sequential numeric PDDL로 제한한다. `increase`,
 `decrease`, `assign`, 선형 numeric precondition과 static fluent가 들어간 effect를
 포함하되, 연속 변화, 외생 event와 임의의 비선형 식은 후속 범위로 둔다. 목표는
 optimality 증명보다 제한시간 안의 valid first plan과 그 실행비용이다.
 
-현재의 중심 문제는 다음과 같이 정의한다.
+문서 첫머리에서 정의한 문제로부터 다음 **주 연구 질문**이 나온다.
 
-> **일반적인 numeric effect를 포함한 로봇 planning에서, 긴 행동열 뒤에 드러나는
-> 수치적 불가능성과 비용을 현재 상태의 휴리스틱에 낮은 계산비용으로 반영하여,
-> 빠른 첫 valid plan과 효과적인 탐색을 함께 달성할 수 있는가?**
+> **누적 자원 제약이 여러 action 뒤에 드러나는 deterministic sequential numeric
+> planning에서, Metric-FF의 relaxed planning graph가 제공하는 빠른 first-plan 탐색을
+> 유지하면서 미래에 infeasible해질 상태와 선택을 더 일찍 식별하여 탐색량과
+> first-plan time을 줄일 수 있는가?**
 
 영문 초안은 다음과 같다.
 
-> **How can heuristic search for robotic numeric planning anticipate delayed numeric
-> infeasibility and cost while retaining broad numeric expressiveness and low first-plan
-> latency?**
+> **Can heuristic search identify states and choices that will become infeasible because of
+> delayed cumulative resource constraints, while retaining the fast first-plan performance
+> of Metric-FF's relaxed planning graph?**
+
+부 연구 문제는 다음과 같다.
+
+> Feasible 선택 사이에서도 미래에 불가피한 refill, recharge와 우회 비용을 조기에
+> 구별하여 같은 시간 안에 더 낮은 objective의 plan을 찾을 수 있는가?
 
 이 문제 정의는 해결 수단을 포함하지 않는다. LLM을 사용하지 않아도 되고, 하나의
 새 휴리스틱 대신 기존 방법의 조합으로 해결해도 된다.
@@ -150,12 +357,19 @@ horizon이 failure revelation depth와 탐색량을 얼마나 설명하는가?
 각 휴리스틱이 decrease, ordering, numeric–symbolic correlation과 objective 정보를
 어디서 제거하며, 그 손실이 dead-end 인식 시점과 plan quality에 어떤 영향을 주는가?
 
-### RQ3. 미래 제약을 어느 정도까지 계산해야 이득인가?
+### RQ3. 미래 dead end를 얼마나 일찍 구별할 수 있는가?
+
+기존 휴리스틱과 후보 방법은 실제 failure revelation depth보다 몇 action 앞에서
+실패 선택의 우선순위를 낮추거나 dead end로 판정하는가? 그 과정에서 feasible 선택을
+잘못 낮게 평가하는 비율은 얼마인가?
+
+### RQ4. 조기 감지의 계산비용보다 탐색 이득이 큰가?
 
 총수요 lower bound, interval, 작은 LP, landmark, abstraction, bounded lookahead처럼
-강도가 다른 추론에서 추가 계산비용보다 pruning 이득이 커지는 조건은 무엇인가?
+강도가 다른 추론에서 휴리스틱 계산시간 증가보다 상태 확장과 first-plan time 감소가
+큰 조건은 무엇인가?
 
-### RQ4. 이득이 새로운 domain과 problem에도 유지되는가?
+### RQ5. 이득이 새로운 domain과 problem에도 유지되는가?
 
 특정 benchmark에 맞춘 규칙이 아니라, 보지 못한 자원 구조와 problem 크기에서도
 coverage, first-plan latency 또는 objective를 개선하는가?
@@ -166,8 +380,10 @@ coverage, first-plan latency 또는 objective를 개선하는가?
 
 | 요구사항 | 평가 질문 |
 |---|---|
-| 조기 감지 | 실제 충돌보다 몇 action/layer 앞에서 위험을 구분하는가? |
-| 낮은 overhead | 휴리스틱 계산 증가보다 확장 감소가 큰가? |
+| 조기 감지 | 기존 휴리스틱보다 몇 action 앞에서 실패 선택을 구분하는가? |
+| 오판 통제 | Feasible 선택을 dead end로 잘못 제거하거나 과도하게 낮추지 않는가? |
+| Metric-FF 경쟁력 | 쉬운 문제의 first-plan time과 coverage를 Metric-FF 수준으로 유지하는가? |
+| 순 탐색 이득 | 추가 휴리스틱 계산시간보다 상태 확장과 first-plan time 감소가 큰가? |
 | 넓은 표현 범위 | decrease, refill, recharge, assignment와 fluent-dependent effect를 어디까지 지원하는가? |
 | 상관관계 보존 | 위치·순서·여러 자원의 결합 중 무엇을 유지하는가? |
 | 빠른 첫 plan | 주어진 짧은 시간 안의 valid-plan coverage가 유지되는가? |
@@ -176,6 +392,17 @@ coverage, first-plan latency 또는 objective를 개선하는가?
 
 모든 조건을 완벽히 만족할 필요는 없다. 대신 어느 정보를 얼마의 비용으로 추가했고,
 그 결과 어떤 문제군에서 이득과 손해가 발생하는지 명시해야 한다.
+
+### 7.1 이번 연구가 직접 해결하지 않는 것
+
+- 모든 numeric PDDL과 비선형·연속 dynamics 지원
+- optimal plan 또는 unsolvability proof의 효율적 계산
+- 모든 domain에서 항상 우월한 단일 휴리스틱
+- 첫 연구에서 plan objective까지 동시에 최적화하는 것
+- LLM을 사용하는 것 자체
+- planner portfolio 선택 자체
+
+이 항목들은 확장 또는 방법 후보가 될 수 있지만 현재 문제 정의의 성공 조건은 아니다.
 
 ## 8. 열어 둔 방법 후보
 
@@ -204,6 +431,21 @@ LP도 먼저 정한 목표가 아니라 실험으로 선택할 후보다.
 5. 휴리스틱 계산시간과 상태 확장 감소를 함께 측정한다.
 6. objective를 제외한 실험과 포함한 실험을 나눠 feasibility guidance와 quality
    guidance를 구분한다.
+
+작은 통제 문제에서는 탐색 중 표본을 다음 단위로 저장한다.
+
+```text
+domain, problem, state_id, action,
+state_solvable, action_has_goal_continuation,
+remaining_cost_or_infinity,
+resource_conflict_witness_depth,
+heuristic_name, heuristic_value, heuristic_dead_end,
+heuristic_time, expanded_before_detection
+```
+
+이 데이터가 있어야 `문제가 어려웠다`는 결과에서 한 단계 더 나아가, 기존 휴리스틱이
+실제 dead end를 놓친 것인지, feasible 선택의 순서만 잘못 정한 것인지, 아니면
+휴리스틱 계산 자체가 비쌌는지를 구분할 수 있다.
 
 이 실험 뒤에 가장 작은 정보 추가로 반복적인 delayed conflict를 제거하는 방법을
 우선 구현한다. 결과가 지지하지 않으면 다른 후보로 바꾼다.
