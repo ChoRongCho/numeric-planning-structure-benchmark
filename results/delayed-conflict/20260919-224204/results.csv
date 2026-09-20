@@ -1,0 +1,5 @@
+variant,revelation,branching,manifestation_depth,reachable_states,dead_end_states,false_finite_states,reference_gbfs_expanded,reference_false_finite_expanded,metric_ff_status,metric_ff_validation,metric_ff_wall_seconds,metric_ff_expanded,metric_ff_plan_length
+early-low,early,1,3,11,2,1,10,1,solved,valid,0.00615,12,9
+early-high,early,2,3,15,6,2,11,2,solved,valid,0.007672,16,9
+deep-low,deep,1,6,14,5,4,13,4,solved,valid,0.006571,15,9
+deep-high,deep,2,6,71,62,30,39,30,solved,valid,0.007589,72,9

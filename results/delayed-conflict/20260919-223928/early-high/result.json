@@ -1,0 +1,47 @@
+{
+  "variant": "early-high",
+  "revelation": "early",
+  "branching_label": "high",
+  "branching": 3,
+  "manifestation_depth": 3,
+  "nodes": 1101,
+  "edges": 1100,
+  "initial_solvable": true,
+  "initial_exact_distance": 9,
+  "reachable_states": 21,
+  "solvable_states": 9,
+  "dead_end_states": 12,
+  "bad_root_actions": [
+    {
+      "action": "a-bad-1-0-0",
+      "successor_solvable": false
+    },
+    {
+      "action": "a-bad-1-0-1",
+      "successor_solvable": false
+    },
+    {
+      "action": "a-bad-1-0-2",
+      "successor_solvable": false
+    }
+  ],
+  "good_root_actions": [
+    {
+      "action": "z-good-1",
+      "successor_solvable": true
+    }
+  ],
+  "relaxed_initial_h": 7.0,
+  "false_finite_states": 3,
+  "false_finite_fraction": 0.14285714285714285,
+  "mean_persistent_branching": 0.0,
+  "reference_gbfs_solved": true,
+  "reference_gbfs_expanded": 12,
+  "reference_false_finite_expanded": 3,
+  "metric_ff_status": "crash",
+  "metric_ff_validation": "not-run",
+  "metric_ff_wall_seconds": 0.015353,
+  "metric_ff_expanded": "",
+  "metric_ff_plan_length": "",
+  "metric_ff_returncode": 1
+}

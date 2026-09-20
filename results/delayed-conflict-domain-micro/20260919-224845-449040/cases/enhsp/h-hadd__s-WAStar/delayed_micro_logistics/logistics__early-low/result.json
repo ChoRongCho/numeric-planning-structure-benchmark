@@ -1,0 +1,22 @@
+{
+  "planner": "enhsp",
+  "configuration": "h-hadd__s-WAStar",
+  "heuristic": "hadd",
+  "search": "WAStar",
+  "benchmark": "delayed_micro_logistics",
+  "instance": "logistics__early-low.pddl",
+  "compatible": "true",
+  "return_code": "0",
+  "wall_seconds": "0.302192",
+  "max_rss_kb": "72764",
+  "peak_group_rss_kb": "72764",
+  "limit_reason": "",
+  "plan_length": "",
+  "expanded_nodes": "4",
+  "metric_value": "-1.0",
+  "objective_value": "",
+  "validation": "not-run",
+  "plan_path": "",
+  "case_directory": "results/delayed-conflict-domain-micro/20260919-224845-449040/cases/enhsp/h-hadd__s-WAStar/delayed_micro_logistics/logistics__early-low",
+  "status": "unsolved"
+}

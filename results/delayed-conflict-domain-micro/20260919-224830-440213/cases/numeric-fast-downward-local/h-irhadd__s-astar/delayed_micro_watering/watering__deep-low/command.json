@@ -1,0 +1,9 @@
+[
+  "/home/changmin/PyProject/53_KIST_Research/planners/plannerctl",
+  "run",
+  "numeric-fast-downward-local",
+  "/home/changmin/PyProject/53_KIST_Research/results/delayed-conflict-domain-micro/20260919-224830-440213/cases/numeric-fast-downward-local/h-irhadd__s-astar/delayed_micro_watering/watering__deep-low/work/domain.pddl",
+  "/home/changmin/PyProject/53_KIST_Research/results/delayed-conflict-domain-micro/20260919-224830-440213/cases/numeric-fast-downward-local/h-irhadd__s-astar/delayed_micro_watering/watering__deep-low/work/problem.pddl",
+  "--search",
+  "astar(irhadd())"
+]

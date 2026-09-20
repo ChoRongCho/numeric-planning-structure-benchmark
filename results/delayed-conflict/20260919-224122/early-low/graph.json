@@ -1,0 +1,152 @@
+{
+  "variant": {
+    "name": "early-low",
+    "revelation": "early",
+    "branching_label": "low",
+    "branching": 1,
+    "depth": 6,
+    "initial_fuel": 2,
+    "good_depth": 8,
+    "consuming_levels": [
+      1,
+      2,
+      3
+    ],
+    "manifestation_depth": 3
+  },
+  "nodes": [
+    "root",
+    "good-1",
+    "good-2",
+    "good-3",
+    "good-4",
+    "good-5",
+    "good-6",
+    "good-7",
+    "good-8",
+    "bad-1-0-0",
+    "bad-2-0-0",
+    "bad-3-0-0",
+    "bad-4-0-0",
+    "bad-5-0-0",
+    "bad-6-0-0"
+  ],
+  "terminals": [
+    "bad-6-0-0",
+    "good-8"
+  ],
+  "edges": [
+    {
+      "name": "z-good-1",
+      "source": "root",
+      "target": "good-1",
+      "fuel_cost": 0,
+      "route": "good",
+      "level": 1
+    },
+    {
+      "name": "z-good-2",
+      "source": "good-1",
+      "target": "good-2",
+      "fuel_cost": 0,
+      "route": "good",
+      "level": 2
+    },
+    {
+      "name": "z-good-3",
+      "source": "good-2",
+      "target": "good-3",
+      "fuel_cost": 0,
+      "route": "good",
+      "level": 3
+    },
+    {
+      "name": "z-good-4",
+      "source": "good-3",
+      "target": "good-4",
+      "fuel_cost": 0,
+      "route": "good",
+      "level": 4
+    },
+    {
+      "name": "z-good-5",
+      "source": "good-4",
+      "target": "good-5",
+      "fuel_cost": 0,
+      "route": "good",
+      "level": 5
+    },
+    {
+      "name": "z-good-6",
+      "source": "good-5",
+      "target": "good-6",
+      "fuel_cost": 0,
+      "route": "good",
+      "level": 6
+    },
+    {
+      "name": "z-good-7",
+      "source": "good-6",
+      "target": "good-7",
+      "fuel_cost": 0,
+      "route": "good",
+      "level": 7
+    },
+    {
+      "name": "z-good-8",
+      "source": "good-7",
+      "target": "good-8",
+      "fuel_cost": 0,
+      "route": "good",
+      "level": 8
+    },
+    {
+      "name": "a-bad-1-0-0",
+      "source": "root",
+      "target": "bad-1-0-0",
+      "fuel_cost": 1,
+      "route": "bad",
+      "level": 1
+    },
+    {
+      "name": "a-bad-2-0-0",
+      "source": "bad-1-0-0",
+      "target": "bad-2-0-0",
+      "fuel_cost": 1,
+      "route": "bad",
+      "level": 2
+    },
+    {
+      "name": "a-bad-3-0-0",
+      "source": "bad-2-0-0",
+      "target": "bad-3-0-0",
+      "fuel_cost": 1,
+      "route": "bad",
+      "level": 3
+    },
+    {
+      "name": "a-bad-4-0-0",
+      "source": "bad-3-0-0",
+      "target": "bad-4-0-0",
+      "fuel_cost": 0,
+      "route": "bad",
+      "level": 4
+    },
+    {
+      "name": "a-bad-5-0-0",
+      "source": "bad-4-0-0",
+      "target": "bad-5-0-0",
+      "fuel_cost": 0,
+      "route": "bad",
+      "level": 5
+    },
+    {
+      "name": "a-bad-6-0-0",
+      "source": "bad-5-0-0",
+      "target": "bad-6-0-0",
+      "fuel_cost": 0,
+      "route": "bad",
+      "level": 6
+    }
+  ]
+}

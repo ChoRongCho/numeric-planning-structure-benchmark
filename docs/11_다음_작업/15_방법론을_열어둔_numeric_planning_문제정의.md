@@ -400,41 +400,328 @@ LLM은 문제 정의에 포함되지 않는다. 사용한다면 수작업 규칙
 특징 기반 선택과 비교해 추가 이득을 증명해야 한다. 마찬가지로 anytime search나
 LP도 먼저 정한 목표가 아니라 실험으로 선택할 후보다.
 
-## 9. 방법을 고르기 전에 필요한 실험
+## 9. Delayed-conflict 가설을 검증하는 실험
 
-1. Barman에서 horizon과 stock slack을 독립적으로 변화시킨다.
-2. Watering에서 목표 수, 물 용량, recharge 필요성과 보충 장소 거리를 분리한다.
-3. Logistics에서 경로 branching과 연료·예산 slack을 분리한다.
-4. 각 상태에서 relaxed plan의 실행 가능성, 첫 numeric conflict layer와 실제 dead end
-   깊이를 기록한다.
-5. 휴리스틱 계산시간과 상태 확장 감소를 함께 측정한다.
-6. objective를 제외한 실험과 포함한 실험을 나눠 feasibility guidance와 quality
-   guidance를 구분한다.
+### 9.1 먼저 두 원인을 독립적으로 조작한다
 
-작은 통제 문제에서는 탐색 중 표본을 다음 단위로 저장한다.
+기존 p001~p004만으로는 problem size, resource slack, conflict depth와 branching이 함께
+변한다. 다음 2×2 통제 family를 새로 만든다.
+
+| 조건 | Failure revelation depth | Persistent branching |
+|---|---|---|
+| E/L | early | low |
+| E/H | early | high |
+| D/L | deep | low |
+| D/H | deep | high |
+
+네 조건에서 객체 수, goal 수, 총 자원 부족량과 valid branch의 길이는 같게 유지한다.
+바꾸는 것은 다음 두 가지뿐이다.
+
+- **Revelation depth:** 실패 branch의 자원 모순이 첫 action 부근에서 나타나는지, 같은
+  크기의 모순이 마지막 action 부근에서 나타나는지
+- **Persistent branching:** 모순이 나타나기 전까지 선택할 수 있는 실패 successor가
+  적은지 많은지
+
+Solvable family에는 정확히 하나 이상의 성공 branch와 여러 실패 branch를 함께 둔다.
+Unsolvable family에는 모든 branch가 실패하되 모순이 나타나는 깊이만 다르게 둔다.
+이렇게 해야 state-level dead-end detection과 action ranking을 같은 설계에서 볼 수 있다.
+
+가장 먼저 planner와 독립적인 작은 synthetic chain domain으로 조작이 정확히
+작동하는지 확인한다. 이후 실제 benchmark 구조로 옮긴다.
+
+| Domain | Early/deep 조작 | Branching 조작 |
+|---|---|---|
+| Barman | 같은 one-dose deficit을 첫 주문에 필요한 재료와 마지막 주문에 필요한 재료에 각각 배치 | 동일 recipe를 처리할 수 있는 shot·shaker·fill 순서 수 조절 |
+| Watering | 같은 총 물 수요와 refill 횟수에서 물 부족이 짧은 tour와 긴 tour의 끝에 나타나도록 goal 순서·수도 위치 구성 | 다음 식물과 이동 경로 선택 수 조절 |
+| Logistics | 같은 총 fuel/budget deficit을 강제 경로의 첫 edge와 마지막 edge에 배치 | 비용과 길이가 비슷한 대체 도로·truck 선택 수 조절 |
+
+Barman의 기존 blocked-zero와 one-short는 early/deep의 첫 근사지만, 부족량과 실제
+주문 구조까지 완전히 같지는 않다. 새 family에서는 총 deficit과 symbolic 크기를 같게
+만들어 revelation position만 바꿔야 한다.
+
+### 9.2 작은 문제에서는 exact oracle로 정답 label을 만든다
+
+가설 검증에는 planner의 `unsolvable` 출력만으로 부족하다. 정수 자원 범위와 객체 수가
+작은 instance의 전체 reachable state graph를 BFS 또는 Dijkstra로 열거한다. Goal
+state에서 reverse reachability를 계산하면 모든 상태와 action에 다음 label을 붙일 수
+있다.
 
 ```text
-domain, problem, state_id, action,
-state_solvable, action_has_goal_continuation,
-remaining_cost_or_infinity,
-resource_conflict_witness_depth,
-heuristic_name, heuristic_value, heuristic_dead_end,
-heuristic_time, expanded_before_detection
+state_solvable(s)              # s에서 goal continuation이 존재하는가
+remaining_cost(s)              # 존재하면 정확한 최소 잔여 비용
+successor_solvable(s, a)       # a를 선택한 뒤 goal continuation이 존재하는가
+remaining_cost_after(s, a)     # action별 정확한 잔여 비용
 ```
 
-이 데이터가 있어야 `문제가 어려웠다`는 결과에서 한 단계 더 나아가, 기존 휴리스틱이
-실제 dead end를 놓친 것인지, feasible 선택의 순서만 잘못 정한 것인지, 아니면
-휴리스틱 계산 자체가 비쌌는지를 구분할 수 있다.
+반복 refill 때문에 graph가 무한해지지 않도록 micro instance는 finite integer range로
+제한하고, `total-cost`처럼 계속 증가하지만 applicability에 영향을 주지 않는 metric
+accumulator는 state identity에서 분리한다. Oracle이 완전 탐색할 수 없는 큰 문제는
+정답 label 실험에 사용하지 않고 외부 일반화 평가에만 사용한다.
 
-이 실험 뒤에 가장 작은 정보 추가로 반복적인 delayed conflict를 제거하는 방법을
-우선 구현한다. 결과가 지지하지 않으면 다른 후보로 바꾼다.
+### 9.3 각 휴리스틱에서 state-level trace를 수집한다
+
+Metric-FF `numeric-hff`, Count Downward `irhff`, NFD `irhadd`, ENHSP `hadd/hradd`에
+최소한 다음 trace를 추가한다.
+
+```text
+state_id, parent_id, generating_action, search_depth,
+h_value, is_heuristic_dead_end, preferred_actions,
+expanded_order, heuristic_time,
+relaxed_plan_actions, relaxed_plan_layers
+```
+
+Oracle label과 합치면 다음 두 오류를 직접 계산할 수 있다.
+
+```text
+false-finite state:
+    state_solvable = false and h_value < infinity
+
+bad-action ranking:
+    successor_solvable(a_bad) = false,
+    successor_solvable(a_good) = true,
+    but heuristic prefers or ranks a_bad no worse than a_good
+```
+
+가능하면 relaxed plan을 실제 numeric semantics로 replay한다. 처음 numeric
+precondition이 깨지는 layer와 누적 resource deficit이 처음 증명되는 layer를 따로
+기록한다. 이것이 단순 runtime 추측이 아니라 false feasibility의 직접 증거가 된다.
+
+### 9.4 가설 변수는 다음처럼 측정한다
+
+| 변수 | 조작적 측정 |
+|---|---|
+| Conflict manifestation depth | 실패 선택 이후 실제 numeric precondition 위반 또는 resource-deficit certificate가 처음 나타나는 최소 깊이 |
+| Heuristic detection depth | 해당 branch에서 휴리스틱이 처음 infinity/dead-end를 반환하는 깊이 |
+| Detection lag | heuristic detection depth − 선택이 이루어진 깊이 |
+| Persistent branching | 모순이 나타나기 전까지 생성된 successor 중 휴리스틱 값이 유한한 수 |
+| False-feasible subtree size | Oracle상 unsolvable이지만 휴리스틱 값이 유한하여 확장된 descendant 수 |
+| Ranking error rate | 성공 action이 존재하는 상태에서 실패 action을 같거나 더 높게 평가한 비율 |
+| Heuristic overhead | 상태당 휴리스틱 계산시간과 전체 계산시간 |
+| Search outcome | expanded states, first-plan time, coverage, VAL-valid 여부, objective |
+
+`failure revelation depth`라는 하나의 이름으로 실제 모순 깊이와 휴리스틱 감지 깊이를
+섞지 않는다. 문제 구조가 정하는 `manifestation depth`와 알고리즘이 보이는
+`detection depth`를 별도 열로 저장한다.
+
+### 9.5 어떤 결과가 나오면 가설을 지지하는가
+
+다음 결과가 반복되어야 delayed-conflict 가설을 채택한다.
+
+1. 객체 수, deficit과 goal 수를 고정해도 deep 조건이 early 조건보다 false-feasible
+   subtree와 expanded states를 증가시킨다.
+2. 같은 revelation depth에서 high-branching 조건이 low-branching보다 탐색을 늘린다.
+3. `deep × high branching` 상호작용이 가장 큰 탐색 증가를 만든다.
+4. `manifestation depth`, false-feasible subtree size와 ranking error가 raw resource
+   count·tightness보다 expanded states와 first-plan time을 더 잘 설명한다.
+5. 이 관계가 synthetic domain뿐 아니라 Barman, Watering, Logistics 중 최소 두
+   domain에서 같은 방향으로 나타난다.
+
+분석에서는 먼저 matched-pair 비율을 보고, 그다음 다음 형태의 회귀 또는 mixed-effects
+model을 사용한다.
+
+```text
+log(expanded + 1)
+  ~ manifestation_depth
+  + persistent_branching
+  + depth × branching
+  + problem_size
+  + resource_slack
+  + planner_heuristic
+```
+
+기본 model인 `problem_size + resource_count + resource_slack`과 비교해 depth·branching을
+추가한 model의 cross-validated 설명력이 실제로 높아지는지 확인한다. Seed와 domain을
+바꿔도 계수 방향이 유지되어야 한다.
+
+### 9.6 어떤 결과가 나오면 가설을 버리는가
+
+다음 중 하나가 반복되면 delayed-conflict를 중심 문제로 채택하지 않는다.
+
+- Revelation depth만 바꿔도 expanded states와 first-plan time이 거의 변하지 않음
+- 변화가 heuristic 계산시간이나 grounding 크기로 모두 설명됨
+- False-feasible state가 많아도 실제 search는 거의 확장하지 않음
+- Raw topology, duplicate detection 또는 tie breaking이 depth보다 결과를 더 잘 설명함
+- Barman에서만 나타나고 Watering·Logistics에는 일반화되지 않음
+
+이 경우 탐색 실패의 중심 원인을 plateau, heuristic 계산비용, objective misalignment,
+grounding 또는 topology에서 다시 찾아야 한다.
+
+### 9.7 검증 순서
+
+1. [x] Synthetic 2×2 family와 exact oracle 구현
+2. [x] 외부 relaxation trace와 Metric-FF 실행으로 측정 pipeline 검증
+3. Count Downward, NFD, ENHSP로 같은 state/action label 비교
+4. Barman matched early/deep family 실행
+5. [x] 기존 Watering·Logistics 통제실험으로 방향성 교차 점검
+6. [x] Watering·Logistics 원본 schema의 matched micro family 실행
+7. 전체 benchmark 크기의 matched revelation-position family 실행
+8. 가설이 지지된 경우에만 최소 guidance prototype 구현
+
+이 순서라면 처음부터 일반 numeric dead-end detector를 만들지 않아도 된다. 첫 결과는
+`왜 어려워지는가`에 대한 검증이고, 그 결과가 충분할 때만 `어떻게 고칠 것인가`로
+넘어간다.
+
+### 9.8 첫 synthetic pilot 결과
+
+`scripts/run/delayed_conflict_experiment.py`로 depth 6, initial fuel 2,
+high branching 2의 첫 pilot을 실행했다. 네 조건 모두 Metric-FF가 plan을 찾았고 VAL에서
+valid였다.
+
+| Variant | Manifestation depth | Branching | Oracle false-finite states | Reference GBFS expanded | Metric-FF evaluated states |
+|---|---:|---:|---:|---:|---:|
+| early-low | 3 | 1 | 1 | 10 | 12 |
+| early-high | 3 | 2 | 2 | 11 | 16 |
+| deep-low | 6 | 1 | 4 | 13 | 15 |
+| deep-high | 6 | 2 | 30 | 39 | 72 |
+
+High-branching 조건에서 모순 위치만 early에서 deep으로 옮기자 grounded action 수는
+동일한 199개인 상태에서 Metric-FF 평가 상태가 16개에서 72개로 4.5배 증가했다.
+Oracle상 false-finite 상태도 2개에서 30개로 증가했다. Deep 조건에서 branching을
+1에서 2로 바꾸면 Metric-FF 평가 상태는 15개에서 72개로 증가했다. 즉 synthetic
+조작은 `deep × branching`이 false-feasible subtree와 실제 Metric-FF search effort를
+함께 늘리는 예상 방향을 만들었다.
+
+이 결과는 pipeline과 조작이 작동한다는 sanity check다. 가설의 일반적 증거로
+사용하려면 seed·depth·branching sweep과 Barman·Watering·Logistics 재현이 필요하다.
+첫 실행 결과는
+[`results/delayed-conflict/20260919-224204`](../../results/delayed-conflict/20260919-224204/)에
+보관했다.
+
+### 9.9 실제 Barman·Watering·Logistics 교차 점검
+
+기존 통제실험 220행을 같은 형식으로 다시 읽어 55개의 paired contrast를 만들었다.
+NFD·ENHSP·Count Downward에는 `expanded_nodes`를 사용했고, 기존 CSV에서 비어 있던
+Metric-FF 탐색량은 각 `planner.log`의 `evaluating N states`를 다시 추출했다. 전체
+결과와 재현 스크립트는 다음 위치에 있다.
+
+- 결과: [`results/delayed-conflict/cross-domain-evidence`](../../results/delayed-conflict/cross-domain-evidence/)
+- 분석기: [`scripts/run/analyze_delayed_conflict_evidence.py`](../../scripts/run/analyze_delayed_conflict_evidence.py)
+
+#### Barman: 늦은 모순은 실제 search를 크게 늘렸다
+
+p001에서 `blocked-zero`와 `one-short`는 모두 unsolvable이다. 전자는 필요한 핵심
+재료가 처음부터 0이고, 후자는 여러 잔을 만든 뒤 마지막 한 dose가 부족하다.
+
+| Planner / heuristic | 즉시 모순 상태 수 | 늦은 모순 상태 수 | 증가 |
+|---|---:|---:|---:|
+| Metric-FF / `numeric-hff` | 2 evaluated | 49,047 evaluated | 24,523.5배 |
+| NFD / `irhadd` | 26,877 expanded | 986,505 expanded | 36.7배 |
+| Count Downward / `irhff` | 0 expanded | 31,558 expanded | 즉시 종료→대규모 탐색 |
+
+Metric-FF의 실행시간도 0.20초에서 1.41초로, NFD는 1.00초에서 32.32초로 늘었다.
+p002와 p004에서는 Metric-FF를 포함한 여러 configuration이 `one-short`에서 60초
+timeout에 도달했지만 `blocked-zero`는 0.2~1.0초에 unsolvable을 판정했다. 이는
+`확실히 안 되는 선택은 쉽고, 한동안 될 것처럼 보이는 선택은 어렵다`는 관찰에
+직접 부합한다.
+
+다만 이 비교는 아직 완전한 matched causal test가 아니다. `blocked-zero`와
+`one-short`는 부족한 총량도 다르다. 따라서 Barman 결과는 강한 실제-domain 증거지만,
+같은 deficit을 유지하고 모순 위치만 바꾼 후속 실험이 필요하다.
+
+#### Watering: 자원 하나의 반복 refill만으로도 탐색이 커졌다
+
+배터리를 loose로 고정하고 물만 loose에서 tight로 바꿨다. Metric-FF의 evaluated
+states는 p001~p004에서 각각 `395→1,376`, `471→544`, `1,634→3,247`,
+`442→1,272`로 모두 증가했지만 실행시간은 약 0.2초를 유지했다. 반면 numeric-aware
+휴리스틱은 훨씬 민감했다.
+
+- p002 ENHSP `hadd`: 206→190,184 expanded, 923.2배
+- p002 NFD `irhadd`: 3,363→549,228 expanded, 163.3배
+- p003 ENHSP `hradd`: 642→20,486 expanded, 31.9배
+- p004 ENHSP `hadd`: 6,570 expanded에서 solved였으나 water-tight에서
+  1,010,221 expanded 후 timeout
+
+즉 물과 배터리 두 자원의 동시 경쟁이 없어도 물 보충을 반복해야 하는 긴 action
+연쇄만으로 탐색이 크게 늘었다. 이 결과는 persistent ambiguity 설명과 일관되지만,
+현재 2×2 실험은 물 부족이 나타나는 **위치**를 직접 조작하지 않았으므로 failure
+revelation depth의 인과효과를 증명하지는 않는다.
+
+#### Logistics: 강한 제약의 효과도 instance와 휴리스틱에 따라 바뀌었다
+
+p004 Count Downward `irhff`에서는 loose/loose의 131,514 expanded가 tight/tight에서
+1,541로 줄었다. 시간도 17.87초에서 0.60초로 감소했다. 이는 강한 수치 제약이
+불가능한 선택을 일찍 제거하면 search space가 작아질 수 있다는 사례다.
+
+하지만 이 방향은 보편적이지 않았다. p003에서는 tight/tight가 ENHSP `hadd`의
+expanded를 202에서 45,992로, NFD `irhadd`를 217에서 32,946로 늘렸다. Metric-FF도
+p001을 제외한 각 instance에서 tight/tight의 evaluated states가 소폭 증가했다.
+따라서 `tight하면 쉬워진다` 역시 일반 설명이 아니다. 같은 제약이 어떤 problem에서는
+초기 pruning 신호가 되고, 다른 problem에서는 긴 탐색 동안 남는 결합 조건이 된다.
+
+#### 현재 판정
+
+세 도메인을 함께 보면 `자원이 많다`, `자원이 tight하다`, `두 자원이 경쟁한다`는
+변수만으로 난도를 설명할 수 없다. 결과는 다음의 더 구체적인 설명과 일관된다.
+
+> 수치 제약이 강한가보다, 그 제약이 실패 선택을 얼마나 일찍 제거하며 그전까지
+> 유한한 휴리스틱 값을 받는 대안이 얼마나 많이 남는가가 탐색 난도와 더 관련된다.
+
+Synthetic 실험은 depth와 branching을 직접 통제해 이 방향을 지지했고, Barman은
+실제 domain에서 매우 큰 early/deep 근사 차이를 보였다. Watering과 Logistics는 이
+설명에 부합하는 사례와 중요한 비단조성을 제공했다. 아직 Watering·Logistics에서
+revelation position을 독립적으로 바꾸지 않았으므로 **교차 도메인 인과가 확인됐다고
+결론 내리지는 않는다.**
+
+### 9.10 Watering·Logistics matched micro replication
+
+9.9의 한계를 보완하기 위해 Watering과 Logistics의 **원본 domain.pddl과 action
+schema를 그대로 사용한** micro problem family를 추가했다. 두 domain 모두 용량은
+10, 네 개 edge의 총 자원소모는 14로 고정했다.
+
+```text
+early: 6, 6, 1, 1  → 두 번째 edge에서 차단
+deep:  1, 1, 6, 6  → 네 번째 edge에서 차단
+```
+
+즉 객체 수, goal, 총 deficit과 grounded domain semantics는 같고, edge cost의 순서만
+바뀐다. High-branching 조건에는 목표로 이어지지 않는 실행 가능한 side edge를 중간
+layer마다 두 개 추가했다. 여덟 problem은 모두 unsolvable이며 각 planner도 이를
+정상 판정했다.
+
+| Domain | Planner / heuristic | E/L | E/H | D/L | D/H | Deep/early low | Deep/early high |
+|---|---|---:|---:|---:|---:|---:|---:|
+| Watering | Metric-FF `numeric-hff` | 24 | 44 | 34 | 64 | 1.42배 | 1.45배 |
+| Watering | Count Downward `irhff` | 5 | 5 | 12 | 12 | 2.40배 | 2.40배 |
+| Watering | NFD `irhadd` | 18 | 64 | 49 | 153 | 2.72배 | 2.39배 |
+| Watering | ENHSP `hadd` / `hradd` | 5 | 5 | 12 | 12 | 2.40배 | 2.40배 |
+| Logistics | Metric-FF `numeric-hff` | 14 | 22 | 26 | 42 | 1.86배 | 1.91배 |
+| Logistics | Count Downward `irhff` | 4 | 4 | 12 | 12 | 3.00배 | 3.00배 |
+| Logistics | NFD `irhadd` | 10 | 38 | 28 | 76 | 2.80배 | 2.00배 |
+| Logistics | ENHSP `hadd` / `hradd` | 4 | 4 | 12 | 12 | 3.00배 | 3.00배 |
+
+표의 값은 Metric-FF에는 evaluated states, 나머지에는 expanded nodes다. 모든
+domain–configuration 조합에서 deep 조건이 early보다 1.42~3.00배 더 많은 상태를
+탐색했다. 따라서 **같은 총 deficit에서도 모순이 늦게 드러나면 탐색이 증가한다는
+효과는 Barman에만 국한되지 않았다.** Watering과 Logistics 원본 action semantics를
+사용한 통제 family에서도 같은 방향이 반복됐다.
+
+Branching 효과는 더 제한적이었다. Metric-FF와 NFD `irhadd`에서는 high 조건이 low보다
+상태 수를 늘렸지만, Count Downward와 ENHSP에서는 side edge가 expanded 수를 바꾸지
+않았다. 이 planner들은 해당 successor를 휴리스틱 dead end나 비선호 action으로
+초기에 걸러낸 것으로 해석할 수 있다. 정확한 이유는 trace를 확인해야 한다. 따라서
+현재 결과는 다음처럼 정리한다.
+
+1. **Revelation depth 효과:** 두 실제 domain schema와 다섯 configuration에서 반복됨
+2. **Persistent branching 효과:** Metric-FF와 NFD에서는 확인, 다른 configuration에는
+   일반화되지 않음
+3. **남은 한계:** 작은 강제-chain unsolvable 문제이므로, solvable 문제의 bad-action
+   ranking과 전체 benchmark 규모에서도 재현해야 함
+
+생성기와 원자료는 다음 위치에 있다.
+
+- 생성·실행기: [`scripts/run/delayed_conflict_domain_micro.py`](../../scripts/run/delayed_conflict_domain_micro.py)
+- 5개 configuration 실행: [`results/delayed-conflict-domain-micro`](../../results/delayed-conflict-domain-micro/)
+- 통합표: [`results/delayed-conflict/cross-domain-evidence/matched-micro-results.csv`](../../results/delayed-conflict/cross-domain-evidence/matched-micro-results.csv)
 
 ## 10. 현재 단계의 결론
 
 현재까지 확인된 것은 **자원 개수와 tightness만으로 휴리스틱의 비단조적인 성능을
-설명할 수 없다는 사실**과 **빠른 relaxed-plan 계열과 강한 numeric-aware 계열 사이의
-시간–품질 차이**다. Forward search가 미래 수치 실패를 늦게 발견한다는 설명은 아직
-유력한 가설이지 확인된 결론이 아니다.
+설명할 수 없다는 사실**, **빠른 relaxed-plan 계열과 강한 numeric-aware 계열 사이의
+시간–품질 차이**, 그리고 **synthetic family, Barman 근사 비교, Watering·Logistics
+matched micro family에서 늦은 모순이 탐색을 늘렸다는 사실**이다. 특히 같은 deficit과
+문제 크기에서 revelation position만 바꾼 micro 실험은 다섯 configuration 모두에서
+같은 방향을 보였다. 다만 작은 unsolvable chain을 넘어 solvable 문제의 action ranking과
+전체 benchmark 규모에서도 재현하기 전에는 일반적인 난도 원인으로 확정하지 않는다.
 
 따라서 다음 단계의 기여는 새 휴리스틱이 아니라 상태·action 수준 계측으로 이 가설을
 검증하는 것이다. 가설이 탐색량과 objective 변화를 실제로 설명할 때만 조기

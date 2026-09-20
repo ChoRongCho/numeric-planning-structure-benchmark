@@ -1,0 +1,11 @@
+node,fuel,action,route,level,fuel_cost,successor_node,successor_fuel,successor_solvable,successor_exact_remaining_cost,successor_relaxed_h,bad_action_ranking_candidate
+bad-1-0-0,1,a-bad-2-0-0,bad,2,1,bad-2-0-0,0,false,infinity,infinity,false
+good-1,2,z-good-2,good,2,0,good-2,2,true,7,7,false
+good-2,2,z-good-3,good,3,0,good-3,2,true,6,6,false
+good-3,2,z-good-4,good,4,0,good-4,2,true,5,5,false
+good-4,2,z-good-5,good,5,0,good-5,2,true,4,4,false
+good-5,2,z-good-6,good,6,0,good-6,2,true,3,3,false
+good-6,2,z-good-7,good,7,0,good-7,2,true,2,2,false
+good-7,2,z-good-8,good,8,0,good-8,2,true,1,1,false
+root,2,a-bad-1-0-0,bad,1,1,bad-1-0-0,1,false,infinity,6,true
+root,2,z-good-1,good,1,0,good-1,2,true,8,8,false

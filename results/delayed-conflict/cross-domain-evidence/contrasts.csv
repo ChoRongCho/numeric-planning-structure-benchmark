@@ -1,0 +1,56 @@
+domain,instance,planner,heuristic,contrast,causal_role,baseline_status,treatment_status,baseline_seconds,treatment_seconds,time_ratio,baseline_states,treatment_states,state_ratio,baseline_objective,treatment_objective
+barman,p001,count-downward-agile,irhff,one-short / blocked-zero,early/deep 근사,unsolved,unsolved,0.201001,2.610092,12.985467733991372,0,31558,,,
+barman,p001,enhsp,hadd,one-short / blocked-zero,early/deep 근사,unsolved,unsolved,0.40177,5.619653,13.987238967568508,,49590,,,
+barman,p001,enhsp,hradd,one-short / blocked-zero,early/deep 근사,unsolved,unsolved,0.401901,5.620165,13.983953759756757,,49590,,,
+barman,p001,metric-ff-cross-v1,numeric-hff,one-short / blocked-zero,early/deep 근사,unsolved,unsolved,0.201121,1.405168,6.986679660502881,2,49047,24523.5,,
+barman,p001,numeric-fast-downward-local,irhadd,one-short / blocked-zero,early/deep 근사,unsolved,unsolved,1.003991,32.324674,32.196179049413786,26877,986505,36.70443129813595,,
+barman,p002,count-downward-agile,irhff,one-short / blocked-zero,early/deep 근사,unsolved,timeout,0.401753,60.030433,149.4212438986143,0,78,,,
+barman,p002,enhsp,hadd,one-short / blocked-zero,early/deep 근사,unsolved,timeout,0.401648,60.015833,149.42395580209538,,56716,,,
+barman,p002,enhsp,hradd,one-short / blocked-zero,early/deep 근사,unsolved,timeout,0.602683,60.016224,99.58174363637269,,58224,,,
+barman,p002,metric-ff-cross-v1,numeric-hff,one-short / blocked-zero,early/deep 근사,unsolved,timeout,0.201136,60.010053,298.355605162676,2,,,,
+barman,p002,numeric-fast-downward-local,irhadd,one-short / blocked-zero,early/deep 근사,timeout,timeout,60.032454,60.028625,0.9999362178331074,347498,531,0.0015280663485833011,,
+barman,p004,count-downward-agile,irhff,one-short / blocked-zero,early/deep 근사,unsolved,timeout,0.802996,60.041573,74.77194531479608,0,39856,,,
+barman,p004,enhsp,hadd,one-short / blocked-zero,early/deep 근사,unsolved,timeout,1.004386,60.01288,59.75081293446942,,5910,,,
+barman,p004,enhsp,hradd,one-short / blocked-zero,early/deep 근사,unsolved,timeout,0.803711,60.013646,74.67067888830687,,5953,,,
+barman,p004,metric-ff-cross-v1,numeric-hff,one-short / blocked-zero,early/deep 근사,unsolved,timeout,0.20105,60.009278,298.4793732902263,2,,,,
+barman,p004,numeric-fast-downward-local,irhadd,one-short / blocked-zero,early/deep 근사,timeout,timeout,60.038647,60.033558,0.9999152379299954,38037,923,0.02426584641270342,,
+watering,p001,count-downward-agile,irhff,water-tight / water-loose (battery loose),지속 탐색 일관성 검사,solved,solved,0.201034,0.201141,1.000532248276411,1536,9486,6.17578125,104.0,153.0
+watering,p001,enhsp,hadd,water-tight / water-loose (battery loose),지속 탐색 일관성 검사,solved,solved,0.401701,0.602562,1.5000261388445637,80,5103,63.7875,76.0,94.0
+watering,p001,enhsp,hradd,water-tight / water-loose (battery loose),지속 탐색 일관성 검사,solved,solved,0.401717,0.803519,2.0002115917424454,56,16251,290.19642857142856,87.0,94.0
+watering,p001,metric-ff-cross-v1,numeric-hff,water-tight / water-loose (battery loose),지속 탐색 일관성 검사,solved,solved,0.201225,0.201213,0.9999403652627656,395,1376,3.4835443037974683,255.0,282.0
+watering,p001,numeric-fast-downward-local,irhadd,water-tight / water-loose (battery loose),지속 탐색 일관성 검사,solved,solved,0.200961,0.401874,1.9997611476853718,105,5829,55.51428571428571,76.0,94.0
+watering,p002,count-downward-agile,irhff,water-tight / water-loose (battery loose),지속 탐색 일관성 검사,solved,solved,0.200961,0.402193,2.001348520359672,2324,15770,6.785714285714286,82.0,104.0
+watering,p002,enhsp,hadd,water-tight / water-loose (battery loose),지속 탐색 일관성 검사,solved,solved,0.402379,4.817291,11.972023887926557,206,190184,923.2233009708738,77.0,99.0
+watering,p002,enhsp,hradd,water-tight / water-loose (battery loose),지속 탐색 일관성 검사,solved,solved,0.402113,8.430098,20.964500028598923,32,265203,8287.59375,86.0,127.0
+watering,p002,metric-ff-cross-v1,numeric-hff,water-tight / water-loose (battery loose),지속 탐색 일관성 검사,solved,solved,0.200995,0.20102,1.0001243812035125,471,544,1.1549893842887473,328.0,320.0
+watering,p002,numeric-fast-downward-local,irhadd,water-tight / water-loose (battery loose),지속 탐색 일관성 검사,solved,solved,0.401651,15.862029,39.49206898526333,3363,549228,163.31489741302408,77.0,99.0
+watering,p003,count-downward-agile,irhff,water-tight / water-loose (battery loose),지속 탐색 일관성 검사,solved,solved,0.401714,2.208778,5.498384422748523,7061,134220,19.008639002974082,144.0,232.0
+watering,p003,enhsp,hadd,water-tight / water-loose (battery loose),지속 탐색 일관성 검사,solved,solved,0.402268,11.845522,29.44684140920978,1641,421808,257.04326630103594,156.0,169.0
+watering,p003,enhsp,hradd,water-tight / water-loose (battery loose),지속 탐색 일관성 검사,solved,solved,0.401716,1.405031,3.4975729122066332,642,20486,31.909657320872274,176.0,206.0
+watering,p003,metric-ff-cross-v1,numeric-hff,water-tight / water-loose (battery loose),지속 탐색 일관성 검사,solved,solved,0.201192,0.20104,0.9992445027635293,1634,3247,1.9871481028151774,253.0,452.0
+watering,p003,numeric-fast-downward-local,irhadd,water-tight / water-loose (battery loose),지속 탐색 일관성 검사,solved,solved,0.602471,41.359473,68.6497325182457,8081,1177378,145.69706719465412,121.0,169.0
+watering,p004,count-downward-agile,irhff,water-tight / water-loose (battery loose),지속 탐색 일관성 검사,solved,solved,0.201066,0.401782,1.998259278048004,1753,14726,8.400456360524815,147.0,252.0
+watering,p004,enhsp,hadd,water-tight / water-loose (battery loose),지속 탐색 일관성 검사,solved,timeout,1.004896,60.028151,59.735685085819824,6570,1010221,153.7627092846271,172.0,
+watering,p004,enhsp,hradd,water-tight / water-loose (battery loose),지속 탐색 일관성 검사,solved,solved,0.602458,0.803572,1.3338224407344577,1805,4051,2.2443213296398894,246.0,296.0
+watering,p004,metric-ff-cross-v1,numeric-hff,water-tight / water-loose (battery loose),지속 탐색 일관성 검사,solved,solved,0.201348,0.200962,0.9980829211117072,442,1272,2.8778280542986425,309.0,325.0
+watering,p004,numeric-fast-downward-local,irhadd,water-tight / water-loose (battery loose),지속 탐색 일관성 검사,solved,timeout,44.167357,60.031242,1.3591766878873914,613818,26382,0.042980166759528066,137.0,
+logistics,p001,count-downward-agile,irhff,tight/tight / loose/loose,조기 pruning 일관성 검사,solved,solved,0.201024,0.201263,1.0011889127666347,19,19,1.0,126.0,126.0
+logistics,p001,enhsp,hadd,tight/tight / loose/loose,조기 pruning 일관성 검사,solved,solved,0.401753,0.401789,1.000089607296025,35,35,1.0,60.0,60.0
+logistics,p001,enhsp,hradd,tight/tight / loose/loose,조기 pruning 일관성 검사,solved,solved,0.401802,0.401966,1.0004081612336424,35,35,1.0,60.0,60.0
+logistics,p001,metric-ff-cross-v1,numeric-hff,tight/tight / loose/loose,조기 pruning 일관성 검사,solved,solved,0.200993,0.20102,1.0001343330364738,32,32,1.0,126.0,126.0
+logistics,p001,numeric-fast-downward-local,irhadd,tight/tight / loose/loose,조기 pruning 일관성 검사,solved,solved,0.200946,0.201007,1.00030356414161,34,34,1.0,90.0,90.0
+logistics,p002,count-downward-agile,irhff,tight/tight / loose/loose,조기 pruning 일관성 검사,solved,solved,0.401599,0.401793,1.0004830689319446,2806,2275,0.8107626514611547,452.0,300.0
+logistics,p002,enhsp,hadd,tight/tight / loose/loose,조기 pruning 일관성 검사,solved,solved,3.814606,2.610056,0.6842268900117077,2065,1216,0.588861985472155,77.0,89.0
+logistics,p002,enhsp,hradd,tight/tight / loose/loose,조기 pruning 일관성 검사,solved,solved,3.613407,2.61115,0.7226282563796439,2065,1216,0.588861985472155,77.0,89.0
+logistics,p002,metric-ff-cross-v1,numeric-hff,tight/tight / loose/loose,조기 pruning 일관성 검사,solved,solved,0.201,0.200823,0.9991194029850746,1486,1762,1.1857335127860027,487.0,217.0
+logistics,p002,numeric-fast-downward-local,irhadd,tight/tight / loose/loose,조기 pruning 일관성 검사,solved,solved,1.204505,0.803542,0.6671138766547254,2267,1063,0.46890163211292457,76.0,96.0
+logistics,p003,count-downward-agile,irhff,tight/tight / loose/loose,조기 pruning 일관성 검사,solved,solved,0.401735,0.40173,0.9999875539845917,737,286,0.3880597014925373,369.0,492.0
+logistics,p003,enhsp,hadd,tight/tight / loose/loose,조기 pruning 일관성 검사,solved,solved,2.007619,58.209853,28.994472058692413,202,45992,227.68316831683168,155.0,147.0
+logistics,p003,enhsp,hradd,tight/tight / loose/loose,조기 pruning 일관성 검사,solved,solved,2.009348,59.612966,29.667815629746563,202,45992,227.68316831683168,155.0,147.0
+logistics,p003,metric-ff-cross-v1,numeric-hff,tight/tight / loose/loose,조기 pruning 일관성 검사,solved,solved,0.201176,0.200968,0.9989660794528175,918,975,1.0620915032679739,369.0,483.0
+logistics,p003,numeric-fast-downward-local,irhadd,tight/tight / loose/loose,조기 pruning 일관성 검사,solved,solved,0.602225,15.858827,26.333724106438623,217,32946,151.82488479262673,155.0,147.0
+logistics,p004,count-downward-agile,irhff,tight/tight / loose/loose,조기 pruning 일관성 검사,solved,solved,17.870188,0.602664,0.033724547273929074,131514,1541,0.011717383700594613,1095.0,928.0
+logistics,p004,enhsp,hadd,tight/tight / loose/loose,조기 pruning 일관성 검사,solved,solved,3.413004,4.015335,1.1764811878333574,392,815,2.079081632653061,228.0,196.0
+logistics,p004,enhsp,hradd,tight/tight / loose/loose,조기 pruning 일관성 검사,solved,solved,3.212163,3.814268,1.1874453444610378,392,815,2.079081632653061,228.0,196.0
+logistics,p004,metric-ff-cross-v1,numeric-hff,tight/tight / loose/loose,조기 pruning 일관성 검사,solved,solved,0.201033,0.201027,0.9999701541537958,552,811,1.4692028985507246,710.0,774.0
+logistics,p004,numeric-fast-downward-local,irhadd,tight/tight / loose/loose,조기 pruning 일관성 검사,solved,solved,0.803335,0.803095,0.9997012454331008,365,581,1.5917808219178082,228.0,207.0

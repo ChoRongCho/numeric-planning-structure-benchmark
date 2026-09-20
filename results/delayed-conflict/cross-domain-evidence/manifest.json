@@ -1,0 +1,7 @@
+{
+  "created_at": "2026-09-19T22:50:03.511837+09:00",
+  "source_rows": 220,
+  "paired_contrasts": 55,
+  "matched_micro_rows": 40,
+  "note": "Barman is an early/deep approximation; legacy Watering/Logistics contrasts are consistency checks; matched micro rows directly control edge-cost order."
+}

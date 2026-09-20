@@ -1,0 +1,18 @@
+(define (domain delayed-conflict-deep-low)
+  (:requirements :strips :typing :fluents)
+  (:types node)
+  (:constants root good-1 good-2 good-3 good-4 good-5 good-6 good-7 good-8 bad-1-0-0 bad-2-0-0 bad-3-0-0 bad-4-0-0 bad-5-0-0 bad-6-0-0 - node)
+  (:predicates (at ?n - node) (edge ?from ?to - node) (terminal ?n - node) (done))
+  (:functions (fuel) (total-cost) (edge-cost ?from ?to - node))
+  (:action a-move
+    :parameters (?from ?to - node)
+    :precondition (and (at ?from) (edge ?from ?to)
+                       (>= (fuel) (edge-cost ?from ?to)))
+    :effect (and (not (at ?from)) (at ?to)
+                 (decrease (fuel) (edge-cost ?from ?to))
+                 (increase (total-cost) 1)))
+  (:action z-finish
+    :parameters (?n - node)
+    :precondition (and (at ?n) (terminal ?n))
+    :effect (and (done) (increase (total-cost) 1)))
+)

@@ -1,0 +1,12 @@
+node,fuel,state_solvable,exact_remaining_cost,relaxed_h,false_finite,concrete_successors,finite_relaxed_successors,solvable_successors
+bad-1-0-0,1,false,infinity,6,true,1,0,0
+bad-2-0-0,0,false,infinity,infinity,false,0,0,0
+good-1,2,true,8,8,false,1,1,1
+good-2,2,true,7,7,false,1,1,1
+good-3,2,true,6,6,false,1,1,1
+good-4,2,true,5,5,false,1,1,1
+good-5,2,true,4,4,false,1,1,1
+good-6,2,true,3,3,false,1,1,1
+good-7,2,true,2,2,false,1,1,1
+good-8,2,true,1,1,false,0,0,0
+root,2,true,9,7,false,2,2,1

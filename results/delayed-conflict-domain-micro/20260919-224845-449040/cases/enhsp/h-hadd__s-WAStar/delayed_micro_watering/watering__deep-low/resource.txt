@@ -1,0 +1,3 @@
+wall_seconds=0.20
+max_rss_kb=66484
+exit_code=0

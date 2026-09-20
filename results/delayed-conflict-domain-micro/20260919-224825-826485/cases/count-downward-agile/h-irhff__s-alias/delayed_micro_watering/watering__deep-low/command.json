@@ -1,0 +1,7 @@
+[
+  "/home/changmin/PyProject/53_KIST_Research/planners/plannerctl",
+  "run",
+  "count-downward-agile",
+  "/home/changmin/PyProject/53_KIST_Research/results/delayed-conflict-domain-micro/20260919-224825-826485/cases/count-downward-agile/h-irhff__s-alias/delayed_micro_watering/watering__deep-low/work/domain.pddl",
+  "/home/changmin/PyProject/53_KIST_Research/results/delayed-conflict-domain-micro/20260919-224825-826485/cases/count-downward-agile/h-irhff__s-alias/delayed_micro_watering/watering__deep-low/work/problem.pddl"
+]

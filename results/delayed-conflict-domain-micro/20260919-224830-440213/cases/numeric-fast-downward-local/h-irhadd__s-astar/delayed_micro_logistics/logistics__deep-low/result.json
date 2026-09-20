@@ -1,0 +1,22 @@
+{
+  "planner": "numeric-fast-downward-local",
+  "configuration": "h-irhadd__s-astar",
+  "heuristic": "irhadd",
+  "search": "astar",
+  "benchmark": "delayed_micro_logistics",
+  "instance": "logistics__deep-low.pddl",
+  "compatible": "true",
+  "return_code": "5",
+  "wall_seconds": "0.100842",
+  "max_rss_kb": "14848",
+  "peak_group_rss_kb": "740",
+  "limit_reason": "",
+  "plan_length": "",
+  "expanded_nodes": "28",
+  "metric_value": "",
+  "objective_value": "",
+  "validation": "not-run",
+  "plan_path": "",
+  "case_directory": "results/delayed-conflict-domain-micro/20260919-224830-440213/cases/numeric-fast-downward-local/h-irhadd__s-astar/delayed_micro_logistics/logistics__deep-low",
+  "status": "unsolved"
+}

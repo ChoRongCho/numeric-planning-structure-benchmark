@@ -1,0 +1,22 @@
+{
+  "planner": "metric-ff-cross-v1",
+  "configuration": "h-numeric-hff__s-default",
+  "heuristic": "numeric-hff",
+  "search": "default",
+  "benchmark": "delayed_micro_watering",
+  "instance": "watering__deep-low.pddl",
+  "compatible": "true",
+  "return_code": "0",
+  "wall_seconds": "0.100821",
+  "max_rss_kb": "3328",
+  "peak_group_rss_kb": "440",
+  "limit_reason": "",
+  "plan_length": "",
+  "expanded_nodes": "",
+  "metric_value": "",
+  "objective_value": "",
+  "validation": "not-run",
+  "plan_path": "",
+  "case_directory": "results/delayed-conflict-domain-micro/20260919-224817-215300/cases/metric-ff-cross-v1/h-numeric-hff__s-default/delayed_micro_watering/watering__deep-low",
+  "status": "unsolved"
+}

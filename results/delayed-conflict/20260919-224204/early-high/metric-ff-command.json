@@ -1,0 +1,10 @@
+[
+  "/home/changmin/PyProject/53_KIST_Research/planners/plannerctl",
+  "run",
+  "metric-ff-cross-v1",
+  "-o",
+  "/home/changmin/PyProject/53_KIST_Research/results/delayed-conflict/20260919-224204/early-high/domain.pddl",
+  "-f",
+  "/home/changmin/PyProject/53_KIST_Research/results/delayed-conflict/20260919-224204/early-high/problem.pddl",
+  "-E"
+]

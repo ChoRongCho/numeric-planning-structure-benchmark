@@ -1,0 +1,767 @@
+begin_version
+4
+end_version
+begin_metric
+< 10
+end_metric
+7
+begin_variable
+var3
+6
+2
+Atom new-axiom@0()
+NegatedAtom new-axiom@0()
+end_variable
+begin_variable
+var5
+5
+3
+>= PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck1, n0, side0_0), PNE derived!0.0()
+< PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck1, n0, side0_0), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var4
+5
+3
+>= PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck1, n0, n1), PNE derived!0.0()
+< PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck1, n0, n1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var2
+-1
+11
+Atom at(truck1, n0)
+Atom at(truck1, n1)
+Atom at(truck1, n2)
+Atom at(truck1, n3)
+Atom at(truck1, n4)
+Atom at(truck1, side0_0)
+Atom at(truck1, side0_1)
+Atom at(truck1, side1_0)
+Atom at(truck1, side1_1)
+Atom at(truck1, side2_0)
+Atom at(truck1, side2_1)
+end_variable
+begin_variable
+var0
+-1
+12
+Atom at(driver1, n0)
+Atom at(driver1, n1)
+Atom at(driver1, n2)
+Atom at(driver1, n3)
+Atom at(driver1, n4)
+Atom at(driver1, side0_0)
+Atom at(driver1, side0_1)
+Atom at(driver1, side1_0)
+Atom at(driver1, side1_1)
+Atom at(driver1, side2_0)
+Atom at(driver1, side2_1)
+Atom in(driver1, truck1)
+end_variable
+begin_variable
+var6
+5
+3
+<= PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack1, truck1, truck1), PNE derived!0.0()
+> PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack1, truck1, truck1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var1
+-1
+12
+Atom at(pack1, n0)
+Atom at(pack1, n1)
+Atom at(pack1, n2)
+Atom at(pack1, n3)
+Atom at(pack1, n4)
+Atom at(pack1, side0_0)
+Atom at(pack1, side0_1)
+Atom at(pack1, side1_0)
+Atom at(pack1, side1_1)
+Atom at(pack1, side2_0)
+Atom at(pack1, side2_1)
+Atom loaded(pack1, truck1)
+end_variable
+11
+begin_numeric_variables
+C -1 PNE derived!0.0()
+C -1 PNE derived!10.0()
+C -1 PNE derived!6.0()
+C -1 PNE derived!1.0()
+D 1 PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck1, n0, side0_0)
+D 0 PNE derived!difference_PNE fuel-level(?truck)_PNE distance(?from, ?to)(truck1, n0, n1)
+R -1 PNE fuel-level(truck1)
+D 3 PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(pack1, truck1)
+D 4 PNE derived!difference_PNE derived!sum_PNE package-weight(?package)_PNE truck-load(?truck)(?package, ?truck)_PNE truck-capacity(?truck)(pack1, truck1, truck1)
+R -1 PNE truck-load(truck1)
+I -1 PNE total-delivery-time()
+end_numeric_variables
+0
+begin_state
+1
+2
+2
+0
+11
+2
+11
+end_state
+begin_numeric_state
+0
+10
+6
+1
+0
+0
+10
+0
+0
+1
+0
+end_numeric_state
+begin_goal
+1
+6 4
+end_goal
+54
+begin_operator
+board-truck driver1 truck1 n0
+1
+3 0
+1
+0 4 0 11
+1
+0 10 + 3
+1
+end_operator
+begin_operator
+board-truck driver1 truck1 n1
+1
+3 1
+1
+0 4 1 11
+1
+0 10 + 3
+1
+end_operator
+begin_operator
+board-truck driver1 truck1 n2
+1
+3 2
+1
+0 4 2 11
+1
+0 10 + 3
+1
+end_operator
+begin_operator
+board-truck driver1 truck1 n3
+1
+3 3
+1
+0 4 3 11
+1
+0 10 + 3
+1
+end_operator
+begin_operator
+board-truck driver1 truck1 n4
+1
+3 4
+1
+0 4 4 11
+1
+0 10 + 3
+1
+end_operator
+begin_operator
+board-truck driver1 truck1 side0_0
+1
+3 5
+1
+0 4 5 11
+1
+0 10 + 3
+1
+end_operator
+begin_operator
+board-truck driver1 truck1 side0_1
+1
+3 6
+1
+0 4 6 11
+1
+0 10 + 3
+1
+end_operator
+begin_operator
+board-truck driver1 truck1 side1_0
+1
+3 7
+1
+0 4 7 11
+1
+0 10 + 3
+1
+end_operator
+begin_operator
+board-truck driver1 truck1 side1_1
+1
+3 8
+1
+0 4 8 11
+1
+0 10 + 3
+1
+end_operator
+begin_operator
+board-truck driver1 truck1 side2_0
+1
+3 9
+1
+0 4 9 11
+1
+0 10 + 3
+1
+end_operator
+begin_operator
+board-truck driver1 truck1 side2_1
+1
+3 10
+1
+0 4 10 11
+1
+0 10 + 3
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 n0 n1
+2
+4 11
+2 0
+1
+0 3 0 1
+2
+0 6 - 2
+0 10 + 2
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 n0 side0_0
+2
+4 11
+1 0
+1
+0 3 0 5
+2
+0 6 - 3
+0 10 + 3
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 n0 side0_1
+2
+4 11
+1 0
+1
+0 3 0 6
+2
+0 6 - 3
+0 10 + 3
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 n1 n2
+2
+4 11
+2 0
+1
+0 3 1 2
+2
+0 6 - 2
+0 10 + 2
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 n1 side1_0
+2
+4 11
+1 0
+1
+0 3 1 7
+2
+0 6 - 3
+0 10 + 3
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 n1 side1_1
+2
+4 11
+1 0
+1
+0 3 1 8
+2
+0 6 - 3
+0 10 + 3
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 n2 n3
+2
+4 11
+1 0
+1
+0 3 2 3
+2
+0 6 - 3
+0 10 + 3
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 n2 side2_0
+2
+4 11
+1 0
+1
+0 3 2 9
+2
+0 6 - 3
+0 10 + 3
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 n2 side2_1
+2
+4 11
+1 0
+1
+0 3 2 10
+2
+0 6 - 3
+0 10 + 3
+1
+end_operator
+begin_operator
+drive-local-road driver1 truck1 n3 n4
+2
+4 11
+1 0
+1
+0 3 3 4
+2
+0 6 - 3
+0 10 + 3
+1
+end_operator
+begin_operator
+get-out driver1 truck1 n0
+1
+3 0
+1
+0 4 11 0
+1
+0 10 + 3
+1
+end_operator
+begin_operator
+get-out driver1 truck1 n1
+1
+3 1
+1
+0 4 11 1
+1
+0 10 + 3
+1
+end_operator
+begin_operator
+get-out driver1 truck1 n2
+1
+3 2
+1
+0 4 11 2
+1
+0 10 + 3
+1
+end_operator
+begin_operator
+get-out driver1 truck1 n3
+1
+3 3
+1
+0 4 11 3
+1
+0 10 + 3
+1
+end_operator
+begin_operator
+get-out driver1 truck1 n4
+1
+3 4
+1
+0 4 11 4
+1
+0 10 + 3
+1
+end_operator
+begin_operator
+get-out driver1 truck1 side0_0
+1
+3 5
+1
+0 4 11 5
+1
+0 10 + 3
+1
+end_operator
+begin_operator
+get-out driver1 truck1 side0_1
+1
+3 6
+1
+0 4 11 6
+1
+0 10 + 3
+1
+end_operator
+begin_operator
+get-out driver1 truck1 side1_0
+1
+3 7
+1
+0 4 11 7
+1
+0 10 + 3
+1
+end_operator
+begin_operator
+get-out driver1 truck1 side1_1
+1
+3 8
+1
+0 4 11 8
+1
+0 10 + 3
+1
+end_operator
+begin_operator
+get-out driver1 truck1 side2_0
+1
+3 9
+1
+0 4 11 9
+1
+0 10 + 3
+1
+end_operator
+begin_operator
+get-out driver1 truck1 side2_1
+1
+3 10
+1
+0 4 11 10
+1
+0 10 + 3
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck1 n0
+3
+4 0
+3 0
+5 0
+1
+0 6 0 11
+2
+0 10 + 3
+0 9 + 3
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck1 n1
+3
+4 1
+3 1
+5 0
+1
+0 6 1 11
+2
+0 10 + 3
+0 9 + 3
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck1 n2
+3
+4 2
+3 2
+5 0
+1
+0 6 2 11
+2
+0 10 + 3
+0 9 + 3
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck1 n3
+3
+4 3
+3 3
+5 0
+1
+0 6 3 11
+2
+0 10 + 3
+0 9 + 3
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck1 n4
+3
+4 4
+3 4
+5 0
+1
+0 6 4 11
+2
+0 10 + 3
+0 9 + 3
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck1 side0_0
+3
+4 5
+3 5
+5 0
+1
+0 6 5 11
+2
+0 10 + 3
+0 9 + 3
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck1 side0_1
+3
+4 6
+3 6
+5 0
+1
+0 6 6 11
+2
+0 10 + 3
+0 9 + 3
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck1 side1_0
+3
+4 7
+3 7
+5 0
+1
+0 6 7 11
+2
+0 10 + 3
+0 9 + 3
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck1 side1_1
+3
+4 8
+3 8
+5 0
+1
+0 6 8 11
+2
+0 10 + 3
+0 9 + 3
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck1 side2_0
+3
+4 9
+3 9
+5 0
+1
+0 6 9 11
+2
+0 10 + 3
+0 9 + 3
+1
+end_operator
+begin_operator
+load-truck driver1 pack1 truck1 side2_1
+3
+4 10
+3 10
+5 0
+1
+0 6 10 11
+2
+0 10 + 3
+0 9 + 3
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck1 n0
+2
+4 0
+3 0
+1
+0 6 11 0
+2
+0 10 + 3
+0 9 - 3
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck1 n1
+2
+4 1
+3 1
+1
+0 6 11 1
+2
+0 10 + 3
+0 9 - 3
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck1 n2
+2
+4 2
+3 2
+1
+0 6 11 2
+2
+0 10 + 3
+0 9 - 3
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck1 n3
+2
+4 3
+3 3
+1
+0 6 11 3
+2
+0 10 + 3
+0 9 - 3
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck1 n4
+2
+4 4
+3 4
+1
+0 6 11 4
+2
+0 10 + 3
+0 9 - 3
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck1 side0_0
+2
+4 5
+3 5
+1
+0 6 11 5
+2
+0 10 + 3
+0 9 - 3
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck1 side0_1
+2
+4 6
+3 6
+1
+0 6 11 6
+2
+0 10 + 3
+0 9 - 3
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck1 side1_0
+2
+4 7
+3 7
+1
+0 6 11 7
+2
+0 10 + 3
+0 9 - 3
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck1 side1_1
+2
+4 8
+3 8
+1
+0 6 11 8
+2
+0 10 + 3
+0 9 - 3
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck1 side2_0
+2
+4 9
+3 9
+1
+0 6 11 9
+2
+0 10 + 3
+0 9 - 3
+1
+end_operator
+begin_operator
+unload-truck driver1 pack1 truck1 side2_1
+2
+4 10
+3 10
+1
+0 6 11 10
+2
+0 10 + 3
+0 9 - 3
+1
+end_operator
+1
+begin_rule
+0
+0 1 0
+end_rule
+3
+begin_comparison_axioms
+2 >= 5 0
+1 >= 4 0
+5 <= 8 0
+end_comparison_axioms
+4
+begin_numeric_axioms
+5 - 6 2
+4 - 6 3
+7 + 3 9
+8 - 7 1
+end_numeric_axioms
+begin_global_constraint
+0 0
+end_global_constraint
+begin_SG

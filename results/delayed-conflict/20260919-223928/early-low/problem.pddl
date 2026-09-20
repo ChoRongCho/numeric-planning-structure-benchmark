@@ -1,0 +1,6 @@
+(define (problem delayed-conflict-early-low-p01)
+  (:domain delayed-conflict-early-low)
+  (:init (at root) (= (fuel) 2) (= (total-cost) 0))
+  (:goal (done))
+  (:metric minimize (total-cost))
+)

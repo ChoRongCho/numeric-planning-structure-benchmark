@@ -1,0 +1,18 @@
+(define (domain delayed-conflict-early-high)
+  (:requirements :strips :typing :fluents)
+  (:types node)
+  (:constants root good-1 good-2 good-3 good-4 good-5 good-6 good-7 good-8 bad-1-0-0 bad-1-0-1 bad-2-0-0 bad-2-0-1 bad-2-1-0 bad-2-1-1 bad-3-0-0 bad-3-0-1 bad-3-1-0 bad-3-1-1 bad-3-2-0 bad-3-2-1 bad-3-3-0 bad-3-3-1 bad-4-0-0 bad-4-0-1 bad-4-1-0 bad-4-1-1 bad-4-2-0 bad-4-2-1 bad-4-3-0 bad-4-3-1 bad-4-4-0 bad-4-4-1 bad-4-5-0 bad-4-5-1 bad-4-6-0 bad-4-6-1 bad-4-7-0 bad-4-7-1 bad-5-0-0 bad-5-0-1 bad-5-1-0 bad-5-1-1 bad-5-2-0 bad-5-2-1 bad-5-3-0 bad-5-3-1 bad-5-4-0 bad-5-4-1 bad-5-5-0 bad-5-5-1 bad-5-6-0 bad-5-6-1 bad-5-7-0 bad-5-7-1 bad-5-8-0 bad-5-8-1 bad-5-9-0 bad-5-9-1 bad-5-10-0 bad-5-10-1 bad-5-11-0 bad-5-11-1 bad-5-12-0 bad-5-12-1 bad-5-13-0 bad-5-13-1 bad-5-14-0 bad-5-14-1 bad-5-15-0 bad-5-15-1 bad-6-0-0 bad-6-0-1 bad-6-1-0 bad-6-1-1 bad-6-2-0 bad-6-2-1 bad-6-3-0 bad-6-3-1 bad-6-4-0 bad-6-4-1 bad-6-5-0 bad-6-5-1 bad-6-6-0 bad-6-6-1 bad-6-7-0 bad-6-7-1 bad-6-8-0 bad-6-8-1 bad-6-9-0 bad-6-9-1 bad-6-10-0 bad-6-10-1 bad-6-11-0 bad-6-11-1 bad-6-12-0 bad-6-12-1 bad-6-13-0 bad-6-13-1 bad-6-14-0 bad-6-14-1 bad-6-15-0 bad-6-15-1 bad-6-16-0 bad-6-16-1 bad-6-17-0 bad-6-17-1 bad-6-18-0 bad-6-18-1 bad-6-19-0 bad-6-19-1 bad-6-20-0 bad-6-20-1 bad-6-21-0 bad-6-21-1 bad-6-22-0 bad-6-22-1 bad-6-23-0 bad-6-23-1 bad-6-24-0 bad-6-24-1 bad-6-25-0 bad-6-25-1 bad-6-26-0 bad-6-26-1 bad-6-27-0 bad-6-27-1 bad-6-28-0 bad-6-28-1 bad-6-29-0 bad-6-29-1 bad-6-30-0 bad-6-30-1 bad-6-31-0 bad-6-31-1 - node)
+  (:predicates (at ?n - node) (edge ?from ?to - node) (terminal ?n - node) (done))
+  (:functions (fuel) (total-cost) (edge-cost ?from ?to - node))
+  (:action a-move
+    :parameters (?from ?to - node)
+    :precondition (and (at ?from) (edge ?from ?to)
+                       (>= (fuel) (edge-cost ?from ?to)))
+    :effect (and (not (at ?from)) (at ?to)
+                 (decrease (fuel) (edge-cost ?from ?to))
+                 (increase (total-cost) 1)))
+  (:action z-finish
+    :parameters (?n - node)
+    :precondition (and (at ?n) (terminal ?n))
+    :effect (and (done) (increase (total-cost) 1)))
+)

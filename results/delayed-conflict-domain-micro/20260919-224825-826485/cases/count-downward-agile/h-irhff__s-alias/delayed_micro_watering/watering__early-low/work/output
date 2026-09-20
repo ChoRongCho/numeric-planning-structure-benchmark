@@ -1,0 +1,358 @@
+begin_version
+4
+end_version
+begin_metric
+< 10
+end_metric
+10
+begin_variable
+var3
+6
+2
+Atom new-axiom@0()
+NegatedAtom new-axiom@0()
+end_variable
+begin_variable
+var5
+5
+3
+>= PNE derived!difference_PNE battery-level(?robot)_PNE watering-unit-energy()(robot1), PNE derived!0.0()
+< PNE derived!difference_PNE battery-level(?robot)_PNE watering-unit-energy()(robot1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var7
+5
+3
+>= PNE derived!difference_PNE water-level(?container)_PNE derived!1.0()(can1), PNE derived!0.0()
+< PNE derived!difference_PNE water-level(?container)_PNE derived!1.0()(can1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var8
+5
+3
+< PNE derived!difference_PNE watered-amount(plant1)_PNE plant-demand(plant1)(plant1, plant1), PNE derived!0.0()
+>= PNE derived!difference_PNE watered-amount(plant1)_PNE plant-demand(plant1)(plant1, plant1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var6
+5
+3
+>= PNE derived!difference_PNE battery-level(?robot)_PNE move-energy(?from, ?to)(robot1, n1, n2), PNE derived!0.0()
+< PNE derived!difference_PNE battery-level(?robot)_PNE move-energy(?from, ?to)(robot1, n1, n2), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var0
+-1
+5
+Atom at-robot(robot1, n0)
+Atom at-robot(robot1, n1)
+Atom at-robot(robot1, n2)
+Atom at-robot(robot1, n3)
+Atom at-robot(robot1, n4)
+end_variable
+begin_variable
+var1
+-1
+6
+Atom container-at(can1, n0)
+Atom container-at(can1, n1)
+Atom container-at(can1, n2)
+Atom container-at(can1, n3)
+Atom container-at(can1, n4)
+Atom holding(robot1, can1)
+end_variable
+begin_variable
+var2
+-1
+2
+Atom hand-free(robot1)
+NegatedAtom hand-free(robot1)
+end_variable
+begin_variable
+var9
+5
+3
+>= PNE derived!difference_PNE watered-amount(plant1)_PNE plant-demand(plant1)(plant1, plant1), PNE derived!0.0()
+< PNE derived!difference_PNE watered-amount(plant1)_PNE plant-demand(plant1)(plant1, plant1), PNE derived!0.0()
+<none of those>
+end_variable
+begin_variable
+var4
+6
+2
+Atom new-axiom@1()
+NegatedAtom new-axiom@1()
+end_variable
+11
+begin_numeric_variables
+C -1 PNE derived!6.0()
+C -1 PNE derived!1.0()
+C -1 PNE derived!0.0()
+D 1 PNE derived!difference_PNE battery-level(?robot)_PNE watering-unit-energy()(robot1)
+D 3 PNE derived!difference_PNE water-level(?container)_PNE derived!1.0()(can1)
+D 4 PNE derived!difference_PNE watered-amount(plant1)_PNE plant-demand(plant1)(plant1, plant1)
+D 2 PNE derived!difference_PNE battery-level(?robot)_PNE move-energy(?from, ?to)(robot1, n1, n2)
+R -1 PNE water-level(can1)
+R -1 PNE watered-amount(plant1)
+R -1 PNE battery-level(robot1)
+I -1 PNE total-watering-time()
+end_numeric_variables
+1
+begin_mutex_group
+2
+6 5
+7 0
+end_mutex_group
+begin_state
+1
+2
+2
+2
+2
+0
+5
+1
+2
+1
+end_state
+begin_numeric_state
+6
+1
+0
+0
+0
+0
+0
+1
+0
+10
+0
+end_numeric_state
+begin_goal
+1
+9 0
+end_goal
+15
+begin_operator
+drop-container robot1 can1 n0
+2
+5 0
+1 0
+2
+0 6 5 0
+0 7 -1 0
+2
+0 9 - 1
+0 10 + 1
+1
+end_operator
+begin_operator
+drop-container robot1 can1 n1
+2
+5 1
+1 0
+2
+0 6 5 1
+0 7 -1 0
+2
+0 9 - 1
+0 10 + 1
+1
+end_operator
+begin_operator
+drop-container robot1 can1 n2
+2
+5 2
+1 0
+2
+0 6 5 2
+0 7 -1 0
+2
+0 9 - 1
+0 10 + 1
+1
+end_operator
+begin_operator
+drop-container robot1 can1 n3
+2
+5 3
+1 0
+2
+0 6 5 3
+0 7 -1 0
+2
+0 9 - 1
+0 10 + 1
+1
+end_operator
+begin_operator
+drop-container robot1 can1 n4
+2
+5 4
+1 0
+2
+0 6 5 4
+0 7 -1 0
+2
+0 9 - 1
+0 10 + 1
+1
+end_operator
+begin_operator
+move robot1 n0 n1
+1
+4 0
+1
+0 5 0 1
+2
+0 9 - 0
+0 10 + 0
+1
+end_operator
+begin_operator
+move robot1 n1 n2
+1
+4 0
+1
+0 5 1 2
+2
+0 9 - 0
+0 10 + 0
+1
+end_operator
+begin_operator
+move robot1 n2 n3
+1
+1 0
+1
+0 5 2 3
+2
+0 9 - 1
+0 10 + 1
+1
+end_operator
+begin_operator
+move robot1 n3 n4
+1
+1 0
+1
+0 5 3 4
+2
+0 9 - 1
+0 10 + 1
+1
+end_operator
+begin_operator
+pick-container robot1 can1 n0
+2
+5 0
+1 0
+2
+0 6 0 5
+0 7 0 1
+2
+0 9 - 1
+0 10 + 1
+1
+end_operator
+begin_operator
+pick-container robot1 can1 n1
+2
+5 1
+1 0
+2
+0 6 1 5
+0 7 0 1
+2
+0 9 - 1
+0 10 + 1
+1
+end_operator
+begin_operator
+pick-container robot1 can1 n2
+2
+5 2
+1 0
+2
+0 6 2 5
+0 7 0 1
+2
+0 9 - 1
+0 10 + 1
+1
+end_operator
+begin_operator
+pick-container robot1 can1 n3
+2
+5 3
+1 0
+2
+0 6 3 5
+0 7 0 1
+2
+0 9 - 1
+0 10 + 1
+1
+end_operator
+begin_operator
+pick-container robot1 can1 n4
+2
+5 4
+1 0
+2
+0 6 4 5
+0 7 0 1
+2
+0 9 - 1
+0 10 + 1
+1
+end_operator
+begin_operator
+water-one-unit robot1 can1 plant1 n4
+5
+5 4
+6 5
+1 0
+2 0
+3 0
+0
+4
+0 9 - 1
+0 10 + 1
+0 7 - 1
+0 8 + 1
+1
+end_operator
+2
+begin_rule
+0
+0 1 0
+end_rule
+begin_rule
+1
+8 0
+9 1 0
+end_rule
+5
+begin_comparison_axioms
+1 >= 3 2
+4 >= 6 2
+2 >= 4 2
+3 < 5 2
+8 >= 5 2
+end_comparison_axioms
+4
+begin_numeric_axioms
+3 - 9 1
+6 - 9 0
+4 - 7 1
+5 - 8 1
+end_numeric_axioms
+begin_global_constraint
+0 0
+end_global_constraint
+begin_SG

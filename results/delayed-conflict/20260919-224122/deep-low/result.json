@@ -1,0 +1,39 @@
+{
+  "variant": "deep-low",
+  "revelation": "deep",
+  "branching_label": "low",
+  "branching": 1,
+  "manifestation_depth": 6,
+  "nodes": 15,
+  "edges": 14,
+  "initial_solvable": true,
+  "initial_exact_distance": 9,
+  "reachable_states": 14,
+  "solvable_states": 9,
+  "dead_end_states": 5,
+  "bad_root_actions": [
+    {
+      "action": "a-bad-1-0-0",
+      "successor_solvable": false
+    }
+  ],
+  "good_root_actions": [
+    {
+      "action": "z-good-1",
+      "successor_solvable": true
+    }
+  ],
+  "relaxed_initial_h": 7.0,
+  "false_finite_states": 4,
+  "false_finite_fraction": 0.2857142857142857,
+  "mean_persistent_branching": 0.75,
+  "reference_gbfs_solved": true,
+  "reference_gbfs_expanded": 13,
+  "reference_false_finite_expanded": 4,
+  "metric_ff_status": "solved",
+  "metric_ff_validation": "valid",
+  "metric_ff_wall_seconds": 0.005628,
+  "metric_ff_expanded": "15",
+  "metric_ff_plan_length": 9,
+  "metric_ff_returncode": 0
+}

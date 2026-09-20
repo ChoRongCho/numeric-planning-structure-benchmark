@@ -25,6 +25,25 @@ Changmin benchmark 6개에서 13개 planner의 지원 heuristic을 모두
 이 실험은 `results.csv`에 configuration, heuristic, plan length,
 wall time, expanded nodes, VAL objective value를 함께 기록한다.
 
+## Delayed numeric conflict 2×2 실험
+
+다음 명령은 모순이 나타나는 깊이(early/deep)와 그전까지 유지되는 분기 수(low/high)를
+독립적으로 바꾼 synthetic PDDL 네 개를 생성한다. Exact state oracle, 감소 효과를
+무시하는 reference GBFS, 실제 Metric-FF와 VAL 검증을 한 번에 실행한다.
+
+```bash
+./delayed_conflict_experiment.py
+```
+
+출력은 `results/delayed-conflict/<timestamp>/` 아래의 `results.csv`, `summary.md`, 각
+variant의 PDDL·graph·planner log로 저장된다. Planner 없이 generator와 oracle만
+검사하려면 `--skip-planner`를 사용한다.
+
+```bash
+./delayed_conflict_experiment.py --depth 6 --high-branching 2 --initial-fuel 2
+./delayed_conflict_experiment.py --skip-planner
+```
+
 ## 파일 구성
 
 | 파일 | 사용 여부 | 역할 |
@@ -37,6 +56,7 @@ wall time, expanded nodes, VAL objective value를 함께 기록한다.
 | `generate_benchmark_manifest.py` | 필요할 때 실행 | benchmark catalog 재생성 |
 | `run_up_engine.py` | 내부 | TamerLite/NextFLAP 실행 helper |
 | `smoke_test_plannerctl.sh` | 설치 점검용 | planner runtime 전체 저수준 검사 |
+| `delayed_conflict_experiment.py` | 가설 검증용 | early/deep × low/high generator, exact oracle, Metric-FF pilot |
 
 ## experiment.yaml 설정
 
@@ -349,3 +369,28 @@ YAML 없이 즉석에서 한 번 실행해야 할 때만 `benchmarkctl`을 사�
 ./benchmarkctl validate-pddl
 ./benchmarkctl run --planner enhsp --benchmark 19_COUNTERS --instance p001
 ```
+
+## Delayed-conflict 교차 분석
+
+Barman stock 실험과 Watering·Logistics 2×2 실험을 같은 형식으로 다시 집계하고,
+Metric-FF 로그의 evaluated states까지 복원하려면 다음을 실행합니다.
+
+```bash
+python3 scripts/run/analyze_delayed_conflict_evidence.py
+```
+
+결과는 기본적으로 `results/delayed-conflict/cross-domain-evidence/`에 생성됩니다.
+`contrasts.csv`에는 paired comparison이, `summary.md`에는 해석과 한계가 기록됩니다.
+
+Watering·Logistics 원본 action schema로 revelation position과 side branching을 직접
+바꾸는 micro 실험은 다음처럼 실행합니다.
+
+```bash
+python3 scripts/run/delayed_conflict_domain_micro.py
+python3 scripts/run/delayed_conflict_domain_micro.py \
+  --planner numeric-fast-downward-local --heuristic irhadd --search astar
+```
+
+용량과 총소모량은 고정되며 early 조건은 두 번째 edge, deep 조건은 네 번째 edge에서
+막힙니다. 생성된 problem과 planner별 원자료는
+`results/delayed-conflict-domain-micro/`에 저장됩니다.

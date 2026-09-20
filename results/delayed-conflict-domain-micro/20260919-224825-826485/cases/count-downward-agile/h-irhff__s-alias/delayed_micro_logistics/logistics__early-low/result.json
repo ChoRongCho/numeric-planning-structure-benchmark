@@ -1,0 +1,22 @@
+{
+  "planner": "count-downward-agile",
+  "configuration": "h-irhff__s-alias",
+  "heuristic": "irhff",
+  "search": "alias",
+  "benchmark": "delayed_micro_logistics",
+  "instance": "logistics__early-low.pddl",
+  "compatible": "true",
+  "return_code": "5",
+  "wall_seconds": "0.100879",
+  "max_rss_kb": "14976",
+  "peak_group_rss_kb": "932",
+  "limit_reason": "",
+  "plan_length": "",
+  "expanded_nodes": "4",
+  "metric_value": "",
+  "objective_value": "",
+  "validation": "not-run",
+  "plan_path": "",
+  "case_directory": "results/delayed-conflict-domain-micro/20260919-224825-826485/cases/count-downward-agile/h-irhff__s-alias/delayed_micro_logistics/logistics__early-low",
+  "status": "unsolved"
+}
